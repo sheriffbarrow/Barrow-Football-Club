@@ -1,0 +1,32 @@
+{% extends "account/account_settings.html" %}
+{% load crispy_forms_tags %}
+            {% block account %}
+			<form method="POST" action="" enctype="multipart/form-data">
+				{% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-5 mb-0">
+                        {{ account_form.email|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-5 mb-0">
+                        {{ account_form.contact|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5 mb-0">
+                        {{ account_form.firstName|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-5 mb-0">
+                        {{ account_form.surName|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5 mb-0">
+                        {{ account_form.country|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-5 mb-0">
+                        {{ account_form.dob|as_crispy_field }}
+                    </div>
+                </div>
+			<input class="btn btn-primary" type="submit" name="Update Information">
+			</form>
+            {% endblock account %}

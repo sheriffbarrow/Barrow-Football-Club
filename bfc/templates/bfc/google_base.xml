@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version ="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+    <title>Barrowfc News Post Feed</title>
+    <description>Barrowfc News Post Feed</description>
+    <link>http://barrowfc.net</link>
+{% for post in posts %}
+<item>
+<title>{{post.title}}</title>
+<g:author>{{post.author}}</g:author>
+<g:synopsis>{{post.synopsis}}</g:synopsis>
+<description>{{post.description}}</description>
+<g:image_link>{{post.postImage}}</g:image_link>
+<link>{{post.get_absolute_url}}</link>
+</item>
+{% endfor %}
+</channel>
+</rss>

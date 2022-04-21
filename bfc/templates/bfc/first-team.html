@@ -1,0 +1,459 @@
+{% extends 'bfc/base/index1.html' %}
+{% load static %}
+{% block bread %}
+<div class="breadcrumbs">
+
+    <span class="breadcrumb-prefix">you are here:</span>
+    <ul>
+
+        <li>
+            <a href="">home</a>
+        </li>
+        <li>
+            <span>/ </span>
+
+            <a href="">news</a>
+        </li>
+        <li>
+            <span>/ </span>
+
+            first team
+        </li>
+    </ul>
+</div>
+{% endblock bread %}
+{% block main %}
+
+    <div class="wrapper">
+
+        <div class="container">
+
+
+            <div class="content ">
+                <div class="mainCol">
+                    <div class="mainColInner">
+                        <div id="cms-block-2918" class="cms-block cms-block-element"
+                            data-block-type="sonata.page.block.container">
+                            <div class="container-block block-2918 ">
+
+
+                                <div class="content-header default thinner    has-image">
+                                    <h1 class="main-title">
+                                        First Team
+                                    </h1>
+                                </div>
+
+
+
+                                <style>
+                                    @media only screen and (min-width: 1000px) {
+                                        .title-image {
+                                            background-image: url('/static/images/banner/group.png') !important;
+                                            padding-bottom: 49.96%;
+                                        }
+                                    }
+
+                                    @media only screen and (max-width: 999px) {
+                                        .title-image {
+                                            background-image: url("/static/images/banner/group.png") !important;
+                                            padding-bottom: 49.95%;
+                                        }
+                                    }
+
+                                    @media only screen and (max-width: 499px) {
+                                        .title-image {
+                                            background-image: url('/static/images/banner/group_sm.png') !important;
+                                            padding-bottom: 49.90%;
+                                        }
+                                    }
+                                </style>
+
+
+
+                                <div class="title-image ">
+                                    <!-- EMPTY-->
+                                </div>
+
+                                <nav class="grouped-navigation closedMenu default">
+                                    <span class="current">First Team</span>
+                                    <div class="select"></div>
+                                    <ul class="bar">
+                                        <li>
+                                            <a href=""
+                                                class="is_active">First Team</a>
+                                        </li>
+                                        <!--
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/team/women" class="">Women</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/team/academy" class="">Academy</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="dropdown">
+                                        <li class="hidden">
+                                            <a href="https://www.liverpoolfc.com/team/first-team"
+                                                class="is_active">First Team</a>
+                                        </li>
+                                        <li class="hidden">
+                                            <a href="https://www.liverpoolfc.com/team/women" class="">Women</a>
+                                        </li>
+                                        <li class="hidden">
+                                            <a href="https://www.liverpoolfc.com/team/academy" class="">Academy</a>
+                                        </li>
+
+                                    </ul>
+                                -->
+                                </nav>
+
+                                <div id="cms-block-17815" class="cms-block cms-block-element"
+                                    data-block-type="lfc.fixtures.listing.block.player">
+                                    <div class="team-player-list">
+
+                                        <h2>GOALKEEPERS</h2>
+                                        {% if team_goal %}
+                                        {% for player in team_goal %}
+                                        <ul>
+                                            <li class="team-player-list-item">
+
+                                                <a
+                                                    href="{{ player.get_absolute_url }}">
+
+                                                    <div class="img-wrap">
+                                                        <img src="{{ player.playerProfile.url }}"
+                                                            alt="Alisson Becker">
+                                                    </div>
+                                                    <div class="number">{{ player.jerseyNumber }}</div>
+                                                    <div class="about">
+                                                        <div class="name">
+                                                            <span>{{ player.firstName }}</span> <span>{{ player.surname }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                </a>
+
+                                            </li> 
+                                            {% endfor %}
+                                            {% else %} 
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                  <h3><i></i></h3>
+                                                </li>
+                                      
+                                              </ul>                                  
+                                        </ul>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div id="cms-block-17816" class="cms-block cms-block-element"
+                                    data-block-type="lfc.fixtures.listing.block.player">
+                                    <div class="team-player-list">
+
+                                        <h2>DEFENDERS</h2>
+                                        {% if team_defend %}
+                                        {% for player in team_defend %}
+                                        <ul>
+                                            <li class="team-player-list-item">
+
+                                                <a
+                                                    href="{{ player.get_absolute_url }}">
+
+                                                    <div class="img-wrap">
+                                                        <img src="{{ player.playerProfile.url }}"
+                                                            alt="Virgil van Dijk">
+                                                    </div>
+                                                    <div class="number">{{ player.jerseyNumber }}</div>
+                                                    <div class="about">
+                                                        <div class="name">
+                                                            <span>{{ player.firstName}}</span> <span>{{ player.surname }}</span> <span></span>
+                                                        </div>
+                                                    </div>
+
+                                                </a>
+
+                                            </li>
+                                            {% endfor %}
+                                            {% else %} 
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                  <h3><i></i></h3>
+                                                </li>
+                                      
+                                              </ul>
+                                        </ul>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div id="cms-block-17817" class="cms-block cms-block-element"
+                                    data-block-type="lfc.fixtures.listing.block.player">
+                                    <div class="team-player-list">
+
+                                        <h2>MIDFIELDERS</h2>
+                                        {% if team_midfield %}
+                                        {% for player_mid in team_midfield %}
+                                        <ul>
+                                            <li class="team-player-list-item">
+
+                                                <a href="{{ player_mid.get_absolute_url }}">
+
+                                                    <div class="img-wrap">
+                                                        <img src="{{ player_mid.playerProfile.url }}"
+                                                            alt="Barrowfc">
+                                                    </div>
+                                                    <div class="number">{{ player_mid.jerseyNumber }}</div>
+                                                    <div class="about">
+                                                        <div class="name">
+                                                            <span>{{ player_mid.firstName }}</span><span>{{ player_mid.surname }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                </a>
+
+                                            </li>
+                                            {% endfor %}
+                                            {% else %} 
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                  <h3><i></i></h3>
+                                                </li>
+                                      
+                                              </ul>
+                                        </ul>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div id="cms-block-17818" class="cms-block cms-block-element"
+                                    data-block-type="lfc.fixtures.listing.block.player">
+                                    <div class="team-player-list">
+
+                                        <h2>FORWARDS</h2>
+                                        {% if team_striker %}
+                                        {% for player in team_striker %}
+                                        <ul>
+                                            <li class="team-player-list-item">
+
+                                                <a
+                                                    href="{{ player.get_absolute_url }}">
+
+                                                    <div class="img-wrap">
+                                                        <img src="{{ player.playerProfile.url }}"
+                                                            alt="">
+                                                    </div>
+                                                    <div class="number">{{ player.jerseyNumber }}</div>
+                                                    <div class="about">
+                                                        <div class="name">
+                                                            <span>{{ player.firstName }}</span> <span>{{ player.surname }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                </a>
+
+                                            </li>
+                                            {% endfor %}
+                                            {% else %} 
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                  <h3><i></i></h3>
+                                                </li>
+                                      
+                                              </ul>
+                                        </ul>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div id="cms-block-17819" class="cms-block cms-block-element"
+                                    data-block-type="lfc.fixtures.listing.block.player">
+                                    <div class="team-player-list">
+
+                                        <h2>ON LOAN</h2>
+                                        {% if team_loan %}
+                                        {% for player in team_loan %}
+                                        <ul>
+                                            <li class="team-player-list-item">
+
+                                                <a href="">
+
+                                                    <div class="img-wrap">
+                                                        <img src="{{ player.playerProfile.url }}"
+                                                            alt="">
+                                                    </div>
+                                                    <div class="number">{{player.jerseyNumber}}</div>
+                                                    <div class="about">
+                                                        <div class="name">
+                                                            <span>{{ player.firstName }}</span> <span>{{ player.surname }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                </a>
+
+                                            </li> 
+                                            {% endfor %}
+                                            {% else %} 
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                  <h3><i>NO PLAYER HAS BEEN LOANED OUT  YET</i></h3>
+                                                </li>
+                                      
+                                              </ul>                                     
+                                        </ul>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div id="cms-block-3194" class="cms-block cms-block-element"
+                            data-block-type="sonata.page.block.container">
+                            <div class="container-block block-3194 ">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="rightCol">
+
+                    <div class="rightAd">
+                        <div id='div-gpt-ad-RES_MAIN_RIGHT_ONE'>
+                            <script>
+                                Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_ONE');
+                            </script>
+                        </div>
+
+                    </div>
+
+
+
+                    <div id="cms-block-2919" class="cms-block cms-block-element"
+                        data-block-type="sonata.page.block.container">
+                        <div class="container-block block-2919 ">
+                            <div id="cms-block-3332" class="cms-block cms-block-element"
+                                data-block-type="sonata.block.service.text">
+                                <style type="text/css">
+                                    .richtext.linkList a {
+                                        display: block;
+                                        padding: 6px;
+                                        margin-bottom: 0;
+                                        overflow: hidden;
+                                        padding-right: 30px;
+                                        position: relative;
+                                        color: #333;
+                                        font-weight: normal;
+                                    }
+
+                                    .richtext.linkList a:nth-child(odd) {
+                                        background: #F6F6F6;
+                                    }
+
+                                    .richtext.linkList a:after {
+                                        border-bottom: 8px solid transparent;
+                                        border-left: 12px solid #000080;
+                                        border-top: 8px solid transparent;
+                                        content: "";
+                                        display: inline-block;
+                                        height: 0;
+                                        position: absolute;
+                                        width: 0;
+                                        right: 10px;
+                                        margin-top: -8px;
+                                        top: 50%;
+                                    }
+
+                                    @media screen and (max-width: 699px) {
+                                        .mainColInner .richtext img {
+                                            width: 100% !important;
+                                            height: auto !important;
+                                            float: left !important;
+                                            margin-bottom: 30px !important;
+                                        }
+                                </style>
+
+                                <div class="richtext linkList">
+                                    <h2>First Team Staff</h2>
+                                    {% for team_staff in first_team %}
+                                    <a href="{{team_staff.get_absolute_url}}"> {{team_staff.first_Name}} {{team_staff.last_Name}}</a>
+                                   {% endfor %}
+                                    
+                                </div>
+
+                            </div>
+
+                            <div id="cms-block-3333" class="cms-block cms-block-element"
+                                data-block-type="lfc.opta.standings.block.service">
+
+                                <section id="league-table" class="opta-wrapper">
+
+                                    <opta-widget widget="standings" competition="8" season="2021" team="14"
+                                        template="normal" live="true" default_nav="1" side="combined" show_form="0"
+                                        data_detail="full" show_key="false" show_crests="false"
+                                        points_in_first_column="false" lose_before_draw="false"
+                                        competition_naming="full" team_naming="full" date_format="dddd D MMMM YYYY"
+                                        sorting="false" show_live="true" show_relegation_average="false"
+                                        show_logo="false" show_title="false" breakpoints="550" sport="football">
+                                    </opta-widget>
+
+                                </section>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="rightAd">
+                        <div id='div-gpt-ad-RES_MAIN_RIGHT_TWO'>
+                            <script>
+                                Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_TWO');
+                            </script>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+        var opta_settings = {
+            subscription_id: 'da747e372c352a82f3dd6174084858fd',
+            language: 'en_GB',
+            timezone: 'Europe/London',
+            opta_tracking: false
+        };
+    </script>
+
+    <style>
+        .team-player-list-item .name>span {
+            width: 40px;
+        }
+    </style>
+
+
+
+
+    <!-- monitoring:3e9fda56df2cdd3b039f189693ab7844fbb2d4f6 -->
+</body>
+
+
+</html>
+{% endblock main %}

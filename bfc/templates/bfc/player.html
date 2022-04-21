@@ -1,0 +1,58 @@
+{% block player %}
+<div id="cms-block-21912" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+    <div class="container-block block-21912 ">
+      <section id="players-carousel">
+
+        <div class="carousel owl-carousel players-carousel">
+          {% for players in playerprofile %}
+          <div class="carousel-item ">
+            <div class="thumbnail">
+              <img src="{{ players.playerProfile.url }}" data-src="{{ players.playerProfile.url }}"
+                class="lazyLoadPlaceholder" alt="">
+
+              <div class="overlay">
+                <p class="fullname">
+                  {{ players.firstName }} {{ players.surname }}
+                </p>
+                <p>
+                  <label>Pos:</label>
+                  {{ players.position }}
+                </p>
+                <p>
+                  <label>Nat:</label>
+                  {{ players.nationality }}
+                </p>
+                <p>
+                  <label>DOB:</label>
+                  {{ players.dob }}
+                </p>
+              </div>
+
+            </div>
+
+            <div class="player-info">
+
+              <span class="number">
+                {{players.jerseyNumber}}
+              </span>
+              <span class="name">
+                <div class="front">{{ players.firstName }}</div>
+                <div class="back">view profile</div>
+              </span>
+
+            </div>
+
+            <a href="{{ players.get_absolute_url}}">
+            </a>
+
+          </div>
+          {% endfor %}
+        </div>
+        <a href="#" class="slideBtn owl-prev"></a>
+        <a href="#" class="slideBtn owl-next"></a>
+
+
+      </section>
+    </div>
+  </div>
+  {% endblock player %}

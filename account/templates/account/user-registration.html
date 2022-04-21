@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+    <script type="text/javascript"
+        src="{% static 'cdn-ukwest.onetrust.com/consent/aa158886-777d-463e-8082-e384a26718f6/OtAutoBlock.js' %}"></script>
+    <script src="{% static 'cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js' %}" type="text/javascript"
+        charset="UTF-8" data-domain-script="aa158886-777d-463e-8082-e384a26718f6"></script>
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/css/cookie-consent-5.css' %}" />
+    <meta http-equiv="Max-Age" content="0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lfc" />
+    <meta name="twitter:title" content="Register for FREE" />
+    <meta name="twitter:description" content=" " />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image:src"
+        content="//d3j2s6hdd6a7rg.cloudfront.net/images/international/thumb-no-image-3.jpg" />
+    <meta name="twitter:domain" content="liverpoolfc.com" />
+    <meta property="og:title" content="Register for FREE" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Liverpool FC" />
+    <meta property="og:image" content="//d3j2s6hdd6a7rg.cloudfront.net/images/international/thumb-no-image-2.jpg" />
+    <meta name="title" content="Register for FREE - Liverpool FC" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>Register for FREE - Barrow FC</title>
+
+
+    <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/js/base.js' %}"></script>
+    <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/js/scripts.min.js' %}"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
+
+    <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/js/lfcLogin-1.2.min.js' %}" type="text/javascript"></script>
+
+    <script type="text/javascript" src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/js/LiveUpdate-1.7.min.js' %}"></script>
+
+
+
+    <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/js/Global-5.01.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/js/jquery/plugins/jquery.lazyload.min.js' %}"
+        type="text/javascript"></script>
+
+
+    <script type="text/javascript">var allow_comments = true;</script>
+
+    <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/js/UserGeoGroups-1.02.min.js' %}"
+        type="text/javascript"></script>
+
+
+
+    <script language="JavaScript">
+
+        usergeogroups = new UserGeoGroups();
+        var geo_location;
+        var geo_group_location;
+
+        geo_cookie = $.cookie('lfc_geo_loc_cc');
+
+        if (!geo_cookie) {
+            var geo_location = null;
+
+            $.ajax({
+                type: 'GET',
+                url: 'https://d3j2s6hdd6a7rg.cloudfront.net/scripts/geo_location_lookup.php',
+                async: true,
+                jsonpCallback: 'jQueryCallback',
+                contentType: "application/json",
+                dataType: 'jsonp',
+                crossDomain: true,
+                cache: true
+            });
+        }
+        else {
+            geo_location = $.cookie('lfc_geo_loc_cc');
+            doJavascript(geo_location);
+        }
+        function jQueryCallback(data) {
+            $.cookie('lfc_geo_loc_cc', data.code, { path: '/', expires: 30 });
+            doJavascript(data.code);
+        }
+        function doJavascript(country_code) {
+            geo_location = country_code;
+
+            var allCountryGroups = { "EEA": ["AT", "BE", "BG", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "GB"], "membership_economy": ["AL", "AD", "AM", "AT", "AZ", "BY", "BE", "BA", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "GE", "DE", "GR", "HU", "IS", "IE", "IT", "KZ", "LV", "LI", "LT", "LU", "MK", "MT", "MD", "MC", "ME", "NL", "NO", "PL", "PT", "RO", "RU", "SM", "RS", "SK", "SI", "ES", "SE", "CH", "TR", "UA", "VA", "GI", "FO", "SJ", "GB", "GG", "IM", "JE"], "geo_bet_misli": ["TR"], "geo_bet_usa": ["US"], "geo_bet_188_row": ["BR", "KH", "CN", "ID", "JP", "KP", "KR", "LA", "MY", "MM", "PH", "SG", "TH", "VN", "TW", "HK", "MO"], "CurrencyCountries": ["AF", "AL", "DZ", "AO", "AR", "AM", "AU", "AZ", "BS", "BH", "BD", "BB", "BY", "BZ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BI", "KH", "CA", "CV", "CF", "CL", "CN", "CO", "KM", "CD", "CR", "HR", "CU", "CY", "CZ", "DK", "DJ", "DO", "EG", "ER", "EE", "ET", "FJ", "GM", "GE", "GH", "GT", "GN", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IL", "JM", "JP", "JO", "KZ", "KE", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LT", "MK", "MG", "MW", "MY", "MV", "MT", "MR", "MU", "MX", "MD", "MN", "MA", "MZ", "MM", "NA", "NP", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PA", "PG", "PY", "PE", "PH", "PL", "QA", "RO", "RU", "RW", "LC", "WS", "ST", "SA", "RS", "SC", "SL", "SG", "SK", "SB", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TH", "TO", "TT", "TN", "TR", "TM", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VE", "VN", "YE", "ZM", "ZW", "TW", "PF", "GG", "IM", "JE", "BM", "KY", "FK", "GI", "SH", "HK", "MO", "AW", "CW", "EH", "GP", "MF", "SX"], "FACup_AsiaAustralasia": ["AU", "BD", "BT", "BN", "KH", "CN", "FJ", "IN", "ID", "JP", "KI", "KP", "KR", "LA", "MY", "MV", "MH", "FM", "MN", "MM", "NR", "NP", "NZ", "PK", "PW", "PG", "PH", "WS", "SG", "SB", "LK", "TH", "TO", "TV", "VU", "VN", "TW", "NC", "PF", "WF", "CK", "NU", "TK", "HK", "GF"], "geo_bet_comeon": ["FI", "NO", "SE"], "partner_group_xolo": ["BD", "IN", "NP", "LK"], "geo_bet_comeon_norway": ["NO"], "geo_bet_comeon_finland": ["FI"], "geo_bet_comeon_sweden": ["SE"], "partner_group_lumberjack_liquidators": ["CA", "US"], "partner_group_instaforex": ["AF", "AM", "AZ", "BH", "BD", "BY", "BT", "BN", "KH", "CN", "IN", "ID", "IR", "JP", "JO", "KZ", "KP", "KR", "KW", "KG", "LA", "LB", "MY", "MV", "MD", "MN", "MM", "NP", "OM", "PK", "PH", "QA", "RU", "SA", "SG", "LK", "SY", "TJ", "TH", "TM", "UA", "AE", "UZ", "VN", "YE", "TW", "HK", "MO"], "geo_background": ["IE", "GB"], "geo_bet_betfair": ["BG", "DK", "IE", "IT", "ES", "GB", "BG", "DK", "IE", "IT", "ES", "GB"], "UKROI": ["IE", "GB", "GG", "IM", "JE"], "partner_group_nivea": ["DK", "FI", "NO", "SE", "GB"], "geo_bet_marathon": ["AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AT", "AZ", "BS", "BB", "BY", "BE", "BZ", "BJ", "BO", "BA", "BW", "BG", "BF", "BI", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IQ", "IE", "IT", "JM", "KE", "KI", "KP", "KR", "KW", "KG", "LV", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "ME", "MA", "MZ", "MM", "NA", "NR", "NL", "NZ", "NI", "NE", "NG", "PW", "PA", "PG", "PY", "PE", "PL", "PT", "RO", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SN", "RS", "SC", "SL", "SK", "SI", "SB", "SO", "ZA", "ES", "SD", "SR", "SZ", "CH", "TJ", "TZ", "TL", "TG", "TO", "TT", "TN", "TV", "UG", "UA", "GB", "US", "UY", "VU", "VA", "VE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "HK", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX"], "UK_only": ["GB"], "allowed_currencies_default": ["ES", "US"], "lfctv_economy": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "CF", "TD", "CL", "CN", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TH", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX", "AU", "CA", "DK", "MY", "NO", "SG", "GB", "GG", "IM", "JE", "HK", "GP"], "partner_group_bancdebinary": ["AU", "AT", "BE", "BG", "CA", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ZA", "ES", "SE", "CH", "GB"], "allowed_currencies": ["AU", "CA", "DK", "MY", "NO", "SG", "ES", "GB", "US", "HK"], "allowed_membership_currencies_default": ["ES", "GB", "US"], "partner_group_claymore": ["AU"], "partner_group_draftkings": ["CA", "GB", "US"], "geo_bet_betvictor_germanic": ["AT", "LI", "CH"], "geo_bet_betvictor_english": ["AD", "AO", "AZ", "BH", "BZ", "BJ", "BT", "BO", "BW", "BN", "BF", "BI", "KH", "CA", "CV", "CF", "TD", "KM", "CG", "CR", "CY", "DJ", "DM", "DO", "EG", "SV", "GQ", "ER", "ET", "FI", "GA", "GM", "GE", "GH", "GR", "GT", "GN", "GW", "GY", "HT", "HN", "IN", "IE", "JM", "JP", "JO", "KZ", "KE", "KI", "KR", "KW", "KG", "LA", "LB", "LS", "LR", "LY", "LU", "MK", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "FM", "ME", "MA", "MZ", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PG", "PY", "QA", "RU", "RW", "VC", "WS", "SM", "ST", "SA", "SN", "SC", "SL", "SK", "SI", "SB", "SO", "LK", "SR", "SZ", "SE", "TJ", "TZ", "TL", "TG", "TT", "TN", "TV", "AE", "GB", "VU", "VE", "VN", "YE", "ZW", "CX", "CC", "HM", "NF", "BV", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "PN", "SH", "GS", "TC", "FO", "GL", "AW", "SJ", "AQ"], "lfctv_show_paypal": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CN", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TH", "TL", "TG", "TO", "TT", "TN", "TM", "TV", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "HK", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "MF", "SX"], "allowed_currencies_sg": ["SG", "US"], "allowed_currencies_au": ["AU", "US"], "allowed_currencies_ca": ["CA", "US"], "allowed_currencies_dk": ["DK", "ES"], "allowed_currencies_no": ["NO", "ES"], "vitality_geo": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SK", "SI", "SB", "SO", "ES", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX"], "discovery_geo": ["DZ", "AO", "AZ", "BW", "CD", "CG", "JO", "KE", "LY", "MZ", "NA", "NE", "NG", "OM", "RS", "ZA", "SD", "SY", "UG", "YE", "ZM", "ZW", "EH", "SX"], "allowed_currencies_gb": ["GB"], "allowed_currencies_im": ["IM"], "allowed_currencies_je": ["JE"], "allowed_currencies_gg": ["GG"], "allowed_currencies_my": ["MY"], "allowed_currencies_gi": ["GI"], "allowed_currencies_hk": ["HK"], "partner_group_joie": ["CN", "GB", "TW"], "partner_group_tatweermisr": ["EG", "GB"], "partner_group_btsport": ["IE", "GB", "GG", "IM", "JE"], "partner_group_liverpool_vodka": ["IE", "GB"], "all_excluding_china": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TH", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "HK", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX"], "group_europe": ["AT", "BE", "BG", "HR", "CY", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "RU", "SK", "SE", "CH", "GB"], "partner_group_levis": ["AT", "BY", "BE", "BG", "HR", "CZ", "DK", "EE", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LI", "LT", "LU", "NL", "NO", "PL", "PT", "RO", "SK", "SE", "CH", "GB", "GG", "IM", "GI"], "uk_ireland": ["IE", "GB"], "partner_group_nh_foods": ["AU", "KH", "CN", "ID", "JP", "LA", "MM", "PH", "SG", "TH", "GB", "VN", "TW", "HK"], "partner_group_1xbet": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SK", "SI", "SB", "SO", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG", "UA", "AE", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX"], "UK_full": ["GB", "GG", "IM", "JE"] };
+            geo_group_location = usergeogroups.setGeoGroups(geo_location, allCountryGroups);
+        }
+
+    </script>
+
+    <script language="JavaScript">
+
+        function enableGeoPlaceholder(elName, content) {
+            $('#' + elName + '').replaceWith(content);
+        }
+    </script>
+    <script type='text/javascript'>
+        function lfcAdServingDisabled() {
+
+            return !(typeof lfc_ad_serving_disabled == 'undefined' || lfc_ad_serving_disabled == 0);
+        }
+        function testBrowserInRange(range) {
+            return ($(window).width() > range[0] && $(window).width() < range[1]);
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (typeof geo_group_location != 'undefined') {
+                if (geo_group_location.null) {
+                    var clickBgUrl = ' ' % 3b% 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20if (clickBgUrl)% 7b % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 20 % 24(.html'#SponsorBg').click(function (event) {
+                        if (event.target.id == 'SponsorBg') {
+                            window.open(clickBgUrl)
+                        }
+                    })
+                    $('body').prepend('<style type="text/css">#SponsorBg{cursor:pointer;}</style>');
+                }
+            }
+        }
+});
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+    <link href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/css/main-6.07.min.css' %}" media="screen" type="text/css"
+        rel="stylesheet" />
+    <link href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/css/print-1.1.min.css' %}" media="print" type="text/css"
+        rel="stylesheet" />
+
+    <!--[if IE 9]> 
+  <style type="text/css"> 
+    #tabsNewsWidget-1 .Caption h1 a, #tabsNewsWidget-2 .Caption h1 a, #tabs-1 .Caption h1 a {
+      font-family:Arial,Helvetica,sans-serif;
+      font-size:11px;
+    } 
+  </style> 
+<![endif]-->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (typeof geo_group_location != 'undefined') {
+                if (geo_group_location.null) {
+                    var imageBackground = '/static/d3j2s6hdd6a7rg.cloudfront.net/uploads/9706__2428__lfc-desktop-bg.jpg';
+                    var imageCentral = '/static/d3j2s6hdd6a7rg.cloudfront.net/uploads/9706__2428__lfc-desktop-bg.jpg';
+                    var backgroundColour = '#000000';
+                    var backgroundRepeat = 'no-repeat';
+                    var cssOutput = '<style type="text/css">body {background: ' + backgroundColour + ' url(' + imageBackground + ') top center ' + backgroundRepeat + ' !important } #SponsorBg{background:url(' + imageCentral + ') top center no-repeat!important;}</style>';
+                    $('body').prepend(cssOutput);
+                }
+            }
+        });
+    </script>
+
+    <style type="text/css">
+        body {
+            background: #000000 url(/static/d3j2s6hdd6a7rg.cloudfront.net/uploads/9706__2428__lfc-desktop-bg.jpg) top center no-repeat !important;
+        }
+
+        #SponsorBg {
+            background: url(/static/d3j2s6hdd6a7rg.cloudfront.net/uploads/9706__2428__lfc-desktop-bg.jpg) top center no-repeat !important;
+        }
+    </style>
+
+
+
+    <link href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/css/registration-2.91.min.css' %}" media="screen"
+        type="text/css" rel="stylesheet" />
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/css/styles.css' %}" />
+    <!--[if  (lt IE 9) & (!IEMobile)]>
+          <link rel="stylesheet" href="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/css/styles-ie8.css" />
+          <![endif]-->
+    <!--[if lt IE 9]>
+            <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/js/polyfills-ie8.min.js"></script>
+          <![endif]-->
+    <!--[if IE 9]>
+            <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/js/polyfills-ie9.min.js"></script>
+          <![endif]-->
+
+
+
+
+
+
+    <link rel="shortcut icon" href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/images/bfc-fav.png' %}"
+        <script>
+    </script>
+    <script type="text/javascript">
+        if ($.browser.msie) {
+            $("html").addClass("ie");
+        }
+        if ($.browser.mozilla && $.browser.version == 11.0) {
+            $("html").addClass("ie");
+        }
+    </script>
+
+    <script>
+        function validateForm() {
+
+            var message = '';
+            var email = document.forms["Login"]["username"].value;
+            var password = document.forms["Login"]["password"].value;
+
+            $('#login_form_username').attr('style', 'border-color: none');
+            $('#login_form_password').attr('style', 'border-color: none');
+
+            if (email == "") {
+                message = "Please enter your username";
+                $('#invalid_login_msg').show();
+                $('#invalid_login_msg').html('<p class="invalid_login_msg">' + message + '</p>');
+                $('#login_form_username').attr('style', 'border-color: #c00 !important');
+                return false;
+            }
+            var isEmail = email.includes("@");
+            if (isEmail != true) {
+                message = "Please enter your email address as your username";
+                $('#invalid_login_msg').show();
+                $('#invalid_login_msg').html('<p class="invalid_login_msg">' + message + '</p>');
+                $('#login_form_username').attr('style', 'border-color: #c00 !important');
+                return false;
+            }
+            if (password == "") {
+                message = "Please enter your password";
+                $('#invalid_login_msg').show();
+                $('#invalid_login_msg').html('<p class="invalid_login_msg">' + message + '</p>');
+                $('#login_form_password').attr('style', 'border-color: #c00 !important');
+                return false;
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript"
+        src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/lfcMembershipPlugin/js/reg_address_lookup.1.6.js' %}"></script>
+    <link rel="stylesheet" type="text/css" media="print"
+        href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/css/reg-print.css' %}" />
+</head>
+
+<body class="main-site-layout standard-single-column new_lfc_layout">
+
+
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCFJMVP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+
+        })(window, document, 'script', 'dataLayer', 'GTM-KCFJMVP');</script>
+    <!-- End Google Tag Manager -->
+
+    
+    <div class="wrapper">
+        <a id="page-top"></a>
+       
+        <div class="clear"></div>
+        <h1>Register for FREE</h1>
+        <div class="container">
+            <div class="content">
+                <section id="content">
+
+
+                    <div class="membershipHeadingBox">
+                    </div>
+
+                    <div class="innnerContent">
+
+                        <p class="topMessage right">Already registered?<a href="{% url 'account:login' %}"> Log in
+                                here</a>.</p>
+
+                        <div class="mbsFormContainerMid">
+                            <div class="RegistrationContent">
+                                <div class="boxContent">
+
+
+                                    <div class="rightColumn">
+                                        <div class="innerPadding">
+                                            <h2 class="toggler">Reasons to Register</h2>
+
+                                            <div class="registerText">
+                                                <ul class="leftList">
+                                                    <li>Pre-Season Never Miss A Moment</li>
+                                                    </li>
+                                                    <li>Exclusive interviews and training </li>
+                                                </ul>
+                                                <ul class="rightList">
+                                                    <li>Get the latest news</li>
+                                                    <li>Classic match highlights</li>
+                                                </ul>
+                                                <p style="float: right; padding-top: 15px;">...and it's completely
+                                                    <span>FREE!</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="well">
+                                        {% if messages %}
+                                        {% for message in messages %}
+                                        <div class="alert alert-success" role="alert">
+                                            <center>{{ message }}</center>
+                                            {% endfor %}
+                                            {% endif %}
+                                        </div>
+                                        <div class="leftColumn">
+
+                                            <form action="." method="post" id="WholesaleContact"
+                                                class="one-submit-only">
+                                                {% csrf_token %}
+
+                                                <h2>Enter your details </h2>
+
+                                                <input autocomplete="off" type="hidden" name="sf_guard_user[id]"
+                                                    id="sf_guard_user_id" /> <input type="hidden"
+                                                    name="site_user_profile[id]" id="site_user_profile_id" /> <input
+                                                    autocomplete="off" type="hidden" name="address_book[id]"
+                                                    id="address_book_id" />
+                                                <div class="left registrationForm">
+                                                    <table class="lfcMembershipTable formNameDiv">
+
+
+
+
+
+                                                        <tr class="leftRow">
+                                                            <th>
+                                                                <label for="site_user_profile_forename">First
+                                                                    Name</label>
+                                                                <span class="req">
+                                                                    * </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                                {{registration_form.first_name}}
+
+                                                            </td>
+                                                            <td class="formHelp">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="leftRow">
+                                                            <th>
+                                                                <label for="site_user_profile_surname">last_name</label>
+                                                                <span class="req">
+                                                                    * </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                                {{registration_form.last_name}}
+
+                                                            </td>
+                                                            <td class="formHelp">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table class="lfcMembershipTable formEmailDiv">
+
+
+
+
+
+                                                        <tr class="">
+                                                            <th>
+                                                                <label for="sf_guard_user_username">Email</label>
+                                                                <span class="req">
+                                                                    * </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                                {{registration_form.email}}
+
+                                                            </td>
+                                                            <td class="formHelp">
+                                                                (Username for login) </td>
+                                                        </tr>
+
+
+
+
+
+                                                        <tr class="">
+                                                            <th>
+                                                                <label for="sf_guard_user_username_confirm">Contact
+                                                                </label>
+                                                                <span class="req">
+                                                                    * </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                                {{ registration_form.contact }}
+
+                                                            </td>
+                                                            <td class="formHelp">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table class="lfcMembershipTable formGenderDiv">
+
+
+
+
+
+                                                        <tr class="noStyle">
+                                                            <th>
+                                                                <label for="site_user_profile_gender">Gender</label>
+                                                                <span class="req">
+                                                                </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                                <ul class="radio_list">
+                                                                    <li>
+                                                                        {{registration_form.gender}}
+                                                                    </li>
+                                                                </ul>
+
+                                                            </td>
+                                                            <td class="formHelp">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <div class="right registrationForm">
+                                                    <table class="lfcMembershipTable formDobDiv">
+
+
+
+
+
+                                                        <tr class="noStyle">
+                                                            <th>
+                                                                <label for="site_user_profile_dob">Date of Birth</label>
+                                                                <span class="req">
+                                                                    * </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                               {{registration_form.dob}}
+                                                            </td>
+                                                            <td class="formHelp">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table class="lfcMembershipTable formCountryDiv">
+
+
+
+
+
+                                                        <tr class="">
+                                                            <th>
+                                                                <label
+                                                                    for="address_book_country_code_id">Country</label>
+                                                                <span class="req">
+                                                                    * </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                                {{registration_form.country}}
+
+                                                            </td>
+                                                            <td class="formHelp">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table class="lfcMembershipTable formPasswordDiv">
+
+
+
+
+
+                                                        <tr class="">
+                                                            <th>
+                                                                <label for="sf_guard_user_password">Password</label>
+                                                                <span class="req">
+                                                                    * </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                                {{registration_form.password1}}
+
+                                                            </td>
+                                                            <td class="formHelp">
+                                                            </td>
+                                                        </tr>
+
+
+
+
+
+                                                        <tr class="">
+                                                            <th>
+                                                                <label for="sf_guard_user_password_confirm">Confirm
+                                                                    Password</label>
+                                                                <span class="req">
+                                                                    * </span>
+                                                            </th>
+                                                            <td onclick="void(0)">
+                                                                {{registration_form.password2}}
+
+                                                            </td>
+                                                            <td class="formHelp">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <div class="tearmsText">
+                                                    <div class="contact-pref">
+                                                        <!--
+                                                    <div class="consent-wrap">
+                                                        <h2>Contact Permission</h2>
+
+
+                                                        <div class="consent-top">
+
+                                                            <div class='text'>
+                                                                <p class="MsoNormal">We would like to keep in touch and
+                                                                    send you information via email. Please let us know
+                                                                    the type of information you&rsquo;d like to receive
+                                                                    by clicking below.</p>
+                                                                <p>&nbsp;</p>
+                                                                <h3 style="font-size:16px;">
+                                                                    <p class="MsoNormal"><strong><span>Liverpool FC
+                                                                                news, products, services and
+                                                                                offers</span></strong></p>
+                                                                </h3>
+                                                                <p class="MsoNormal">Please keep me updated on Liverpool
+                                                                    FC, Liverpool FC Women and the LFC Foundation.</p>
+                                                            </div>
+
+                                                            <div class="contactable form" id="set1">
+                                                                <ul class="radio_list">
+                                                                    <li><input
+                                                                            name="site_user_profile[opt_lfc_email_consent]"
+                                                                            type="radio" value="1"
+                                                                            id="site_user_profile_opt_lfc_email_consent_1" />&nbsp;<label
+                                                                            for="site_user_profile_opt_lfc_email_consent_1">Yes
+                                                                            Please</label></li>
+                                                                    <li><input
+                                                                            name="site_user_profile[opt_lfc_email_consent]"
+                                                                            type="radio" value="0"
+                                                                            id="site_user_profile_opt_lfc_email_consent_0" />&nbsp;<label
+                                                                            for="site_user_profile_opt_lfc_email_consent_0">No
+                                                                            Thanks</label></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="consent-bottom">
+                                                            <div class='text'>
+                                                                <h3 style="font-size:16px;">Liverpool FC Sponsors and
+                                                                    Partners</h3>
+                                                                <p><span>Please keep me updated on</span>&nbsp;<a
+                                                                        href="../../corporate/partners.html"
+                                                                        target="_blank">official sponsors and
+                                                                        partners</a>&nbsp;products, events, news and
+                                                                    offers available to Liverpool FC supporters.</p>
+                                                            </div>
+                                                            <div class="contactable form" id="set3">
+                                                                <ul class="radio_list">
+                                                                    <li><input
+                                                                            name="site_user_profile[opt_partner_email_consent]"
+                                                                            type="radio" value="1"
+                                                                            id="site_user_profile_opt_partner_email_consent_1" />&nbsp;<label
+                                                                            for="site_user_profile_opt_partner_email_consent_1">Yes
+                                                                            Please</label></li>
+                                                                    <li><input
+                                                                            name="site_user_profile[opt_partner_email_consent]"
+                                                                            type="radio" value="0"
+                                                                            id="site_user_profile_opt_partner_email_consent_0" />&nbsp;<label
+                                                                            for="site_user_profile_opt_partner_email_consent_0">No
+                                                                            Thanks</label></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <p>&nbsp;</p>
+                                                            <p class="MsoNormal">You can withdraw these consents and
+                                                                alter your privacy preferences or unsubscribe at any
+                                                                time by visiting the preference centre link found on the
+                                                                bottom of every e-mail we send to you.&nbsp; By
+                                                                registering you signify that you have read and accept
+                                                                Liverpool Football Club&nbsp;<a
+                                                                    href="../../legal/terms-and-conditions.html">Terms
+                                                                    and Conditions</a>&nbsp;and have&nbsp;read
+                                                                the&nbsp;club&nbsp;<a
+                                                                    href="../../legal/privacy-policy.html"
+                                                                    target="_blank">Privacy Policy.</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            -->
+                                                    </div>
+
+
+                                                    <!-- YES/NO RADIO BUTTONS -->
+                                                    <script type="text/javascript">
+                                                        function highlightRadio(input, id) {
+                                                            $('#' + id + ' ul li label').removeClass('active');
+                                                            input.parent().children('label').addClass('active');
+                                                        }
+
+                                                        $(document).ready(function () {
+                                                            highlightRadio($('#set1 ul li input:checked'), 'set1');
+                                                            highlightRadio($('#set2 ul li input:checked'), 'set2');
+                                                            highlightRadio($('#set3 ul li input:checked'), 'set3');
+                                                            highlightRadio($('#set4 ul li input:checked'), 'set4');
+                                                        });
+
+                                                        $('#set1 ul li input').click(function () {
+                                                            highlightRadio($(this), 'set1');
+                                                        });
+
+                                                        $('#set2 ul li input').click(function () {
+                                                            highlightRadio($(this), 'set2');
+                                                        });
+
+                                                        $('#set3 ul li input').click(function () {
+                                                            highlightRadio($(this), 'set3');
+                                                        });
+
+                                                        $('#set4 ul li input').click(function () {
+                                                            highlightRadio($(this), 'set4');
+                                                        });
+                                                    </script>
+
+                                                    <br />
+
+
+                                                    <div class="innerPadding">
+                                                        <div class="buttonPlaceholder register">
+                                                            <input type="submit" value="Register"
+                                                                class="btn right metroButton" />
+                                                            <span class="buttonIcon"></span>
+                                                        </div>
+                                                    </div>
+                                            </form>
+                                        </div>
+
+                                    </div> <!-- end of boxContent -->
+                                </div><!-- end of ArticleContent -->
+
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="mbsFormContainerBot"></div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <script>
+                            //Default
+                            var class_name = 'one-submit-only';
+                            var form_sent = false;
+
+
+                            $(function () {
+                                $('form.' + class_name).submit(function () {
+                                    if (form_sent == false) {
+                                        //alert("sending");
+                                        form_sent = true;
+                                        // Fade all buttons within this form
+                                        $('form.' + class_name + ' button').css({ opacity: 0.6 });
+                                        return true;
+                                    }
+                                    else {
+                                        //alert("not sending");
+                                        return false;
+                                    }
+                                });
+                            });
+                        </script>
+
+                        <script type="text/javascript">
+                            var width = $(window).width();
+                            reposition();
+
+                            $(window).resize(function (event) {
+                                width = $(window).width();
+                            });
+
+                            $(window).scroll(function (event) {
+                                reposition();
+                            });
+
+                            $('input#sf_guard_user_password').blur(function () {
+                                $('.ui-tooltip').remove();
+                            });
+
+                            $('input').tooltip({
+                                content: function () {
+                                    return $(this).attr('title');
+                                }
+                            });
+
+                            function reposition() {
+                                if (width > 1260) {
+                                    var top = $(window).scrollTop();
+                                    var position = 312;
+                                    var leftColBottom = $('.leftColumn').height() + position;
+                                    if (top > position && top <= leftColBottom - $('.rightColumn').height()) {
+                                        $('.rightColumn').css('margin-top', top - position);
+                                    }
+                                    else if (top < position) {
+                                        $('.rightColumn').css('margin-top', 0);
+                                    }
+                                    else {
+                                        $('.rightColumn').css('margin-top', leftColBottom - position - $('.rightColumn').height());
+                                    }
+                                }
+                                else {
+                                    $('.rightColumn').css('margin-top', 0);
+                                }
+                            }
+
+                            $(document).ready(function () {
+                                // store referrer in cookie, if it's not this page itself.
+                                if (document.referrer && document.referrer.indexOf('/my-lfc/join/user-details') === -1) {
+                                    $.cookie('lfc_stored_referrer', document.referrer);
+                                }
+
+                                // set up toggling
+                                $(document).delegate('h2.toggler', 'click', function (evt) {
+                                    var $this = $(this);
+                                    if ($this.hasClass('open')) {
+                                        $this.removeClass('open');
+                                        $this.next('div').slideUp();
+                                    } else {
+                                        $this.next('div').slideDown();
+                                        $this.addClass('open');
+                                    }
+                                });
+                            });
+                        </script>
+
+                        <div class="backButtonPlaceholderDiv">
+                            <a href="{% url 'account:login' %}"
+                                class="pageButtons centerBtns backButtonPlaceholder buttonPlaceholder greyPayBtn btn metroButton">Back</a>
+                        </div>
+
+
+                </section>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        {% include 'account/footer.html' %}
+    </div>
+    
+</body>
+
+</html>

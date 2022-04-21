@@ -1,0 +1,4781 @@
+.new_lfc_layout .contactable input[type=radio] {
+    float: none;
+    width: auto
+}
+
+.new_lfc_layout .form-btn-wrapper .metroButton {
+    padding: 0 55px 0 15px
+}
+
+.new_lfc_layout .resetPassForm .form-btn-wrapper {
+    width: 505px
+}
+
+@media (max-width:699px) {
+    .new_lfc_layout .resetPassForm .form-btn-wrapper {
+        width: 100%
+    }
+}
+
+.new_lfc_layout .resetPassForm .buttonPlaceholder {
+    margin-right: 0
+}
+
+.new_lfc_layout .resetPassForm .form-btn-wrapper .metroButton:disabled {
+    padding: 0 15px 0 15px;
+    background: #ccc
+}
+
+.new_lfc_layout .resetPassForm .form-btn-wrapper .metroButton:disabled+span.buttonIcon {
+    display: none
+}
+
+.membershipHeadingBox {
+    padding-left: 14px;
+    padding-top: 13px
+}
+
+.new_lfc_layout .ui-tooltip {
+    font-size: 12px;
+    font-family: Arial, sans-serif
+}
+
+.mbsFormContainerTop {
+    width: 902px;
+    height: 18px;
+    margin: 25px auto 0 auto
+}
+
+#Container .mbsFormContainerTop {
+    background: url(../images/template/lfc-membership-rndBox-top.gif)
+}
+
+.mbsFormContainerMid {
+    width: 852px;
+    margin: 0 auto 0 auto;
+    padding: 10px 25px
+}
+
+#Container .mbsFormContainerMid {
+    background: url(../images/template/lfc-membership-rndBox-mid.gif)
+}
+
+.almost_there {
+    margin-bottom: 20px;
+    float: left;
+    width: 100%
+}
+
+.almost_there h2 {
+    float: left;
+    widht: auto
+}
+
+.almost_there p {
+    float: right
+}
+
+.registerText {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 15px
+}
+
+.registerText::after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.registerText p {
+    font-size: 16px;
+    font-weight: 700
+}
+
+.registerText ul,
+.registerText.signUpMessage ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    padding-left: 15px
+}
+
+.registerText ul li+li,
+.registerText ul+ul {
+    margin-top: 10px
+}
+
+.registerText ul li.image-bullet {
+    list-style: none;
+    margin-left: -30px;
+    padding: 6px 0 4px 40px;
+    background-position: 0 50%;
+    background-size: 30px;
+    background-repeat: no-repeat
+}
+
+.registerText ul li.image-bullet.video {
+    background-image: url(../images/reg/bullet-video.png)
+}
+
+.registerText ul li.image-bullet.match {
+    background-image: url(../images/reg/bullet-match.png)
+}
+
+.registerText ul li.image-bullet.win {
+    background-image: url(../images/reg/bullet-win.png)
+}
+
+.registerText ul li.image-bullet.news {
+    background-image: url(../images/reg/bullet-news.png)
+}
+
+.registerText ul li.image-bullet.forum {
+    background-image: url(../images/reg/bullet-forums.png)
+}
+
+.registerText ul li.image-bullet.shirt {
+    background-image: url(../images/reg/bullet-shirt.png)
+}
+
+.new_lfc_layout .mbsFormContainerMid {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    background: 0 0;
+    padding: 0
+}
+
+#White .paymentForm input,
+#White .paymentForm textarea {
+    border: none
+}
+
+#newPaymentForm .paymentFormWrap {
+    padding: 15px 0 20px 0;
+    clear: both
+}
+
+#newPaymentForm input[type=text] {
+    border: solid 1px #999 !important;
+    font-size: 16px;
+    color: #333;
+    padding: 3px;
+    width: 93%;
+    max-width: 300px;
+    margin: 0 10px 20px 10px
+}
+
+#newPaymentForm .mbsFormContainerMid {
+    width: 100%;
+    background: 0 0;
+    margin: 0;
+    padding: 0;
+    background: 0 0
+}
+
+#newPaymentForm .ArticleContent h1 {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 30px
+}
+
+#newPaymentForm .ArticleContent h2 {
+    float: left;
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+    padding-top: 20px;
+    width: 320px;
+    font-family: Arial, sans-serif
+}
+
+#newPaymentForm .ArticleContent h3 {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    clear: both
+}
+
+#newPaymentForm .ArticleContent h4 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+    margin: 0 0 30px 0
+}
+
+#newPaymentForm .directDebitArea,
+#newPaymentForm .paymentForm fieldset {
+    width: 100%;
+    padding: 0 20px 0 20px;
+    float: left
+}
+
+#newPaymentForm .ddForm {
+    float: left
+}
+
+.dd #WholesaleContact .lfcMembershipTable th {
+    width: auto !important
+}
+
+#newPaymentForm .paymentForm fieldset {
+    background: #eee;
+    margin: 20px 0 20px 0;
+    padding: 20px 0;
+    border: solid 1px #ccc
+}
+
+#newPaymentForm .ArticleContent fieldset p {
+    margin: 0 0 20px 0 !important;
+    font-size: 16px !important;
+    color: #333 !important;
+    padding: 0 0 15px 0 !important;
+    font-family: Arial, sans-serif !important
+}
+
+.formBoxOut {
+    background: #eee;
+    border: solid 1px #ccc;
+    max-width: 904px;
+    margin: 30px auto 0 auto;
+    padding: 20px 20px 0 20px
+}
+
+.formBoxOut p {
+    margin: 0 0 10px 0 !important;
+    font-size: 16px !important;
+    color: #333 !important;
+    font-family: Arial, sans-serif !important
+}
+
+.formBoxOut p span {
+    padding: 4px;
+    font-weight: 700;
+    margin: 0 0 0 6px
+}
+
+.boxOutRow {
+    width: 100%;
+    margin: 0 0 10px 0
+}
+
+#newPaymentForm #periodSet,
+#newPaymentForm #voucherSet {
+    text-align: center
+}
+
+#newPaymentForm #periodSet label.activeLabel {
+    font-weight: 700
+}
+
+#newPaymentForm .paymentForm .fieldHalf {
+    display: block;
+    text-align: center
+}
+
+#newPaymentForm #periodSet .fieldHalf {
+    padding: 20px 0 20px 0
+}
+
+#newPaymentForm .fieldHalf.leftField {
+    border-right: dashed 1px #bbb;
+    width: 50%;
+    float: left;
+    padding-right: 20px
+}
+
+#newPaymentForm #paymentSet {
+    text-align: center
+}
+
+#newPaymentForm #paymentSet .leftField {
+    width: 65%;
+    float: left;
+    padding-right: 0;
+    text-align: center
+}
+
+#newPaymentForm .bottomField {
+    text-align: center !important;
+    padding-top: 20px;
+    margin-bottom: 20px
+}
+
+#newPaymentForm #paymentSet .rightField {
+    width: 35%;
+    padding-left: 0;
+    float: right
+}
+
+#newPaymentForm .fieldHalf.rightField {
+    padding-left: 20px;
+    width: 50%;
+    float: right
+}
+
+#newPaymentForm .fieldHalf .halfWidth {
+    width: 50%;
+    float: left
+}
+
+#newPaymentForm .paymentForm label {
+    font-size: 16px;
+    color: #333;
+    text-transform: capitalize
+}
+
+#newPaymentForm .directDebitArea {
+    background: #ddd;
+    border: solid 1px #ccc;
+    margin: 15px 0 30px 0
+}
+
+#newPaymentForm .directDebitLeft {
+    float: left;
+    margin-top: 50px
+}
+
+#newPaymentForm .ddIcon {
+    float: left;
+    margin: 0 20px 0 0
+}
+
+#newPaymentForm #directDebitIntro {
+    text-align: center
+}
+
+#newPaymentForm #directDebitFull {
+    display: none
+}
+
+#newPaymentForm .ddBtn {
+    display: inline-block;
+    background: url(../images/reg/payment-icon-directdebit.png) no-repeat;
+    min-width: 102px;
+    min-height: 64px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 400;
+    padding: 0 0 0 20px;
+    width: auto;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    text-decoration: none
+}
+
+#newPaymentForm .ddBtn:hover {
+    text-decoration: underline;
+    color: #fdd236
+}
+
+#newPaymentForm .directDebitRight {
+    float: right;
+    margin: 20px 0
+}
+
+#newPaymentForm .ddBtnWrap {
+    background: #fff;
+    border: solid 1px #ccc;
+    float: left;
+    width: 186px;
+    text-align: center;
+    padding: 10px
+}
+
+#newPaymentForm #ddBtnWrap1 {
+    margin-right: 20px
+}
+
+#newPaymentForm .ddTxt {
+    color: #333;
+    font-size: 16px;
+    width: 100%;
+    clear: both;
+    float: left;
+    height: 50px
+}
+
+#newPaymentForm .payFormBtn,
+.payFormBtn {
+    display: inline-block;
+    background: #c3000d;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: solid 1px #8c0000
+}
+
+#newPaymentForm .payFormBtn.smallPayBtn,
+.smallPayBtn {
+    background: #c3000d;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 16px;
+    border: solid 1px #8c0000
+}
+
+#newPaymentForm .payFormBtn.greyPayBtn,
+.greyPayBtn {
+    background: #888;
+    margin-bottom: 20px;
+    color: #fff;
+    border: solid 1px #777
+}
+
+#newPaymentForm .payFormBtn:hover,
+.payFormBtn:hover {
+    background: #fdd236;
+    color: #333;
+    border: solid 1px #999;
+    cursor: pointer
+}
+
+#newPaymentForm .paymentForm .fullWidth {
+    text-align: center
+}
+
+#newPaymentForm .paymentForm .currencyBtnWrap {
+    display: inline-block;
+    width: 220px
+}
+
+#newPaymentForm .paymentForm #currencySet label {
+    font-size: 16px;
+    color: #333;
+    padding-top: 15px;
+    display: block;
+    text-transform: capitalize
+}
+
+#newPaymentForm .currencyBtn {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: none;
+    text-indent: -9999px;
+    margin: 0 auto 0 auto;
+    background-position: 0 0;
+    cursor: pointer
+}
+
+#newPaymentForm .currencyBtn:focus {
+    outline: 0
+}
+
+#newPaymentForm .AEDBtn {
+    background: transparent url(../images/reg/country-currency-icon-aed.png) 0 0
+}
+
+#partial-actions {
+    width: 35%;
+    float: left
+}
+
+#newPaymentForm .AUDBtn {
+    background: transparent url(../images/reg/country-currency-icon-aud.png) 0 0
+}
+
+#newPaymentForm .BRLBtn {
+    background: transparent url(../images/reg/country-currency-icon-brl.png) 0 0
+}
+
+#newPaymentForm .CADBtn {
+    background: transparent url(../images/reg/country-currency-icon-cad.png) 0 0
+}
+
+#newPaymentForm .CNYBtn {
+    background: transparent url(../images/reg/country-currency-icon-cny.png) 0 0
+}
+
+#newPaymentForm .DKKBtn {
+    background: transparent url(../images/reg/country-currency-icon-dkk.png) 0 0
+}
+
+#newPaymentForm .EURBtn {
+    background: transparent url(../images/reg/country-currency-icon-eur.png) 0 0
+}
+
+#newPaymentForm .GBPBtn {
+    background: transparent url(../images/reg/country-currency-icon-gbp.png) 0 0
+}
+
+#newPaymentForm .HKDBtn {
+    background: transparent url(../images/reg/country-currency-icon-hkd.png) 0 0
+}
+
+#newPaymentForm .IDRBtn {
+    background: transparent url(../images/reg/country-currency-icon-idr.png) 0 0
+}
+
+#newPaymentForm .INRBtn {
+    background: transparent url(../images/reg/country-currency-icon-inr.png) 0 0
+}
+
+#newPaymentForm .JPYBtn {
+    background: transparent url(../images/reg/country-currency-icon-jpy.png) 0 0
+}
+
+#newPaymentForm .MYRBtn {
+    background: transparent url(../images/reg/country-currency-icon-myr.png) 0 0
+}
+
+#newPaymentForm .NGNBtn {
+    background: transparent url(../images/reg/country-currency-icon-ngn.png) 0 0
+}
+
+#newPaymentForm .NOKBtn {
+    background: transparent url(../images/reg/country-currency-icon-nok.png) 0 0
+}
+
+#newPaymentForm .NZDBtn {
+    background: transparent url(../images/reg/country-currency-icon-nzd.png) 0 0
+}
+
+#newPaymentForm .SEKBtn {
+    background: transparent url(../images/reg/country-currency-icon-sek.png) 0 0
+}
+
+#newPaymentForm .SGDBtn {
+    background: transparent url(../images/reg/country-currency-icon-sgd.png) 0 0
+}
+
+#newPaymentForm .THBBtn {
+    background: transparent url(../images/reg/country-currency-icon-thb.png) 0 0
+}
+
+#newPaymentForm .USDBtn {
+    background: transparent url(../images/reg/country-currency-icon-usd.png) 0 0
+}
+
+#newPaymentForm .VNDBtn {
+    background: transparent url(../images/reg/country-currency-icon-vnd.png) 0 0
+}
+
+#newPaymentForm .activeCurrency label {
+    font-weight: 700
+}
+
+#newPaymentForm .activeCurrency .currencyBtn,
+.currencyBtn:hover,
+.currencyBtnWrap.active .currencyBtn {
+    background-position: 0 60px !important;
+    outline: 0
+}
+
+.currencyBtnWrap.active label {
+    font-weight: 700
+}
+
+.new_lfc_layout .boxContent .confirmationPad {
+    max-width: 700px;
+    margin: 0 auto
+}
+
+.new_lfc_layout .confirmation .lfctv-promotion-div {
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    float: left
+}
+
+.new_lfc_layout .confirmation div,
+.new_lfc_layout .confirmation li,
+.new_lfc_layout .confirmation p {
+    line-height: 25px !important;
+    font-size: 12px
+}
+
+.new_lfc_layout .confirmation .confirmationTerms {
+    color: #777;
+    float: left;
+    width: 100%;
+    clear: both;
+    margin: 20px 0 20px 0;
+    font-size: 12px
+}
+
+.new_lfc_layout .confirmation .lfctv-promotion-div .video {
+    width: 60%;
+    float: left
+}
+
+.new_lfc_layout .confirmation .lfctv-promotion-div .benefits {
+    width: 40%;
+    float: right;
+    text-align: left
+}
+
+.new_lfc_layout .confirmation .lfctv-promotion-div .benefits h3 {
+    margin-bottom: 20px;
+    font-size: 18px
+}
+
+.new_lfc_layout .confirmation .lfctv-promotion-div .benefits ul {
+    list-style-type: disc;
+    margin-left: 20px
+}
+
+.new_lfc_layout .confirmation .video-div-outer-400 {
+    background-image: none;
+    background-color: #000;
+    width: 95%;
+    height: auto;
+    margin: 0 0;
+    padding: 0
+}
+
+#video_div_LFCTV_BENEFITS_VIDEO,
+#video_div_container_LFCTV_BENEFITS_VIDEO {
+    height: 0 !important;
+    overflow: hidden;
+    padding: 0 0 56.25%;
+    position: relative;
+    width: 100% !important
+}
+
+#video-preview-img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+#video_div_LFCTV_BENEFITS_VIDEO_REPLACE {
+    width: 100% !important
+}
+
+.new_lfc_layout .videoInner {
+    max-width: 500px;
+    margin: 0 auto
+}
+
+#video_div_LFCTV_BENEFITS_VIDEO embed,
+#video_div_LFCTV_BENEFITS_VIDEO iframe,
+#video_div_LFCTV_BENEFITS_VIDEO object,
+#video_div_LFCTV_BENEFITS_VIDEO video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.new_lfc_layout .confirmation #player_area_play {
+    transform: translate(-50%, -50%);
+    top: 50% !important;
+    left: 50% !important
+}
+
+#newPaymentForm .voucherMessage {
+    margin: 0 20px 0 20px;
+    border: dashed 1px #fff;
+    padding: 10px;
+    background: #fff;
+    display: none;
+    font-size: 14px;
+    color: #333
+}
+
+#newPaymentForm .voucherMessage.errorMessage {
+    background: #d90000;
+    color: #fff
+}
+
+#newPaymentForm .voucherMessage.successMessage {
+    background: #698c00;
+    color: #fff
+}
+
+#newPaymentForm .instructTxt {
+    float: left;
+    width: 100%;
+    clear: both;
+    margin: 15px 0 0 0;
+    color: #555;
+    font-style: italic;
+    text-align: left
+}
+
+#newPaymentForm .payTypeBtn {
+    display: inline-block;
+    width: 102px;
+    height: 64px;
+    text-indent: -9999px;
+    margin: 0 15px 15px 0;
+    background-position: 0 0;
+    background-color: transparent
+}
+
+#newPaymentForm .payTypeBtn:hover {
+    background-position: 0 64px;
+    cursor: pointer
+}
+
+#newPaymentForm .payTypeImg {
+    display: inline-block;
+    width: 60px;
+    height: auto;
+    margin: 0 25px 15px 0
+}
+
+#newPaymentForm .payTypeImg#payTypepaypal {
+    margin: 0 0 15px 0
+}
+
+#newPaymentForm .rightField .payTypeBtn {
+    margin: 0
+}
+
+#newPaymentForm .paymentForm #paymentSet label {
+    display: block;
+    margin: 0 0 20px 0
+}
+
+#newPaymentForm .payment-option-day {
+    width: 934px;
+    height: 130px;
+    background: url(../images/reg/payment-options-day-bg.jpg) top left no-repeat;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px
+}
+
+.pageButtons {
+    margin: 0;
+    float: left;
+    width: 995px
+}
+
+.pageButtons.centerBtns {
+    text-align: center
+}
+
+.extraOptionsPage {
+    text-align: left !important;
+    font-size: 16px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #333;
+    font-weight: 400 !important;
+    line-height: 20px
+}
+
+.extraOptionsPage p {
+    text-align: left !important;
+    font-size: 16px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #333;
+    font-weight: 400 !important;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: 20px
+}
+
+.ArticleContent .extraOptionsPage .cmsContent ul li {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif !important;
+    margin-bottom: 12px;
+    font-size: 16px !important;
+    line-height: 20px
+}
+
+.ArticleContent .extraOptionsPage .cmsContent dl,
+.ArticleContent .extraOptionsPage .cmsContent ol,
+.ArticleContent .extraOptionsPage .cmsContent ul {
+    text-align: left
+}
+
+.extraOptionsPage .bottomBtn {
+    margin: 30px 0 0 0;
+    text-align: center
+}
+
+.my-lfc-mbsFormContainerMid {
+    width: 872px;
+    margin: 0 auto 0 auto;
+    padding: 10px 15px
+}
+
+#Container .my-lfc-mbsFormContainerMid {
+    background: url(../images/template/lfc-membership-rndBox-mid.gif)
+}
+
+.mbsFormContainerBot {
+    width: 902px;
+    height: 18px;
+    margin: 0 auto 10px auto
+}
+
+#Container .mbsFormContainerBot {
+    background: url(../images/template/lfc-membership-rndBox-bot.gif)
+}
+
+.memfooter {
+    width: 1023px;
+    height: 10px;
+    background: url(../images/template/lfc-membership-footer-bg.png) no-repeat;
+    margin: 0 auto 0 auto
+}
+
+.metroButtonv2 {
+    background-color: 000080;
+    color: #fff;
+    padding: 13px 30px;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px
+}
+
+.metroButtonv2:hover {
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: #333;
+    color: #fff
+}
+
+.RegistrationContent h1 {
+    font-size: 22px;
+    margin-bottom: 20px
+}
+
+.new_lfc_layout .RegistrationContent h1 {
+    margin-bottom: 0
+}
+
+.new_lfc_layout fieldset.lfcMembership {
+    border: 0
+}
+
+.new_lfc_layout fieldset {
+    padding: 0 0
+}
+
+.new_lfc_layout .forgotPassword h1 {
+    margin-bottom: 20px
+}
+
+.boxContent {
+    float: left;
+    width: 100%;
+    padding: 0
+}
+
+.boxContent.forgotPasswordPage,
+.boxContent.linkAndLoginPage {
+    float: none;
+    max-width: 541px;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center
+}
+
+#Container .boxContent {
+    width: 840px
+}
+
+.new_lfc_layout .boxContent {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 30px 0
+}
+
+.new_lfc_layout .boxContent iframe {
+    height: 626px;
+    float: left
+}
+
+.new_lfc_layout .boxContent .formReCaptchaDiv iframe {
+    height: auto;
+    float: none
+}
+
+.new_lfc_layout .boxContent .formReCaptchaDiv .formReCaptchaRow th {
+    display: none
+}
+
+.formReCaptchaDiv .g-recaptcha {
+    padding-top: 0 !important
+}
+
+@media (max-width:399px) {
+    .new_lfc_layout .boxContent iframe {
+        height: 730px
+    }
+}
+
+.reg-fs-box {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px
+}
+
+fieldset.reg-login {
+    float: left;
+    border-right: 1px solid #e31b23;
+    width: 100%;
+    margin-top: 10px
+}
+
+fieldset.reg-login:after {
+    border-right: 1px solid #e31b23
+}
+
+#not-logged-in-actions {
+    margin-top: 20px
+}
+
+body.standard-single-column>.wrapper>.container {
+    min-height: 250px;
+    padding: 0 40px !important
+}
+
+fieldset.reg-signup {
+    float: left;
+    width: 100%
+}
+
+.new-user-content {
+    margin-top: 10px;
+    line-height: 27px
+}
+
+.new-user-content ul {
+    list-style-type: disc
+}
+
+.new-user-content li {
+    margin-left: 25px
+}
+
+.reg-social {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    clear: both
+}
+
+.socialAccounts .button .icon {
+    float: left;
+    position: relative
+}
+
+.socialAccounts .button .text {
+    font-size: 20px;
+    float: left;
+    width: auto
+}
+
+.socialAccounts .button {
+    display: inline-block;
+    margin: 20px 20px 20px 0;
+    cursor: pointer;
+    background-color: #ddd
+}
+
+.socialAccounts .button .inactive:hover {
+    background-color: #fff;
+    color: #333;
+    border: solid 1px #ddd
+}
+
+.socialAccounts .button .inactive:hover a {
+    color: #333
+}
+
+.socialAccounts .button .active:hover .disconnect {
+    background: #e31b23
+}
+
+.forgotPassword legend,
+.reg-login legend,
+.reg-signup legend,
+.reg-social legend {
+    color: #e31b23;
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700
+}
+
+.container h1.page-title {
+    font-weight: 700 !important;
+    font-size: 32px !important;
+    text-transform: none !important
+}
+
+label {
+    line-height: 37px;
+    display: inline-block;
+    color: #4f4f4f
+}
+
+#cboxLoadedContent label,
+.new_lfc_layout label {
+    font-size: 14px
+}
+
+.dd label {
+    font-size: 14px
+}
+
+span.req {
+    color: #000080;
+    font-weight: 700;
+    display: inline-block
+}
+
+ul.radio_list {
+    display: inline;
+    margin-left: 10px
+}
+
+ul.radio_list label {
+    color: #272727;
+    font-weight: 700
+}
+
+.lfcMembershipTable {
+    margin-left: 0;
+    width: 100%;
+    max-width: 600px
+}
+
+.new_lfc_layout .resetPassForm .lfcMembershipTable input {
+    width: 330px
+}
+
+.resetPassForm .lfcMembershipTable {
+    max-width: none
+}
+
+.resetPassForm .lfcMembershipTable tr {
+    margin-bottom: 10px;
+    display: block
+}
+
+.resetPassForm #passHelp,
+.resetPassForm .error-message,
+.resetPassForm .success-message {
+    color: #fff;
+    padding: 15px;
+    margin: 7px 0 0 0;
+    clear: both;
+    max-width: 330px;
+    width: 330px
+}
+
+.resetPassForm .success-message {
+    background: #009982;
+    font-size: .9em;
+    line-height: 1.4em;
+    text-align: center;
+    padding-bottom: 20px
+}
+
+.resetPassForm .error-message {
+    background: #dc0714;
+    float: left;
+    margin-top: 10px;
+    font-size: .9em;
+    line-height: 1.4em;
+    text-align: center;
+    padding-bottom: 15px
+}
+
+.resetPassForm #WholesaleContact .lfcMembershipTable td.formHelp {
+    padding-top: 0;
+    clear: both;
+    display: block;
+    margin-left: 170px
+}
+
+.resetPassForm #passHelp {
+    border: solid 1px #ccc;
+    margin: 0 0 15px 0;
+    background: #f9f9f9;
+    max-width: 330px
+}
+
+.resetPassForm .error-message p,
+.resetPassForm .success-message p {
+    color: #fff;
+    padding-bottom: 5px;
+    text-align: center;
+    margin: 0
+}
+
+.resetPassForm .success-message p {
+    padding-bottom: 0
+}
+
+.resetPassForm #passHelp p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding-bottom: 5px;
+    margin: 0;
+    text-align: center
+}
+
+.resetPassForm input[type=password].success {
+    border: 1px solid #009982
+}
+
+.resetPassForm input[type=password].error {
+    border: 1px solid #000080
+}
+
+.resetPassForm #sf_guard_user_password {
+    background-image: none
+}
+
+@media (max-width:1050px) {
+    .new_lfc_layout .resetPassForm #WholesaleContact .registrationForm .lfcMembershipTable td {
+        float: none;
+        width: 100%;
+        clear: both;
+        padding-bottom: 0
+    }
+
+    .new_lfc_layout .resetPassForm #passHelp {
+        margin: 10px 0 0 0
+    }
+}
+
+@media (max-width:699px) {
+    .new_lfc_layout .resetPassForm .lfcMembershipTable input {
+        width: 100%
+    }
+
+    ,
+    .new_lfc_layout .resetPassForm #passHelp,
+    .new_lfc_layout .resetPassForm .error-message,
+    .new_lfc_layout .resetPassForm .success-message {
+        margin: 10px 0 0 0;
+        max-width: none;
+        width: 100%
+    }
+
+    .resetPassForm .error-message,
+    .resetPassForm .success-message {
+        width: 100%;
+        max-width: none
+    }
+
+    .new_lfc_layout .resetPassForm #WholesaleContact .lfcMembershipTable td.formHelp {
+        padding: 0;
+        margin-left: 0
+    }
+
+    .new_lfc_layout .resetPassForm #WholesaleContact .registrationForm .lfcMembershipTable th {
+        float: left;
+        clear: both;
+        width: 100%
+    }
+
+    .new_lfc_layout .resetPassForm #WholesaleContact .registrationForm .lfcMembershipTable td {
+        float: left;
+        width: 100%;
+        clear: both;
+        max-width: none
+    }
+
+    .resetPassForm .error-message p,
+    .resetPassForm .success-message p {
+        width: 100%;
+        max-width: none
+    }
+
+    .new_lfc_layout .resetPassForm #passHelp {
+        margin: 10px 0 0 0;
+        width: 100%;
+        max-width: none
+    }
+}
+
+.new_lfc_layout .resetPassForm .lfcMembershipTable input {
+    background-color: #fff
+}
+
+.new_lfc_layout .resetPassForm .lfcMembershipTable input:disabled {
+    background-color: #e6e6e7
+}
+
+.dd-confirmation,
+.dd-confirmation div,
+.dd-confirmation p {
+    font-size: 12px !important
+}
+
+.dd-confirmation fieldset.lfcMembership {
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.dd-confirmation fieldset.lfcMembership {
+    margin-top: 30px
+}
+
+.dd-confirmation .lfcMembershipTable {
+    max-width: none
+}
+
+.dd-confirmation .lfcMembershipTable .contact-pref {
+    text-align: left !important;
+    padding: 0 0 20px 0 !important
+}
+
+.lfcMembershipTable.tearmsText {
+    max-width: 100%;
+    font-size: 12px
+}
+
+.lfcMembershipTable tr {
+    margin-bottom: 10px
+}
+
+.remember p {
+    margin: 0 !important
+}
+
+.remember label {
+    float: left;
+    font-weight: 700;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px
+}
+
+.remember .input {
+    margin-top: 5px;
+    float: left
+}
+
+.remember .formHelp {
+    float: left;
+    margin-top: 5px
+}
+
+.lfcMembershipTable tr.remember td {
+    padding-bottom: 13px !important
+}
+
+#WholesaleContact .lfcMembershipTable th {
+    width: 163px
+}
+
+.new_lfc_layout .forgotPassword .lfcMembershipTable th {
+    width: 124px !important
+}
+
+#WholesaleContact .lfcMembershipTable td.formHelp {
+    padding-top: 7px
+}
+
+.reg-fs-box #WholesaleContact .lfcMembershipTable th {
+    width: 133px
+}
+
+input.checkbox {
+    border: 1px solid #ddd;
+    width: auto;
+    margin-right: 10px;
+    background: 0 0
+}
+
+.new_lfc_layout .contact-pref-float .lfcMembershipTable {
+    margin: 0 auto;
+    max-width: none
+}
+
+.new_lfc_layout #WholesaleContact .lfcMembershipTable tr.contact-pref th {
+    width: auto !important
+}
+
+.new_lfc_layout .contact-pref-float label {
+    line-height: normal;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    color: #333
+}
+
+.new_lfc_layout .contact-pref-float .lfcMembershipTable tr.noStyle input[type=checkbox] {
+    width: auto !important;
+    margin-top: 3px;
+    height: auto !important
+}
+
+.new_lfc_layout .contact-pref p {
+    padding: 0;
+    margin: 0
+}
+
+.new_lfc_layout .contact-pref-float .lfcMembershipTable th {
+    margin-right: 0 !important;
+    padding-right: 5px !important
+}
+
+.new_lfc_layout .consent-wrap {
+    text-align: left
+}
+
+.new_lfc_layout .consent-bottom,
+.new_lfc_layout .consent-top {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: dashed 1px #ddd
+}
+
+.new_lfc_layout .consent-bottom {
+    margin: 20px 0
+}
+
+.new_lfc_layout .contactable ul.radio_list {
+    margin-left: 0
+}
+
+.new_lfc_layout .contactable ul.radio_list li input {
+    display: none;
+    cursor: pointer
+}
+
+.new_lfc_layout .contactable ul.radio_list li label {
+    border: 1px solid #999;
+    cursor: pointer;
+    padding: 5px 0;
+    cursor: pointer;
+    width: 122px;
+    text-align: center
+}
+
+.new_lfc_layout .contactable ul.radio_list li:last-of-type label.active {
+    background-color: #e31b23;
+    color: #fff
+}
+
+.new_lfc_layout .contactable ul.radio_list li:first-of-type label.active {
+    background-color: #00a590;
+    color: #fff
+}
+
+.new_lfc_layout .contactable ul.radio_list li:first-of-type label.active::before,
+.new_lfc_layout .contactable ul.radio_list li:last-of-type label.active::before {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: 11px;
+    width: 20px
+}
+
+.new_lfc_layout .contactable ul.radio_list li:last-of-type label.active::before {
+    background-image: url(../images/cross_white.png)
+}
+
+.new_lfc_layout .contactable ul.radio_list li:first-of-type label.active::before {
+    background-image: url(../images/tick_white.png)
+}
+
+.new_lfc_layout .consent-wrap .text {
+    margin: 20px 0
+}
+
+.new_lfc_layout .gdpr-message {
+    background: #c8c8c8;
+    border: solid 1px #c8c8c8;
+    padding: 30px 25px;
+    width: auto;
+    display: none;
+    margin: 0 0 30px 0;
+    color: #333;
+    max-width: 500px;
+    position: relative
+}
+
+.new_lfc_layout .pageConfirmation .gdpr-message {
+    display: inline-block;
+    float: left
+}
+
+.new_lfc_layout .gdpr-message img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10
+}
+
+.new_lfc_layout .gdpr-message:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 48%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #c8c8c8 transparent transparent transparent
+}
+
+.new_lfc_layout .gdpr-message h4 {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+    position: relative;
+    z-index: 30
+}
+
+.new_lfc_layout .gdpr-message span {
+    font-size: .9em;
+    line-height: 1.8em
+}
+
+.reg-login-btn {
+    float: right
+}
+
+.btn {
+    border: none !important
+}
+
+.lfcMembershipTable td#invalid_login_msg {
+    padding-bottom: 0
+}
+
+.login-content {
+    margin-top: 10px;
+    min-height: 198px;
+    margin-bottom: 0 !important
+}
+
+.login-join-btn {
+    margin-left: 40px
+}
+
+.nojs {
+    text-align: center;
+    padding: 30px 30px 150px 30px;
+    font-weight: 700
+}
+
+.LoginTableSpacing {
+    height: 50px
+}
+
+.lfcMembershipTable th {
+    padding: 0
+}
+
+.login-content .lfcMembershipTable th {
+    padding: 0
+}
+
+fieldset.lfcMembership {
+    padding-bottom: 30px
+}
+
+legend.lfcMembership {
+    font-size: 24px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 0 10px 0
+}
+
+.new_lfc_layout .directDebitAddress {
+    margin-bottom: 20px;
+    font-weight: 700
+}
+
+.new_lfc_layout .directDebitAddress.rightStyle {
+    border: 1px solid #ccc;
+    margin: 0 0 20px 20px;
+    background-color: #eee;
+    padding: 10px;
+    clear: both;
+    float: right
+}
+
+#WholesaleContact .lfcMembershipTable th.contact-pref,
+#WholesaleContact2 .lfcMembershipTable th.contact-pref {
+    width: 100%;
+    text-align: center;
+    padding: 20px
+}
+
+th.contact-pref {
+    font-weight: 400
+}
+
+#WholesaleContact .contact-pref-float .lfcMembershipTable {
+    width: auto;
+    margin: auto
+}
+
+.contact-pref input[type=checkbox] {
+    width: 23px !important;
+    height: 23px !important
+}
+
+#WholesaleContact .lfcMembershipTable tr.contact-pref th {
+    width: 119px
+}
+
+#WholesaleContact .lfcMembershipTable tr.contact-pref td.formHelp {
+    width: 10px
+}
+
+.options-bg {
+    width: 909px;
+    height: 439px;
+    background: url(../images/reg/join-options-bg.png) no-repeat;
+    margin: 0 auto 0 26px
+}
+
+.options-bg.with-day-option {
+    width: 909px;
+    height: 639px;
+    background: url(../images/reg/join-options-bg-big.png) no-repeat;
+    margin: 0 auto 0 26px
+}
+
+.option-day {
+    width: 800px;
+    height: 130px;
+    background: url(../images/reg/day-option-bg.jpg) top left no-repeat;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 32px;
+    padding: 20px
+}
+
+.option-day #join-btn {
+    margin-top: 90px;
+    margin-right: 10px
+}
+
+.payment-option-day {
+    width: 770px;
+    height: 130px;
+    background: url(../images/reg/payment-options-day-bg.jpg) top left no-repeat;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px
+}
+
+.options-bg h1 {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 23px;
+    text-align: center;
+    padding-bottom: 5px
+}
+
+.options-bg p {
+    font-size: 13px;
+    text-align: center;
+    color: #c00;
+    margin-bottom: 10px
+}
+
+.options-bg a:hover {
+    text-decoration: underline
+}
+
+.opt-free,
+.opt-lfctvo {
+    width: 390px;
+    height: 341px;
+    background: url(../images/reg/free-bg.png) no-repeat;
+    float: left;
+    margin-left: 20px;
+    padding-left: 40px
+}
+
+.opt-free.disabled {
+    background: url(../images/reg/free-bg-disabled.png) no-repeat
+}
+
+.opt-lfctvo {
+    background: url(../images/reg/lfctv-go-bg-2.jpg) no-repeat;
+    margin-left: 5px
+}
+
+.day-content {
+    float: left;
+    width: 370px;
+    background: url(../images/reg/day-option-content-bg.png);
+    padding: 10px;
+    margin-left: 10px
+}
+
+.day-content p {
+    text-align: left !important;
+    color: #fff
+}
+
+.day-content h2 {
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 10px
+}
+
+h2.hd-free,
+h2.hd-lfctvo,
+h2.hd-mem {
+    width: 284px;
+    height: 17px;
+    background: url(../images/reg/lfctvo-opt-hd.gif) no-repeat;
+    text-indent: -9999px;
+    margin-top: 38px;
+    padding-bottom: 35px
+}
+
+h2.hd-free {
+    background: url(../images/reg/free-opt-hd.gif) no-repeat
+}
+
+h2.hd-free.disabled {
+    background: url(../images/reg/free-opt-hd-disabled.gif) no-repeat
+}
+
+h2.hd-mem {
+    background: url(../images/reg/mem-opt-hd.gif) no-repeat;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding-bottom: 10px
+}
+
+.options-mem-bg h2.hd-mem {
+    background: url(../images/reg/membership-title.png) no-repeat;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding-bottom: 10px;
+    width: 290px
+}
+
+.opt-free p,
+.opt-lfctvo p {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left
+}
+
+.formHelp {
+    font-size: 14px;
+    color: #666;
+    padding: 5px;
+    line-height: 13px;
+    font-weight: 400
+}
+
+.opt-free ul,
+.opt-lfctvo ul {
+    list-style-image: url(../images/reg/list-image.gif);
+    margin: 0 0 0 10px
+}
+
+.opt-lfctvo ul {
+    list-style-image: url(../images/reg/list-image-dark.gif)
+}
+
+.options-mem-bg ul {
+    list-style-type: square;
+    margin-left: 20px;
+    width: 100%
+}
+
+.opt-free .cmsContent ul li,
+.opt-lfctvo ul li {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 8px 0
+}
+
+.options-mem-bg ul li {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 8px 0;
+    list-style-type: square
+}
+
+.opt-lfctvo ul li {
+    margin: 6px 0
+}
+
+.opt-lfctvo p,
+.opt-lfctvo ul li {
+    color: #fff
+}
+
+.options-mem-bg ul li {
+    color: #fff
+}
+
+.options-mem-bg p {
+    color: #fff;
+    margin-bottom: 15px;
+    margin-left: 14px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 17px
+}
+
+.opt-free img,
+.opt-lfctvo img {
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left
+}
+
+.opt-free .btn,
+.opt-lfctvo .btn {
+    margin-top: 13px;
+    margin-right: 30px
+}
+
+.options-mem-bg {
+    background: url(../images/reg/membership-bg-3.png) no-repeat;
+    width: 873px;
+    height: 209px;
+    margin-left: 29px;
+    margin-top: 10px;
+    padding: 10px
+}
+
+.options-mem-bg div.right {
+    text-align: center;
+    padding: 20px
+}
+
+.options-mem-bg img {
+    padding-bottom: 20px
+}
+
+#back-btn,
+#back-btn-pay-options,
+#btn-pay-annual,
+#btn-pay-monthly,
+#btn-return-home,
+#btn-return-my-lfc,
+#change-btn,
+#confirm-btn,
+#confirm-cancel-btn,
+#continue-btn,
+#join-btn,
+#join-btn-mem,
+#print-blank-ddi-btn,
+#renew_method_direct_debit_annually,
+#renew_method_direct_debit_monthly,
+#renew_method_payment_card_annually,
+#renew_method_payment_card_daily,
+#renew_method_payment_card_monthly,
+#renew_method_voucher,
+#reset-password-btn {
+    background: url(../images/reg/btn-join-opt.png) no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    height: 35px;
+    text-indent: -9999px;
+    vertical-align: middle;
+    width: 150px
+}
+
+#renew_method_payment_card_daily {
+    background: url(../images/reg/btn-daily-opt-2.png) no-repeat
+}
+
+#renew_method_payment_card_5day {
+    background: url(../images/reg/btn-5-day-opt.png) no-repeat
+}
+
+#join-btn.disabled {
+    background: url(../images/reg/btn-join-opt-disabled.png) no-repeat;
+    cursor: default
+}
+
+.opt-lfctvo #join-btn {
+    background: url(../images/reg/lfctv-go-join-btn.png) no-repeat;
+    height: 35px;
+    width: 110px;
+    margin-left: 120px;
+    margin-top: 263px;
+    float: none !important
+}
+
+.opt-lfctvo {
+    position: relative
+}
+
+.opt-lfctvo a#tandc-link {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #fff
+}
+
+#reset-password-btn {
+    width: 239px;
+    height: 36px;
+    background: url(../images/reg/btn-reset-password.gif) no-repeat
+}
+
+#join-btn-mem {
+    background: url(../images/reg/btn-join-opt-mem.png) no-repeat;
+    width: 151px;
+    margin-top: 150px
+}
+
+a#join-btn-mem {
+    display: block
+}
+
+#back-btn,
+#continue-btn {
+    width: 162px;
+    height: 42px;
+    background: url(../images/reg/btn-back.gif) no-repeat
+}
+
+#continue-btn {
+    background: url(../images/reg/btn-continue.gif) no-repeat
+}
+
+#renew_method_direct_debit {
+    background: url(../images/reg/btn-pay-dd.png) no-repeat;
+    width: 239px;
+    height: 41px
+}
+
+#renew_method_payment_card {
+    background: url(../images/reg/btn-pay-card.png) no-repeat;
+    width: 239px;
+    height: 41px
+}
+
+#renew_method_direct_debit_monthly {
+    background: url(../images/reg/pay-monthly.gif) no-repeat;
+    width: 123px;
+    height: 39px;
+    float: left
+}
+
+#renew_method_direct_debit_annually {
+    background: url(../images/reg/pay-annually.gif) no-repeat;
+    width: 130px;
+    height: 39px;
+    float: left
+}
+
+#renew_method_payment_card_annually {
+    background: url(../images/reg/pay-annually.gif) no-repeat;
+    width: 130px;
+    height: 39px;
+    float: left
+}
+
+#renew_method_payment_card_monthly {
+    background: url(../images/reg/pay-monthly.gif) no-repeat;
+    width: 123px;
+    height: 39px;
+    float: left
+}
+
+#renew_method_payment_card_daily {
+    float: right;
+    margin-right: 10px;
+    margin-top: 90px
+}
+
+#renew_method_payment_card_5day {
+    float: right;
+    margin-right: 10px;
+    margin-top: 90px;
+    width: 170px;
+    height: 35px;
+    text-indent: -9999px;
+    cursor: pointer
+}
+
+#renew_method_voucher {
+    background: url(../images/reg/pay-voucher.jpg) no-repeat;
+    width: 239px;
+    height: 41px
+}
+
+#back-btn-pay-options {
+    background: url(../images/reg/btn-back-payment-options.png) no-repeat;
+    width: 285px;
+    height: 44px
+}
+
+#print-blank-ddi-btn {
+    background: url(../images/reg/btn-print-paper-ddi.png) no-repeat;
+    width: 221px;
+    height: 43px
+}
+
+#change-btn {
+    background: url(../images/reg/btn-change.gif) no-repeat;
+    width: 178px;
+    height: 41px
+}
+
+#confirm-btn {
+    background: url(../images/reg/btn-confirm.gif) no-repeat;
+    width: 162px;
+    height: 42px
+}
+
+#confirm-cancel-btn {
+    background: url(../images/reg/btn-confirm-cancel.png) no-repeat;
+    width: 248px;
+    height: 42px
+}
+
+#btn-return-my-lfc {
+    background: url(../images/reg/btn-return-my-lfc.png) no-repeat;
+    width: 248px;
+    height: 41px;
+    display: block
+}
+
+#btn-return-home {
+    background: url(../images/reg/btn-return-home.png) no-repeat;
+    width: 248px;
+    height: 41px;
+    display: block
+}
+
+#btn-pay-monthly {
+    background: url(../images/reg/btn-pay-monthly.gif) no-repeat;
+    width: 255px;
+    height: 42px
+}
+
+#btn-pay-annual {
+    background: url(../images/reg/btn-pay-annual.gif) no-repeat;
+    width: 255px;
+    height: 42px
+}
+
+.new_lfc_layout #btn-pay-annual,
+.new_lfc_layout #btn-pay-monthly {
+    background-image: none;
+    width: auto;
+    border: 0 none;
+    cursor: pointer;
+    text-indent: 0
+}
+
+.new_lfc_layout #btn-pay-annual span,
+.new_lfc_layout #btn-pay-monthly span {
+    margin-top: 0;
+    display: inline-block
+}
+
+p.mem-txt {
+    color: #c00;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-left: 34px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.opt-free .cmsContent ul {
+    float: none;
+    margin: 0 0 0 10px
+}
+
+table.user-details-table {
+    margin-left: 30px;
+    text-align: left;
+    width: 740px;
+    margin-bottom: 20px
+}
+
+.new_lfc_layout .confirmation table.user-details-table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.dd-confirmation table.user-details-table {
+    width: auto !important
+}
+
+.new_lfc_layout .dd-confirmation table.user-details-table {
+    margin-left: 0 !important;
+    margin-bottom: 0 !important
+}
+
+table.user-details-table td {
+    color: #555;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 12px
+}
+
+table.user-details-table th {
+    padding: 10px;
+    font-size: 12px;
+    width: 200px;
+    text-align: left !important
+}
+
+.helpText,
+.new_lfc_layout .helpText {
+    color: #4f4f4f !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    margin-left: 0 !important;
+    font-family: Arial !important
+}
+
+.accept-terms th {
+    width: 392px !important
+}
+
+.accept-terms td.formHelp {
+    width: auto !important
+}
+
+fieldset.choose_duration_container {
+    padding-bottom: 15px
+}
+
+.choose_duration {
+    margin-left: 30px;
+    float: left;
+    padding-top: 0
+}
+
+.choose_duration div {
+    display: block;
+    float: left;
+    margin: 11px 5px 0 0;
+    text-align: center;
+    width: 124px
+}
+
+.choose_duration div input {
+    border: none !important
+}
+
+.choose_duration div label {
+    background: url(../images/reg/choices-bg.gif) no-repeat 0 0;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 29px;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: center;
+    width: 124px;
+    padding-top: 10px
+}
+
+.choose_duration span {
+    float: left;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #4d4d4d
+}
+
+.choose_duration div label span.desc {
+    color: #4d4d4d;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    float: none;
+    padding: 0
+}
+
+.choose_talent_membership div input {
+    background: 0 0;
+    margin-right: 7px;
+    width: auto
+}
+
+.duration_label {
+    padding-top: 20px;
+    color: #4d4d4d;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 20px
+}
+
+div.pay-method {
+    width: 256px;
+    float: left;
+    text-align: center;
+    padding-right: 33px;
+    background: url(../images/reg/payment-divide-smr.gif) no-repeat top right;
+    margin-bottom: 30px
+}
+
+div.end {
+    background: 0 0;
+    padding-right: 0
+}
+
+div.pay-method h2 {
+    color: #c00;
+    font-size: 20px;
+    padding-bottom: 8px;
+    font-weight: 400
+}
+
+div.pay-method div {
+    height: 65px;
+    padding-left: 18px;
+    padding-top: 10px;
+    padding-right: 0
+}
+
+div.pay-method div.pay-method-voucher-text {
+    height: 117px;
+    padding-top: 5px
+}
+
+div.pay-method div,
+div.pay-method div p,
+div.pay-method div ul li {
+    color: #c00;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: left
+}
+
+.ArticleContent .cmsContent ul {
+    float: none
+}
+
+#ArticleCommentsMain p,
+.ArticleContent p {
+    font-family: Arial, sans-serif;
+    font-size: 12px
+}
+
+.new_lfc_layout .dd_title {
+    font-size: 20px;
+    line-height: 64px;
+    width: 445px
+}
+
+#ArticleCommentsMain .socialAccounts p,
+.ArticleContent .socialAccounts p {
+    font-size: 14px;
+    text-align: left
+}
+
+.ArticleContent .cmsContent ul li {
+    color: #4c4c4c;
+    font-family: inherit;
+    font-size: inherit;
+    margin-bottom: 7px
+}
+
+.choose_duration .error_list {
+    font-weight: 700;
+    float: left;
+    margin-top: 21px;
+    margin-left: 16px
+}
+
+.th-left {
+    text-align: left !important;
+    padding: 15px 0 15px 15px !important;
+    color: #666 !important
+}
+
+.product_group_split tr.nostyle {
+    display: none
+}
+
+.product_group_split input {
+    width: 12px !important;
+    margin-right: 5px;
+    background: 0 0;
+    clear: left;
+    float: left
+}
+
+.product_group_split label,
+label.currency-label {
+    color: #272727;
+    font-weight: 700;
+    float: left;
+    margin-right: 20px
+}
+
+.product_group_split br {
+    float: left
+}
+
+label.currency-label {
+    float: left;
+    margin: 20px 15px 0 0;
+    width: 233px;
+    text-align: right
+}
+
+a {
+    text-decoration: underline
+}
+
+.ddi-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px #ccc solid
+}
+
+.small-details {
+    font-size: 12px;
+    font-weight: 400
+}
+
+.auto-renew input {
+    float: left;
+    margin-right: 15px;
+    margin-top: 6px
+}
+
+.auto-renew span.formHelp {
+    float: left;
+    width: 500px;
+    padding-bottom: 15px
+}
+
+.auto-renew td,
+.auto-renew th {
+    vertical-align: top
+}
+
+input#print-ddi-btn {
+    width: 274px;
+    height: 43px;
+    background: url(../images/reg/btn-print-completed-ddi.png) top left no-repeat;
+    border: 0;
+    margin-bottom: 20px;
+    text-indent: -9999px;
+    cursor: pointer
+}
+
+.status-history {
+    float: left;
+    width: 530px
+}
+
+.my-actions {
+    float: right
+}
+
+p.user-status span {
+    font-weight: 700
+}
+
+.history-box {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #d0ccc9;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px 20px 20px;
+    text-align: left;
+    width: 480px
+}
+
+#my-account-history ul {
+    padding-left: 10px
+}
+
+#my-account-history ul li {
+    background: none repeat scroll 0 0 #efefef;
+    border: 1px solid #d0ccc9;
+    color: #898989;
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    margin-bottom: -1px;
+    position: relative;
+    -webkit-border-top-left-radius: 7px;
+    -webkit-border-top-right-radius: 7px;
+    -moz-border-radius-topleft: 7px;
+    -moz-border-radius-topright: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    float: left;
+    margin-right: 3px
+}
+
+#my-account-history ul li.ui-tabs-selected {
+    background: none repeat scroll 0 0 #fff;
+    border-bottom: 0 none;
+    color: #5f95ef;
+    top: 1px
+}
+
+#my-account-history ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px 10px;
+    display: block
+}
+
+#my-account-history ul li.ui-tabs-selected a {
+    color: #c00
+}
+
+.history-heading {
+    border-bottom: 1px solid #ccc;
+    color: #888;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 7px;
+    padding-top: 15px;
+    height: 20px
+}
+
+.history-entry {
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    font-size: 12px;
+    font-weight: 700;
+    padding-bottom: 7px;
+    padding-top: 7px
+}
+
+.history-entry span,
+.history-heading span {
+    display: block;
+    float: left;
+    padding-left: 10px
+}
+
+.history-entry span.date,
+.history-heading span.date {
+    width: 77px
+}
+
+.history-entry span.event,
+.history-heading span.event {
+    width: 360px
+}
+
+.history-entry span.purchase,
+.history-heading span.purchase {
+    width: 215px
+}
+
+.history-entry span.card-used,
+.history-heading span.card-used {
+    width: 80px
+}
+
+.history-entry span.amount,
+.history-heading span.amount {
+    width: 60px
+}
+
+.history-footer {
+    color: #888;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 15px;
+    padding-left: 10px
+}
+
+.flash-success {
+    background: none repeat scroll 0 0 #e6ffe6;
+    border: 4px solid #090;
+    border-radius: 15px 15px 15px 15px;
+    color: #090;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 25px
+}
+
+.flash-error {
+    background: none repeat scroll 0 0 #ffe6e6;
+    border: 4px solid #c00;
+    border-radius: 15px 15px 15px 15px;
+    color: #c00;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 25px
+}
+
+.flash-message {
+    background: none repeat scroll 0 0 #fef7e7;
+    border: 4px solid #f60;
+    border-radius: 15px 15px 15px 15px;
+    color: #f60;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 25px
+}
+
+.new_lfc_layout .flash-error {
+    background: none repeat scroll 0 0 #dc0714;
+    border: 1px solid #911712;
+    border-radius: 0;
+    color: #fff;
+    font-size: inherit;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 20px
+}
+
+.new_lfc_layout .flash-success {
+    background: none repeat scroll 0 0 #009982;
+    border: 4px solid #00634d;
+    border-radius: 15px 15px 15px 15px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 25px
+}
+
+.new_lfc_layout .flash-message {
+    background: none repeat scroll 0 0 #888;
+    border: 4px solid #626262;
+    border-radius: 15px 15px 15px 15px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 25px
+}
+
+a.my-lfc-btn {
+    width: 296px;
+    height: 48px;
+    cursor: pointer;
+    text-indent: -9999px;
+    display: block
+}
+
+a.mlb-cancel {
+    background: url(../images/reg/my-lfc-btn-cancel.png) top left no-repeat
+}
+
+a.mlb-card {
+    background: url(../images/reg/my-lfc-btn-card.png) top left no-repeat
+}
+
+a.mlb-card-add {
+    background: url(../images/reg/add-card-details.png) top left no-repeat
+}
+
+a.mlb-dd {
+    background: url(../images/reg/my-lfc-btn-dd.png) top left no-repeat
+}
+
+a.mlb-edit {
+    background: url(../images/reg/my-lfc-btn-edit.png) top left no-repeat
+}
+
+a.mlb-reactivate {
+    background: url(../images/reg/my-lfc-btn-reactivate.png) top left no-repeat
+}
+
+a.mlb-upgrade {
+    background: url(../images/reg/my-lfc-btn-upgrade.png) top left no-repeat
+}
+
+a.mlb-frequency {
+    background: url(../images/reg/my-lfc-btn-frequency.png) top left no-repeat
+}
+
+a.mlb-help {
+    background: url(../images/reg/my-lfc-btn-help.png) top left no-repeat
+}
+
+a.mlb-home {
+    background: url(../images/reg/my-lfc-btn-home.png) top left no-repeat
+}
+
+a.mlb-password {
+    background: url(../images/reg/my-lfc-btn-password.png) top left no-repeat
+}
+
+a.mlb-logout {
+    background: url(../images/reg/my-lfc-btn-logout.png) top left no-repeat
+}
+
+a.mlb-social {
+    background: url(../images/reg/my-lfc-btn-social.png) top left no-repeat
+}
+
+#WholesaleContact .lfcMembershipTable th.cancel-label {
+    text-align: left;
+    width: 455px
+}
+
+#WholesaleContact .lfcMembershipTable th.cancel-label-sm {
+    text-align: left
+}
+
+#WholesaleContact .lfcMembershipTable td.cancel-check {
+    width: 80px;
+    text-align: center
+}
+
+#WholesaleContact .lfcMembershipTable td.cancel-check input {
+    width: auto;
+    border: none;
+    background: 0 0
+}
+
+th.cancel-subhead {
+    font-size: 20px;
+    color: #999 !important;
+    padding-top: 25px !important
+}
+
+span.cancel-subhead {
+    font-size: 20px;
+    color: #999 !important;
+    display: block
+}
+
+.cancel-comments-big textarea {
+    border: 1px solid #b3b3b3 !important;
+    width: 530px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4c4c4c;
+    font-size: 13px;
+    padding: 5px
+}
+
+.cancel-mainhead {
+    color: #c00 !important;
+    font-weight: 700
+}
+
+td.cancel-mainhead {
+    text-align: center
+}
+
+img.cancelled-image {
+    margin-bottom: 40px
+}
+
+p.access-date span {
+    font-size: 20px;
+    color: #c00
+}
+
+.lfcMembershipTable input[type=radio] {
+    float: none
+}
+
+.lfcMembershipTable select {
+    width: 234px
+}
+
+#cboxLoadedContent .lfcMembership input,
+.new_lfc_layout .lfcMembershipTable input {
+    width: 95%;
+    font-size: 16px
+}
+
+.new_lfc_layout :-moz-placeholder {
+    color: #999
+}
+
+.new_lfc_layout ::-moz-placeholder {
+    color: #999
+}
+
+.new_lfc_layout :-ms-input-placeholder {
+    color: #999
+}
+
+.new_lfc_layout ::-webkit-input-placeholder {
+    color: #999
+}
+
+.new_lfc_layout .forgotPassword input {
+    width: 100%
+}
+
+#postcode_lookup_div {
+    clear: both
+}
+
+.my-lfc-pay-freq-box {
+    width: 60%;
+    float: right
+}
+
+.my-lfc-pay-freq-box span {
+    float: left;
+    display: block;
+    margin-top: 15px
+}
+
+.new_lfc_layout .my-lfc-pay-freq-box {
+    width: 100%;
+    float: left
+}
+
+.new_lfc_layout .my-lfc-pay-freq-box span {
+    margin-top: 0
+}
+
+.metroButton {
+    min-width: 165px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    min-height: 50px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700
+}
+
+a.metroButton:hover {
+    color: #fff
+}
+
+.metroButton.right {
+    padding-right: 18px
+}
+
+#socialSignOn {
+    display: block;
+    width: 603px;
+    float: left;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-bottom: 35px
+}
+
+.not-logged-in-actions {
+    display: block
+}
+
+.socialLogin {
+    width: 192px;
+    height: 75px;
+    margin-right: 10px;
+    background-repeat: no-repeat
+}
+
+.socialLogin:hover {
+    opacity: .9;
+    cursor: pointer
+}
+
+.socialText {
+    margin-left: 49px;
+    margin-top: 9px;
+    padding: 20px 10px;
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px
+}
+
+.socialLogin a:hover {
+    color: #fff;
+    cursor: pointer
+}
+
+.signUpMessage>li,
+.signUpMessage>p,
+.signUpMessage>ul {
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+    padding: 0
+}
+
+.signUpMessage span {
+    color: #e31b23
+}
+
+.new_lfc_layout .formHelp {
+    font-size: 12px
+}
+
+.loginTopTxt {
+    line-height: normal;
+    margin-top: 0;
+    font-size: 14px;
+    color: #666;
+    font-weight: 700;
+    padding: 0;
+    padding-left: 2px
+}
+
+.loginTopTxt p {
+    margin-bottom: 5px
+}
+
+.metroSlider {
+    min-width: 20px;
+    min-height: 50px;
+    margin-left: 70px;
+    background-color: red;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700
+}
+
+.red {
+    color: #e31b23
+}
+
+input[type=checkbox] {
+    width: 19px;
+    height: 19px;
+    margin-right: 16px;
+    cursor: pointer;
+    font-size: 23px;
+    margin-top: 2px
+}
+
+.contact-pref input[type=checkbox] {
+    margin-top: -3px
+}
+
+.ie .formCountryDiv select,
+.ie .formDobDiv select {
+    background-image: none !important
+}
+
+.buttonPlaceholder {
+    height: 50px;
+    background-color: #e31b23;
+    display: inline-block;
+    margin-right: 0;
+    float: right
+}
+
+.buttonIcon {
+    display: inline-block;
+    background: #e31b23 url(../images/reg/rightArrow.png) no-repeat center center;
+    position: absolute;
+    z-index: 0;
+    text-indent: -9999px;
+    width: 40px;
+    height: 50px;
+    background-color: transparent;
+    -webkit-transition: margin-left .3s 0s;
+    -o-transition: margin-left .3s 0s;
+    transition: margin-left .3s 0s;
+    margin-left: 125px;
+    pointer-events: none
+}
+
+.green {
+    background-color: #00a88e
+}
+
+.buttonIconRight {
+    background-image: url(../images/reg/rightArrow.png);
+    background-position: center right;
+    padding-right: 65px;
+    background-repeat: no-repeat
+}
+
+.buttonIconLeft {
+    background-image: url(../images/reg/leftArrow.png);
+    background-position: center left;
+    padding-left: 65px;
+    background-repeat: no-repeat
+}
+
+.forgotPasswordPage .buttonPlaceholder,
+.linkAndLoginPage .buttonPlaceholder {
+    float: none
+}
+
+.forgotPasswordPage .buttonPlaceholder .buttonIcon,
+.linkAndLoginPage .buttonPlaceholder .buttonIcon {
+    margin-left: 145px
+}
+
+.forgotPasswordPage .buttonPlaceholder:hover .buttonIcon,
+.linkAndLoginFieldset .buttonPlaceholder:hover .buttonIcon {
+    margin-left: 155px
+}
+
+.buttonPlaceholder:hover .buttonIcon {
+    margin-left: 140px
+}
+
+#invalid_login_msg p.invalid_login_msg {
+    color: #c00;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 20px
+}
+
+.lfcMembershipTable td.error ul {
+    padding-left: 0;
+    color: #e31b23
+}
+
+.lfcMembershipTable td.error {
+    padding-bottom: 2px
+}
+
+.reg-fs-box #WholesaleContact .LoginTableSpacing .inputBox td {
+    padding-top: 0
+}
+
+.topMessage {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    line-height: 1.3em;
+    margin: 0 39px 25px 20px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700
+}
+
+@media (max-width:1260px) {
+    .RegistrationContent .rightColumn {
+        clear: both;
+        width: 100% !important
+    }
+
+    .RegistrationContent .rightColumn ul {
+        line-height: 20px
+    }
+
+    .RegistrationContent .rightColumn ul.leftList,
+    .RegistrationContent .rightColumn ul.rightList {
+        float: left;
+        width: 50%;
+        margin: 0;
+        padding: 0
+    }
+
+    .RegistrationContent .rightColumn ul li.image-bullet {
+        padding: 2px 0 0 30px;
+        background-size: 20px
+    }
+
+    .RegistrationContent .rightColumn ul.leftList li {
+        margin-right: 50px;
+        margin-left: 30px
+    }
+
+    .RegistrationContent .rightColumn .innerPadding {
+        padding: 0
+    }
+
+    .RegistrationContent .leftColumn {
+        width: 100% !important;
+        border-right: 0 !important;
+        padding-right: 0 !important
+    }
+
+    .new_lfc_layout h2.toggler {
+        cursor: pointer
+    }
+
+    .new_lfc_layout h2.toggler::after {
+        content: "+";
+        float: right
+    }
+
+    .new_lfc_layout h2.toggler.open::after {
+        content: "\002013"
+    }
+
+    .new_lfc_layout h2.toggler+div {
+        display: none
+    }
+
+    .new_lfc_layout h2.toggler.open+div {
+        display: block
+    }
+}
+
+@media (min-width:1261px) {
+    .new_lfc_layout h2.toggler+div {
+        display: block !important
+    }
+}
+
+@media (max-width:1163px) {
+    #newPaymentForm .payTypeImg {
+        margin: 0 5px 15px 0
+    }
+}
+
+.button {
+    margin: auto;
+    width: 250px;
+    height: 75px;
+    color: #4e4e4e
+}
+
+.button a {
+    color: #4e4e4e;
+    text-decoration: none;
+    width: 100%;
+    height: 75px;
+    display: inline-block
+}
+
+.button .icon {
+    float: left;
+    width: 90px;
+    height: 75px
+}
+
+.button .text {
+    float: left;
+    text-align: center;
+    width: 100%;
+    line-height: 75px;
+    font-size: 40px;
+    font-weight: 700
+}
+
+.button .icon {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.button.facebook .icon {
+    background-image: url(/static/images/template/facebookSocial.png)
+}
+
+.button.twitter .icon {
+    background-image: url(/static/images/template/twitterBird.png)
+}
+
+.button.google .icon {
+    background-image: url(../images/template/googleSocialIcon.png)
+}
+
+.button.facebook .inactive .icon {
+    background-image: url(/static/images/template/facebookSocial-grey.png)
+}
+
+.button.twitter .inactive .icon {
+    background-image: url(/static/images/template/twitterBird-grey.png)
+}
+
+.button.google .inactive .icon {
+    background-image: url(../images/template/googleSocialLogo-grey.png)
+}
+
+.button .active {
+    color: #fff
+}
+
+.button.facebook .active {
+    background-color: #3a5795
+}
+
+.button.twitter .active {
+    background-color: #55acee
+}
+
+.button.google .active {
+    background-color: #dc4a38
+}
+
+.button .inactive .disconnect {
+    display: none
+}
+
+.button .active .disconnect {
+    display: block
+}
+
+.button .disconnect {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 75px;
+    color: #fff;
+    float: right;
+    height: 75px;
+    width: 30px
+}
+
+.button.lfc a {
+    background-color: #e31b23;
+    color: #fff
+}
+
+.plus {
+    height: 75px;
+    color: #e31b23;
+    line-height: 75px;
+    padding: 0 10px;
+    font-size: 35px;
+    font-weight: 700
+}
+
+.inline {
+    float: left
+}
+
+.linkAndLoginPage .button {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.linkAndLoginPage .button.google {
+    background-image: url(../images/reg/GoogleLogoBig.png);
+    background-color: #dc4a38
+}
+
+.linkAndLoginPage .button.twitter {
+    background-image: url(../images/reg/twitterBig.png);
+    background-color: #55acee
+}
+
+.linkAndLoginPage .button.facebook {
+    background-image: url(../images/reg/facebookBig.png);
+    background-color: #3a5795
+}
+
+.linkAndLoginPage .button.lfc {
+    background-image: url(../images/reg/LFCBIG.png);
+    background-color: #e31b23
+}
+
+.linkAndLoginPage .button.lfc a {
+    background-color: transparent
+}
+
+.linkAndLoginPage .button .active {
+    background-color: transparent !important
+}
+
+.linkAndLoginPage .button .text {
+    text-indent: -9999px
+}
+
+#cboxLoadedContent #socialSignOn {
+    float: right;
+    width: 646px;
+    padding: 0
+}
+
+@media (max-width:1050px) {
+    #newPaymentForm .directDebitLeft {
+        text-align: center;
+        width: 100%;
+        margin-top: 20px
+    }
+
+    #newPaymentForm .directDebitRight {
+        margin-top: 0
+    }
+
+    #newPaymentForm .dd_title {
+        text-align: center;
+        width: auto
+    }
+
+    .new_lfc_layout #WholesaleContact .registrationForm .lfcMembershipTable th {
+        float: left;
+        clear: both;
+        padding-bottom: 0;
+        text-align: left
+    }
+
+    .new_lfc_layout #WholesaleContact .registrationForm .lfcMembershipTable td {
+        float: left;
+        width: 90%;
+        clear: both;
+        padding-bottom: 0
+    }
+
+    #newPaymentForm .ddIcon {
+        display: inline-block;
+        float: none
+    }
+
+    #newPaymentForm .ArticleContent h2 {
+        display: inline-block;
+        float: none
+    }
+
+    .directDebitRight {
+        clear: both;
+        margin-top: 20px;
+        float: left;
+        width: 100%;
+        text-align: center
+    }
+
+    #newPaymentForm .ddForm {
+        display: inline-block;
+        float: none
+    }
+}
+
+@media (max-width:999px) {
+    .rightColumn {
+        clear: both;
+        width: 100% !important
+    }
+
+    .rightColumn ul {
+        line-height: 20px
+    }
+
+    .rightColumn ul.leftList,
+    .rightColumn ul.rightList {
+        float: left;
+        width: 50%;
+        margin: 0;
+        padding: 0
+    }
+
+    .rightColumn ul li.image-bullet {
+        padding: 2px 0 0 30px;
+        background-size: 20px
+    }
+
+    .rightColumn ul.leftList li {
+        margin-right: 50px;
+        margin-left: 30px
+    }
+
+    .rightColumn .innerPadding {
+        padding: 0
+    }
+
+    .leftColumn {
+        width: 100% !important;
+        border-right: 0 !important;
+        padding-right: 0 !important
+    }
+}
+
+@media (max-width:900px) {
+    .new_lfc_layout .directDebitAddress.rightStyle {
+        width: 100%
+    }
+
+    .new_lfc_layout .confirmation .lfctv-promotion-div .benefits {
+        clear: both;
+        width: 100%
+    }
+
+    .new_lfc_layout .confirmation .lfctv-promotion-div .video .video-div-outer-400 {
+        width: 100%
+    }
+
+    .new_lfc_layout .confirmation .lfctv-promotion-div .video {
+        width: 100%;
+        clear: both;
+        margin-bottom: 20px;
+        float: left
+    }
+
+    #socialSignOn {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-top: 2px;
+        margin-right: 0
+    }
+
+    .remember {
+        margin-top: -10px
+    }
+
+    .remember label {
+        width: auto;
+        text-align: left
+    }
+
+    .remember .formHelp {
+        font-size: 12px
+    }
+
+    .new_lfc_layout .signUpMessage>p,
+    .signUpMessage>li,
+    .signUpMessage>p,
+    .signUpMessage>ul {
+        font-size: 12px
+    }
+
+    #newPaymentForm .payTypeImg {
+        width: 40px;
+        margin: 0 0 15px 0
+    }
+
+    .socialLogin {
+        width: 33%;
+        height: 75px;
+        margin-right: -2px;
+        margin-bottom: 15px;
+        margin-top: -5px
+    }
+
+    .socialText {
+        font-size: 16px;
+        margin-left: 53px !important;
+        margin-top: 9px;
+        padding: 3px 3px;
+        display: block;
+        color: #fff;
+        font-weight: 700
+    }
+
+    .reg-login legend,
+    .reg-signup legend {
+        display: none
+    }
+
+    .loginTopTxt {
+        margin-left: 5px;
+        line-height: normal;
+        margin-top: 20px
+    }
+
+    .reg-fs-box {
+        padding: 2px 2px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0
+    }
+
+    .LoginTableSpacing th {
+        display: block;
+        float: left;
+        position: absolute;
+        text-align: left !important
+    }
+
+    .LoginTableSpacing th {
+        display: block;
+        margin-bottom: 0;
+        margin-top: -23px
+    }
+
+    .LoginTableSpacing td {
+        padding-top: 7px
+    }
+
+    .LoginTableSpacing td {
+        width: 100%
+    }
+
+    .lfcMembershipTable {
+        margin-left: 0;
+        width: 100%
+    }
+
+    .LoginTableSpacing {
+        height: 75px;
+        margin-bottom: 20px
+    }
+
+    .lfcMembershipTable input {
+        width: 100%
+    }
+
+    .reg-fs-box #WholesaleContact .lfcMembershipTable td,
+    .reg-fs-box #WholesaleContact .lfcMembershipTable th {
+        float: left;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 0
+    }
+
+    .reg-fs-box #WholesaleContact .lfcMembershipTable td.formHelp {
+        float: left;
+        width: 100%;
+        text-align: right
+    }
+
+    input[type=checkbox] {
+        margin-left: 0
+    }
+}
+
+.RegistrationContent .lfcMembershipTable td.formHelp {
+    display: none
+}
+
+.leftColumn {
+    width: 75%;
+    font-size: 12px;
+    float: left;
+    padding-right: 20px;
+    border-right: 1px solid #ddd
+}
+
+.rightColumn {
+    width: 25%;
+    float: right
+}
+
+.innerPadding {
+    padding: 20px;
+    float: left;
+    width: 100%
+}
+
+.rightColumn .innerPadding {
+    padding-top: 0;
+    padding-right: 0
+}
+
+.userDetailsTop {
+    width: 70%;
+    position: absolute
+}
+
+.userDetailsSocial {
+    width: 100%;
+    margin: 0 0 20px 0
+}
+
+.left.registrationForm {
+    width: 50%;
+    margin-top: 10px
+}
+
+.right.registrationForm {
+    width: 50%;
+    margin-top: 10px
+}
+
+.formEmailDiv {
+    float: left
+}
+
+.formGenderDiv {
+    color: #fff
+}
+
+.formDobDiv {
+    color: #fff
+}
+
+.lfcMembershipTable.formCountryDiv select {
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    width: 95%;
+    line-height: 1;
+    border-radius: 0;
+    height: 37px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-right: 14px;
+    background: url(../images/images/downArrowSmall.png) no-repeat right #e4e4e4
+}
+
+.forgotPasswordFieldset,
+.linkAndLoginFieldset {
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.forgotPasswordFieldset .field,
+.linkAndLoginFieldset .field {
+    clear: both;
+    float: left;
+    width: 100%;
+    padding: 5px 0
+}
+
+.new_lfc_layout .my-lfc-mbsFormContainerMid {
+    width: 100%
+}
+
+.forgotPasswordFieldset .field a,
+.linkAndLoginFieldset .field a {
+    font-weight: 700
+}
+
+.forgotPasswordFieldset label,
+.linkAndLoginFieldset label {
+    float: left;
+    font-weight: 700;
+    width: 100px
+}
+
+.forgotPasswordFieldset .actAsInput,
+.linkAndLoginFieldset .actAsInput {
+    padding: 10px 5px;
+    float: left
+}
+
+.forgotPasswordFieldset input,
+.linkAndLoginFieldset input {
+    background-color: #e4e4e4;
+    margin-right: 10px;
+    width: 250px;
+    padding: 10px 5px;
+    float: left
+}
+
+.forgotPasswordFieldset .instructions,
+.linkAndLoginFieldset .instructions {
+    float: left;
+    line-height: 34px
+}
+
+.forgotPasswordPage .text p,
+.linkAndLoginPage .text p {
+    line-height: 20px !important
+}
+
+.forgotPasswordPage .big,
+.linkAndLoginPage .big {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 30px
+}
+
+.lfcMembershipTable.formDobDiv select {
+    width: 30% !important;
+    padding: 5px;
+    border: 1px solid #ccc;
+    padding-left: 7px;
+    font-size: 16px;
+    line-height: 1.2;
+    border-radius: 0;
+    height: 37px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-right: 5px;
+    background: url(../images/images/downArrowSmall.png) no-repeat right #e4e4e4
+}
+
+.lfcMembershipTable .formDobDiv td {
+    display: block
+}
+
+.lfcMembershipTable .formGenderDiv ul.radio_list td {
+    padding-top: 6px;
+    padding-bottom: 6px
+}
+
+.formGenderDiv .radio_list li {
+    display: block;
+    float: left
+}
+
+.formGenderDiv .radio_list li input {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 8px
+}
+
+.formGenderDiv td {
+    display: block
+}
+
+.tearmsText {
+    clear: both;
+    padding-top: 20px;
+    text-align: center
+}
+
+.contact-pref-text {
+    clear: both;
+    padding-top: 30px;
+    margin-right: -29%;
+    text-align: center;
+    margin-bottom: 30px
+}
+
+.new_lfc_layout .wrapper h1 {
+    background-color: #eee;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 20px 0 20px 40px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px
+}
+
+.new_lfc_layout .boxContent h1 {
+    background-color: transparent;
+    border-bottom: 0;
+    color: #e31b23;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0 30px 0
+}
+
+.new_lfc_layout .confirmation {
+    text-align: center
+}
+
+.new_lfc_layout h2 {
+    color: #e31b23 !important;
+    display: block !important;
+    border-bottom: 1px solid #ddd !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+    padding: 20px 0 10px 0 !important;
+    width: 100% !important
+}
+
+.ArticleContent .registerText br,
+.ArticleContent .registerText p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4f4f4f
+}
+
+.new_lfc_layout .registerText span {
+    color: #e31b23
+}
+
+.contact-pref-float {
+    text-align: center;
+    margin-top: 10px
+}
+
+.backButtonPlaceholder {
+    width: 165px;
+    padding: 14px;
+    position: absolute;
+    margin-right: auto;
+    float: left;
+    margin-top: -127px
+}
+
+.new_lfc_layout .form-btn-wrapper {
+    width: 100%;
+    float: left;
+    padding: 20px 0
+}
+
+.new_lfc_layout .form-btn-wrapper .backButtonPlaceholder {
+    margin-top: 0;
+    text-align: center;
+    padding: 14px
+}
+
+.new_lfc_layout .buttonDiv {
+    margin-bottom: 20px;
+    float: left;
+    width: 100%
+}
+
+.startOverButton {
+    width: 165px;
+    padding: 14px;
+    margin-right: auto;
+    float: none !important
+}
+
+.lfcMembershipTable .radio_list span.req {
+    top: 0;
+    left: -16px
+}
+
+.lfcMembershipTable td span.req {
+    color: #c00;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 2px
+}
+
+.lfcMembershipTable td,
+.lfcMembershipTable th {
+    padding-bottom: 20px
+}
+
+.formGenderDiv td span.req {
+    right: 10px;
+    top: -1px
+}
+
+.formDobDiv td span.req {
+    right: 10px;
+    top: 2px
+}
+
+ul.radio_list label {
+    color: #4f4f4f;
+    font-weight: 700
+}
+
+.new_lfc_layout .buttonContainer {
+    margin-bottom: 10px
+}
+
+@media (max-width:760px) {
+    .new_lfc_layout #ddi-print {
+        display: none
+    }
+
+    .new_lfc_layout .ddi-container p {
+        display: none
+    }
+
+    .new_lfc_layout input#print-ddi-btn {
+        margin-bottom: 0;
+        background-size: contain;
+        background-position: center
+    }
+
+    .new_lfc_layout .ddi-container {
+        border: 0;
+        padding: 0
+    }
+}
+
+@media (max-width:720px) {
+    #voucherSet .fieldHalf label {
+        display: none
+    }
+}
+
+@media (min-width:400px) and (max-width:700px) {
+    .formDobDiv select {
+        width: 31% !important;
+        margin-right: 7px
+    }
+}
+
+@media (max-width:700px) {
+    .new_lfc_layout .wrapper h1 {
+        padding-left: 20px
+    }
+
+    .new_lfc_layout .confirmation a.metroButtonv2 {
+        clear: both;
+        width: 100%;
+        margin-bottom: 10px
+    }
+
+    #newPaymentForm .directDebitRight {
+        margin-top: 20px
+    }
+
+    #not-logged-in-actions {
+        clear: both;
+        width: 100%;
+        float: left
+    }
+
+    .new_lfc_layout h1 {
+        font-size: 26px
+    }
+
+    #partial-actions {
+        width: 100%
+    }
+
+    fieldset.lfcMembership {
+        padding-bottom: 0
+    }
+
+    .new_lfc_layout .socialLogin {
+        width: 32%
+    }
+
+    .new_lfc_layout .button {
+        clear: both;
+        display: block;
+        margin: 30px auto 30px auto
+    }
+
+    .new_lfc_layout .button.text {
+        font-size: 20px
+    }
+
+    .new_lfc_layout .socialAccounts p {
+        text-align: center
+    }
+
+    .new-user-content {
+        width: 50%;
+        padding: 20px;
+        float: left
+    }
+
+    .RegistrationContent .rightColumn ul.leftList,
+    .RegistrationContent .rightColumn ul.rightList,
+    .rightColumn ul.leftList,
+    .rightColumn ul.rightList {
+        width: 100%
+    }
+
+    .RegistrationContent .rightColumn ul.leftList li,
+    .RegistrationContent .rightColumn ul.rightList li,
+    .rightColumn ul.leftList li,
+    .rightColumn ul.rightList li {
+        margin-left: 2%;
+        margin-right: 0
+    }
+
+    #not-logged-in-actions .buttonPlaceholder {
+        margin-top: 235px
+    }
+
+    fieldset.reg-signup {
+        padding: 0;
+        margin: 0
+    }
+
+    #page-login {
+        padding: 20px 0;
+        margin: 0 0 20px 0
+    }
+
+    .new_lfc_layout #socialSignOn {
+        margin-bottom: 7px
+    }
+
+    .new_lfc_layout fieldset.reg-login {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: 0
+    }
+
+    .login-content,
+    .new-user-content {
+        min-height: 160px
+    }
+
+    .new-user-content {
+        padding: 0;
+        height: auto
+    }
+
+    .new_lfc_layout #WholesaleContact .registrationForm .lfcMembershipTable td {
+        float: left;
+        width: 100%
+    }
+
+    .new_lfc_layout .resetPasswordPage .lfcMembershipTable td,
+    .new_lfc_layout .resetPasswordPage .lfcMembershipTable th {
+        display: block;
+        clear: both;
+        text-align: left !important;
+        padding-bottom: 0
+    }
+
+    .new_lfc_layout .lfcMembershipTable td input {
+        width: 100%
+    }
+
+    .new_lfc_layout .lfcMembershipTable {
+        max-width: none
+    }
+
+    .new_lfc_layout .resetPasswordPage .lfcMembershipTable td.formHelp {
+        text-align: right !important
+    }
+
+    .new_lfc_layout .left.registrationForm,
+    .new_lfc_layout .right.registrationForm {
+        width: 100%
+    }
+
+    .new_lfc_layout .LoginTableSpacing td {
+        width: 100%;
+        float: left
+    }
+
+    .ArticleContent {
+        clear: both
+    }
+
+    .new_lfc_layout .lfcMembershipTable td.formHelp {
+        text-align: right
+    }
+
+    .new_lfc_layout .container h1.page-title {
+        font-size: 24px !important
+    }
+
+    .new_lfc_layout .forgotPassword h1 {
+        font-size: 24px !important
+    }
+
+    .new_lfc_layout .forgotPassword td,
+    .new_lfc_layout .forgotPassword th {
+        float: left;
+        width: 100%;
+        padding-bottom: 5px
+    }
+
+    body.standard-single-column>.wrapper>.container {
+        padding: 0 20px !important
+    }
+
+    .topMessage {
+        margin-right: 20px;
+        font-size: 13px;
+        font-weight: 400
+    }
+}
+
+@media (max-width:650px) {
+
+    .dd .lfcMembershipTable td,
+    .dd .lfcMembershipTable th {
+        padding-bottom: 0
+    }
+
+    table.user-details-table td,
+    table.user-details-table th {
+        width: 100%;
+        text-align: left;
+        float: left
+    }
+
+    .new_lfc_layout .socialText {
+        font-size: 16px
+    }
+
+    .googleButton .socialText {
+        margin-left: 65px !important
+    }
+
+    .button {
+        width: 200px
+    }
+
+    .button .text {
+        font-size: 30px
+    }
+
+    table.user-details-table th {
+        padding: 10px 10px 0 10px
+    }
+
+    table.user-details-table td {
+        font-weight: 400;
+        padding: 0 10px
+    }
+
+    .fieldHalf .top {
+        display: none
+    }
+
+    .dd #WholesaleContact .lfcMembershipTable td,
+    .dd #WholesaleContact .lfcMembershipTable th {
+        width: 100%;
+        text-align: left;
+        float: left
+    }
+
+    .directDebitLeft {
+        display: none
+    }
+
+    .directDebitRight {
+        margin-top: 0
+    }
+
+    #newPaymentForm #paymentSet .leftField,
+    #newPaymentForm #paymentSet .rightField {
+        width: 50%
+    }
+
+    .new_lfc_layout .socialLogin {
+        width: 32%
+    }
+
+    .new_lfc_layout .socialLogin {
+        width: 81px !important
+    }
+
+    .new_lfc_layout .socialLogin a {
+        display: none
+    }
+
+    .new_lfc_layout .socialLogin.twitterButton {
+        background-position-x: 5px
+    }
+}
+
+@media (max-width:560px) {
+    .new_lfc_layout .confirmation .lfctv-promotion-div {
+        border: 0;
+        padding: 0
+    }
+
+    .button {
+        width: 190px
+    }
+
+    .instructions {
+        clear: both;
+        display: block;
+        width: 100%;
+        text-align: right
+    }
+
+    .mbsFormContainerMid {
+        padding: 10px
+    }
+
+    .new_lfc_layout #WholesaleContact .lfcMembershipTable td.formHelp {
+        float: left
+    }
+
+    .new_lfc_layout .reg-login legend,
+    .new_lfc_layout .reg-signup legend,
+    .new_lfc_layout .reg-social legend {
+        font-size: 20px
+    }
+
+    .new-user-content {
+        width: 100%;
+        height: auto
+    }
+
+    #not-logged-in-actions .buttonPlaceholder {
+        margin-top: 0
+    }
+
+    .new_lfc_layout .LoginTableSpacing {
+        height: 80px
+    }
+
+    .innerPadding {
+        padding: 20px 0
+    }
+
+    .login-content {
+        height: 220px
+    }
+
+    .googleButton .socialText,
+    .new_lfc_layout .socialText {
+        font-size: 20px
+    }
+
+    #newPaymentForm .ddForm {
+        width: 100%
+    }
+
+    #newPaymentForm .ddBtnWrap {
+        width: 100%
+    }
+
+    #ddBtnWrap2 {
+        margin-top: 20px
+    }
+}
+
+@media (max-width:500px) {
+
+    #newPaymentForm #paymentSet .leftField,
+    #newPaymentForm #paymentSet .rightField {
+        clear: both;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0 !important
+    }
+
+    .forgotPasswordFieldset .actAsInput,
+    .linkAndLoginFieldset .actAsInput {
+        padding: 10px 0
+    }
+
+    .forgotPasswordFieldset label,
+    .linkAndLoginFieldset label {
+        text-align: left
+    }
+
+    .new_lfc_layout input {
+        width: 100%;
+        float: left;
+        clear: both
+    }
+
+    .new_lfc_layout #newPaymentForm input {
+        width: auto;
+        float: none
+    }
+
+    #newPaymentForm input.currencyBtn {
+        width: 60px
+    }
+
+    #newPaymentForm .paymentForm .currencyBtnWrap {
+        width: 170px
+    }
+
+    .currencyBtnWrap {
+        margin-bottom: 10px
+    }
+
+    #newPaymentForm .fieldHalf.leftField {
+        border-right: 0;
+        width: 100%;
+        padding: 10px 0 10px 0 !important
+    }
+
+    #newPaymentForm .fieldHalf.rightField {
+        width: 100%;
+        padding: 10px 0 10px 0 !important
+    }
+
+    #newPaymentForm .ArticleContent fieldset p {
+        margin: 0 0 5px 0 !important
+    }
+
+    .mbsFormContainerMid {
+        margin: 0;
+        padding: 0
+    }
+
+    .dd-instructions h1 {
+        padding-bottom: 0
+    }
+
+    .topMessage {
+        font-size: 11px
+    }
+}
+
+@media (max-width:450px) {
+    .register .metroButton {
+        width: 185px;
+        position: absolute;
+        z-index: 1;
+        background-color: transparent
+    }
+
+    .register.buttonPlaceholder:hover .buttonIcon {
+        margin-left: 62px
+    }
+
+    .form-btn-wrapper,
+    .innerPadding {
+        text-align: center
+    }
+
+    .new_lfc_layout .register.buttonPlaceholder {
+        margin-right: 0;
+        width: 185px !important;
+        position: static;
+        display: block;
+        clear: both;
+        float: none;
+        margin: 0 auto 30px auto
+    }
+
+    .new_lfc_layout td.error {
+        margin-top: 15px
+    }
+
+    .register .backButtonPlaceholder {
+        width: 185px
+    }
+
+    .register.buttonPlaceholder .buttonIcon {
+        margin-left: 52px
+    }
+
+    .register .metroButton.right {
+        padding-right: 0;
+        display: block
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: normal
+    }
+
+    .new_lfc_layout h1 {
+        font-size: 22px;
+        line-height: normal
+    }
+
+    .new_lfc_layout .field .actAsInput {
+        clear: both
+    }
+
+    .new_lfc_layout .plus {
+        height: auto;
+        line-height: normal;
+        text-align: center
+    }
+
+    .new_lfc_layout .button {
+        width: 100%
+    }
+
+    .new_lfc_layout .inline {
+        clear: both;
+        float: none
+    }
+
+    .new_lfc_layout .backButtonPlaceholderDiv {
+        text-align: center
+    }
+
+    .new_lfc_layout .leftColumn .innerPadding {
+        text-align: center
+    }
+
+    .formDobDiv select {
+        width: 30% !important;
+        margin-right: 7px
+    }
+
+    .new_lfc_layout .backButtonPlaceholder {
+        margin-top: -35px;
+        position: relative;
+        float: none !important;
+        margin-bottom: 10px
+    }
+
+    .new_lfc_layout .RegistrationContent .buttonPlaceholder {
+        float: none !important;
+        width: 175px
+    }
+
+    .new_lfc_layout .RegistrationContent .dd .buttonPlaceholder,
+    .new_lfc_layout .RegistrationContent .dd-confirmation .buttonPlaceholder,
+    .new_lfc_layout .RegistrationContent .dd-instructions .buttonPlaceholder {
+        width: auto
+    }
+
+    .dd .buttonPlaceholder,
+    .dd-confirmation .buttonPlaceholder,
+    .dd-instructions .buttonPlaceholder {
+        margin-right: 0;
+        display: block
+    }
+
+    .dd #WholesaleContact,
+    .dd-confirmation #WholesaleContact,
+    .dd-confirmation #WholesaleContact2,
+    .dd-instructions #WholesaleContact2 {
+        text-align: center
+    }
+
+    .dd #WholesaleContact input[type=button],
+    .dd #WholesaleContact input[type=submit],
+    .dd-confirmation #WholesaleContact2 input,
+    .dd-instructions #WholesaleContact2 input {
+        width: 100%
+    }
+
+    .dd .buttonIcon,
+    .dd-confirmation .buttonIcon,
+    .dd-instructions .buttonIcon {
+        right: 20px !important;
+        margin-left: auto
+    }
+
+    .dd .buttonPlaceholder,
+    .dd-confirmation .buttonPlaceholder,
+    .dd-instructions .buttonPlaceholder {
+        margin-bottom: 20px
+    }
+
+    .dd .buttonPlaceholder.left,
+    .dd-confirmation .buttonPlaceholder.left,
+    .dd-instructions .buttonPlaceholder.left {
+        float: none !important
+    }
+
+    .dd .buttonPlaceholder.right,
+    .dd-confirmation .buttonPlaceholder.right,
+    .dd-instructions .buttonPlaceholder.right {
+        float: none !important
+    }
+
+    .new_lfc_layout .socialText {
+        text-align: center;
+        padding: 20px 0 !important;
+        margin-left: 10% !important
+    }
+
+    .topMessage {
+        font-size: 11px;
+        margin-bottom: 27px
+    }
+
+    .topMessage>a {
+        white-space: pre
+    }
+
+    .topMessage>a::before {
+        content: "\A"
+    }
+}
+
+@media (max-width:400px) {
+    .topMessage {
+        position: static;
+        margin: -10px 0 0 0
+    }
+
+    .topMessage>a {
+        white-space: inherit
+    }
+}
+
+@media (max-width:330px) {
+    .new_lfc_layout .socialText {
+        margin-left: 15% !important
+    }
+}
+
+.new_lfc_layout .top-wrapper {
+    width: 100%
+}
+
+.new_lfc_layout .ad-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 0 0
+}
+
+.new_lfc_layout .mobile-ad {
+    display: none
+}
+
+.new_lfc_layout .divider {
+    background-color: #dadada;
+    float: left
+}
+
+.new_lfc_layout .divider.horizontal {
+    width: 100%;
+    height: 1px;
+    margin: 40px 0
+}
+
+.new_lfc_layout .btns-wrapper {
+    float: left;
+    width: 100%
+}
+
+.new_lfc_layout .btns-set-1 {
+    width: 75%;
+    float: left;
+    margin-right: 5%;
+    padding-right: 2%;
+    border-right: solid 1px #dadada
+}
+
+.new_lfc_layout .btns-set-2 {
+    width: 20%;
+    float: right
+}
+
+.new_lfc_layout .main-btn {
+    height: 220px;
+    display: inline-block;
+    margin: 0 2% 20px 0;
+    vertical-align: top;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    position: relative;
+    font-size: 1.2em;
+    color: #535353
+}
+
+.new_lfc_layout .btns-set-1 .main-btn {
+    width: 30%
+}
+
+.new_lfc_layout .btns-set-2 .main-btn {
+    width: 100%
+}
+
+.new_lfc_layout .main-btn span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: #dadada;
+    height: auto;
+    min-height: 30%;
+    padding: 20px 0 0 0
+}
+
+.new_lfc_layout .main-btn.grey {
+    background-color: #f5f5f5;
+    border: solid 1px #888
+}
+
+.new_lfc_layout .main-btn.green {
+    color: #fff;
+    background-color: #007e6b;
+    border: solid 1px #006253
+}
+
+.new_lfc_layout .main-btn.red {
+    color: #fff;
+    background-color: #b7161e;
+    border: solid 1px #931117
+}
+
+.new_lfc_layout .main-btn.green span {
+    background-color: #00a590
+}
+
+.new_lfc_layout .main-btn.red span {
+    background-color: #e31b23
+}
+
+.new_lfc_layout .main-btn:hover {
+    color: #fff;
+    background-color: #e31b23;
+    border: solid 1px #b7161e
+}
+
+.new_lfc_layout .main-btn:hover span {
+    color: #fff;
+    background-color: #b7161e
+}
+
+.new_lfc_layout .main-btn.user-details-btn {
+    background-image: url(../images/reg/mylfc-icon-user-details.png)
+}
+
+.new_lfc_layout .main-btn.user-details-btn:hover {
+    background-image: url(../images/reg/mylfc-icon-user-details-active.png)
+}
+
+.new_lfc_layout .main-btn.social-btn {
+    background-image: url(../images/reg/mylfc-icon-social.png)
+}
+
+.new_lfc_layout .main-btn.social-btn:hover {
+    background-image: url(../images/reg/mylfc-icon-social-active.png)
+}
+
+.new_lfc_layout .main-btn.password-btn {
+    background-image: url(../images/reg/mylfc-icon-password.png)
+}
+
+.new_lfc_layout .main-btn.password-btn:hover {
+    background-image: url(../images/reg/mylfc-icon-password-active.png)
+}
+
+.new_lfc_layout .main-btn.card-details-btn {
+    background-image: url(../images/reg/mylfc-icon-card-details.png)
+}
+
+.new_lfc_layout .main-btn.card-details-btn:hover {
+    background-image: url(../images/reg/mylfc-icon-card-details-active.png)
+}
+
+.new_lfc_layout .main-btn.directdebit-details-btn {
+    background-image: url(../images/reg/mylfc-icon-directdebit.png)
+}
+
+.new_lfc_layout .main-btn.directdebit-details-btn:hover {
+    background-image: url(../images/reg/mylfc-icon-directdebit-active.png)
+}
+
+.new_lfc_layout .main-btn.frequency-btn {
+    background-image: url(../images/reg/mylfc-icon-pay-frequncy.png)
+}
+
+.new_lfc_layout .main-btn.frequency-btn:hover {
+    background-image: url(../images/reg/mylfc-icon-pay-frequncy-active.png)
+}
+
+.new_lfc_layout .main-btn.reactivate-btn {
+    background-image: url(../images/reg/mylfc-icon-pay-reactivate.png)
+}
+
+.new_lfc_layout .main-btn.reactivate-btn:hover {
+    background-image: url(../images/reg/mylfc-icon-pay-reactivate-active.png)
+}
+
+.new_lfc_layout .main-btn.pulse-btn {
+    background-image: url(../images/reg/mylfc-icon-manage.png)
+}
+
+.new_lfc_layout .main-btn.pulse-btn:hover {
+    background-image: url(../images/reg/mylfc-icon-manage-active.png)
+}
+
+.new_lfc_layout .main-btn.help-button {
+    background-image: url(../images/reg/mylfc-icon-help.png)
+}
+
+.new_lfc_layout .main-btn.lfctvgo-button {
+    background-image: url(../images/reg/mylfc-icon-lfctvgo.png)
+}
+
+.new_lfc_layout .main-btn.external:after {
+    content: '';
+    width: 26px;
+    height: 22px;
+    background: url(../images/reg/mylfc-icon-external-link.png) center no-repeat;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 300
+}
+
+.new_lfc_layout .links-wrapper {
+    float: left;
+    clear: both;
+    margin-top: 25px
+}
+
+.new_lfc_layout .links-wrapper a {
+    color: #545454;
+    text-decoration: underline
+}
+
+.new_lfc_layout .links-wrapper a:hover {
+    color: #e31b23;
+    text-decoration: none
+}
+
+@media (max-width:999px) {
+    .new_lfc_layout .main-btn {
+        background-size: 45%;
+        background-position: center 35%;
+        font-size: 1.1em
+    }
+
+    .new_lfc_layout .main-btn span {
+        padding: 15px 0 0 0
+    }
+
+    .new_lfc_layout .main-btn.external:after {
+        top: 5px;
+        right: 5px;
+        background-size: 70%
+    }
+}
+
+@media (max-width:799px) {
+    .new_lfc_layout .main-btn {
+        height: 180px;
+        font-size: 1em;
+        background-position: center 27%
+    }
+
+    .new_lfc_layout .main-btn span {
+        padding: 8px 0 0 0
+    }
+}
+
+@media (max-width:699px) {
+    .new_lfc_layout .main-btn {
+        float: left;
+        display: block;
+        margin: 0 2.7% 20px 0
+    }
+
+    .new_lfc_layout .btns-set-1 {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px #dadada
+    }
+
+    .new_lfc_layout .btns-set-2 {
+        width: 100%;
+        float: left;
+        clear: both
+    }
+
+    .new_lfc_layout .btns-set-1 .main-btn,
+    .new_lfc_layout .btns-set-2 .main-btn {
+        width: 31.5%
+    }
+
+    .new_lfc_layout .main-btn.third {
+        margin: 0 0 20px 0
+    }
+
+    .new_lfc_layout .divider.horizontal {
+        margin: 30px 0
+    }
+
+    .new_lfc_layout .ad-wrapper {
+        margin: 20px 0 0 0
+    }
+
+    .new_lfc_layout .forgotPassword .boxContent {
+        margin-bottom: 0
+    }
+
+    .new_lfc_layout .forgotPassword .boxContent .btn.left.metroButtonv2 {
+        margin-top: -43px;
+        padding: 10px 30px
+    }
+}
+
+@media (max-width:499px) {
+    .new_lfc_layout .main-btn {
+        height: 60px;
+        margin: 0 0 20px 0;
+        background-size: 13%;
+        background-position: 4% center
+    }
+
+    .new_lfc_layout .main-btn span {
+        top: 0;
+        left: 19%;
+        padding: 20px 10px 0 10px
+    }
+
+    .new_lfc_layout .btns-set-1 .main-btn,
+    .new_lfc_layout .btns-set-2 .main-btn {
+        width: 100%
+    }
+
+    .new_lfc_layout .wrapper h1 {
+        padding: 15px 0 15px 0;
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center
+    }
+
+    .top-wrapper p {
+        text-align: center
+    }
+
+    .new_lfc_layout .divider.horizontal {
+        margin: 20px 0
+    }
+
+    .new_lfc_layout .links-wrapper {
+        width: 100%;
+        text-align: center
+    }
+
+    .new_lfc_layout .desktop-ad {
+        display: none
+    }
+
+    .new_lfc_layout .mobile-ad {
+        display: block
+    }
+}
+
+.account-found table.results {
+    width: 100%
+}
+
+.account-found table.results th {
+    padding: 10px
+}
+
+.account-found table.results td {
+    padding: 5px
+}
+
+.account-found table.results .results-row td {
+    padding-top: 20px
+}
+
+.account-found table.results .btn-row td {
+    padding-bottom: 20px
+}
+
+.account-found tr.header td {
+    background-color: #ddd;
+    font-weight: 700
+}
+
+.account-found {
+    padding: 20px
+}
+
+.account-found fieldset {
+    padding: 10px;
+    border: 1px solid #bbb;
+    margin: 0
+}
+
+.account-found .info-row p,
+.account-found p {
+    font-size: .9em
+}
+
+.account-found .btn-row {
+    border-bottom: dashed 1px #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px
+}
+
+.account-found .default-btn {
+    width: auto;
+    padding: 10px 12px;
+    margin-right: auto;
+    height: auto;
+    background-color: #e52d34;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    border: none !important
+}
+
+@media screen and (max-width:699px) {
+    .account-found tr.header td {
+        display: none
+    }
+
+    .account-found tr.results-row td {
+        width: 100%;
+        float: left;
+        text-align: center
+    }
+
+    .account-found tr.results-row {
+        display: block;
+        margin-top: 10px
+    }
+
+    .account-found .btn-row,
+    .account-found .info-row,
+    .account-found legend,
+    .account-found p {
+        text-align: center
+    }
+}
+
+.gdpr-consent-banner-desktop,
+.gdpr-consent-banner-mobile,
+.gdpr-consent-banner-tablet {
+    width: 100%;
+    margin: 0 0 30px 0
+}
+
+.gdpr-consent-banner-desktop,
+.gdpr-consent-banner-tablet {
+    display: none
+}
+
+@media screen and (min-width:400px) {
+    .gdpr-consent-banner-mobile {
+        display: none
+    }
+
+    .gdpr-consent-banner-tablet {
+        display: block
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .gdpr-consent-banner-tablet {
+        display: none
+    }
+
+    .gdpr-consent-banner-desktop {
+        width: 100%;
+        display: block
+    }
+}
+
+.GDPR-consent-form-question {
+    margin: 0 0 50px 0
+}
+
+.GDPR-consent-form-question h2 {
+    border: none !important;
+    color: #333 !important
+}
+
+.GDPR-consent-form-question .contractable {
+    margin: 0 0 50px 0
+}
+
+.GDPR-consent-form-question .email-consent {
+    margin: 0 0 30px 0
+}
+
+.GDPR-consent-form-title {
+    font-weight: 700
+}
+
+.formPasswordDiv input#sf_guard_user_password {
+    background-image: url(../images/icons/icon-password-tooltip.png);
+    background-repeat: no-repeat;
+    background-position: right 5px top 6px
+}
+
+.formPasswordDiv input#sf_guard_user_password:hover {
+    background-position: right 5px top -37px
+}
+
+.formPasswordDiv input#sf_guard_user_password::-ms-reveal {
+    display: none
+}
+
+.formPasswordDiv .error_list li ul {
+    list-style-type: disc;
+    padding-left: 10px;
+    list-style-position: inside
+}

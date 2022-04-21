@@ -1,0 +1,15 @@
+{% extends 'bfc/base/index1.html' %}
+{% block title %}Welcome{% endblock %}
+
+{% block main %}
+<style>
+    .forget{
+      margin-left: 15%;
+    }
+  </style>
+<div class="forget">
+<h1>Welcome {{ user.firstName }}!</h1>
+
+<p>Your account has been successsfully created. Now you can <a href="{% url 'account:login' %}">log in</a></p>
+</div>
+{% endblock main %}

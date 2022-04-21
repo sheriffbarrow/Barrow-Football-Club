@@ -1,0 +1,272 @@
+{% extends 'bfc/base/index1.html' %}
+{% block title %}
+<title>Barrow fc - Team News</title>
+{% endblock title %}
+{% block bread %}
+<div class="breadcrumbs">
+    <span class="breadcrumb-prefix">you are here:</span>
+    <ul>
+        <li>
+            <a href="{% url 'bfc:myhome' %}">home</a>
+        </li>
+        <li>
+            <span>/ </span>
+
+            <a href="">news</a>
+        </li>
+        <li>
+            <span>/ </span>
+
+            first team
+        </li>
+    </ul>
+</div>
+{% endblock bread %}
+{% block main %}
+
+           
+            <div id="news-list-page" class="news-list-page list-page">
+
+                <main class="news-list-main post-main main" role="main">
+
+                    <div id="featured-single-item-content-wrapper">
+                        <div id="cms-block-" class="cms-block cms-block-element"
+                            data-block-type="sonata.block.service.text">
+
+                            <div class="carousel news-carousel featured-single-item-content owl-carousel">
+                                <div class="carousel-item news-carousel-item featured-news-carousel-item">
+                                    {% for post in posts %}
+                                    <div class="featured-single-item">
+                                        <a class="carousel-item-link"
+                                            href="{{ post.get_absolute_url }}">
+                                            <p class="featured-label">FEATURED</p>
+                                            <span class="icon-helper icon-doc-text content-type-article"><span
+                                                    class="indent">article</span></span>
+                                            <img src="{{ post.postImage.url }}"
+                                                data-src="{{ post.postImage.url }}"
+                                                alt="" class="carousel-media-image media-image lazyLoadPlaceholder" />
+
+                                            <div class="post-header-wrap">
+
+                                                <h2 class="post-header">
+                                                   {{ post.title|truncatewords:'10'}}  &amp;
+                                                </h2>
+
+                                                <p class="post-synopsis synopsis">
+                                                    {{ post.body|truncatewords:'30'}}
+                                                </p>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% endfor %}
+                                   
+                                    <div class="featured-single-advert-wrapper">
+                                        <div class="featured-single-advert partial">
+                                            <div id='div-gpt-ad-RES_MAIN_NEWS_LISTING_FEATURED'>
+                                                <script>
+                                                    Lfc.gtmAdQueue.push(
+                                                        'div-gpt-ad-RES_MAIN_NEWS_LISTING_FEATURED');
+                                                </script>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <nav class="news-list-filter post-list-filter closedMenu">
+
+
+                        <div class="current">First Team</div>
+                        <div class="select"></div>
+                        <ul class="bar">
+                            <!--
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news">
+                                    All
+                                </a>
+                            </li>
+                        -->
+                            <li class="filter-option">
+                                <a href="" class="is_active">
+                                    First Team
+                                </a>
+                            </li>
+                            <!--
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/women">
+                                    Women
+                                </a>
+                            </li>
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/academy">
+                                    Academy
+                                </a>
+                            </li>
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/features">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/tickets">
+                                    Tickets
+                                </a>
+                            </li>
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/community">
+                                    Community
+                                </a>
+                            </li>
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/announcements">
+                                    Announcements
+                                </a>
+                            </li>
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/media-watch">
+                                    Media Watch
+                                </a>
+                            </li>
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/axa-training-centre">
+                                    AXA Training Centre
+                                </a>
+                            </li>
+                            <li class="filter-option">
+                                <a href="https://www.liverpoolfc.com/news/behind-the-badge">
+                                    Behind the Badge
+                                </a>
+                            </li>
+                             -->
+                        </ul>
+                   
+                    <!--
+                        <ul class="dropdown">
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news">
+                                    All
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/first-team" class="is_active">
+                                    First Team
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/women">
+                                    Women
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/academy">
+                                    Academy
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/features">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/tickets">
+                                    Tickets
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/community">
+                                    Community
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/announcements">
+                                    Announcements
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/media-watch">
+                                    Media Watch
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/axa-training-centre">
+                                    AXA Training Centre
+                                </a>
+                            </li>
+                            <li class="filter-option hidden">
+                                <a href="https://www.liverpoolfc.com/news/behind-the-badge">
+                                    Behind the Badge
+                                </a>
+                            </li>
+                        </ul>
+                    -->
+
+                    </nav>
+
+                    <div id="cms-block-21" class="cms-block cms-block-element"
+                        data-block-type="sonata.page.block.container">
+                        <div class="container-block block-21 ">
+                            <div class="news-list-page">
+                                <section id="post-list" class="news-list post-list news-grid post-grid list-layout-1">
+                                    {% for post in post1 %}
+                                    <article class="news-list-item list-item  ">
+
+                                        <a class="news-list-item-content "
+                                            href="{{ post.get_absolute_url }}">
+
+                                            <div class="media-thumbnail-wrap">
+                                           
+                                                <span class="media-thumbnail-grad"></span>
+
+                                                <img src="{{ post.postImage.url }}"
+                                                    class="media-thumbnail-image lazyLoadPlaceholder"
+                                                    data-src="{{ post.postImage.url }}"
+                                                    data-title="{{ post.ttile }}"
+                                                    alt="" />
+
+                                                <div class="post-synopsis-wrap">
+                                                    <p class="post-synopsis synopsis">
+                                                        {{ post.title}}
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+
+                                            <span class="icon-helper icon-doc-text content-type-article"><span
+                                                    class="indent">article</span></span>
+
+                                            <div class="post-meta meta">
+
+
+
+                                                <div class="post-time-wrap">
+                                                    <time class="post-time time"
+                                                        datetime="{{ post.publish|date:'d M Y'}}">{{post.publish|date:"d" }}<BR>{{ post.publish|date:'M Y'}}</time>
+                                                </div>
+
+                                                <h2 class="post-header">
+                                                    {{ post.title }}
+                                                </h2>
+                                            </div>
+
+                                        </a>
+
+                                    </article>
+                                    {% endfor %}
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+{% endblock main %}

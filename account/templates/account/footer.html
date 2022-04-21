@@ -1,0 +1,432 @@
+{% block footers %}
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static '/css/quick_service.css' %}">
+<link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<head>
+
+
+
+  
+
+   
+
+    {% block footer %}
+    <footer id="page-footer">
+        <div class="upperBackground">
+            <section class="partners">
+
+
+                <!--
+                    <div class="Primary">
+
+
+                        <a href="http://www.standardchartered.com/home/en/index.html?camp_id=liverpool_source=liverpoolfctv_medium=4"
+                            title="Standard Chartered" target="_blank">
+
+
+                            <img src="../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/partnerlogo/0002/25/thumb_124418_partnerlogo_partner_footer.png"
+                                alt="Standard Chartered">
+
+
+                        </a>
+
+
+                        <a href="https://www.nike.com/gb/" title="Nike" target="_blank">
+
+
+                            <img src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/partnerlogo/0002/09/thumb_108617_partnerlogo_partner_footer.png' %}"
+                                alt="Nike">
+
+
+                        </a>
+
+
+                        <a href="https://www.axa.com/?utm_source=liverpoolfc&amp;utm_medium=logo-partnership&amp;utm_campaign=lfc1819season"
+                            title="AXA" target="_blank">
+
+
+                            <img src="../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/partnerlogo/0001/74/thumb_73714_partnerlogo_partner_footer.png"
+                                alt="AXA">
+
+
+                        </a>
+
+
+                        <a href="https://www.expedia.co.uk/" title="Expedia" target="_blank">
+
+
+                            <img src="../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/partnerlogo/0002/21/thumb_120808_partnerlogo_partner_footer.png"
+                                alt="Expedia">
+
+
+                        </a>
+
+
+                    </div>
+                -->
+
+                <div class="Secondary">
+                    <a href="" title="Barrow fc" target="">
+
+
+                        <img src="{% static 'images/footer/bfcfooter.png' %}" alt="Barrow fc">
+
+
+                    </a>
+
+
+                    <a href="" title="Nike" target="">
+
+
+                        <img src="{% static 'images/footer/nikefooter.png' %}" alt="Nike">
+
+
+                    </a>
+
+
+                    <a href="" title="EA Sports" target="">
+
+
+                        <img src="{% static 'images/footer/eafooter.png' %}" alt="EA Sports">
+
+
+                    </a>
+
+
+
+
+                    <a href="" title="Barrow Company Limited" target="">
+
+
+                        <img src="{% static 'images/footer/bcl.png' %}" alt="Barrow Company Limited">
+
+
+                    </a>
+
+                    <!--
+                        <a href="https://uk.joiebaby.com/liverpoolfc/" title="Joie Baby" target="_blank">
+
+
+                            <img src="../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/partnerlogo/0001/41/thumb_40979_partnerlogo_partner_footer.png"
+                                alt="Joie Baby">
+
+
+                        </a>
+                    -->
+
+
+                </div>
+
+
+
+
+            </section>
+        </div>
+        <div class="lowerBackground">
+            <section class="bottomFooter">
+
+                <div class="footerCrest">
+                </div>
+
+                <div class="footerCrestLeft">
+                </div>
+
+                <div class="footerText">
+
+
+
+                    <div class="footer-middleBottom">
+                        <a title="Go to Privacy Policy" href="">Privacy Policy</a>
+                        <span>|</span>
+                        <a title="Go to Terms and Conditions" href="l">Terms and
+                            Conditions</a> <span>|</span>
+                        <a title="Go to Cookies" href="">Cookies</a> <span>|</span>
+                        <a title="Go to Help" href="">Help</a> <span>|</span>
+                        <a title="Go to Browser Support" href="">Browser Support</a>
+                        <span>|</span>
+                        <a title="Go to RSS Feeds" href="{% url 'bfc:post_feed' %}">RSS Feeds</a> <span>|</span>
+                        <a title="Go to Contact Us" href="">Contact Us</a>
+                    </div>
+
+                    <div class="footer-left">
+                        &copy; Copyright 2022 The Barrow Football Club and Barrow Company Limited. All rights
+                        reserved.
+                    </div>
+
+                    <div class="footer-right">
+                        Developed and maintained by the BFC Technology and Transformation Team
+                    </div>
+                    
+
+                </div>
+        </div>
+
+        </section>
+        </div>
+    </footer>
+    {% endblock footer %}
+
+
+    </div>
+
+
+
+
+    <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/scripts.min.js' %}"></script>
+
+    <script src="{% static 'secure.widget.cloud.opta.net/v3/v3.opta-widgets.js' %}"></script>
+
+ 
+
+    <style>
+        @media screen and (max-width: 699px) {
+            .home .last-next-match div[title="UEFA Champions League"] {
+                height: 30px !important;
+                background-size: 100%;
+                width: 75px;
+                margin: 0 auto;
+            }
+        }
+
+        #two-col-content-grid .two-col-content-grid-item .media-image-wrap>img {
+            min-width: 1px !important;
+        }
+
+        @media screen and (max-width: 519px) {
+            .news-carousel-item:first-child .home-page-primary-advert {
+                height: 250px;
+                width: 300px;
+            }
+        }
+
+        /* NEW PRINCIPLE PARTNER MENU */
+        .home .site-header-inner .principle-partners-logos {
+            left: 0 !important;
+            right: 0 !important;
+            top: initial !important;
+            bottom: 6px;
+            width: auto !important;
+            padding-top: 7px !important;
+            text-indent: -15%;
+        }
+
+        .home .site-header-inner .principle-partners-logos-inner a:nth-child(3) img {
+            width: 30px;
+        }
+
+        .home .site-header-inner .principle-partners-logos a {
+            margin: 0 14px;
+        }
+
+        @media screen and (max-width: 999px) {
+            .home .site-header-inner .principle-partners-logos {
+                text-indent: 0;
+                padding-top: 0 !important;
+            }
+
+            .home .site-header-inner .principle-partners-logos-inner a:nth-child(3) img {
+                width: 25px;
+            }
+        }
+
+        @media screen and (max-width: 699px) {
+            .home .site-header-inner .principle-partners-logos {
+                margin-top: 20px !important;
+            }
+        }
+
+
+        #players-carousel .principle-partners-logos a[title~="AXA"] img {
+            width: 30px;
+        }
+
+        */ END NEW */
+        /* start adding axa style fix */
+        /*
+.home .site-header-inner .principle-partners-logos-inner a:nth-child(3) img {
+
+width: 45px;
+
+margin: 0 15px;
+
+}
+
+@media only screen and (max-width: 1090px) {
+
+.home .site-header-inner .principle-partners-logos { left: 19% }
+
+}
+
+@media only screen and (max-width: 699px) {
+
+.home .site-header-inner .principle-partners-logos-inner a:nth-child(3) img {
+
+    width: 35px;
+
+}
+
+}
+
+@media only screen and (max-width: 380px) {
+
+.home .site-header-inner .principle-partners-logos-inner img {
+
+    width: 62px;
+
+}
+
+.home .site-header-inner .principle-partners-logos-inner a:nth-child(3) img {
+
+    width: 28px;
+
+     margin: 0 10px
+
+}
+
+}
+
+
+
+.home #players-carousel .principle-partners-logos-inner a:nth-child(3) img {
+
+width: 45px;
+
+margin: 0 15px;
+
+}
+
+@media only screen and (max-width: 699px) {
+
+.home #players-carousel .principle-partners-logos-inner a:nth-child(3) img {
+
+    width: 35px;
+
+}
+
+}
+
+
+
+@media only screen and (max-width: 380px) {
+
+.home #players-carousel .principle-partners-logos-inner img {
+
+    width: 62px;
+
+}
+
+.home #players-carousel .principle-partners-logos-inner a:nth-child(3) img {
+
+    width: 28px;
+
+     margin: 0 10px
+
+}
+
+}
+ */
+
+
+        /* end adding axa style fix */
+
+
+
+        /* Winners Banner Below
+
+#featured-content::before{
+content: "";
+display: block;
+max-width: 100%;
+background-image: url('https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/page_banner/0002/08/7abcb0d130016504c4a4761ae88451af4f7c107d.jpeg');
+background-repeat: no-repeat;
+background-size: 100%;
+padding-top: 11.400%;
+}
+
+@media screen and (min-width: 699px){
+#featured-content::before{
+content: "";
+display: block;
+max-width: 100%;
+background-image: url('https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/page_banner/0002/08/a645dcf8e1f1cf28fb38a0701ee5e32b6d0b0a79.jpeg');
+background-repeat: no-repeat;
+background-size: 100%;
+padding-top: 5.400%;
+}
+}
+
+Winners Banner Above*/
+
+        /* CHAMPS WALL BANNER BEGIN ************/
+        .champs-wall {
+            width: 100%;
+        }
+
+        .champs-wall img {
+            width: 100%;
+        }
+
+        .champs-wall .desktop,
+        .champs-wall .tablet {
+            display: none;
+        }
+
+        @media screen and (min-width: 400px) {
+            .champs-wall .tablet {
+                display: block;
+            }
+
+            .champs-wall .mobile {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 699px) {
+            .champs-wall .desktop {
+                display: block;
+            }
+
+            .champs-wall .tablet {
+                display: none;
+            }
+        }
+
+        /* CHAMPS WALL BANNER END ************/
+
+        .home .site-header {
+            padding-bottom: 2px;
+        }
+
+
+        /* LFC RECCOMMENDS HOT FIX */
+        #lfc-recommends>.lfc-recommends article.no-partner-logo {
+            padding-top: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        })
+    </script>
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/scripts.min.js"></script>
+
+    <script src="https://secure.widget.cloud.opta.net/v3/v3.opta-widgets.js"></script>
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/news-scripts.min.js"></script>
+
+    <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/home-scripts.min.js' %}"></script>
+
+    </body>
+
+</html>
+{% endblock footers %}

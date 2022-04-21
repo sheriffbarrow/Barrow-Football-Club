@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html id="top" class="no-js">
+<!--<![endif]-->
+<script>
+    (function(H) {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+    })(document.documentElement);
+
+    if (window.history.replaceState && window.location.href.slice(-1) === '#') {
+        window.history.replaceState({}, document.title, window.location.href.slice(0, -1));
+    }
+</script>
+
+<head>
+    <!-- OneTrust Cookies Consent Notice start for liverpoolfc.com -->
+   
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+
+
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-697/lfc/images/favicon.png" type="image/png" />
+
+
+    <link rel="stylesheet" href="https://secure.widget.cloud.opta.net/v3/css/v3.football.opta-widgets.css">
+
+    <link rel="stylesheet" href="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-697/lfc/css/styles.css" />
+
+    <!--[if  (lt IE 9) & (!IEMobile)]>
+            <link rel="stylesheet" href="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-697/lfc/css/styles-ie8.css" />
+        <![endif]-->
+
+
+    <!--[if lt IE 9]>
+            <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-697/lfc/js/polyfills-ie8.min.js"></script>
+        <![endif]-->
+
+    <!--[if IE 9]>
+        <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-697/lfc/js/polyfills-ie9.min.js"></script>
+        <![endif]-->
+
+
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-697/lfc/js/base.js"></script>
+
+    <link rel="dns-prefetch" href="//cdn.dynamicyield.com">
+    <link rel="dns-prefetch" href="//st.dynamicyield.com">
+    <link rel="dns-prefetch" href="//rcom.dynamicyield.com">
+
+    <script>
+        window.DY = window.DY || {};
+        DY.recommendationContext = {
+            type: 'OTHER'
+        };
+    </script>
+
+    <script type="text/javascript" src="//cdn.dynamicyield.com/api/8772718/api_dynamic.js"></script>
+    <script type="text/javascript" src="//cdn.dynamicyield.com/api/8772718/api_static.js"></script>
+
+    <style type="text/css">
+        a.post-next.post-next-top {
+            display: none;
+        }
+
+        div.post-next.post-next-bottom {
+            display: none;
+        }
+    </style>
+
+    <script>
+        // create Lfc element with GPT command queue
+        var Lfc = Lfc || {};
+        Lfc.gtmAdQueue = Lfc.gtmAdQueue || [];
+
+        // Load GPT asynchronously
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+            var gads = document.createElement('script');
+            gads.async = true;
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            //$('.masthead .link-login a').attr('href', 'https://www.liverpoolfc.com/my-lfc/login?fragment=&referer='+(document.URL));
+
+            // Add redirect to login and join links
+            var loginUrl = $('.masthead .link-login a').prop('href');
+            $('.masthead .link-login a').attr('href', loginUrl + '?redirect_uri=' + (document.URL));
+
+            var joinUrl = $('.masthead .link-join a').prop('href');
+            $('.masthead .link-join a').attr('href', joinUrl + '?redirect_uri=' + (document.URL));
+
+
+            // remove age restricted footer logos
+            var checkString = window.location.href;
+            if (checkString.indexOf("academy") !== -1 || checkString.indexOf("under-23") !== -1 || checkString.indexOf("under-18") !== -1 || checkString.indexOf("soccerschools") !== -1 || checkString.indexOf("soccer-schools") !== -1 || checkString.indexOf("u23") !== -1 || checkString.indexOf("u18") !== -1) {
+                $('a[title="Carlsberg"], a[title="Betvictor"], a[title="Liverpool Vodka"], a[title="Draft Kings"], a[title="1XBET"]').remove();
+            }
+
+            if (checkString.indexOf("/women/") !== -1 || checkString.indexOf("/news/women") !== -1 || checkString.indexOf("/team/women") !== -1 || checkString.indexOf("/fans/liverpool-fc-women") !== -1) {
+                $('a[title="Western Union"], a[title="Carlsberg"],a[title="MG"],a[title="Nivea"],a[title="Falken Tyres"],a[title="TigerWit"],a[title="EA Sports"],a[title="Chaokoh"],a[title="NH Foods"],a[title="Lavazza"],a[title="Petro-Canada"],a[title="Liverpool Vodka"],a[title="Levis"],a[title="iugis"],a[title="Mitel"],a[title="Verbier"],a[title="Tribus"],a[title="Cadbury UK"],a[title="Cadbury ROW"],a[title="Holly Frontier"],a[title="Quorn"],a[title="Mauritius"],a[title="Acronis"]').remove();
+            }
+
+            // remove link
+            $('a[title="1XBET"]').removeAttr("href");
+
+            // HOT FIX - REMOVING MORE MENU FROM INTERNATIONAL SITES
+            var urlHostName = window.location.hostname;
+            if (urlHostName.indexOf('indonesia') !== -1 || urlHostName.indexOf('thailand') !== -1 || urlHostName.indexOf('japan') !== -1) {
+                $('.main-menu ul.more-menu').hide();
+            }
+
+        })
+    </script>
+    <style>
+        .site-header-inner .masthead .masthead-links .more-menu ul li a {
+            background: none !important;
+        }
+
+        .site-header-inner .social-links li.skype {
+            display: none;
+        }
+
+        .vixlet,
+        .dugout {
+            display: none !important;
+        }
+
+        .video-error__content {
+            padding-top: 3% !important;
+        }
+
+        .video-error__listing {
+            margin: 15px 0 !important;
+        }
+
+        .video-error__subtitle-mobile,
+        .video-error__registered {
+            color: white !important;
+        }
+
+        .video-player-embeddable .video-error--embed .video-error__listing-group ul li {
+            margin: 0 0 5px 0 !important;
+        }
+
+        .video-error__call-to-action a.js-subscribe-button {
+            font-size: 0.8em !important;
+            background: white !important;
+            text-transform: uppercase !important;
+        }
+
+        .video-error__call-to-action a.js-subscribe-button:hover {
+            color: #e31b23 !important;
+        }
+
+        @media only screen and (min-width: 551px) {
+            .video-error__subtitle-mobile {
+                margin: 10px 0 !important;
+                padding: 0 !important;
+            }
+        }
+
+        @media only screen and (min-width: 775px) and (max-width: 975px) {
+            .video-error__listing-group {
+                display: none !important;
+            }
+        }
+
+        /*@media screen and (min-width: 700px) {
+.site-header-inner .main-menu .more-menu .more-menu-link>ul li {
+display:block !important;
+}
+}*/
+
+        @media screen and (min-width: 1000px) {
+            .site-header-inner .masthead .masthead-links .more-menu.noLogin ul {
+                top: 100% !important;
+            }
+        }
+
+        /* IE ONLY */
+
+        @media screen\0 {
+            .video-player-embeddable .video .shard-overlay {
+                position: absolute !important;
+            }
+        }
+
+        .home .featured-news-carousel .media-image-wrap .indent {
+            text-indent: -99999px;
+        }
+
+        .dy_unit .dy-sliding-drawer-container {
+            bottom: 25%;
+        }
+    </style>
+
+
+
+  
+
+    <style type="text/css">
+        .facebookButton {
+            display: none !important;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+
+<body class="main-site-layout sonata-bc template-standard_two_column standard-two-column">
+
+    <!-- Google Tag Manager -->
+    <noscript>
+                <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KCFJMVP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            </noscript>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KCFJMVP');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+    <div class="wrapper">
+
+
+        <a id="page-top"></a>
+
+        <div class="container">
+
+
+            <div class="content ">
+
+
+
+                <div class="topRow">
+                    <div id="cms-block-2712" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+                        <div class="container-block block-2712 ">
+
+
+
+
+                            <style>
+                                @media only screen and (min-width: 1000px) {
+                                    .title-image {
+                                        background-image: url('{{ staff.playerbanner_xl.url}}') !important;
+                                        padding-bottom: 46.15%;
+                                    }
+                                }
+
+                                @media only screen and (max-width: 999px) {
+                                    .title-image {
+                                        background-image: url('{{staff.playerbanner_sm.url }}') !important;
+                                        padding-bottom: 46.14%;
+                                    }
+                                }
+
+                                @media only screen and (max-width: 499px) {
+                                    .title-image {
+                                        background-image: url('{{ staff.playerbanner_sm.url }}') !important;
+                                        padding-bottom: 46.18%;
+                                    }
+                                }
+                            </style>
+
+
+
+                            <style>
+                                @media only screen and (max-width: 499px) {
+                                    .title-image.mobile {
+                                        background-image: url('{{staff.playerbanner_sm.url }}') !important;
+                                        padding-bottom: 62.60%;
+                                    }
+                                }
+                            </style>
+
+
+                            <div class="title-image mobile">
+                                <!-- EMPTY-->
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mainCol">
+                    <div class="mainColInner">
+                        <div id="cms-block-2713" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+                            <div class="container-block block-2713 ">
+                                <nav class="grouped-navigation closedMenu default">
+                                    <span class="current">Jürgen Klopp</span>
+                                    <div class="select"></div>
+                                    <ul class="bar">
+                                        <li>
+                                            <a href="/team/first-team/staff/jurgen-klopp" class="is_active">Jürgen Klopp</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.liverpoolfc.com/video/search/q/Klopp/channel/lfctvgo_clip/rank/-published_at" class="" target="_blank">Video</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.lfcpicturestore.tv/dmcs_search.html?find=klopp" class="" target="_blank">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://store.liverpoolfc.com/" class="" target="_blank">Shop</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="dropdown">
+                                        <li class="hidden">
+                                            <a href="/team/first-team/staff/jurgen-klopp" class="is_active">Jürgen Klopp</a>
+                                        </li>
+                                        <li class="hidden">
+                                            <a href="http://www.liverpoolfc.com/video/search/q/Klopp/channel/lfctvgo_clip/rank/-published_at" class="" target="_blank">Video</a>
+                                        </li>
+                                        <li class="hidden">
+                                            <a href="http://www.lfcpicturestore.tv/dmcs_search.html?find=klopp" class="" target="_blank">Gallery</a>
+                                        </li>
+                                        <li class="hidden">
+                                            <a href="https://store.liverpoolfc.com/" class="" target="_blank">Shop</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <div id="cms-block-2718" class="cms-block cms-block-element" data-block-type="lfc.block.service.richtext">
+                                    <div class="richtext ">
+                                        <p><strong>Joined:</strong>&nbsp;October 2015<br />
+                                            <strong>Honours:&nbsp;</strong>Premier League (2019-20), FIFA Club World Cup (2019), UEFA Super Cup (2019), Champions League (2019)</p>
+
+                                        <hr />
+                                        <p>J&uuml;rgen Klopp made Liverpool champions of England, Europe and the world within five years of his appointment at Anfield in October 2015.</p>
+
+                                        <p>The charismatic German ended the Reds&rsquo; 30-year wait for a league title in the summer of 2020 as his relentless side, one carefully constructed throughout his tenure, emphatically secured top spot in the Premier
+                                            League with seven games remaining.</p>
+
+                                        <p>Revered by fans from the earliest weeks of his spell on Merseyside, Klopp had already delivered the club&rsquo;s sixth European Cup the previous year, when Tottenham Hotspur were defeated 2-0 in Madrid in the Reds&rsquo;
+                                            second successive Champions League final appearance.</p>
+
+                                        <p>The UEFA Super Cup and a first ever FIFA Club World Cup have also been added to the trophy cabinet by a Liverpool squad that has perfectly adapted to the vision of one of the most forward-thinking coaches in the
+                                            game.</p>
+
+                                        <p>Klopp&rsquo;s CV already boasted two Bundesliga titles, a German Cup and a Champions League final appearance before he took the Reds reins, all earned during a seven-year stint at Borussia Dortmund.</p>
+
+                                        <p style="text-align: center;"><img alt="" src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0001/12/6c92e8354924036d327559c94bc4a3a093e3e7b1.jpeg" style="width: 500px; height: 301px;" /></p>
+
+                                        <p>His journey as a player had started &ndash; and in fact ended &ndash; with FSV Mainz 05, where he spent his entire career before retiring at 34.</p>
+
+                                        <p>As the man himself once admitted, he was not the most talented player in the world, but he found himself able to make up for any shortcomings thanks to a good understanding of the game.</p>
+
+                                        <p>&ldquo;I never succeeded in bringing to the field what was going on in my brain,&rdquo; he said. &ldquo;I had the talent for the fifth division, and the mind for the Bundesliga. The result was a career in the second
+                                            division.&rdquo;</p>
+
+                                        <p>This ability to apply his experience was evident in a positional move from striker to centre-half as his career progressed, and it resulted in more than 300 professional appearances.</p>
+
+                                        <p>It also proved to be the perfect preparation for a career in coaching, which began in 2001 when he hung up his boots and moved straight into the dugout of a club he had already given 11 years&rsquo; service to.</p>
+
+                                        <p>Throughout Klopp&rsquo;s time as a player, and indeed Mainz&rsquo;s history, they had rarely troubled the upper echelons of German football &ndash; but he found himself in a position to change all that as the manager.</p>
+
+                                        <p style="text-align: center;"><img alt="" src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/05/30081aa2856b8e2833c70300f070c04bc60c0d16.jpeg" style="width: 500px; height: 373px;" /></p>
+
+                                        <p>The Stuttgart-born boss ended a 41-year wait for Bundesliga football at the Stadion am Bruchweg when he oversaw promotion from the second tier in his third season in charge.</p>
+
+                                        <p>Three seasons in the top flight followed and, though Mainz eventually returned to the 2.Bundesliga, Klopp had already established himself as a coach of great repute.</p>
+
+                                        <p>As a result, it was little surprise to see Borussia Dortmund swoop in the summer of 2008 as they looked to bounce back from a 13th-place finish the season before.</p>
+
+                                        <p>After steadying the ship and taking the Westfalenstadion side to sixth and fifth in his first and second seasons respectively, Klopp masterminded back-to-back Bundesliga title wins.</p>
+
+                                        <p>Those successes, allied to a German Cup win in 2011-12, helped to re-establish Dortmund among their country&rsquo;s elite, and by his fifth campaign at the helm Klopp was also proving himself capable in Europe.</p>
+
+                                        <p>In 2012-13, Dortmund reached the final of the Champions League, where they were defeated by rivals Bayern Munich, but a loss at the hands of better-resourced foes did the manager&rsquo;s reputation little harm.</p>
+
+                                        <p>That is largely because it was not just the achievements of his team that caught the eye but also the relentless pressing and attractive attacking football that underpinned those successes.</p>
+
+                                        <p>As Klopp explained: &ldquo;What I love is not serenity football, it&rsquo;s fighting football &ndash; that&rsquo;s what I like. What we call in Germany &lsquo;English football&rsquo; &ndash; rainy day, heavy pitch,
+                                            everybody is dirty in the face and they go home and can&rsquo;t play football for the next four weeks.&rdquo;</p>
+
+                                        <p>He arrived on Merseyside looking to apply that approach in its philosophical home of England, and oversaw an exciting first season at the helm punctuated by a series of exhilarating matches and performances.</p>
+
+                                        <p style="text-align: center;"><img alt="" src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0001/12/34938099c1831d76cf6c38919cc064456903e2a4.jpeg" style="width: 500px; height: 301px;" /></p>
+
+                                        <p>Though Liverpool ultimately lost out in both the League Cup and Europa League finals, Klopp&rsquo;s maiden campaign saw plenty of progress and featured an unforgettable win over former club Dortmund that will go
+                                            down as one of Anfield&rsquo;s greatest games.</p>
+
+                                        <p>Ahead of Klopp&rsquo;s first full season in charge, the club announced the manager had signed a new, long-term contract extension.</p>
+
+                                        <p>And that show of faith was rewarded in 2016-17 as the Reds secured a top-four Premier League finish and a place in the next season&rsquo;s Champions League qualifiers as a result.</p>
+
+                                        <p>Liverpool&rsquo;s resurgence continued into the new campaign and their return to Europe&rsquo;s elite club competition was marked by an unforgettable run all the way to the final in Kiev.</p>
+
+                                        <p>Heartbreak was inflicted by Real Madrid that night but another top-four placing meant Liverpool had the chance to exorcise those memories a year later.</p>
+
+                                        <p>And that they did, with the win over Spurs in Madrid being made possible by an unforgettable 4-0 semi-final second-leg victory against Barcelona in what was perhaps <em>the</em> greatest European night in Anfield&rsquo;s
+                                            history.</p>
+
+                                        <p style="text-align: center;"><img alt="" src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0001/88/4cd7d5617d9e48c70c7ee4575ecdfdf8b991cb83.jpeg" style="width: 500px; height: 301px;" /></p>
+
+                                        <p>The Reds had been pipped to the Premier League title by Manchester City in 2018-19 despite a club-record total of 97 points, but &ndash; just as they had used their near-miss in the European Cup as motivation &ndash;
+                                            returned even stronger at the next opportunity.</p>
+
+                                        <p>Twenty-six wins out of 27 from the start of the campaign established Liverpool as runaway leaders and put Klopp, who had again prolonged his stay &ndash; to 2024 &ndash; during the season, and his players on the
+                                            brink of history.</p>
+
+                                        <p>They sealed the club&rsquo;s 19th league championship when Premier League football resumed after a three-month halt due to the COVID-19 pandemic, with Manchester City&rsquo;s defeat at Chelsea on June 25, 2020 &ndash;
+                                            the night after a trademark win over Crystal Palace at Anfield &ndash; confirming their title and Klopp&rsquo;s legacy.</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div id="cms-block-2716" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+                            <div class="container-block block-2716 ">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="rightCol">
+
+                    <div class="rightAd">
+                        <div id='div-gpt-ad-RES_MAIN_RIGHT_ONE'>
+                            <script>
+                                Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_ONE');
+                            </script>
+                        </div>
+
+                    </div>
+
+
+
+                    <div id="cms-block-2714" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+                        <div class="container-block block-2714 ">
+                            <div id="cms-block-3128" class="cms-block cms-block-element" data-block-type="sonata.block.service.text">
+                                <style type="text/css">
+                                    .richtext.linkList a {
+                                        display: block;
+                                        padding: 6px;
+                                        margin-bottom: 0;
+                                        overflow: hidden;
+                                        padding-right: 30px;
+                                        position: relative;
+                                        color: #333;
+                                        font-weight: normal;
+                                    }
+
+                                    .richtext.linkList a:nth-child(odd) {
+                                        background: #F6F6F6;
+                                    }
+
+                                    .richtext.linkList a:after {
+                                        border-bottom: 8px solid transparent;
+                                        border-left: 12px solid #E31B23;
+                                        border-top: 8px solid transparent;
+                                        content: "";
+                                        display: inline-block;
+                                        height: 0;
+                                        position: absolute;
+                                        width: 0;
+                                        right: 10px;
+                                        margin-top: -8px;
+                                        top: 50%;
+                                    }
+
+                                    @media screen and (max-width: 699px) {
+                                        .mainColInner .richtext img {
+                                            width: 100% !important;
+                                            height: auto !important;
+                                            float: left !important;
+                                            margin-bottom: 30px !important;
+                                        }
+                                </style>
+
+                                <div class="richtext linkList">
+                                    <h2>First Team Staff</h2>
+                                    <a href="/team/first-team/staff/jurgen-klopp">Jürgen Klopp</a>
+                                    <a href="/team/first-team/staff/peter-krawietz">Peter Krawietz</a>
+                                    <a href="/team/first-team/staff/pepijn-lijnders">Pepijn Lijnders</a>
+                                    <a href="/team/first-team/staff/john-achterberg">John Achterberg</a>
+                                    <a href="/team/first-team/staff/jack-robinson">Jack Robinson</a>
+                                    <a href="/team/first-team/staff/claudio-taffarel">Claudio Taffarel</a>
+                                    <a href="/team/first-team/staff/vitor-matos">Vitor Matos</a>
+                                    <a href="/team/first-team/staff/andreas-kornmayer">Andreas Kornmayer</a>
+                                    <a href="/team/first-team/staff/dr-andreas-schlumberger">Dr Andreas Schlumberger</a>
+                                    <a href="/team/first-team/staff/dr-jim-moxon">Dr Jim Moxon</a>
+                                    <a href="/team/first-team/staff/lee-nobes">Lee Nobes</a>
+                                    <a href="/team/first-team/staff/conall-murtagh">Dr Conall Murtagh</a>
+                                    <a href="/team/first-team/staff/jordan-fairclough">Jordan Fairclough</a>
+                                    <a href="/team/first-team/staff/paul-small">Paul Small </a>
+                                    <a href="/team/first-team/staff/lee-radcliffe">Lee Radcliffe</a>
+                                    <a href="/team/first-team/staff/brendan-mcilduff">Brendan McIlduff</a>
+                                    <a href="/team/first-team/staff/david-rydings">Dr David Rydings</a>
+                                    <a href="/team/first-team/staff/mona-nemmer">Mona Nemmer</a>
+                                    <a href="/team/first-team/staff/daniel-spearritt">Daniel Spearritt</a>
+                                    <a href="/team/first-team/staff/greg-mathieson">Greg Mathieson</a>
+                                    <a href="/team/first-team/staff/james-french">James French</a>
+                                    <a href="/team/first-team/staff/chris-morgan">Chris Morgan</a>
+                                    <a href="/team/first-team/staff/steve-lilley">Steve Lilley</a>
+                                    <a href="/team/first-team/staff/joe-lewis">Joe Lewis</a>
+                                    <a href="/team/first-team/staff/michelle-hudson">Michelle Hudson</a>
+                                    <a href="/team/first-team/staff/motonori-watanabe">Motonori Watanabe</a>
+                                    <a href="/team/first-team/staff/lena-aschenbrenner">Lena Aschenbrenner</a>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="rightAd">
+                        <div id='div-gpt-ad-RES_MAIN_RIGHT_TWO'>
+                            <script>
+                                Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_TWO');
+                            </script>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-697/lfc/js/scripts.min.js"></script>
+
+    <script src="https://secure.widget.cloud.opta.net/v3/v3.opta-widgets.js"></script>
+
+    <script>
+        var opta_settings = {
+            subscription_id: 'da747e372c352a82f3dd6174084858fd',
+            language: 'en_GB',
+            timezone: 'Europe/London',
+            opta_tracking: false
+        };
+    </script>
+
+
+
+
+
+    <!-- monitoring:3e9fda56df2cdd3b039f189693ab7844fbb2d4f6 -->
+</body>
+
+</html>

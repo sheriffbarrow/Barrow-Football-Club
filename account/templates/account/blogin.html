@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+{% load static %}
+<!--[if lt IE 7 ]> <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" prefix="og: http://ogp.me/ns#" id="top" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" prefix="og: http://ogp.me/ns#" id="top" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" prefix="og: http://ogp.me/ns#" id="top" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" prefix="og: http://ogp.me/ns#" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html id="top" class="no-js">
+<!--<![endif]-->
+<script>(function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)</script>
+
+<head>
+    
+    <title>Login - Barrowfc FC</title>
+
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/js/base.js"></script>
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/js/scripts.min.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/js/lfcLogin-1.2.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="https://d3j2s6hdd6a7rg.cloudfront.net/js/LiveUpdate-1.7.min.js"></script>
+
+
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/js/Global-5.01.min.js" type="text/javascript"></script>
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/js/jquery/plugins/jquery.lazyload.min.js"
+        type="text/javascript"></script>
+
+
+    <script type="text/javascript">var allow_comments = true;</script>
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/js/UserGeoGroups-1.02.min.js" type="text/javascript"></script>
+
+
+
+    <script language="JavaScript">
+
+        usergeogroups = new UserGeoGroups();
+        var geo_location;
+        var geo_group_location;
+
+        geo_cookie = $.cookie('lfc_geo_loc_cc');
+
+        if (!geo_cookie) {
+            var geo_location = null;
+
+            $.ajax({
+                type: 'GET',
+                url: 'https://d3j2s6hdd6a7rg.cloudfront.net/scripts/geo_location_lookup.php',
+                async: true,
+                jsonpCallback: 'jQueryCallback',
+                contentType: "application/json",
+                dataType: 'jsonp',
+                crossDomain: true,
+                cache: true
+            });
+        }
+        else {
+            geo_location = $.cookie('lfc_geo_loc_cc');
+            doJavascript(geo_location);
+        }
+        function jQueryCallback(data) {
+            $.cookie('lfc_geo_loc_cc', data.code, { path: '/', expires: 30 });
+            doJavascript(data.code);
+        }
+        function doJavascript(country_code) {
+            geo_location = country_code;
+
+            var allCountryGroups = { "EEA": ["AT", "BE", "BG", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "GB"], "membership_economy": ["AL", "AD", "AM", "AT", "AZ", "BY", "BE", "BA", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "GE", "DE", "GR", "HU", "IS", "IE", "IT", "KZ", "LV", "LI", "LT", "LU", "MK", "MT", "MD", "MC", "ME", "NL", "NO", "PL", "PT", "RO", "RU", "SM", "RS", "SK", "SI", "ES", "SE", "CH", "TR", "UA", "VA", "GI", "FO", "SJ", "GB", "GG", "IM", "JE"], "geo_bet_misli": ["TR"], "geo_bet_usa": ["US"], "geo_bet_188_row": ["BR", "KH", "CN", "ID", "JP", "KP", "KR", "LA", "MY", "MM", "PH", "SG", "TH", "VN", "TW", "HK", "MO"], "CurrencyCountries": ["AF", "AL", "DZ", "AO", "AR", "AM", "AU", "AZ", "BS", "BH", "BD", "BB", "BY", "BZ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BI", "KH", "CA", "CV", "CF", "CL", "CN", "CO", "KM", "CD", "CR", "HR", "CU", "CY", "CZ", "DK", "DJ", "DO", "EG", "ER", "EE", "ET", "FJ", "GM", "GE", "GH", "GT", "GN", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IL", "JM", "JP", "JO", "KZ", "KE", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LT", "MK", "MG", "MW", "MY", "MV", "MT", "MR", "MU", "MX", "MD", "MN", "MA", "MZ", "MM", "NA", "NP", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PA", "PG", "PY", "PE", "PH", "PL", "QA", "RO", "RU", "RW", "LC", "WS", "ST", "SA", "RS", "SC", "SL", "SG", "SK", "SB", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TH", "TO", "TT", "TN", "TR", "TM", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VE", "VN", "YE", "ZM", "ZW", "TW", "PF", "GG", "IM", "JE", "BM", "KY", "FK", "GI", "SH", "HK", "MO", "AW", "CW", "EH", "GP", "MF", "SX"], "FACup_AsiaAustralasia": ["AU", "BD", "BT", "BN", "KH", "CN", "FJ", "IN", "ID", "JP", "KI", "KP", "KR", "LA", "MY", "MV", "MH", "FM", "MN", "MM", "NR", "NP", "NZ", "PK", "PW", "PG", "PH", "WS", "SG", "SB", "LK", "TH", "TO", "TV", "VU", "VN", "TW", "NC", "PF", "WF", "CK", "NU", "TK", "HK", "GF"], "geo_bet_comeon": ["FI", "NO", "SE"], "partner_group_xolo": ["BD", "IN", "NP", "LK"], "geo_bet_comeon_norway": ["NO"], "geo_bet_comeon_finland": ["FI"], "geo_bet_comeon_sweden": ["SE"], "partner_group_lumberjack_liquidators": ["CA", "US"], "partner_group_instaforex": ["AF", "AM", "AZ", "BH", "BD", "BY", "BT", "BN", "KH", "CN", "IN", "ID", "IR", "JP", "JO", "KZ", "KP", "KR", "KW", "KG", "LA", "LB", "MY", "MV", "MD", "MN", "MM", "NP", "OM", "PK", "PH", "QA", "RU", "SA", "SG", "LK", "SY", "TJ", "TH", "TM", "UA", "AE", "UZ", "VN", "YE", "TW", "HK", "MO"], "geo_background": ["IE", "GB"], "geo_bet_betfair": ["BG", "DK", "IE", "IT", "ES", "GB", "BG", "DK", "IE", "IT", "ES", "GB"], "UKROI": ["IE", "GB", "GG", "IM", "JE"], "partner_group_nivea": ["DK", "FI", "NO", "SE", "GB"], "geo_bet_marathon": ["AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AT", "AZ", "BS", "BB", "BY", "BE", "BZ", "BJ", "BO", "BA", "BW", "BG", "BF", "BI", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IQ", "IE", "IT", "JM", "KE", "KI", "KP", "KR", "KW", "KG", "LV", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "ME", "MA", "MZ", "MM", "NA", "NR", "NL", "NZ", "NI", "NE", "NG", "PW", "PA", "PG", "PY", "PE", "PL", "PT", "RO", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SN", "RS", "SC", "SL", "SK", "SI", "SB", "SO", "ZA", "ES", "SD", "SR", "SZ", "CH", "TJ", "TZ", "TL", "TG", "TO", "TT", "TN", "TV", "UG", "UA", "GB", "US", "UY", "VU", "VA", "VE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "HK", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX"], "UK_only": ["GB"], "allowed_currencies_default": ["ES", "US"], "lfctv_economy": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "CF", "TD", "CL", "CN", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TH", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX", "AU", "CA", "DK", "MY", "NO", "SG", "GB", "GG", "IM", "JE", "HK", "GP"], "partner_group_bancdebinary": ["AU", "AT", "BE", "BG", "CA", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ZA", "ES", "SE", "CH", "GB"], "allowed_currencies": ["AU", "CA", "DK", "MY", "NO", "SG", "ES", "GB", "US", "HK"], "allowed_membership_currencies_default": ["ES", "GB", "US"], "partner_group_claymore": ["AU"], "partner_group_draftkings": ["CA", "GB", "US"], "geo_bet_betvictor_germanic": ["AT", "LI", "CH"], "geo_bet_betvictor_english": ["AD", "AO", "AZ", "BH", "BZ", "BJ", "BT", "BO", "BW", "BN", "BF", "BI", "KH", "CA", "CV", "CF", "TD", "KM", "CG", "CR", "CY", "DJ", "DM", "DO", "EG", "SV", "GQ", "ER", "ET", "FI", "GA", "GM", "GE", "GH", "GR", "GT", "GN", "GW", "GY", "HT", "HN", "IN", "IE", "JM", "JP", "JO", "KZ", "KE", "KI", "KR", "KW", "KG", "LA", "LB", "LS", "LR", "LY", "LU", "MK", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "FM", "ME", "MA", "MZ", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PG", "PY", "QA", "RU", "RW", "VC", "WS", "SM", "ST", "SA", "SN", "SC", "SL", "SK", "SI", "SB", "SO", "LK", "SR", "SZ", "SE", "TJ", "TZ", "TL", "TG", "TT", "TN", "TV", "AE", "GB", "VU", "VE", "VN", "YE", "ZW", "CX", "CC", "HM", "NF", "BV", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "PN", "SH", "GS", "TC", "FO", "GL", "AW", "SJ", "AQ"], "lfctv_show_paypal": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CN", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TH", "TL", "TG", "TO", "TT", "TN", "TM", "TV", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "HK", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "MF", "SX"], "allowed_currencies_sg": ["SG", "US"], "allowed_currencies_au": ["AU", "US"], "allowed_currencies_ca": ["CA", "US"], "allowed_currencies_dk": ["DK", "ES"], "allowed_currencies_no": ["NO", "ES"], "vitality_geo": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SK", "SI", "SB", "SO", "ES", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX"], "discovery_geo": ["DZ", "AO", "AZ", "BW", "CD", "CG", "JO", "KE", "LY", "MZ", "NA", "NE", "NG", "OM", "RS", "ZA", "SD", "SY", "UG", "YE", "ZM", "ZW", "EH", "SX"], "allowed_currencies_gb": ["GB"], "allowed_currencies_im": ["IM"], "allowed_currencies_je": ["JE"], "allowed_currencies_gg": ["GG"], "allowed_currencies_my": ["MY"], "allowed_currencies_gi": ["GI"], "allowed_currencies_hk": ["HK"], "partner_group_joie": ["CN", "GB", "TW"], "partner_group_tatweermisr": ["EG", "GB"], "partner_group_btsport": ["IE", "GB", "GG", "IM", "JE"], "partner_group_liverpool_vodka": ["IE", "GB"], "all_excluding_china": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TH", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "GG", "IM", "JE", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "HK", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX"], "group_europe": ["AT", "BE", "BG", "HR", "CY", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "RU", "SK", "SE", "CH", "GB"], "partner_group_levis": ["AT", "BY", "BE", "BG", "HR", "CZ", "DK", "EE", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LI", "LT", "LU", "NL", "NO", "PL", "PT", "RO", "SK", "SE", "CH", "GB", "GG", "IM", "GI"], "uk_ireland": ["IE", "GB"], "partner_group_nh_foods": ["AU", "KH", "CN", "ID", "JP", "LA", "MM", "PH", "SG", "TH", "GB", "VN", "TW", "HK"], "partner_group_1xbet": ["AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CD", "CG", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO", "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SK", "SI", "SB", "SO", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG", "UA", "AE", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW", "TW", "CX", "CC", "HM", "NF", "NC", "PF", "YT", "GP", "PM", "WF", "TF", "BV", "CK", "NU", "TK", "AI", "BM", "IO", "VG", "KY", "FK", "GI", "MS", "PN", "SH", "GS", "TC", "MP", "PR", "AS", "UM", "GU", "VI", "MO", "FO", "GL", "GF", "MQ", "RE", "AX", "AW", "CW", "SJ", "AC", "AQ", "CS", "PS", "EH", "GP", "MF", "SX"], "UK_full": ["GB", "GG", "IM", "JE"] };
+            geo_group_location = usergeogroups.setGeoGroups(geo_location, allCountryGroups);
+        }
+
+    </script>
+
+    <script language="JavaScript">
+
+        function enableGeoPlaceholder(elName, content) {
+            $('#' + elName + '').replaceWith(content);
+        }
+    </script>
+    <script type='text/javascript'>
+        function lfcAdServingDisabled() {
+
+            return !(typeof lfc_ad_serving_disabled == 'undefined' || lfc_ad_serving_disabled == 0);
+        }
+        function testBrowserInRange(range) {
+            return ($(window).width() > range[0] && $(window).width() < range[1]);
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (typeof geo_group_location != 'undefined') {
+                if (geo_group_location.null) {
+                    var clickBgUrl = ' ';
+
+                    if (clickBgUrl) {
+                        $('#SponsorBg').click(function (event) {
+                            if (event.target.id == 'SponsorBg') {
+                                window.open(clickBgUrl)
+                            }
+                        })
+                        $('body').prepend('<style type="text/css">#SponsorBg{cursor:pointer;}</style>');
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- Db Template Id:7 At:2014-04-16 11:57:24 Version:4 -->
+    <script>
+        if (window.location.pathname == '/' && window.location.protocol == 'https:') {
+            window.location.href = '';
+        }
+    </script>
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+    <link href="https://d3j2s6hdd6a7rg.cloudfront.net/css/main-6.07.min.css" media="screen" type="text/css"
+        rel="stylesheet" />
+    <link href="https://d3j2s6hdd6a7rg.cloudfront.net/css/print-1.1.min.css" media="print" type="text/css"
+        rel="stylesheet" />
+
+    <!--[if IE 9]> 
+  <style type="text/css"> 
+    #tabsNewsWidget-1 .Caption h1 a, #tabsNewsWidget-2 .Caption h1 a, #tabs-1 .Caption h1 a {
+      font-family:Arial,Helvetica,sans-serif;
+      font-size:11px;
+    } 
+  </style> 
+<![endif]-->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (typeof geo_group_location != 'undefined') {
+                if (geo_group_location.null) {
+                    var imageBackground = 'https://d3j2s6hdd6a7rg.cloudfront.net/uploads/5796__3611__lfc-desktop-bg.jpg';
+                    var imageCentral = 'https://d3j2s6hdd6a7rg.cloudfront.net/uploads/5796__3611__lfc-desktop-bg.jpg';
+                    var backgroundColour = '#000000';
+                    var backgroundRepeat = 'no-repeat';
+                    var cssOutput = '<style type="text/css">body {background: ' + backgroundColour + ' url(' + imageBackground + ') top center ' + backgroundRepeat + ' !important } #SponsorBg{background:url(' + imageCentral + ') top center no-repeat!important;}</style>';
+                    $('body').prepend(cssOutput);
+                }
+            }
+        });
+    </script>
+
+    <style type="text/css">
+        body {
+            background: #000000 url(https://d3j2s6hdd6a7rg.cloudfront.net/uploads/5796__3611__lfc-desktop-bg.jpg) top center no-repeat !important;
+        }
+
+        #SponsorBg {
+            background: url(https://d3j2s6hdd6a7rg.cloudfront.net/uploads/5796__3611__lfc-desktop-bg.jpg) top center no-repeat !important;
+        }
+    </style>
+
+    <!-- Db Template Id:4 At:2018-07-24 16:11:51 Version:112 -->
+    <style type="text/css">
+        .layout_membership .pageConfirmation h1 strong {
+            color: #e31b23;
+        }
+
+        #topBarBtnSkype {
+            display: none;
+        }
+
+        .facebookButton,
+        .facebook.button {
+            display: none !important;
+        }
+
+
+        .GiftButton {
+            background-image: url("http://assets.lfcimages.com/it/gift-button.gif");
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 39px;
+            margin: 0 auto;
+            width: 161px;
+            float: right;
+        }
+
+        #NavDD ul {
+            display: block;
+            float: left;
+            list-style: none outside none;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            width: auto !important;
+        }
+
+        #NavDD #FansMenu,
+        ul li iframe#FansIframe {
+            width: 680px;
+            height: 315px;
+            z-index: 100;
+            float: left;
+            margin-left: -308px;
+        }
+
+        #NavDD #ShopMenu,
+        ul li iframe#ShopIframe {
+            height: 430px;
+        }
+
+        .og-details h3 {
+            font-weight: bold;
+            font-size: 22px;
+            padding: 0;
+            margin-bottom: 10px;
+            color: #333;
+            width: auto !important;
+        }
+
+        .ArticleContent .opta-widget-container h2 {
+            color: #fff;
+            font-size: 12px;
+            padding: 0;
+            line-height: 25px;
+        }
+
+        .HillsboroughHeader {
+            background: url("http://assets.lfcimages.com/uploads/5910__7712__header-bg-hillsborough-2014b.jpg") no-repeat scroll 0 20px rgba(0, 0, 0, 0) !important;
+        }
+
+        /* START TEMP CSS FOR FOOTER SPONSORS */
+        #FooterLogos li {
+            background: url(http://assets.lfcimages.com/images/template/STF-2.0.png) no-repeat;
+            float: left;
+            height: 43px;
+            padding: 0 0 12px 0;
+            width: 93px;
+        }
+
+        #FooterLogos .One {
+            background-position: 0 -494px;
+            margin-right: 20px !important;
+            width: 103px !important;
+        }
+
+        #FooterLogos .Two {
+            background-position: -600px -623px;
+            height: 37px;
+            margin: 2px 17px 0 0 !important;
+            width: 156px !important;
+        }
+
+        #FooterLogos .Three {
+            background: url(http://assets.lfcimages.com/images/template/thomas_cook_sport_footer_2013.png) top left no-repeat;
+            background-position: 0 0;
+            width: 137px !important;
+            margin: 3px 15px 0 0 !important;
+        }
+
+        #FooterLogos .Four {
+            background-position: -485px -494px;
+            width: 127px !important;
+            margin: 0 81px 12px 0 !important;
+            padding: 0 !important;
+        }
+
+        #FooterLogos .Five {
+            background-position: -34px -551px;
+            margin: -9px 10px 0 0;
+            width: 62px !important;
+            height: 48px;
+        }
+
+        #FooterLogos .Six {
+            background-position: -156px -550px;
+            width: 134px !important;
+            margin: 0 10px 0 0 !important;
+        }
+
+        #FooterLogos .Seven {
+            background-position: -293px -550px;
+            width: 96px !important;
+            margin: 0px 12px 0 0 !important;
+        }
+
+        #FooterLogos .Eight {
+            background-position: -467px -64px;
+            width: 82px !important;
+            margin: 0 52px 0 0 !important;
+        }
+
+        #FooterLogos .Nine {
+            background-position: -700px -499px;
+            margin: 0 !important;
+            width: 100px !important;
+        }
+
+        #FooterLogos .Ten {
+            background: none !important;
+            width: 70px !important;
+            margin: 0 22px 5px 0 !important;
+        }
+
+        #FooterLogos.FooterLogosWide .Ten {
+            background: none !important;
+            width: 109px !important;
+            margin: 7px 0px 0 0 !important;
+        }
+
+        #FooterLogos .Eleven {
+            background-position: -328px -494px;
+            width: 120px !important;
+            margin: 0 20px 0 16px !important;
+        }
+
+        #FooterLogos .Twelve {
+            background-position: -630px -555px;
+            width: 73px !important;
+            margin: 0px 15px 0 0px !important;
+        }
+
+        #FooterLogos .Thirteen {
+            background-position: -489px -493px;
+            width: 95px !important;
+            margin: 0 22px 12px 0 !important;
+            padding: 0 !important;
+        }
+
+        #FooterLogos .Fourteen {
+            background: url(http://assets.lfcimages.com/images/template/garuda-footer-logo.png) no-repeat scroll 0 0 transparent;
+            margin: 5px 12px 3px 15px !important;
+            width: 146px !important;
+        }
+
+        #FooterLogos .Fifteen {
+            background: url(http://assets.lfcimages.com/images/template/bellawood.png) no-repeat scroll 0 0 transparent;
+            margin: -2px 20px 3px 30px !important;
+            width: 129px !important;
+        }
+
+        #FooterLogos .Sixteen {
+            background: url(http://assets.lfcimages.com/images/template/gatorade_footer_logo.png) no-repeat scroll 0 0 transparent;
+            margin: -2px 0px 3px 10px !important;
+            width: 51px !important;
+            clear: none !important;
+        }
+
+        #FooterLogos .Seventeen {
+            background: url(http://assets.lfcimages.com/images/template/xolo_footer_logo.gif) no-repeat scroll 0 0 transparent;
+            margin: -4px 0px 3px 10px !important;
+            width: 74px !important;
+        }
+
+        #FooterLogos .Eighteen {
+            background: url(http://assets.lfcimages.com/images/template/dunkin_footer_logo.png) no-repeat scroll 0 0 transparent;
+            margin: -5px 15px 0px 0px !important;
+            width: 115px !important;
+        }
+
+        #FooterLogos .Nineteen {
+            background: url(http://assets.lfcimages.com/images/template/vauxhall_footer_logo_black.png) no-repeat scroll 0 0 transparent;
+            margin: -4px 10px 0px 0px !important;
+            width: 67px !important;
+        }
+
+        #InnerFooter {
+            width: 996px;
+            padding-top: 20px;
+            clear: both;
+        }
+
+        #FooterLogos.FooterLogosWide li.Eleven {
+            margin-left: 7px !important;
+        }
+
+        #FooterLogos.FooterLogosWide li.Sixteen {
+            margin-left: none !important;
+        }
+
+        /* END TEMP CSS FOR FOOTER SPONSORS */
+
+        /* START TEMP SPLASH TV ICON FOR MOB */
+        .splashChannel1 .splashIcon {
+            width: 35px !important;
+            background-size: 32px 60px !important;
+            -webkit-background-size: 32px 60px !important;
+            -moz-background-size: 32px 60px !important;
+        }
+
+        /* END TEMP SPLASH TV ICON FOR MOB */
+
+        /* START TEMP KIT LAUNCH IMAGE NUDGE */
+        .galleryFull #GalleryImage {
+            margin: 23px 0 20px 0 !important;
+        }
+
+        /* END TEMP KIT LAUNCH IMAGE NUDGE */
+
+        #NavDD #MembershipMenu,
+        ul li iframe#MembershipIframe {
+            width: 160px;
+            height: 150px !important;
+            z-index: 100;
+            float: left;
+        }
+
+        #tabsMatch-1 .Marg2 .Match span.Red.right {
+            display: none;
+        }
+
+        #div-gpt-ad-MPU_MAIN_HOME div,
+        #div-gpt-ad-MPU_MAIN div {
+            z-index: 1 !important;
+        }
+    </style>
+
+    <!-- START DON'T DELETE -->
+    <!--[if IE 9]> 
+  <style type="text/css"> 
+    #tabsNewsWidget-1 .Caption h1 a, #tabsNewsWidget-2 .Caption h1 a, #tabs-1 .Caption h1 a {
+      font-family:Arial,Helvetica,sans-serif;
+      font-size:11px;
+    } 
+  </style> 
+<![endif]-->
+    <!-- END DON'T DELETE -->
+
+
+
+
+    <link href="https://d3j2s6hdd6a7rg.cloudfront.net/css/registration-2.91.min.css" media="screen" type="text/css"
+        rel="stylesheet" />
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/css/styles.css' %}" />
+    <!--[if  (lt IE 9) & (!IEMobile)]>
+          <link rel="stylesheet" href="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/css/styles-ie8.css" />
+          <![endif]-->
+    <!--[if lt IE 9]>
+            <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/js/polyfills-ie8.min.js"></script>
+          <![endif]-->
+    <!--[if IE 9]>
+            <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/js/polyfills-ie9.min.js"></script>
+          <![endif]-->
+
+
+
+
+
+
+    <link rel="shortcut icon" href="https://d3j2s6hdd6a7rg.cloudfront.net/favicon.ico" />
+
+    <script type="text/javascript">
+        if ($.browser.msie) {
+            $("html").addClass("ie");
+        }
+        if ($.browser.mozilla && $.browser.version == 11.0) {
+            $("html").addClass("ie");
+        }
+    </script>
+
+    <script>
+        function validateForm() {
+
+            var message = '';
+            var email = document.forms["Login"]["username"].value;
+            var password = document.forms["Login"]["password"].value;
+
+            $('#login_form_username').attr('style', 'border-color: none');
+            $('#login_form_password').attr('style', 'border-color: none');
+
+            if (email == "") {
+                message = "Please enter your username";
+                $('#invalid_login_msg').show();
+                $('#invalid_login_msg').html('<p class="invalid_login_msg">' + message + '</p>');
+                $('#login_form_username').attr('style', 'border-color: #c00 !important');
+                return false;
+            }
+            var isEmail = email.includes("@");
+            if (isEmail != true) {
+                message = "Please enter your email address as your username";
+                $('#invalid_login_msg').show();
+                $('#invalid_login_msg').html('<p class="invalid_login_msg">' + message + '</p>');
+                $('#login_form_username').attr('style', 'border-color: #c00 !important');
+                return false;
+            }
+            if (password == "") {
+                message = "Please enter your password";
+                $('#invalid_login_msg').show();
+                $('#invalid_login_msg').html('<p class="invalid_login_msg">' + message + '</p>');
+                $('#login_form_password').attr('style', 'border-color: #c00 !important');
+                return false;
+            }
+        }
+    </script>
+
+
+</head>
+
+<body class="main-site-layout standard-single-column new_lfc_layout">
+
+
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KCFJMVP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KCFJMVP');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <div class="wrapper">
+        <a id="page-top"></a>
+        <header id="site-header" class="site-header" role="banner">
+            <div class="site-header-inner">
+
+                <div class="masthead">
+                    <ul class="account-links logged-out-only">
+                        <li class="subnav">
+                            <a>Log In</a>
+                            <ul>
+                                <li class="link-login ">
+                                    <a
+                                        href="https://www.liverpoolfc.com/my-lfc/login?fragment=&referer=http://www.liverpoolfc.com">My
+                                        LFC</a>
+
+                                </li>
+                                <li class="">
+                                    <a
+                                        href="https://ticketing.liverpoolfc.com/ClientRequiredFallback.aspx?view=Login&next=%2fCrmDetails.aspx%3f_ga%3d2.72318992.2042741793.1596366965-460835212.1550476886">Tickets</a>
+
+                                </li>
+                                <li class="">
+                                    <a href="https://store.liverpoolfc.com/customer/account/login/">Online Store</a>
+
+                                </li>
+                                <li class="">
+                                    <a href="https://members.liverpoolfc.com/login">Membership</a>
+
+                                </li>
+                                <li class="">
+                                    <a
+                                        href="https://www.liverpoolfc.com/my-lfc/login?fragment=&referer=http://www.liverpoolfc.com/video">LFCTV
+                                        GO</a>
+
+                                </li>
+                                <li class="separator ">
+                                    <a href="">Not sure?</a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="link-separator">&nbsp;</li>
+                        <li class="subnav">
+                            <a>Register</a>
+                            <ul>
+                                <li class="">
+                                    <a href="https://www.liverpoolfc.com/my-lfc/join/user-details?user_type=free">Free
+                                        Registration</a>
+
+                                </li>
+                                <li class="">
+                                    <a href="https://www.liverpoolfc.com/tickets">Tickets</a>
+
+                                </li>
+                                <li class="">
+                                    <a href="https://store.liverpoolfc.com/customer/account/login/">Online Store</a>
+
+                                </li>
+                                <li class="">
+                                    <a href="https://www.liverpoolfc.com/membership">Join Membership</a>
+
+                                </li>
+                                <li class="">
+                                    <a href="https://www.liverpoolfc.com/my-lfc/join/user-details?user_type=lfctvo">Join
+                                        LFCTV GO</a>
+
+                                </li>
+                                <li class="separator ">
+                                    <a href="http://www.liverpoolfc.com/loginhelp">Not Sure?</a>
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="account-links logged-in-only">
+                        <li>
+                            <a href="/scripts/logout.php" title="Logout" class="link-logout">Log out</a>
+                        </li>
+                        <li class="link-separator">&nbsp;</li>
+                        <li>
+                            <a href="/my-lfc" title="My LFC" class="link-my-lfc">My LFC</a>
+                        </li>
+                    </ul>
+
+
+                    <div id="masthead-links" class="masthead-links">
+
+                        <ul class="more-menu">
+                            <li class="more-menu-link">
+                                <a>More</a>
+                                <ul>
+                                    <li class="">
+                                        <a href="https://video.liverpoolfc.com/">LFCTV GO</a>
+
+                                    </li>
+                                    <li class="">
+                                        <a href="http://hospitality.liverpoolfc.com">MATCH HOSPITALITY</a>
+
+                                    </li>
+                                    <li class="bp-min-large-more-min-xlarge-primary ">
+                                        <a href="http://www.liverpoolfc.com/membership/home">MEMBERSHIP</a>
+
+                                    </li>
+                                    <li class="">
+                                        <a href="http://foundation.liverpoolfc.com">FOUNDATION</a>
+
+                                    </li>
+                                    <li class="">
+                                        <a href="http://stadiumtours.liverpoolfc.com">STADIUM TOURS</a>
+
+                                    </li>
+                                    <li class="bp-more-only ">
+                                        <a href="http://events.liverpoolfc.com">MEETING & EVENTS</a>
+
+                                    </li>
+                                    <li class="">
+                                        <a href="https://eacademy.liverpoolfc.com/">e ACADEMY</a>
+
+                                    </li>
+                                    <li class="bp-more-only ">
+                                        <a href="http://store.liverpoolfc.com">SHOP</a>
+
+                                    </li>
+                                    <li class="bp-more-only ">
+                                        <a href="http://bootroom.liverpoolfc.com">BOOT ROOM</a>
+
+                                    </li>
+                                    <li class="bp-more-only ">
+                                        <a href="http://www.liverpoolfc.com/lfcevents">LFC EVENTS</a>
+
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="">
+                                <a href="https://video.liverpoolfc.com/">LFCTV GO</a>
+
+                            </li>
+                            <li class="">
+                                <a href="http://hospitality.liverpoolfc.com">MATCH HOSPITALITY</a>
+
+                            </li>
+                            <li class="bp-min-large-more-min-xlarge-primary ">
+                                <a href="http://www.liverpoolfc.com/membership/home">MEMBERSHIP</a>
+
+                            </li>
+                            <li class="">
+                                <a href="http://foundation.liverpoolfc.com">FOUNDATION</a>
+
+                            </li>
+                            <li class="">
+                                <a href="http://stadiumtours.liverpoolfc.com">STADIUM TOURS</a>
+
+                            </li>
+                            <li class="bp-more-only ">
+                                <a href="http://events.liverpoolfc.com">MEETING & EVENTS</a>
+
+                            </li>
+                            <li class="">
+                                <a href="https://eacademy.liverpoolfc.com/">e ACADEMY</a>
+
+                            </li>
+                            <li class="bp-more-only ">
+                                <a href="http://store.liverpoolfc.com">SHOP</a>
+
+                            </li>
+                            <li class="bp-more-only ">
+                                <a href="http://bootroom.liverpoolfc.com">BOOT ROOM</a>
+
+                            </li>
+                            <li class="bp-more-only ">
+                                <a href="http://www.liverpoolfc.com/lfcevents">LFC EVENTS</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="logo">
+                    <a class="logo-large" title="Home" href="/">
+                        <img src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/images/logo.png" alt="Logo" />
+                    </a>
+                    <a class="logo-medium" title="Home" href="/">
+                        <img src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/images/logo.png" alt="Logo" />
+                    </a>
+                    <a class="logo-small" title="Home" href="/">
+                        <img src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-424/lfc/images/logo-small.png"
+                            alt="Logo-small" /> </a>
+                </div>
+
+                <a href="//www.sc.com/en/" class="sponsor" target="main-sponsor">
+                    Main Club Sponsor: Standard Chartered
+                </a>
+
+                <div class="search"></div>
+
+
+                <nav class="main-menu">
+                    <ul>
+                        <li class="log-out-menu-link bp-medium-more-only ">
+                            <a href="https://www.liverpoolfc.com/scripts/logout.php">LOG OUT</a>
+
+                        </li>
+                        <li class="active-news hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/news">NEWS</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/first-team">First Team</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/women">Women</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/academy">Academy</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/tickets">Ticket News</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/axa-training-centre">AXA Training
+                                        Centre</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/community">Community</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/announcements">Announcements</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/media-watch">Media Watch</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://nesn.com/liverpool-fc/" target="_blank">LFC on NESN</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a
+                                href="https://matchcentre.liverpoolfc.com?utm_medium=site-link-liverpoolfc.com&utm_source=home-top-nav-bar&utm_campaign=med-match-centre-2021">Match
+                                Centre</a>
+
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/match">FIXTURES</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/first-team/fixtures-and-results">Fixtures
+                                        and Results</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/premier-league-table">League
+                                        Table</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/champions-league">Champions
+                                        League</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/premier-league-calendar">PL
+                                        Calendar</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/women/fixtures-and-results">Liverpool
+                                        FC Women</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://www.liverpoolfc.com/match/2020-21/u23s/fixtures-and-results">U23S</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://www.liverpoolfc.com/match/2020-21/u18s/fixtures-and-results">U18S</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/all/fixtures-and-results">All
+                                        Teams</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/opta-stats/team-stats">Opta Stats</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://reachsportshop.com/team/liverpool/" target="_blank">Programme and
+                                        Magazine</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/apps-and-games/uk">App Match
+                                        Notifications</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/tickets">TICKETS</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/tickets/tickets-availability">Tickets
+                                        Availability</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/away-travel">Away Travel</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://hospitality.liverpoolfc.com/" target="_blank">Match Hospitality</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/tickets/how-to-buy-tickets">HOW TO BUY
+                                        TICKETS</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://tickets.tygit.com/u/r/l/Liverpool-FC-Womens"
+                                        target="_blank">Liverpool FC Women</a>
+                                </li>
+
+                                <li>
+                                    <a href="/corporate/partners/official-match-breaks-hospitality">Official Match
+                                        Breaks Hospitality</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/team/first-team">TEAM</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/team/first-team">First Team</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/team/women">Women</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/team/academy">Academy</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bp-medium-more-min-large-primary hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/fans/behind-closed-doors/home">ANFIELD</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/return-of-supporters-to-anfield">Return of
+                                        Supporters</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://events.liverpoolfc.com/events/concerts">CONCERTS & EVENTS</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/fan-experience/fan-zones">Fan Zones</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://stadiumtours.liverpoolfc.com/" target="_blank">Stadium Tours</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://events.liverpoolfc.com/" target="_blank">Meetings & Events</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://bootroom.liverpoolfc.com/" target="_blank">Bootroom Sports Cafe</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://championswall.liverpoolfc.com/BRICS/APP/Store/#/LFCWALL/home"
+                                        target="_blank">Champions Wall</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/local-residents">Local Residents</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/anfieldroadexpansion">Anfield Road</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bp-medium-more-min-large-primary hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/fans/social-media/lfc-on-social-media">FANS</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/membership">Membership</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/watch">LFCTV</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://forums.liverpoolfc.com/" target="_blank">Message Boards</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/official-lfc-supporters-clubs">Official
+                                        Supporters Clubs</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/social-media/lfc-on-social-media">Social
+                                        Media</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://open.spotify.com/playlist/78lxjrcD1yI1KnTcx4zY9d"
+                                        target="_blank">LFC ON SPOTIFY</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/fan-experience/visiting-anfield">Fan
+                                        Experience</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/apps-and-games">Apps & Games</a>
+                                </li>
+
+                                <li>
+                                    <a href="/fans/competitions">Competitions</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://www.liverpoolfc.com/fans/supporters-committee/supporters-committee-home">Supporters
+                                        Committee</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://www.liverpoolfc.com/fans/lfc-supporter-liaison-officer/about-the-supporters-liaison-officer">Supporter
+                                        Liaison Officer</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/safeguarding">Safeguarding</a>
+                                </li>
+
+                                <li>
+                                    <a href="/redtogether">Red Together</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://liverpooldsa.co.uk/">Disabled Supporters Association</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/kopkids" target="_blank">Kop Kids</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bp-medium-more-min-large-primary hasDropMenu">
+                            <a href="https://store.liverpoolfc.com/">SHOP</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://store.liverpoolfc.com" target="_blank">ONLINE STORE</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://eacademy.liverpoolfc.com/" target="_blank">E ACADEMY</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://picturestore.liverpoolfc.com/LFC" target="_blank">LFC PICTURE
+                                        STORE</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://store.liverpoolfc.com/stores/finder" target="_blank">CLUB
+                                        STORES</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/become-a-wholesale-partner">Wholesale
+                                        Partners</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bp-medium-more-min-large-primary hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/corporate/directors">CLUB</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/history/honours">Honours</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/history">History</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/hillsborough">Hillsborough</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/heysel">Heysel</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/directors">Corporate Information</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/partners">Partners</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/charter">Club Charter</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/theredway">Sustainability</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/brand-protection">Brand
+                                        Protection</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/anti-slavery">Anti-Slavery</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://nesn.com/" target="_blank">NESN.com</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/fan-experience">Fan Experience</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://recruitment.liverpoolfc.com/">Jobs At LFC</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bp-medium-more-min-large-primary hasDropMenu">
+                            <a href="https://help.liverpoolfc.com" target="_blank">HELP</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://faq.liverpoolfc.com/portal/home" target="_blank">FAQs</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://faq.liverpoolfc.com/portal/kb/articles/contact-us"
+                                        target="_blank">CONTACT</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/atoz">A - Z</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="more-menu">
+                        <li class="more-menu-link">
+                            <a><span>More</span></a>
+                            <div class="icon-menu moreIconCss"></div>
+                            <ul>
+                                <li class="log-out-menu-link bp-medium-more-only ">
+                                    <a href="https://www.liverpoolfc.com/scripts/logout.php">LOG OUT</a>
+
+                                </li>
+                                <li class="active-news hasDropMenu">
+                                    <a href="https://www.liverpoolfc.com/news">NEWS</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/news/first-team">First Team</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/news/women">Women</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/news/academy">Academy</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/news/tickets">Ticket News</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/news/axa-training-centre">AXA Training
+                                                Centre</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/news/community">Community</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/news/announcements">Announcements</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/news/media-watch">Media Watch</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://nesn.com/liverpool-fc/" target="_blank">LFC on NESN</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a
+                                        href="https://matchcentre.liverpoolfc.com?utm_medium=site-link-liverpoolfc.com&utm_source=home-top-nav-bar&utm_campaign=med-match-centre-2021">Match
+                                        Centre</a>
+
+                                </li>
+                                <li class="hasDropMenu">
+                                    <a href="https://www.liverpoolfc.com/match">FIXTURES</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a
+                                                href="https://www.liverpoolfc.com/match/2020-21/first-team/fixtures-and-results">Fixtures
+                                                and Results</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/match/2020-21/premier-league-table">League
+                                                Table</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/match/2020-21/champions-league">Champions
+                                                League</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/match/2020-21/premier-league-calendar">PL
+                                                Calendar</a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="https://www.liverpoolfc.com/match/2020-21/women/fixtures-and-results">Liverpool
+                                                FC Women</a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="https://www.liverpoolfc.com/match/2020-21/u23s/fixtures-and-results">U23S</a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="https://www.liverpoolfc.com/match/2020-21/u18s/fixtures-and-results">U18S</a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="https://www.liverpoolfc.com/match/2020-21/all/fixtures-and-results">All
+                                                Teams</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/match/opta-stats/team-stats">Opta
+                                                Stats</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://reachsportshop.com/team/liverpool/"
+                                                target="_blank">Programme and Magazine</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/apps-and-games/uk">App Match
+                                                Notifications</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hasDropMenu">
+                                    <a href="https://www.liverpoolfc.com/tickets">TICKETS</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/tickets/tickets-availability">Tickets
+                                                Availability</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/away-travel">Away Travel</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://hospitality.liverpoolfc.com/" target="_blank">Match
+                                                Hospitality</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/tickets/how-to-buy-tickets">HOW TO BUY
+                                                TICKETS</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://tickets.tygit.com/u/r/l/Liverpool-FC-Womens"
+                                                target="_blank">Liverpool FC Women</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/corporate/partners/official-match-breaks-hospitality">Official
+                                                Match Breaks Hospitality</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hasDropMenu">
+                                    <a href="https://www.liverpoolfc.com/team/first-team">TEAM</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/team/first-team">First Team</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/team/women">Women</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/team/academy">Academy</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="bp-medium-more-min-large-primary hasDropMenu">
+                                    <a href="https://www.liverpoolfc.com/fans/behind-closed-doors/home">ANFIELD</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/return-of-supporters-to-anfield">Return
+                                                of Supporters</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://events.liverpoolfc.com/events/concerts">CONCERTS &
+                                                EVENTS</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/fan-experience/fan-zones">Fan
+                                                Zones</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://stadiumtours.liverpoolfc.com/" target="_blank">Stadium
+                                                Tours</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://events.liverpoolfc.com/" target="_blank">Meetings &
+                                                Events</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://bootroom.liverpoolfc.com/" target="_blank">Bootroom Sports
+                                                Cafe</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://championswall.liverpoolfc.com/BRICS/APP/Store/#/LFCWALL/home"
+                                                target="_blank">Champions Wall</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/local-residents">Local
+                                                Residents</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/anfieldroadexpansion">Anfield Road</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="bp-medium-more-min-large-primary hasDropMenu">
+                                    <a href="https://www.liverpoolfc.com/fans/social-media/lfc-on-social-media">FANS</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/membership">Membership</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/watch">LFCTV</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://forums.liverpoolfc.com/" target="_blank">Message Boards</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/official-lfc-supporters-clubs">Official
+                                                Supporters Clubs</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/social-media/lfc-on-social-media">Social
+                                                Media</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://open.spotify.com/playlist/78lxjrcD1yI1KnTcx4zY9d"
+                                                target="_blank">LFC ON SPOTIFY</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/fan-experience/visiting-anfield">Fan
+                                                Experience</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/apps-and-games">Apps & Games</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/fans/competitions">Competitions</a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="https://www.liverpoolfc.com/fans/supporters-committee/supporters-committee-home">Supporters
+                                                Committee</a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="https://www.liverpoolfc.com/fans/lfc-supporter-liaison-officer/about-the-supporters-liaison-officer">Supporter
+                                                Liaison Officer</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/safeguarding">Safeguarding</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/redtogether">Red Together</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://liverpooldsa.co.uk/">Disabled Supporters Association</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/kopkids" target="_blank">Kop Kids</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="bp-medium-more-min-large-primary hasDropMenu">
+                                    <a href="https://store.liverpoolfc.com/">SHOP</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a href="https://store.liverpoolfc.com" target="_blank">ONLINE STORE</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://eacademy.liverpoolfc.com/" target="_blank">E ACADEMY</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://picturestore.liverpoolfc.com/LFC" target="_blank">LFC
+                                                PICTURE STORE</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://store.liverpoolfc.com/stores/finder" target="_blank">CLUB
+                                                STORES</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/corporate/become-a-wholesale-partner">Wholesale
+                                                Partners</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="bp-medium-more-min-large-primary hasDropMenu">
+                                    <a href="https://www.liverpoolfc.com/corporate/directors">CLUB</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/history/honours">Honours</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/history">History</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/hillsborough">Hillsborough</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/heysel">Heysel</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/corporate/directors">Corporate
+                                                Information</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/corporate/partners">Partners</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/corporate/charter">Club Charter</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/theredway">Sustainability</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/corporate/brand-protection">Brand
+                                                Protection</a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="https://www.liverpoolfc.com/corporate/anti-slavery">Anti-Slavery</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://nesn.com/" target="_blank">NESN.com</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/fans/fan-experience">Fan Experience</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://recruitment.liverpoolfc.com/">Jobs At LFC</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="bp-medium-more-min-large-primary hasDropMenu">
+                                    <a href="https://help.liverpoolfc.com" target="_blank">HELP</a>
+
+                                    <ul class="menu_level_1">
+
+                                        <li>
+                                            <a href="https://faq.liverpoolfc.com/portal/home" target="_blank">FAQs</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://faq.liverpoolfc.com/portal/kb/articles/contact-us"
+                                                target="_blank">CONTACT</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.liverpoolfc.com/atoz">A - Z</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="my-account logged-out-only">
+                            <a href="/my-lfc/login" title="Log in">LOG IN</a>
+                            <ul>
+                                <li class="link-login ">
+                                    <a
+                                        href="https://www.liverpoolfc.com/my-lfc/login?fragment=&referer=http://www.liverpoolfc.com">My
+                                        LFC</a>
+
+                                </li>
+                                <li class="">
+                                    <a
+                                        href="https://ticketing.liverpoolfc.com/ClientRequiredFallback.aspx?view=Login&next=%2fCrmDetails.aspx%3f_ga%3d2.72318992.2042741793.1596366965-460835212.1550476886">Tickets</a>
+
+                                </li>
+                                <li class="">
+                                    <a href="https://store.liverpoolfc.com/customer/account/login/">Online Store</a>
+
+                                </li>
+                                <li class="">
+                                    <a href="https://members.liverpoolfc.com/login">Membership</a>
+
+                                </li>
+                                <li class="">
+                                    <a
+                                        href="https://www.liverpoolfc.com/my-lfc/login?fragment=&referer=http://www.liverpoolfc.com/video">LFCTV
+                                        GO</a>
+
+                                </li>
+                                <li class="separator ">
+                                    <a href="http://www.liverpoolfc.com/loginhelp">Not sure?</a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="my-account logged-in-only">
+                            <a href="/my-lfc" title="My LFC">MY LFC</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <!-- Db Template Id:26 At:2018-12-17 11:07:18 Version:5 -->
+                <ul class="social-links">
+                    <li class="facebook">
+                        <a title="Go to The Official Liverpool Football Club Facebook page"
+                            href="https://www.facebook.com/LiverpoolFC" target="_blank"></a>
+                    </li>
+                    <li class="twitter">
+                        <a title="Go to The Official Liverpool Football Club Twitter page"
+                            href="https://twitter.com/lfc" target="_blank"></a>
+                    </li>
+                    <li class="dugout">
+                        <a title="Go to The Liverpool Football Club Dugout page" href="https://dugout.com/LiverpoolFC"
+                            target="_blank"></a>
+                    </li>
+                    <li class="instagram">
+                        <a title="Go to The Official Liverpool Football Club Instagram page"
+                            href="http://instagram.com/liverpoolfc/" target="_blank"></a>
+                    </li>
+                    <li class="youtube">
+                        <a title="Go to The Official Liverpool Football Club Youtube page"
+                            href="http://www.youtube.com/liverpoolfc" target="_blank"></a>
+                    </li>
+                    <li class="alexa">
+                        <a title="Go to The Official Liverpool Football Club Alexa page"
+                            href="https://www.amazon.co.uk/Liverpool-Football-Club-LFC-News/dp/B01N7WO4CD"
+                            target="_blank"></a>
+                    </li>
+                    <li class="global">
+                        <a title="Go to The Official Liverpool Football Club Global page"
+                            href="http://www.liverpoolfc.com/fans/lfc-around-the-globe" target="_blank"></a>
+                    </li>
+                </ul>
+                <a href="#mobile-main-menu" id="mobile-main-menu-control" class="mobile-main-menu-control">
+                    <span class="label">Menu</span>
+                    <span class="icon-menu icon"></span>
+                </a>
+
+                <nav id="mobile-main-menu" class="mobile-main-menu">
+                    <ul>
+                        <li class="account logged-out-only hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/my-lfc/login">LOG IN/REGISTER</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/my-lfc/login">My LFC</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://tickets.liverpoolfc.com/PagesPublic/Login/Login.aspx">Tickets</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://store.liverpoolfc.com/customer/account/login/">Online Store</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://members.liverpoolfc.com/login">Membership</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://www.liverpoolfc.com/my-lfc/login?referer=http://www.liverpoolfc.com/video">LFCTV
+                                        GO</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/loginhelp">Not sure?</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="account logged-in-only hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/my-lfc">MY LFC</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/scripts/logout.php">Log Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="https://www.liverpoolfc.com">HOME</a>
+
+                        </li>
+                        <li class="active-news hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/news">NEWS</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news">Latest News</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/first-team">First Team</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/women">Women</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/academy">Academy</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/tickets">Ticket News</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/axa-training-centre">AXA Training
+                                        Centre</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/community">Community</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/announcements">Announcements</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/news/media-watch">Media Watch</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://nesn.com/liverpool-fc/" target="_blank">LFC on NESN</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/match">FIXTURES</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/fixtures">Fixtures and Results</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/premier-league-table">League
+                                        Table</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/champions-league">Champions
+                                        League</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/premier-league-calendar">PL
+                                        Calendar</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/women/fixtures-and-results">Liverpool
+                                        FC Women</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://www.liverpoolfc.com/match/2020-21/u23s/fixtures-and-results">U23s</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://www.liverpoolfc.com/match/2020-21/u18s/fixtures-and-results">u18s</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/2020-21/all/fixtures-and-results">All
+                                        Teams</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/match/opta-stats">Opta Stats</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://reachsportshop.com/team/liverpool/">Programme and Magazine</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/apps-and-games/uk">App Match
+                                        Notifications</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a
+                                href="https://matchcentre.liverpoolfc.com?utm_medium=site-link-liverpoolfc.com&utm_source=home-top-nav-bar&utm_campaign=med-match-centre-2021">Match
+                                Centre</a>
+
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/tickets">TICKETS</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/tickets/tickets-availability">Tickets
+                                        Availability</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/away-travel">Away Travel</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://hospitality.liverpoolfc.com" target="_blank">Match Hospitality</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://tickets.tygit.com/u/r/l/Liverpool-FC-Womens"
+                                        target="_blank">Liverpool FC Women</a>
+                                </li>
+
+                                <li>
+                                    <a href="/corporate/partners/official-match-breaks-hospitality">Official Match
+                                        Breaks Hospitality</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="https://www.liverpoolfc.com/video">LFCTV GO</a>
+
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/team/first-team">TEAM</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/team/first-team">First Team</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/team/women">Women</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/team/academy">Academy</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/fans/behind-closed-doors/home">ANFIELD</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/return-of-supporters-to-anfield">Return of
+                                        Supporters</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://events.liverpoolfc.com/events/concerts">CONCERTS & EVENTS</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/fan-experience/fan-zones">Fan Zones</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://stadiumtours.liverpoolfc.com" target="_blank">Stadium Tours</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://events.liverpoolfc.com" target="_blank">Meetings & Events</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://bootroom.liverpoolfc.com" target="_blank">Bootroom Sports Cafe</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://championswall.liverpoolfc.com/BRICS/APP/Store/#/LFCWALL/home"
+                                        target="_blank">Champions Wall</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/local-residents">Local Residents</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/anfieldroadexpansion">Anfield Road</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/fans">FANS</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://forums.liverpoolfc.com/" target="_blank">Message Boards</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/watch">LFCTV</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/lfc-official-supporters-clubs">Official
+                                        Supporters Clubs</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/social-media/lfc-on-social-media">Social
+                                        Media</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://open.spotify.com/user/shootmatchday/playlist/78lxjrcD1yI1KnTcx4zY9d"
+                                        target="_blank">LFC On Spotify</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/fan-experience">Fan Experience</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/apps-and-games">Apps & Games</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://competitions.liverpoolfc.com/" target="_blank">Competitions</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/supporters-committee">Supporters
+                                        Committee</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://www.liverpoolfc.com/fans/lfc-supporter-liaison-officer/about-the-supporters-liaison-officer">Supporter
+                                        Liaison Officer</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/safeguarding">Safeguarding</a>
+                                </li>
+
+                                <li>
+                                    <a href="/redtogether">Red Together</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/ldsa">Disabled Supporters Association</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/kopkids" target="_blank">Kop Kids</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="https://www.liverpoolfc.com/membership">MEMBERSHIP</a>
+
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://store.liverpoolfc.com/">SHOP</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://eacademy.liverpoolfc.com/">E ACADEMY</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://store.liverpoolfc.com/" target="_blank">Online Store</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://picturestore.liverpoolfc.com/LFC" target="_blank">LFC PICTURE
+                                        STORE</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/shop/official-club-stores" target="_blank">CLUB
+                                        STORES</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/become-a-wholesale-partner">Wholesale
+                                        Partners</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://www.liverpoolfc.com/corporate">CLUB</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/history/honours">Honours</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/history">History</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/hillsborough">Hillsborough</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/heysel">Heysel</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/directors">Corporate Information</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/partners">Partners</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/charter">Club Charter</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/theredway">Sustainability</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/brand-protection">Brand
+                                        Protection</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/corporate/anti-slavery">Anti-Slavery</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://nesn.com/" target="_blank">NESN.com</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://recruitment.liverpoolfc.com/">Jobs At LFC</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/fans/fan-experience">Fan Experience</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hasDropMenu">
+                            <a href="https://faq.liverpoolfc.com/portal/home" target="_blank">HELP</a>
+
+                            <ul class="menu_level_1">
+
+                                <li>
+                                    <a href="https://faq.liverpoolfc.com/portal/home" target="_blank">FAQs</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://faq.liverpoolfc.com/portal/kb/articles/contact-us"
+                                        target="_blank">CONTACT</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.liverpoolfc.com/atoz">A - Z</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <script language="JavaScript">
+                    function enableGeoPlaceholder(elName, content) {
+                        $('#' + elName + '').replaceWith(content);
+                    }
+                </script>
+
+                <div class="breadcrumbs">
+                    <span class="breadcrumb-prefix">you are here:</span>
+                    <ul>
+                        <li class=""><a href="/">home</a></li>
+                        <li class=""><span>/ </span>login</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="clear"></div>
+        <h1>Login</h1>
+        <div class="container">
+            <div class="content">
+                <section id="content">
+                    <style>
+                        #partial-text {
+                            display: none;
+                        }
+
+                        #not-logged-in-text {
+                            display: none;
+                        }
+
+                        #partial-actions {
+                            display: none;
+                        }
+
+                        #not-logged-in-actions {
+                            display: none;
+                        }
+
+                        #invalid_login_msg {
+                            display: none;
+                        }
+                    </style>
+
+
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            if (isLoggedIn('partial', true)) {
+                                $('#partial-text').show();
+                                $('#partial-actions').show();
+                            }
+                            else {
+                                $('#not-logged-in-text').show();
+                                $('#not-logged-in-actions').show();
+                            }
+
+                            // store referrer in cookie, if it's not this page itself.
+                            if (document.referrer && document.referrer.indexOf('/my-lfc/login') === -1) {
+                                $.cookie('lfc_stored_referrer', document.referrer);
+                            }
+                        });
+                    </script>
+
+                    <div class="membershipHeadingBox">
+                    </div>
+
+                    <div id="not-logged-in-text" class="loginTopTxt">
+                        <div id="cmsContentId" class="cmsContent content-link-builder"></div>
+                    </div>
+
+                    <div id="partial-text">
+                        <p><strong>Hi
+                                <script type="text/javascript">document.write(getLoginCookieValue('username'));</script>
+                                ,
+                            </strong></p>
+                        <p><span>The page you are trying to access is only available if you are fully logged in. Please
+                                enter your password below to continue.</span></p>
+                    </div>
+
+                    <div class="leftColumn">
+
+                        <div class="reg-fs-box">
+
+                            <div id="login-include"></div>
+
+                            <script type="text/javascript">
+
+                                var lookup_url = '/login.php?view=page&fragment=' + getURLParameter('fragment') + '&referer=' + getURLParameter('referer');
+
+                                if ('null' != getURLParameter('scope') && getURLParameter('scope') == 'openid') {
+                                    lookup_url += '&type=openid';
+                                }
+
+                                if ('null' != getURLParameter('client_id')) {
+                                    lookup_url += '&client_id=' + getURLParameter('client_id');
+                                }
+
+                                if ('null' != getURLParameter('state')) {
+                                    lookup_url += '&state=' + getURLParameter('state');
+                                }
+
+                                lookup_url += '#page-login';
+
+                                $('#login-include').load(lookup_url, function (response, status, xhr) {
+                                    if (getURLParameter('errorcode') != '' && getURLParameter('errorcode') !== 'null') {
+                                        var error_msg = '';
+                                        if (getURLParameter('errorcode') == 'nousername') {
+                                            error_msg = 'No username provided';
+                                        }
+                                        else if (getURLParameter('errorcode') == 'nopassword') {
+                                            error_msg = 'No password provided';
+                                        }
+                                        else if (getURLParameter('errorcode') == 'nousernamepassword') {
+                                            error_msg = 'No username or password provided';
+                                        }
+                                        else if (getURLParameter('errorcode') == 'wrongusernamepassword') {
+                                            error_msg = 'Wrong username or password provided.<br/>Please note, you may need to register if your login details are for another LFC service. <a href="/loginhelp" style="text-decoration: underline;">Why?<a/>';
+                                        }
+                                        else if (getURLParameter('errorcode') == 'userinactive') {
+                                            error_msg = 'User inactive';
+                                        }
+                                        else if (getURLParameter('errorcode') == 'unknownerror') {
+                                            error_msg = 'Unknown error';
+                                        }
+                                        $('#invalid_login_msg').show();
+                                        $('#invalid_login_msg').html('<p class="invalid_login_msg">' + error_msg + '</p>');
+                                    }
+                                });
+                            </script>
+
+                            <noscript>
+                                <div class="nojs">You currently have javascript disabled, please <a
+                                        href="/login.php">click here</a> to login.</div>
+                            </noscript>
+
+                            <div id="partial-actions">
+                                <fieldset class="reg-signup">
+                                    <legend>Not You?</legend>
+                                    <div class="new-user-content">
+                                        <div class="signUpMessage">
+
+                                            <p>If this is not you, please click logout below and then login using your
+                                                own details.</p>
+                                            <p>&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <a href="/scripts/logout.php" class="metroButtonv2">Logout</a>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="clear"></div>
+
+                        </div><!-- end reg-fs-box-->
+                    </div>
+
+                    <div class="rightColumn">
+
+                        <div id="not-logged-in-actions" class="innerPadding">
+                            <fieldset class="reg-signup">
+                                <legend>New users</legend>
+                                <div class="new-user-content">
+                                    <div class="signUpMessage registerText">
+                                        <p>Gives you immediate access to:</p>
+                                        <ul class="leftList">
+                                            <li class="image-bullet small-bullet video">Access to free LFC videos</li>
+                                            <li class="image-bullet small-bullet match">Listen to live match commentary
+                                            </li>
+                                            <li class="image-bullet small-bullet win">Access to exclusive competitions
+                                            </li>
+                                        </ul>
+                                        <ul class="rightList">
+                                            <li class="image-bullet small-bullet news">Receive the official club
+                                                newsletter - All in Red</li>
+                                            <li class="image-bullet small-bullet forum">Join the conversation on the
+                                                official LFC Forums</li>
+                                            <li class="image-bullet shirt">Instant access to the Official Online Store
+                                            </li>
+                                        </ul>
+                                        <p style="float: right; padding-top: 15px;">...and it's completely
+                                            <span>FREE!</span></p>
+                                    </div>
+                                </div>
+                                <a href="/my-lfc/free-registration" style="clear: both;">
+                                    <div class="buttonPlaceholder">
+                                        <input type="button" value="Register" class="btn right metroButton" />
+                                        <span class="buttonIcon"></span>
+                                    </div>
+                                </a>
+                            </fieldset>
+                        </div>
+
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <!-- Engage Web Tracking Code -->
+                    <meta name="com.silverpop.brandeddomains"
+                        content="www.pages04.net,bookings.liverpoolfc.com,cnstore.liverpoolfc.com,content.liverpoolfc.com,forums.liverpoolfc.com,foundation.liverpoolfc.com,lfcbootroom.com,lfcbootroom.tv,lfcofflicence.com,lfcofflicence.tv,lfcpicturestore.com,lfcpicturestore.tv,liverpoolfantasymanager.com,liverpoolfc.com,liverpoolfc.mkt5270.com,liverpoolladiesfc.com,nesn.com,programmemaster.com,store.liverpoolfc.com,store.liverpoolfc.tv,thekop.liverpoolfc.com,tickets.liverpoolfc.com,hps.datacash.com" />
+                    <meta name="com.silverpop.cothost" content="engage4.silverpop.com" />
+                    <script
+                        src="https://www.sc.pages04.net/lp/static/js/iMAWebCookie.js?7bfe307e-13abc0179a2-b72427ac28f4177bd55290ce12678282&h=www.pages04.net"
+                        type="text/javascript"></script>
+                    <!--End Engage Web Tracking Code-->
+                </section>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <!-- Db Template Id:28 At:2018-05-01 14:33:53 Version:6 -->
+        <footer id="page-footer" class="noIconsFooter">
+            <div class="lowerBackground">
+                <section class="bottomFooter">
+                    <div class="footerCrest"></div>
+                    <div class="footerCrestLeft"></div>
+                    <div class="footertext">
+                        <div class="footer-middleBottom">
+                            <a title="Go to Privacy Policy"
+                                href="http://www.liverpoolfc.com/legal/privacy-policy">Privacy Policy</a> <span>|</span>
+                            <a title="Go to Terms & Conditions"
+                                href="http://www.liverpoolfc.com/legal/terms-and-conditions">Terms &
+                                Conditions</a> <span>|</span>
+                            <a title="Go to Cookie Information"
+                                href="http://www.liverpoolfc.com/legal/cookies">Cookies</a> <span>|</span>
+                            <a title="Go to Help" href="http://www.liverpoolfc.com/faqs">Help</a> <span>|</span>
+                            <a title="Go to Browser Support"
+                                href="http://www.liverpoolfc.com/corporate/browser-support">Browser
+                                Support</a> <span>|</span>
+                            <a title="Go to RSS Feeds" href="http://www.liverpoolfc.com/corporate/rss-feeds">RSS
+                                Feeds</a> <span>|</span>
+                            <a title="Go to Contact Us" href="http://www.liverpoolfc.com/contact">Contact
+                                Us</a> <span>|</span>
+                            <a title="Go to Accessibility"
+                                href="http://www.liverpoolfc.com/accessible">Accessibility</a>
+                        </div>
+                        <div class="footer-left">© Copyright 2016 The Liverpool Football Club and Athletic Grounds
+                            Limited. All rights reserved.</div>
+                        <div class="footer-right">Developed And Maintained by the LFC Technology and Transformation Team
+                        </div>
+                        <div class="footer-middle">Match Statistics supplied by Opta Sports Data Limited. Reproduced
+                            under licence from Football DataCo Limited. All rights reserved</div>
+                    </div>
+                </section>
+            </div>
+        </footer>
+
+
+
+
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+            $(window).load(function () {
+                $(".SquadPics img").lazyload({ threshold: 150 });
+                $("#tabs-1 img").lazyload({ threshold: 150 });
+                $("img.lazy").show().lazyload({ threshold: 150 });
+                $(".show-lazy-tab-images").click(function () {
+                    $($(this).attr("href") + ' img').each(function () { $(this).trigger('appear') });
+                });
+            });
+
+//]]>
+        </script>
+    </div>
+</body>
+
+</html>

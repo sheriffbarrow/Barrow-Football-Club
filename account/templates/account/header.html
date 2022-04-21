@@ -1,0 +1,609 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/css/styles.css' %}" />
+<script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/scripts.min.js' %}"></script>
+
+    <div class="wrapper">
+
+
+        <a id="page-top"></a>
+      
+        <header id="site-header" class="site-header" role="banner">
+
+            <div class="site-header-inner">
+
+                <div class="masthead">
+
+                    <ul class="account-links logged-out-only">
+                        <li class="subnav">
+                            {% if request.user.is_authenticated %}
+                        <li><a href="{% url 'account:register' %}"><i class="lnr lnr-user"></i><span
+                                    class="my-cart"><span>
+                                        <strong>Welcome</strong></span><span>
+                                    </span></span></a>
+                            <!-- Dropdown Start -->
+                            <ul class="ht-dropdown">
+                                <li><a href="{% url 'account:accountsettings' %}">MY BFC</a></li>
+
+                                <li><a href=""></a></li>
+                            </ul>
+
+                        <li><a href="{% url 'account:logout' %}"><span> <strong></strong></span><span>
+                                </span></span>Logout</a>
+
+                            {% else %}
+                            <a>Log In</a>
+
+                            <ul>
+
+                                <li class=" link-login first"> <a href="{% url 'account:login' %}" target="">login</a>
+                                </li>
+
+                                <!--
+                                <li class=" "> <a href="" target="">Tickets</a>
+                                </li>
+  
+  
+                                <li class=" "> <a href="" target="">Online Store</a>
+                                </li>
+  -->
+
+                            </ul>
+                            {% endif %}
+                        </li>
+                        <li class="link-separator">&nbsp;</li>
+                        <li class="subnav">
+                            <a>Register</a>
+                            <ul>
+
+                                <li class="  first"> <a href="{% url 'account:registration' %}" target="">Free Registration</a>
+                                </li>
+
+                                <li class=" separator last"> <a href="" target="">Not Sure?</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+                    </ul>
+
+                    <ul class="account-links logged-in-only">
+                        <li>
+                            <a href="" title="Logout" class="link-logout">Log out</a>
+                        </li>
+                        <li class="link-separator">&nbsp;</li>
+                        <li>
+                            <a href="{% url 'account:login' %}" title="My LFC" class="link-my-lfc">My BFC</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="logo">
+                    <a class="logo-large" title="Home" href="{% url 'bfc:myhome' %}">
+                        <img src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/images/bfc.png' %}"
+                            alt="Barrow FC" />
+                    </a>
+
+                    <a class="logo-medium" title="Home" href="{% url 'bfc:myhome' %}">
+
+                        <img src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/images/bfc-medium.png' %}"
+                            alt="Barrow FC" />
+                    </a>
+
+                    <a class="logo-small" title="Home" href="{% url 'bfc:myhome' %}">
+                        <img src="{%static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/images/bfcl.png' %}"
+                            alt="Barrow FC" />
+                    </a>
+                </div>
+
+                <a href="" class="sponsor" target="main-sponsor">
+                    Main Club Sponsor: Barrow Company Limited
+                </a>
+
+                <div class="search">
+
+                </div>
+
+
+                <nav class="main-menu">
+                    <ul>
+
+                        <li class="bp-medium-more-only log-out-menu-link first"> <a href="" target="">LOG OUT</a>
+                        </li>
+
+
+                        <li class=" active-news"> <a href="{% url 'bfc:news-first-team' %}" target="">NEWS</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="{% url 'bfc:news-first-team' %}" target="">Latest News</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class=" "> <a href="" target="">FIXTURES</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="" target="">Fixtures and Results</a>
+                                </li>
+
+
+                                <li class=" "> <a href="" target="">League Table</a>
+                                </li>
+
+
+                                <li class=" "> <a href="" target="">Division League Calendar</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <li class=" "> <a href="{% url 'bfc:firstteam' %}" target="">TEAM</a>
+                            <ul class="menu_level_1">
+
+                                <li class="first"> <a href="{% url 'bfc:firstteam' %}" target="">First Team</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+
+
+                        <li class="bp-medium-more-min-large-primary "> <a href="" target="">FANS</a>
+                            <ul class="menu_level_1">
+
+                                <li class=" "> <a href="" target="">Social Media</a>
+                                </li>
+
+                                <li class=" "> <a href="" target="">Supporters Committee</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+                        <li class="bp-medium-more-min-large-primary "> <a href="" target="">CLUB</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="{% url 'bfc:staff' %}" target="">Staff</a>
+                                </li>
+
+
+                                <li class=" "> <a href="javascript:void(0)" target="">History</a>
+                                </li>
+
+
+
+                                <li class=" "> <a href="" target="">Honours</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class="bp-medium-more-min-large-primary  last"> <a href="" target="_blank">HELP</a>
+                            <ul class="menu_level_1">
+
+                                <li class="bp-medium-more-min-large-primary  first"> <a href="" target="_blank">FAQs</a>
+                                </li>
+
+
+                                <li class=" "> <a href="" target="_blank">CONTACT</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                    </ul>
+
+
+
+                    <ul class="more-menu">
+                        <li class="more-menu-link">
+                            <a><span>More</span></a>
+                            <div class="icon-menu moreIconCss"></div>
+
+                            <ul>
+
+                                <li class="bp-medium-more-only log-out-menu-link first"> <a href="" target="">LOG
+                                        OUT</a>
+                                </li>
+
+
+                                <li class=" active-news"> <a href="{% url 'bfc:news-first-team' %}" target="">NEWS</a>
+                                    <ul class="menu_level_1">
+
+                                        <li class="  first"> <a href="" target="{% url 'bfc:news-first-team' %}">Latest
+                                                News</a>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+
+                                <li class=" "> <a href="" target="">Match Centre</a>
+                                </li>
+
+
+                                <li class=" "> <a href="" target="">FIXTURES</a>
+                                    <ul class="menu_level_1">
+
+                                        <li class="  first"> <a href="" target="">Fixtures and Results</a>
+                                        </li>
+
+
+                                        <li class=" "> <a href="" target="">League Table</a>
+                                        </li>
+
+
+                                        <li class=" "> <a href="" target="">Division League Calendar</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </li>
+
+
+                                <li class=" "> <a href="{% url 'bfc:firstteam' %}" target="">TEAM</a>
+                                    <ul class="menu_level_1">
+
+                                        <li class="  first"> <a href="{% url 'bfc:firstteam' %}" target="">First
+                                                Team</a>
+                                        </li>
+
+
+
+                                    </ul>
+
+                                </li>
+
+
+                        </li>
+
+
+                        <li class="bp-medium-more-min-large-primary "> <a href="" target="">FANS</a>
+                            <ul class="menu_level_1">
+
+                                <li class=" "> <a href="" target="">Social Media</a>
+                                </li>
+
+                                <li class=" "> <a href="" target="">Supporters Committee</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+
+
+
+                        <li class="bp-medium-more-min-large-primary "> <a href="" target="">CLUB</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="{% url 'bfc:staff' %}" target="">Staff</a>
+                                </li>
+
+
+                                <li class=" "> <a href="" target="">History</a>
+                                </li>
+
+                                <li class=" "> <a href="" target="">Honours</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class="bp-medium-more-min-large-primary  last"> <a href="" target="_blank">HELP</a>
+                            <ul class="menu_level_1">
+
+                                <li class="bp-medium-more-min-large-primary  first"> <a href="" target="_blank">FAQs</a>
+                                </li>
+
+
+                                <li class=" "> <a href="" target="_blank">CONTACT</a>
+                                </li>
+
+
+                                <li class="  last"> <a href="" target="">A - Z</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                    </ul>
+
+
+
+                    </li>
+
+                    <li class="my-account logged-out-only">
+                        <a href="" title="Log in">LOG IN</a>
+                        <ul>
+
+                            <li class=" link-login first"> <a href="" target="">My BFC</a>
+                            </li>
+
+
+                            <li class=" separator last"> <a href="" target="">Not sure?</a>
+                            </li>
+
+
+                        </ul>
+
+                    </li>
+                    <li class="my-account logged-in-only">
+                        <a href="" title="My LFC">MY BFC</a>
+                    </li>
+                    </ul>
+
+                </nav>
+
+                <ul class="social-links">
+               
+                    <li class="facebook">
+                        <a title="Go to The Official Barrow Football Club Facebook page"
+                            href="https://web.facebook.com/Barrow-Football-Club-282431163549235" target="_blank"></a>
+                    </li>
+                    <li class="twitter">
+                        <a title="Go to The Official Barrow Football Club Twitter page" href="" target="_blank"></a>
+                    </li>
+                   
+                    <li class="instagram">
+                        <a title="Go to The Official Barrow Football Club Instagram page" href="" target="_blank"></a>
+                    </li>
+                    <li class="youtube">
+                        <a title="Go to The Official Barrow Football Club Youtube page" href="" target="_blank"></a>
+                    </li>
+                    <li class="alexa">
+                        <a title="Go to The Official Barrow Football Club Whatsapp page" href="" target="_blank"></a>
+                    </li>
+                    <li class="global">
+                        <a title="Go to The Official Barrow Football Club Global page" href="" target="_blank"></a>
+                    </li>
+                </ul>
+
+
+
+
+                <a href="#mobile-main-menu" id="mobile-main-menu-control" class="mobile-main-menu-control">
+                    <span class="label">Menu</span>
+                    <span class="icon-menu icon"></span>
+                </a>
+
+                <nav id="mobile-main-menu" class="mobile-main-menu">
+
+                    <ul>
+                        {% if request.user.is_authenticated %}
+                        <li><a href="#">Account</a>
+                            <!-- Home Version Dropdown Start -->
+                            <ul>
+                                <li><a href="{% url 'account:register' %}"><i class="lnr lnr-user"></i><span
+                                            class="my-cart"><span>
+                                                <strong>welcome</strong></span><span>
+                                            </span></span></a></li>
+                                <li><a href="{% url 'account:accountsettings' %}">My Account</a></li>
+                                <li><a href="{% url 'account:logout' %}">Logout</a></li>
+
+                            </ul>
+                            <!-- Home Version Dropdown End -->
+                        </li>
+                        {% else %}
+                    </ul>
+
+                    <ul>
+
+                        <li class=" account logged-out-only first"> <a href="" target="">LOG IN / REGISTER</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="{% url 'account:login' %}" target="">LOGIN</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+                        {% endif %}
+                        <ul class="social-links">
+                            <li class="facebook">
+                                <a title="Go to The Official Barrow Football Club Facebook page" href=""
+                                    target="_blank"></a>
+                            </li>
+                            <li class="twitter">
+                                <a title="Go to The Official Barrow Football Club Twitter page" href=""
+                                    target="_blank"></a>
+                            </li>
+                            <li class="instagram">
+                                <a title="Go to The Official Barrow Football Club Instagram page" href=""
+                                    target="_blank"></a>
+                            </li>
+                            <li class="youtube">
+                                <a title="Go to The Official Barrow Football Club Youtube page" href=""
+                                    target="_blank"></a>
+                            </li>
+                            <li class="global">
+                                <a title="Go to The Official Barrow Football Club Global page" href=""
+                                    target="_blank"></a>
+                            </li>
+                        </ul>
+
+
+                        <li class=" account logged-in-only"> <a href="" target="">LOGIN</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first last"> <a href="" target="">Log Out</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class=""> <a href="{% url 'bfc:myhome' %}" target="">HOME</a>
+                        </li>
+
+
+                        <li class=" active-news"> <a href="{% url 'bfc:news-first-team' %}" target="">NEWS</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="{% url 'bfc:news-first-team' %}" target="">Latest News</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class=" "> <a href="" target="">FIXTURES</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="" target="">Fixtures and Results</a>
+                                </li>
+
+
+                                <li class=" "> <a href="" target="">League Table</a>
+                                </li>
+
+
+                                <li class=" "> <a href="" target="">Division League Calendar</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class=" "> <a href="{% url 'bfc:firstteam' %}" target="">TEAM</a>
+                            <ul class="menu_level_1">
+
+                                <li class=" "> <a href="" target="{% url 'bfc:firstteam' %}">frist team</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <!--
+                        <li class=" "> <a href="javascript:void(0)" target="">FANS</a>
+                            <ul class="menu_level_1">
+
+                                <li class=" "> <a href="" target="">Social Media</a>
+                                </li>
+
+                                <li class=" "> <a href="javascript:void(0)" target="">Supporters Committee</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+                    -->
+                        <li class=" "> <a href="" target="">CLUB</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="{% url 'bfc:staff' %}" target="">Staff</a>
+                                </li>
+
+
+                                <li class=" "> <a href="javascript:void(0)" target="">History</a>
+                                </li>
+
+
+
+                                <li class=" "> <a href="javascript:void(0)" target="">Honours</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class="  last"> <a href="" target="_blank">HELP</a>
+                            <ul class="menu_level_1">
+
+                                <li class="  first"> <a href="javascript:void(0)" target="_blank">FAQs</a>
+                                </li>
+
+
+                                <li class=" "> <a href="javascript:void(0)" target="_blank">CONTACT</a>
+                                </li>
+
+
+
+                            </ul>
+
+
+                        </li>
+
+
+                    </ul>
+
+
+                </nav>
+                {% block bread %}
+                <div class="breadcrumbs">
+                    <span class="breadcrumb-prefix">you are here:</span>
+                    <ul>
+                        <li class="home">account</li>
+                    </ul>
+                </div>
+                {% endblock bread %}
+
+
+                <div class="principle-partners-logos">
+                    <div class="principle-partners-logos-inner">
+
+
+
+
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(window).on('scroll', function () {
+                        if ($(window).scrollTop()) {
+                            $('nav').addClass('black');
+                        }
+                        else {
+                            $('nav').removeClass('black');
+                        }
+                    })
+                </script>
+
+            </div>
+
+        </header>
+
+        <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/scripts.min.js"></script>
+
+        <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/news-scripts.min.js"></script>
+    
+        <script src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/home-scripts.min.js' %}"></script>
+
+     
+        
+
+

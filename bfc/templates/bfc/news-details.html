@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+{% extends 'bfc/base/index1.html' %}
+{% load static %}
+{% load social_share %}
+
+<html id="top" class="no-js">
+<!--<![endif]-->
+
+{% block title %}
+    <title>{{ detailss.title }}</title>
+ {% endblock title %}
+
+<!--facebook openGraph-->
+{% if deatilss.slug in request.path %}
+    <title>{{detailss.title}}</title>
+    <meta property="og:title" content="{{detailss.title}}">
+    <meta name="description" property="og:description" content="{{detailss.description|striptags|truncatewords:20}}">
+    <meta property="og:image" content="{{object.postImage.url}}">
+    <meta property="og:image:alt" content="{{detailss.postImage.url}">
+    <meta property="og:url" content="https://www.barrowfc.net/{{detailss.slug}}">
+    <meta name="twitter:card" value="summary">
+
+    {% elif request.path == '/' %}
+    <title>Homepage Title</title>
+    <meta name="description" content="This is the description for the homepage.">
+
+    {% else %}
+   
+    {% endif %}
+
+<script>
+    (function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement);
+
+    if (window.history.replaceState && window.location.href.slice(-1) === '#') {
+        window.history.replaceState({}, document.title, window.location.href.slice(0, -1));
+    }
+    
+ 
+</script>
+
+<head>
+    <!-- OneTrust Cookies Consent Notice start for barrowfc.com -->
+    <script type="text/javascript"
+        src="https://cdn-ukwest.onetrust.com/consent/aa158886-777d-463e-8082-e384a26718f6/OtAutoBlock.js"></script>
+    <script src="https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+        data-domain-script="aa158886-777d-463e-8082-e384a26718f6"></script>
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://d3j2s6hdd6a7rg.cloudfront.net/css/cookie-consent-5.css" />
+
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/images/favicon.png"
+        type="image/png" />
+
+
+    <link rel="stylesheet" href="https://secure.widget.cloud.opta.net/v3/css/v3.football.opta-widgets.css">
+
+    <link rel="stylesheet" href="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/css/styles.css" />
+
+
+
+    <!-- NEWS -->
+    <link rel="stylesheet" href="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/css/news.css" />
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/base.js"></script>
+
+    <script>
+
+        window.DY = window.DY || {};
+        DY.recommendationContext = { type: 'OTHER' };
+
+    </script>
+
+    <style type="text/css">
+        a.post-next.post-next-top {
+            display: none;
+        }
+
+        div.post-next.post-next-bottom {
+            display: none;
+        }
+    </style>
+
+    <script>
+        // create Lfc element with GPT command queue
+        var Lfc = Lfc || {};
+        Lfc.gtmAdQueue = Lfc.gtmAdQueue || [];
+
+        // Load GPT asynchronously
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function () {
+            var gads = document.createElement('script');
+            gads.async = true;
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('.masthead .link-login a').attr('href', '' + (document.URL));
+
+            // remove age restricted footer logos
+            var checkString = window.location.href;
+            if (checkString.indexOf("academy") !== -1 || checkString.indexOf("under-23") !== -1 || checkString.indexOf("under-18") !== -1 || checkString.indexOf("soccerschools") !== -1 || checkString.indexOf("soccer-schools") !== -1 || checkString.indexOf("u23") !== -1 || checkString.indexOf("u18") !== -1) {
+                $('a[title="Carlsberg"], a[title="Betvictor"], a[title="Liverpool Vodka"], a[title="Draft Kings"], a[title="1XBET"]').remove();
+            }
+
+            if (checkString.indexOf("") !== -1 || checkString.indexOf("/news/women") !== -1 || checkString.indexOf("/team/women") !== -1 || checkString.indexOf("/fans/liverpool-fc-women") !== -1) {
+                $('a[title="Western Union"], a[title="Carlsberg"],a[title="MG"],a[title="Nivea"],a[title="Falken Tyres"],a[title="TigerWit"],a[title="EA Sports"],a[title="Chaokoh"],a[title="NH Foods"],a[title="Lavazza"],a[title="Petro-Canada"],a[title="Liverpool Vodka"],a[title="Levis"],a[title="iugis"],a[title="Mitel"],a[title="Verbier"],a[title="Tribus"],a[title="Cadbury UK"],a[title="Cadbury ROW"],a[title="Holly Frontier"],a[title="Quorn"],a[title="Mauritius"],a[title="Acronis"]').remove();
+            }
+
+            // remove link
+            $('a[title="1XBET"]').removeAttr("href");
+
+            // HOT FIX - REMOVING MORE MENU FROM INTERNATIONAL SITES
+            var urlHostName = window.location.hostname;
+            if (urlHostName.indexOf('indonesia') !== -1 || urlHostName.indexOf('thailand') !== -1 || urlHostName.indexOf('japan') !== -1) {
+                $('.main-menu ul.more-menu').hide();
+            }
+
+        })
+    </script>
+    <style>
+        .site-header-inner .masthead .masthead-links .more-menu ul li a {
+            background: none !important;
+        }
+
+        .site-header-inner .social-links li.skype {
+            display: none;
+        }
+
+        .vixlet,
+        .dugout {
+            display: none !important;
+        }
+
+        .video-error__content {
+            padding-top: 3% !important;
+        }
+
+        .video-error__listing {
+            margin: 15px 0 !important;
+        }
+
+        .video-error__subtitle-mobile,
+        .video-error__registered {
+            color: white !important;
+        }
+
+        .video-player-embeddable .video-error--embed .video-error__listing-group ul li {
+            margin: 0 0 5px 0 !important;
+        }
+
+        .video-error__call-to-action a.js-subscribe-button {
+            font-size: 0.8em !important;
+            background: white !important;
+            text-transform: uppercase !important;
+        }
+
+        .video-error__call-to-action a.js-subscribe-button:hover {
+            color: #e31b23 !important;
+        }
+
+        @media only screen and (min-width: 551px) {
+            .video-error__subtitle-mobile {
+                margin: 10px 0 !important;
+                padding: 0 !important;
+            }
+        }
+
+        @media only screen and (min-width: 775px) and (max-width: 975px) {
+            .video-error__listing-group {
+                display: none !important;
+            }
+        }
+
+        /*@media screen and (min-width: 700px) {
+.site-header-inner .main-menu .more-menu .more-menu-link>ul li {
+display:block !important;
+}
+}*/
+
+        @media screen and (min-width: 1000px) {
+            .site-header-inner .masthead .masthead-links .more-menu.noLogin ul {
+                top: 100% !important;
+            }
+        }
+
+        /* IE ONLY */
+        @media screen\0 {
+            .video-player-embeddable .video .shard-overlay {
+                position: absolute !important;
+            }
+        }
+
+        .home .featured-news-carousel .media-image-wrap .indent {
+            text-indent: -99999px;
+        }
+
+        .dy_unit .dy-sliding-drawer-container {
+            bottom: 25%;
+        }
+    </style>
+
+
+    <script>
+        var Lfc = Lfc || {};
+
+        Lfc.messagesConfig = {
+            messages: [
+
+                // ANDROID APP BANNER
+                {
+                    id: 'android-app-banner',
+                    maximumDisplayCount: 1,
+                    displayCondition: function () {
+                        // don't show on non-Android devices
+                        if (navigator.userAgent.match(/Android/i) === null || navigator.userAgent.indexOf('Windows') > -1) {
+                            return false;
+                        }
+                        // only show on home and news pages
+                        var pathStart = window.location.pathname.substr(0, 6);
+                        if (pathStart != "/news/" && pathStart != "/news" && pathStart != "https://www.liverpoolfc.com/") {
+                            return false;
+                        }
+                        // only show if valid app id meta tag exists
+                        //  (e.g. <meta name="google-play-app" content="app-id=tv.liverpoolfc">)
+                        var $meta = $('meta[name="google-play-app"]');
+                        if ($meta.length > 0) {
+                            var appId = /app-id=([^\s,]+)/.exec($meta.attr('content'));
+                            if (appId) {
+                                return true;
+                            }
+                        }
+                    },
+                    content: function () {
+                        // get app id from meta tag
+                        var $meta = $('meta[name="google-play-app"]');
+                        if ($meta.length > 0) {
+                            var appId = /app-id=([^\s,]+)/.exec($meta.attr('content'));
+                            if (appId) {
+                                var linkUrl = 'https://play.google.com/store/apps/details?id=' + appId[1] +
+                                    '&referrer=utm_source%3DWebsite%26utm_medium%3DHEADER_APP_CARD_MAIN_SITE%26utm_content%3DDigital%26utm_campaign%3DClub%2520App';
+
+                                return '<div id="android-app-banner">' +
+                                    '<a href="javascript:void(0);" class="close">&times;</a>' +
+                                    '<a href="' + linkUrl + '">' +
+                                    '<span class="app-icon"></span>' +
+                                    '<div class="app-info">' +
+                                    '<strong>LFC Official App</strong>' +
+                                    '<span>Liverpool Football Club</span>' +
+                                    '<span>FREE in Google Play</span>' +
+                                    '</div>' +
+                                    '<span class="view">VIEW</span>' +
+                                    '</a>' +
+                                    '</div>';
+                            }
+                        }
+                    },
+                    style: "styled-header"
+                },
+
+                // REGISTRATION POP-UP
+                {
+                    id: 'registration-popup',
+                    minimumInterval: 10 * 24 * 60 * 60 * 1000, // 10 days = 10*24*60*60*1000
+                    displayCondition: function () {
+                        // temp fix to not display
+                        return false;
+                        // don't show to logged in users
+                        if (Lfc.Login.isLoggedIn()) {
+                            Lfc.Cookie.set("registration-popup-logout-time", "logged in");
+                            return false;
+                        }
+                        // don't show immediately after logout -- wait 1 day
+                        var now = (new Date()).getTime(),
+                            logOutTime = Lfc.Cookie.get("registration-popup-logout-time");
+
+                        if (logOutTime == "logged in") {
+                            // immediately after logout, store timestamp
+                            Lfc.Cookie.set("registration-popup-logout-time", now);
+                            return false;
+                        } else {
+                            // if one day has not yet passed since first known logged out time, don't show
+                            if (logOutTime && (now - logOutTime < 24 * 60 * 60 * 1000)) { // 1 day = 24*60*60*1000
+                                return false;
+                            };
+                        }
+                        // only show on home and news pages
+                        var pathStart = window.location.pathname.substr(0, 6);
+                        if (pathStart != "/news/" && pathStart != "/news" && pathStart != "https://www.liverpoolfc.com/") {
+                            return false;
+                        }
+                        // only show to "A" group people
+                        var abGroup = Lfc.Cookie.getABGroup("registration-popup");
+                        if (!abGroup) {
+                            abGroup = Lfc.Cookie.setABGroup("registration-popup");
+                            dataLayer.push({ 'event': 'registration-popup-ab-assignment', 'abGroup': abGroup });
+                        }
+                        return abGroup === "A";
+                    },
+                    onShow: function () {
+                        dataLayer.push({ 'event': 'registration-popup-shown' });
+                    },
+                    content: function () {
+                        if ($(window).width() < 1000) {
+                            // header message
+                            return regMessageHeaderMarkup + regMessageHeaderStyling;
+                        } else {
+                            // big popup with login
+                            return regMessagePopupMarkup + regMessagePopupStyling;
+                        }
+                    },
+                    style: function () {
+                        if ($(window).width() < 1000) {
+                            return 'default-header';
+                        } else {
+                            return 'popup';
+                        }
+                    }
+                },
+            ],
+            minimumMessageInterval: 60 * 60 * 1000, // 1 hour = 60*60*1000
+        }
+
+
+        // REGISTRATION POPUP MARKUP & STYLING
+        var regMessagePopupMarkup = '<div class="registration-popup-message"> <h1>GET MORE FROM LFC.</h1> <div id="not-logged-in-actions"> <h2>Register and get immediate access to:</h2> <fieldset class="reg-signup"> <div class="new-user-content"> <div class="signUpMessage registerText" style="line-height: 24px;"> <ul> <li class="image-bullet video">Free LFC videos</li> <li class="image-bullet match">Listen to live match commentary</li> <li class="image-bullet win">Exclusive competitions</li> <li class="image-bullet news">Receive the official club newsletter - All in Red</li> <li class="image-bullet forum">Join the conversation on the official LFC forums</li> <li class="image-bullet shirt">The Official Online Store</li> </ul> <p>...and it&rsquo;s completely <span>FREE!</span></p> </div> </div> <a href="/my-lfc/join/user-details?user_type=free&source=audbuild"> <div class="buttonPlaceholder buttonPlaceholderPopUp"> <input type="button" value="Register" class="btn right metroButton"/> <span class="buttonIcon"></span> </div> </a> </fieldset> </div> <div id="LoginBox"> <h2>Login</h2> <div class="LoginFormBox"> <form id="WholesaleContact" title="Login" method="post" name="Login" action="https://www.liverpoolfc.com/scripts/login.php?login=LfcTVLogin"> <fieldset> <div class="login-content"> <table class="lfcMembershipTable"> <tr class="LoginTableSpacing"> <th><label for="LoginUsernameId">Username</label></th> <td><input id="LoginUsernameId" class="InputLoginBox " type="text" name="username" /></td> <td class="formHelp">Email address</td> </tr> <tr class="LoginTableSpacing"> <th><label for="LoginPasswordId">Password</label></th> <td><input id="LoginPasswordId" class="InputLoginBox" type="password" name="password" /></td> <td class="formHelp"> <p><a href="/my-lfc/login/forgotten-password">Forgotten password?</a></p> </td> </tr> <tr class="remember LoginTableSpacing"> <th><label for="remember_me">Remember</label></th> <td style="vertical-align: middle;" class="rememberSideText formHelp" colspan="2"> <input type="checkbox" name="remember_me" class="remember_checkbox" /> <p class="rememberSideText formHelp">Remember your details on this machine?</p> </td> </tr> </table> </div> <div class="ArticleContent"> <div class="buttonPlaceholder"> <input type="submit" value="Login" class="btn right metroButton"/> <span class="buttonIcon"></span> </div> </div> <input type="hidden" name="referer" value="http://www.liverpoolfc.com/" /> </fieldset> </form> <script type="text/javascript"> $("#LoginUsernameId, #LoginPasswordId").on("keydown", function (evt) { if(evt.keyCode == 13) { $("#LoginForm").submit(); } }); <\/script> </div> </div></div>';
+
+        var regMessagePopupStyling = '<style> /* header */ #cboxLoadedContent .registration-popup-message h1 { background: #E31B23; color: #FFF; padding: 0px 20px; line-height: 64px; font-size: 30px; } #colorbox #cboxClose { background: none; height: 58px; width: 50px; top: 3px!important; right: 3px; border: none; } #colorbox #cboxClose::after { content: "\\2716"; position: absolute; top: 0; left: 0; right: 0; line-height: 58px; text-align: center; font-size: 24px; text-indent: 0; color: #fff; } /* layout */ #cboxLoadedContent .registration-popup-message #not-logged-in-actions { width: 65%; padding: 20px; } #cboxLoadedContent .registration-popup-message #LoginBox { width: 35%; padding: 20px; } #cboxLoadedContent .registration-popup-message .login-content, #cboxLoadedContent .registration-popup-message .new-user-content { height: 250px; } #cboxLoadedContent .registration-popup-message h2 { border-bottom: 1px solid #DDD; margin: 0; padding: 2px 0 8px; } /* registration benefits */ #cboxLoadedContent .registration-popup-message .signUpMessage > p, #cboxLoadedContent .registration-popup-message .signUpMessage > ul { line-height: 36px; font-size: 16px; margin-bottom: 12px; } #cboxLoadedContent .registration-popup-message .signUpMessage > ul li.image-bullet { background-size: 24px; padding-left: 36px; } #cboxLoadedContent .registration-popup-message .signUpMessage > p { line-height: 36px; font-size: 16px; } /* login form */ #cboxLoadedContent .registration-popup-message #socialSignOn { margin: -10px 0 0; } #cboxLoadedContent .registration-popup-message .socialLogin { text-indent: -9999px; width: 40px; height: 40px; background-size: auto 40px; margin: 0 0 0 5px; } #cboxLoadedContent .registration-popup-message .lfcMembershipTable { clear: both; } #cboxLoadedContent .registration-popup-message .lfcMembershipTable th, #cboxLoadedContent .registration-popup-message .lfcMembershipTable td { float: left; width: 100%; } #cboxLoadedContent .registration-popup-message .lfcMembershipTable input { width: 100%; } #cboxLoadedContent .registration-popup-message .lfcMembershipTable th { text-align: left; } #cboxLoadedContent .registration-popup-message .lfcMembershipTable td.formHelp { text-align: right; padding: 5px 0; } #cboxLoadedContent .registration-popup-message .lfcMembershipTable tr.remember input { width: 19px; margin-right: 5px; } #cboxLoadedContent .registration-popup-message .lfcMembershipTable tr.remember td { text-align: left; }<style>';
+
+        var regMessageHeaderMarkup = '<div class="richtext"> <h1>GET MORE FROM LFC</h1> <p class="small-content">Register or log in now to access <strong>FREE</strong> benefits</p> <p class="medium-content">Log in now, or register to access a range of <strong>FREE</strong> benefits including videos and exclusive competitions.</p> <p class="buttons"> <a href="javascript:void(0);" class="main-button close">No thanks</a> <a href="/my-lfc/join/user-details?user_type=free&source=audbuild" class="main-button">Yes, please!</a> </p></div>';
+
+        var regMessageHeaderStyling = '<style> .header-message { background: #FFF; text-align: center; border-bottom: 2px solid #FFF; overflow: hidden; } .header-message::after { background: #C8C8C8; height: 6px; } .header-message > a.close { display: none; } .header-message .richtext a { text-decoration: none; } .header-message .buttons { margin: 10px 0; } .header-message .buttons a.main-button { margin: 0.2em 0.5em 0; padding: 0.8em 2em; } .header-message .buttons a.main-button.close { background: #FFF; color: #E31B23; border: 1px solid #E31B23; } .header-message p.medium-content { display: none; } @media screen and (min-width: 500px) { .header-message p.small-content { display: none; } .header-message p.medium-content { display: block; margin-bottom: 0; } .header-message .buttons { position: absolute; top: 0; right: 0; width: 11.5em; margin-bottom: 0; margin-right: 20px; } .header-message { min-height: 9em; } .header-message .richtext { margin-right: 14em; } .header-message .buttons a.main-button { display: block; margin: 0.6em 0; } }</style>';
+
+    </script>
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body class="main-site-layout sonata-bc template-standard_single_column standard-single-column">
+
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-KCFJMVP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'http://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-KCFJMVP');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    {% block bread %}
+    <div class="breadcrumbs">
+
+        <span class="breadcrumb-prefix">you are here:</span>
+
+        <ul>
+
+            <li>
+                <a href="{% url 'bfc:myhome' %}">home</a>
+            </li>
+            <li>
+                <span>/ </span>
+
+                <a href="">news</a>
+            </li>
+
+            <li>
+                <span>/ </span>
+
+                <a href="">first team</a>
+            </li>
+        </ul>
+    </div>
+    {% endblock bread %}
+
+    {% block main %}
+    <div class="wrapper">
+
+
+        <a id="page-top"></a>
+
+
+        <div class="container">
+
+
+            <div class="content ">
+
+
+
+
+
+
+                <div id="cms-block-31443" class="cms-block cms-block-element"
+                    data-block-type="sonata.page.block.container">
+                    <div class="container-block block-31443 ">
+
+
+                        <script type='text/javascript'>
+
+                            googletag.cmd.push(function () {
+
+                                //news specific size mapping
+                                var mapResMainNewsSponsorship = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([750, 0], [728, 90]).
+                                    addSize([1000, 0], [[970, 90], [970, 250]]).build();
+
+                                var mapResMainNewsListingFeatured = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([683, 0], [300, 250]).build();
+
+                                var mapResMainNewsListingPositionOne = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([683, 0], [300, 250]).build();
+
+                                var mapResMainNewsListingPositionTwo = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([683, 0], [300, 250]).build();
+
+                                var mapResMainNewsInnerStory = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([750, 0], []).build();
+
+                                //general size mapping
+                                var mapResMainRightOne = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([758, 0], [300, 250]).build();
+
+                                var mapResMainRightTwo = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([758, 0], [300, 250]).build();
+
+                                var mapResMainLeftOne = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([750, 0], [300, 250]).build();
+
+
+
+                                //news specific slots
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_SPONSORSHIP', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_SPONSORSHIP').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsSponsorship).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_LISTING_FEATURED', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_LISTING_FEATURED').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsListingFeatured).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_LISTING_POSITION_ONE', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_LISTING_POSITION_ONE').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsListingPositionOne).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_LISTING_POSITION_TWO', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_LISTING_POSITION_TWO').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsListingPositionTwo).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_INNER_STORY', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_INNER_STORY').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsInnerStory).
+                                    addService(googletag.pubads());
+
+
+                                //general slots
+                                googletag.defineSlot('/87687331/RES_MAIN_RIGHT_ONE', [320, 50], 'div-gpt-ad-RES_MAIN_RIGHT_ONE').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainRightOne).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_RIGHT_TWO', [320, 50], 'div-gpt-ad-RES_MAIN_RIGHT_TWO').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainRightTwo).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_LEFT_ONE', [320, 50], 'div-gpt-ad-RES_MAIN_LEFT_ONE').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainLeftOne).
+                                    addService(googletag.pubads());
+
+
+                                googletag.pubads().collapseEmptyDivs();
+                                googletag.pubads().enableSingleRequest();
+                                googletag.enableServices();
+                            });
+                        </script>
+
+                        <style type="text/css">
+                            .facebookButton {
+                                display: none !important;
+                            }
+                        </style>
+                        <div id="news-post-page" class="news-post-page post-page" data-current-post-id="261386">
+                            <main class="news-post-main post-main main" role="main">
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                <div class="news-post-wrapper">
+
+                                    <div id="pop-content">
+
+                                        <div class="media-main-wrapper">
+
+                                            <div class="media-main">
+                                                <img src="{{ detailss.postImage.url }}"
+                                                    title="{{ detailss.title }}"
+                                                    class="media-main-image" alt="" />
+                                            </div>
+
+                                            <div class="share-panel-wrapper">
+                                                <div class="share-panel red-icons">
+                                                    <a href="#" class="share-panel-button icon-share" alt="Share"></a>
+                                                    <ul class="share">
+                                                        <li class="share-item">
+                                                            {% post_to_facebook object_or_url %}
+                                                        </li>
+
+                                                        <li class="share-item">
+                                                            {% post_to_twitter object_or_url %}
+                                                        </li>
+
+                                                        <li class="share-item">
+                                                            {% post_to_whatsapp object_or_url %}
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="post-wrapper">
+
+                                            <article class="post" role="article">
+
+                                                <header class="post-meta meta">
+
+
+                                                    <time class="post-time time"
+                                                        datetime="{{detailss.created|date:'d M Y'}}">{{detailss.created|date:'d M Y'}}</time>
+
+                                                    <h1 class="post-header">{{ detailss.title }}</h1>
+
+
+                                                    <p class="post-author author">
+
+                                                        <i class="fa  icon-user IconStyling"></i><span
+                                                            class="post-author-name name AuthorStyling"><span
+                                                             
+                                                                class="author"></span><span class="value">{{ post_owner }}</span></span>
+                                                  
+
+
+                                                    </p>
+
+                                                    <div class="share-panel white-icons">
+                                                        <a href="#" class="share-panel-button icon-share"
+                                                            alt="Share"></a>
+                                                        <ul class="share">
+                                                            <li class="share-item">
+                                                                {% post_to_facebook object_or_url %}
+                                                            </li>
+
+                                                            <li class="share-item">
+                                                                {% post_to_twitter object_or_url %}
+                                                            </li>
+
+                                                            <li class="share-item">
+                                                                {% post_to_whatsapp object_or_url %}
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </header>
+
+                                                <section class="post-body">
+
+
+                                                    <p class="post-synopsis synopsis">
+                                                       
+                                                        
+                                                        
+                                                    </p>
+
+
+
+                                                    <div class="ad-inner-banner partial">
+                                                        <div id='div-gpt-ad-RES_MAIN_NEWS_INNER_STORY'>
+                                                            <script>
+                                                                Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_NEWS_INNER_STORY');
+                                                            </script>
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                    <p>{{ detailss.sizable|safe}}</p>
+                                                   
+                                                    <div class="post-content">
+                                                        {% for option in related_items %}
+                                                        {% if forloop.counter == 1 %}
+                                                      
+                                                        <p style="text-align: center;"><img alt=""
+                                                                src="{{ option.postImage.url }}"
+                                                                style="width: 500px; height: 301px;" /></p>
+
+                                                        <ul>
+                                                            <li><strong><a
+                                                                        href="{{ option.get_absolute_url }}">{{ option.title}}</a></strong></li>
+                                                            {% else %}  
+                                                          
+                                                            {% endif %}
+                                                        </ul> 
+                                                        {% endfor %}
+                                                    </div>
+                                                    <span style="font-family:Times New Roman;">{{ detailss.remaining|safe }}</span>
+
+                                                    <ul class="post-tags tags">
+                                                        {% for tag in detailss.tags.all %}
+                                                        <li class="post-tag tag"><span>{{tag}}</span></li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                    <footer class="post-footer">
+
+
+                                                        <div class="share-panel red-icons">
+                                                            <a href="#" class="share-panel-button icon-share"
+                                                                alt="Share"></a>
+                                                            <ul class="share">
+                                                                <li class="share-item">
+                                                                    {% post_to_facebook object_or_url %}
+                                                                </li>
+
+                                                                <li class="share-item">
+                                                                    {% post_to_twitter object_or_url %}
+                                                                </li>
+
+                                                                <li class="share-item">
+                                                                    {% post_to_whatsapp object_or_url %}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </footer>
+
+                                                </section>
+
+                                            </article>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- RELATED CONTENT START -->
+                                    <div class="related-panel">
+
+
+                                        <div class="left-mpu ad-mpu partial">
+                                            <div id='div-gpt-ad-RES_MAIN_RIGHT_ONE'>
+                                                <script>
+                                                    Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_ONE');
+                                                </script>
+                                            </div>
+
+
+                                            <style type="text/css">
+                                                .facebookButton {
+                                                    display: none !important;
+                                                }
+                                            </style>
+
+                                        </div>
+
+
+
+                                        <aside class="related-content">
+
+                                            <h2>Related Content</h2>
+                                            {% if related_items %}
+                                            {% for related in related_items %}
+                                            <article>
+
+                                                <a
+                                                    href="{{ related.get_absolute_url }}">
+
+                                                    <img src="{{ related.postImage.url }}"
+                                                        class="media-thumbnail-image lazyLoadPlaceholder"
+                                                        data-src="{{ related.postImage.url }}"
+                                                        data-title="{{related.title}}"
+                                                        alt="" />
+
+                                                    <span class="grad">
+
+
+                                                        <span
+                                                            class="icon-helper icon-doc-text content-type-article"><span
+                                                                class="indent">article</span></span>
+                                                        <h3>{{ related.title }}</h3>
+                                                    </span>
+
+                                                </a>
+
+                                            </article>
+                                            {% endfor %}
+                                            {% else %}
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                  <h3><i>NO RELATED POST</i></h3>
+                                                </li>
+                                      
+                                              </ul>
+                                            {% endif%}
+
+                                        </aside>
+
+
+
+
+                                        <div class="right-top-mpu ad-mpu partial">
+                                            <div id='div-gpt-ad-RES_MAIN_RIGHT_TWO'>
+                                                <script>
+                                                    Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_TWO');
+                                                </script>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <!-- RELATED CONTENT END -->
+
+
+
+                                </div>
+
+                            </main>
+
+
+                            <!-- START MORE / TRENDING -->
+                            <div class="aside-container">
+
+                                <div id="cms-block-" class="cms-block cms-block-element"
+                                    data-block-type="sonata.block.service.text">
+                                    <div id="trending">
+                                        <div class="trending">
+                                            <h2 class="trending-hd">MORE NEWS</h2>
+                                            <ul class="trending-list">
+                                                {% if post1 %}
+                                            {% for post in post1 %}
+                                                <li class="trending-list-item" data-post-id="261391">
+                                                    <span class="icon-wrapper">
+
+
+                                                        <span
+                                                            class="icon-helper icon-doc-text content-type-article"><span
+                                                                class="indent">article</span></span>
+                                                    </span>
+                                                    <a
+                                                        href="{{ post.get_absolute_url }}">
+                                                        <time class="post-time"
+                                                            datetime="{{ post.created|date:'M d Y'}}">{{ post.created|date:'M d Y' }}</time>
+                                                        <h3>{{ post.title }}</h3>
+                                                    </a>
+                                                    {% endfor %}
+                                                    {% else %}
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item">
+                                                          <h3><i>NO OTHER NEWS YET</i</h3>
+                                                        </li>
+                                              
+                                                      </ul>
+                                                </li>
+                                                {% endif %}
+
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <a href="{% url 'bfc:news-first-team' %}" title="More Content"
+                                        class="belowTrending">
+                                        <span class="post-back-icon"></span>
+                                        <div class="content">More news</div>
+                                    </a>
+
+                                </div>
+
+
+                            </div>
+                            <!-- END MORE / TRENDING -->
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div id="cms-block-31444" class="cms-block cms-block-element"
+                    data-block-type="sonata.page.block.container">
+                    <div class="container-block block-31444 ">
+
+                    </div>
+                </div>
+
+
+
+                <div id="cms-block-31445" class="cms-block cms-block-element"
+                    data-block-type="sonata.page.block.container">
+                    <div class="container-block block-31445 ">
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/scripts.min.js"></script>
+
+    <script src="https://secure.widget.cloud.opta.net/v3/v3.opta-widgets.js"></script>
+
+    <script>
+        var opta_settings = {
+            subscription_id: 'da747e372c352a82f3dd6174084858fd',
+            language: 'en_GB',
+            timezone: 'Europe/London',
+            opta_tracking: false
+        };
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(document.body).addClass('news');
+        });
+    </script>
+    <style>
+        .breadcrumbs ul li:last-of-type {
+            display: none;
+        }
+    </style>
+
+
+
+
+
+    <!-- NEWS -->
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/news-scripts.min.js"></script>
+</body>
+
+</html>
+{% endblock main %}

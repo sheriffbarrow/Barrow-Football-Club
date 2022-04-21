@@ -1,0 +1,1003 @@
+{% extends 'bfc/base/index1.html' %}
+<!DOCTYPE html>
+
+<html id="top" class="no-js">
+<head>
+
+    <style>
+        .site-header-inner .masthead .masthead-links .more-menu ul li a {
+            background: none !important;
+        }
+
+        .site-header-inner .social-links li.skype {
+            display: none;
+        }
+
+        .vixlet,
+        .dugout {
+            display: none !important;
+        }
+
+        .video-error__content {
+            padding-top: 3% !important;
+        }
+
+        .video-error__listing {
+            margin: 15px 0 !important;
+        }
+
+        .video-error__subtitle-mobile,
+        .video-error__registered {
+            color: white !important;
+        }
+
+        .video-player-embeddable .video-error--embed .video-error__listing-group ul li {
+            margin: 0 0 5px 0 !important;
+        }
+
+        .video-error__call-to-action a.js-subscribe-button {
+            font-size: 0.8em !important;
+            background: white !important;
+            text-transform: uppercase !important;
+        }
+
+        .video-error__call-to-action a.js-subscribe-button:hover {
+            color: #e31b23 !important;
+        }
+
+        @media only screen and (min-width: 551px) {
+            .video-error__subtitle-mobile {
+                margin: 10px 0 !important;
+                padding: 0 !important;
+            }
+        }
+
+        @media only screen and (min-width: 775px) and (max-width: 975px) {
+            .video-error__listing-group {
+                display: none !important;
+            }
+        }
+        @media screen and (min-width: 1000px) {
+            .site-header-inner .masthead .masthead-links .more-menu.noLogin ul {
+                top: 100% !important;
+            }
+        }
+
+        /* IE ONLY */
+        @media screen\0 {
+            .video-player-embeddable .video .shard-overlay {
+                position: absolute !important;
+            }
+        }
+
+        .home .featured-news-carousel .media-image-wrap .indent {
+            text-indent: -99999px;
+        }
+
+        .dy_unit .dy-sliding-drawer-container {
+            bottom: 25%;
+        }
+    </style>
+</head>
+{% block bread %}
+<div class="breadcrumbs">
+
+    <span class="breadcrumb-prefix">you are here:</span>
+
+    <ul>
+
+        <li>
+            <a href="https://www.liverpoolfc.com/">home</a>
+        </li>
+        <li>
+            <span>/ </span>
+
+            <a href="https://www.liverpoolfc.com/news">news</a>
+        </li>
+
+        <li>
+            <span>/ </span>
+
+            <a href="https://www.liverpoolfc.com/news/first-team">first team</a>
+        </li>
+        <li>
+            <span>/ </span>
+
+            447808 jurgen klopp q a brighton selection decisions lallana and more
+        </li>
+
+
+
+
+    </ul>
+</div>
+{% endblock bread %}
+
+{% block main %}
+<body class="main-site-layout sonata-bc template-standard_single_column standard-single-column">
+    <div class="wrapper">
+
+
+        <a id="page-top"></a>
+
+
+        <div class="container">
+
+
+            <div class="content ">
+
+                <div id="cms-block-31443" class="cms-block cms-block-element"
+                    data-block-type="sonata.page.block.container">
+                    <div class="container-block block-31443 ">
+
+
+                        <script type='text/javascript'>
+
+                            googletag.cmd.push(function () {
+
+                                //news specific size mapping
+                                var mapResMainNewsSponsorship = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([750, 0], [728, 90]).
+                                    addSize([1000, 0], [[970, 90], [970, 250]]).build();
+
+                                var mapResMainNewsListingFeatured = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([683, 0], [300, 250]).build();
+
+                                var mapResMainNewsListingPositionOne = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([683, 0], [300, 250]).build();
+
+                                var mapResMainNewsListingPositionTwo = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([683, 0], [300, 250]).build();
+
+                                var mapResMainNewsInnerStory = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([750, 0], []).build();
+
+                                //general size mapping
+                                var mapResMainRightOne = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([758, 0], [300, 250]).build();
+
+                                var mapResMainRightTwo = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([758, 0], [300, 250]).build();
+
+                                var mapResMainLeftOne = googletag.sizeMapping().
+                                    addSize([0, 0], [320, 50]).
+                                    addSize([750, 0], [300, 250]).build();
+
+
+
+                                //news specific slots
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_SPONSORSHIP', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_SPONSORSHIP').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsSponsorship).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_LISTING_FEATURED', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_LISTING_FEATURED').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsListingFeatured).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_LISTING_POSITION_ONE', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_LISTING_POSITION_ONE').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsListingPositionOne).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_LISTING_POSITION_TWO', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_LISTING_POSITION_TWO').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsListingPositionTwo).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_NEWS_INNER_STORY', [320, 50], 'div-gpt-ad-RES_MAIN_NEWS_INNER_STORY').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainNewsInnerStory).
+                                    addService(googletag.pubads());
+
+
+                                //general slots
+                                googletag.defineSlot('/87687331/RES_MAIN_RIGHT_ONE', [320, 50], 'div-gpt-ad-RES_MAIN_RIGHT_ONE').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainRightOne).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_RIGHT_TWO', [320, 50], 'div-gpt-ad-RES_MAIN_RIGHT_TWO').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainRightTwo).
+                                    addService(googletag.pubads());
+
+                                googletag.defineSlot('/87687331/RES_MAIN_LEFT_ONE', [320, 50], 'div-gpt-ad-RES_MAIN_LEFT_ONE').
+                                    setTargeting("test", "true").
+                                    defineSizeMapping(mapResMainLeftOne).
+                                    addService(googletag.pubads());
+
+
+                                googletag.pubads().collapseEmptyDivs();
+                                googletag.pubads().enableSingleRequest();
+                                googletag.enableServices();
+                            });
+                        </script>
+
+                        <style type="text/css">
+                            .facebookButton {
+                                display: none !important;
+                            }
+                        </style>
+
+
+
+
+                        <div id="news-post-page" class="news-post-page post-page" data-current-post-id="261386">
+
+
+                            <div class="channel-sponsor partial">
+                                <div id='div-gpt-ad-RES_MAIN_NEWS_SPONSORSHIP'>
+                                    <script>
+                                        Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_NEWS_SPONSORSHIP');
+                                    </script>
+                                </div>
+
+                                <style type="text/css">
+                                    .facebookButton {
+                                        display: none !important;
+                                    }
+                                </style>
+
+                            </div>
+                            <main class="news-post-main post-main main" role="main">
+
+                                <div class="news-post-wrapper">
+
+                                    <div id="pop-content">
+
+                                        <div class="media-main-wrapper">
+
+                                            <div class="media-main">
+                                                <img src="{{ detailss.postImage.url }}"
+                                                    title="{{ details.title }}"
+                                                    class="media-main-image" alt="" />
+                                            </div>
+
+                                            <div class="share-panel-wrapper">
+
+
+                                                <div class="share-panel red-icons">
+                                                    <a href="#" class="share-panel-button icon-share" alt="Share"></a>
+                                                    <ul class="share">
+                                                        <li class="share-item">
+                                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.liverpoolfc.com%2Fnews%2Ffirst-team%2F447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                title="Facebook" target="_blank"><i
+                                                                    class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="share-item">
+                                                            <a href="https://twitter.com/intent/tweet?text=J%c3%bcrgen%20Klopp%20Q&amp;A%20|%20Brighton,%20selection%20decisions,%20Lallana%20and%20more&amp;url=https://www.liverpoolfc.com/news/first-team/447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                title="Twitter" target="_blank"><i
+                                                                    class="icon-twitter"></i>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="share-item">
+                                                            <a href="mailto:?&subject=J%C3%BCrgen%20Klopp%20Q%26A%20%7C%20Brighton%2C%20selection%20decisions%2C%20Lallana%20and%20more&body=J%C3%BCrgen%20Klopp%20Q%26A%20%7C%20Brighton%2C%20selection%20decisions%2C%20Lallana%20and%20more%20-%20https%3A%2F%2Fwww.liverpoolfc.com%2Fnews%2Ffirst-team%2F447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                title="Mail"><i class="icon-mail-alt"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <a class="post-next post-next-top"
+                                                    href="https://www.liverpoolfc.com/news/first-team/447713-liverpool-v-brighton-hove-albion-team-news"
+                                                    title="{{ details.title }}">
+
+                                                    <span class="post-next-icon">Next article</span>
+
+                                                    <div class="post-next-content">
+
+                                                        <img src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/images/spacer.gif"
+                                                            class="post-next-image lazyLoadPlaceholder" height='100'
+                                                            width='144'
+                                                            data-src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/29/thumb_128640_default_news_size_1.jpeg"
+                                                            data-title="{{ details.title }}"
+                                                            alt="" />
+
+                                                        <h3 class="post-next-hd">
+                                                            <label>NEXT ARTICLE</label>
+                                                            <span class="post-next-title"></span>
+                                                        </h3>
+
+                                                    </div>
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="post-wrapper">
+
+                                            <article class="post" role="article">
+
+                                                <header class="post-meta meta">
+
+
+                                                    <time class="post-time time"
+                                                        datetime="2021-10-29T12:38:00+00:00">29th October 2021</time>
+
+
+
+                                                    <h1 class="post-header">{{ detailss.title }}</h1>
+
+
+                                                    <p class="post-author author">
+
+
+
+                                                        <i class="fa  icon-user IconStyling"></i><span
+                                                            class="post-author-name name AuthorStyling"><span
+                                                                class="author"></span><span class="value">Sam
+                                                                Williams</span></span>
+
+
+
+                                                        <a href=""
+                                                            class="post-author-twitter">
+                                                            <i class="fa icon-twitter-squared IconStyling"></i><span
+                                                                class="AuthorStyling">{{ details.request.userName }}</span>
+
+                                                        </a>
+
+
+
+                                                    </p>
+
+
+                                                    <div class="share-panel white-icons">
+                                                        <a href="#" class="share-panel-button icon-share"
+                                                            alt="Share"></a>
+                                                        <ul class="share">
+                                                            <li class="share-item">
+                                                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.liverpoolfc.com%2Fnews%2Ffirst-team%2F447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                    title="Facebook" target="_blank"><i
+                                                                        class="icon-facebook"></i>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="share-item">
+                                                                <a href="https://twitter.com/intent/tweet?text=J%c3%bcrgen%20Klopp%20Q&amp;A%20|%20Brighton,%20selection%20decisions,%20Lallana%20and%20more&amp;url=https://www.liverpoolfc.com/news/first-team/447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                    title="Twitter" target="_blank"><i
+                                                                        class="icon-twitter"></i>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="share-item">
+                                                                <a href="mailto:?&subject=J%C3%BCrgen%20Klopp%20Q%26A%20%7C%20Brighton%2C%20selection%20decisions%2C%20Lallana%20and%20more&body=J%C3%BCrgen%20Klopp%20Q%26A%20%7C%20Brighton%2C%20selection%20decisions%2C%20Lallana%20and%20more%20-%20https%3A%2F%2Fwww.liverpoolfc.com%2Fnews%2Ffirst-team%2F447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                    title="Mail"><i class="icon-mail-alt"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </header>
+
+                                                <section class="post-body">
+
+
+                                                    <p class="post-synopsis synopsis">
+                                                        Jürgen Klopp answered questions on a wide range of subjects
+                                                        during his press conference to preview Liverpool’s meeting with
+                                                        Brighton &amp; Hove Albion.
+                                                    </p>
+
+
+
+                                                    <div class="ad-inner-banner partial">
+                                                        <div id='div-gpt-ad-RES_MAIN_NEWS_INNER_STORY'>
+                                                            <script>
+                                                                Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_NEWS_INNER_STORY');
+                                                            </script>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <div class="post-content">
+
+
+
+                                                        <p>The Reds welcome Graham Potter&rsquo;s side to Anfield on
+                                                            Saturday afternoon and are looking to maintain their
+                                                            unbeaten start to the Premier League season.</p>
+
+                                                        <p>Read our round-up of Klopp&rsquo;s pre-match media briefing
+                                                            below&hellip;</p>
+
+                                                        <ul>
+                                                            <li><strong><a
+                                                                        href="https://www.liverpoolfc.com/news/first-team/447798-injury-update-naby-keita-thiago-alcantara-and-fabinho-latest">Injury
+                                                                        update: Naby Keita, Thiago Alcantara and Fabinho
+                                                                        latest</a></strong></li>
+                                                        </ul>
+
+                                                        <p style="text-align: center;">
+                                                        <div id="cms-block-26207" class="cms-block cms-block-element"
+                                                            data-block-type="lfc.video.youtube.block.service">
+                                                            <div class="youtubeTitle"> </div>
+                                                            <div class="youtubeWrapper">
+                                                                <div class="aspectRatioHelper">
+                                                                    <iframe class="ytplayer" type="text/html"
+                                                                        width="100%" height="100%"
+                                                                        src="http://www.youtube.com/embed/Wvawx12xdLc?rel=0?autoplay=0"
+                                                                        frameborder="0" allowfullscreen></iframe>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </p>
+
+                                                        <p><strong>On whether Liverpool will need to be at their best to
+                                                                win the Premier League this season&hellip;</strong></p>
+
+                                                        <p>Yeah, but that&rsquo;s pretty much the case for all of us,
+                                                            not only us. This is just the standard of the league and to
+                                                            be &ndash; not now at the end of October, but in March,
+                                                            April or May &ndash; in that area of the table, that means
+                                                            you have to perform on an incredibly high level and to be
+                                                            incredibly consistent and all these kind of things. In this
+                                                            moment we don&rsquo;t know if we will be, so that&rsquo;s
+                                                            always the thing you can never be sure about and
+                                                            that&rsquo;s why it&rsquo;s so important that we had a good
+                                                            start. We had a good start so far, but obviously other teams
+                                                            had good starts well. Nothing happened, really, in the table
+                                                            &ndash; obviously some clubs feel that they came a bit short
+                                                            in this early part of the season, but we all know that can
+                                                            change pretty quickly and we try to be as consistent as
+                                                            somehow possible. For that we need to be ready, for example,
+                                                            for tomorrow, which is one the trickiest games in the
+                                                            Premier League because of the work Graham is doing at
+                                                            Brighton and the way they play. That&rsquo;s just the
+                                                            Premier League, there is no game which you can take a little
+                                                            bit easy. Not at all, you have to be always at your absolute
+                                                            best.</p>
+
+                                                        <p style="text-align: center;">
+                                                        <div id="cms-block-26208" class="cms-block cms-block-element"
+                                                            data-block-type="lfc.opta.standings.block.service">
+
+
+
+                                                            <section id="league-table" class="opta-wrapper">
+
+
+                                                                <opta-widget widget="standings" competition="8"
+                                                                    season="2021" team="14" team_padding="2"
+                                                                    template="normal" live="true" default_nav="1"
+                                                                    side="combined" show_form="0" data_detail="full"
+                                                                    show_key="false" show_crests="false"
+                                                                    points_in_first_column="false"
+                                                                    lose_before_draw="false" competition_naming="full"
+                                                                    team_naming="full" date_format="dddd D MMMM YYYY"
+                                                                    sorting="false" show_live="true"
+                                                                    show_relegation_average="false" show_logo="false"
+                                                                    show_title="false" breakpoints="550"
+                                                                    sport="football">
+                                                                </opta-widget>
+
+
+                                                            </section>
+                                                        </div>
+                                                        </p>
+
+                                                        <p><strong>On how he is managing to keep his players happy while
+                                                                rotating&hellip;</strong></p>
+
+                                                        <p>I don&rsquo;t think that&rsquo;s possible to be honest, and I
+                                                            don&rsquo;t think I did it! You should ask all the players
+                                                            in the squad. The thing we have to do is win football games,
+                                                            especially when you play for Liverpool. When you are in
+                                                            football you learn early that you have to accept the
+                                                            decisions a manager makes and my team is doing that
+                                                            obviously. That doesn&rsquo;t mean that they are always
+                                                            happy about the decision, they just accept them. The job for
+                                                            the player is to be always that determined, that good in
+                                                            training, that in the moment when you come in you are really
+                                                            influential. That&rsquo;s the deal and that&rsquo;s the deal
+                                                            in each football team in the world and that&rsquo;s the case
+                                                            here as well. I don&rsquo;t <em>try</em> to keep them happy,
+                                                            yes I want them to be happy but I want them to be angry as
+                                                            well when we play an opponent who wants the points -
+                                                            <em>our</em> points, if you want. It&rsquo;s just the things
+                                                            we do over the weeks and over the months and that&rsquo;s
+                                                            the situation we are in. Nothing happened yet, what is it,
+                                                            matchday 10 now? Come on, there are 28 after that to come so
+                                                            obviously nothing happened! It&rsquo;s just a really OK
+                                                            start so far, but even in the start we had our downs, maybe
+                                                            not result-wise too much but we had moments where we were
+                                                            all not happy with so we have constantly things to improve
+                                                            and that&rsquo;s the only thing we are concerned about and
+                                                            not that we won games with a ridiculous result or whatever,
+                                                            where you think, &lsquo;OK, how can that happen
+                                                            constantly?&rsquo; It will not and we are not silly enough
+                                                            to think that. To win a football game, first and foremost
+                                                            you have to make sure that you are ready to defend and
+                                                            that&rsquo;s what we try to make sure for tomorrow again.
+                                                            All the rest is how you can build on that and we will see
+                                                            how we can do it.</p>
+
+                                                        <p><strong>On what kind of challenge he is expecting from
+                                                                Brighton&hellip;</strong></p>
+
+                                                        <p>I&#39;m not sure if you saw the Brighton-[Manchester] City
+                                                            game last week. So, it looks like from the scoreline a
+                                                            pretty clear thing and maybe the first half, yeah City was
+                                                            really good. But I think two goals in the first half were
+                                                            counter-attacking goals and then when you look at the
+                                                            possession, I think it was 52-48 if I&rsquo;m 100 per cent
+                                                            right, but it was a big one for Brighton. That&rsquo;s a
+                                                            football-playing side and not just playing football, they
+                                                            are a real threat. They try to create, they defend well, I
+                                                            think they didn&rsquo;t score yet incredible big amounts
+                                                            &ndash; I think nine goals &ndash; but they conceded only
+                                                            nine and four of them in the last game, which was a really
+                                                            strange one from a conceding point of view. I think there
+                                                            would have been a shout that the first goal could have been
+                                                            a foul on the goalie maybe and then you never know how the
+                                                            game will be. I saw the second half as well and they were
+                                                            incredible. To keep the ball like they did and pass the ball
+                                                            like they did against City is a really difficult thing to do
+                                                            and they did it. So we know what they are capable of but we
+                                                            are not City and we play obviously slightly different and
+                                                            yes, that&rsquo;s what we want to do as well. We want to
+                                                            cause them problems and yes, we lost the last game against
+                                                            Brighton here so that&rsquo;s another warning sign - not
+                                                      difficult
+                                                            since he is there and I have to say he is a top-class
+                                                            manager. Nothing else to say.</p>
+
+                                                        <p style="text-align: center;"><img alt=""
+                                                                src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/29/1d16b1f009eb8548f8eb1ea729739ee73b18ce8e.jpeg"
+                                                                style="width: 500px; height: 301px;" /></p>
+
+                                                        <ul>
+                                                            <li><strong><a
+                                                                        href="https://www.liverpoolfc.com/news/first-team/447699-andy-robertson-brighton-preview-premier-league">Andy
+                                                                        Robertson interview | Being &#39;ruthless&#39;,
+                                                                        Anfield return and Brighton</a></strong></li>
+                                                        </ul>
+
+                                                        <p><strong>On whether Ibrahima Konate&rsquo;s performance at Old
+                                                                Trafford has given him a selection headache at
+                                                                centre-back&hellip;</strong></p>
+
+                                                        <p>I wouldn&rsquo;t call it a headache but a few decisions I
+                                                            have to make, obviously. But thank God &ndash; it&rsquo;s
+                                                            always a good sign when you have to make decisions because
+                                                            it means you have options. Really bad times are when you
+                                                            don&rsquo;t have options and the decisions are pretty much
+                                                            in front of you and you have no influence on it. So there
+                                                            are some [decisions] but not too many obviously, and not too
+                                                            difficult, and it&rsquo;s always about who looks in the
+                                                            moment the most likely to help us to win a game. This
+                                                            decision, I make already for a few years and I will do it
+                                                            this time as well and hopefully again it will be the right
+                                                            one.</p>
+
+                                                        <p><strong>On how he would compare his current team to the one
+                                                                that went unbeaten until late-February in the 2019-20
+                                                                Premier League season&hellip;</strong></p>
+
+                                                        <p>I think the team didn&rsquo;t change too much, right? Gini is
+                                                            out, that&rsquo;s clear, but all the rest should be pretty
+                                                            similar. Yeah, Ibou is in now, Diogo is in now, Thiago -
+                                                            unfortunately not available - but is around. Actually, I
+                                                            don&rsquo;t actually think about these things, &lsquo;Are we
+                                                            better than 18 months ago?&rsquo; It&#39;s not too
+                                                            important, you have to be as good as you can in the moment
+                                                            and yes we have to improve and yes there is space for
+                                                            improvement, we know that. I know how it sounds but the
+                                                            world is a bit like this: you win 5-0 against United and
+                                                            everything is perfect, but it was not. It was not. United
+                                                            had clear-cut chances which we gave them and we
+                                                            shouldn&rsquo;t rely on luck or Ali or stuff like this in
+                                                            these moments, so we could have done better. That&rsquo;s
+                                                            how we spoke at half-time, being 4-0 up, because it&rsquo;s
+                                                            necessary. I told the boys, &lsquo;Now, in this moment
+                                                            it&rsquo;s really important that you believe me: we have to
+                                                            play better, otherwise we open up the game for them because
+                                                            they score one, they score two, whatever.&rsquo; Things like
+                                                            this can happen. We are not worried about that, it&rsquo;s
+                                                            just that I saw in the first half we gave too much away and
+                                                            that&rsquo;s the things we have to improve. And not only in
+                                                            that game, we have to improve it in general. Of course on
+                                                            the other side when you do offensive stuff you have to
+                                                   
+                                                            Offensively we can as well but that&rsquo;s more difficult
+                                                            when you see the goals we scored so far.&nbsp;</p>
+
+                                                        <p style="text-align: center;">
+                                                        <div id="cms-block-26209" class="cms-block cms-block-element"
+                                                            data-block-type="sonata.media.block.media">
+
+                                                            <div class="sonata-media-block-media-container">
+                                                                <link rel="stylesheet"
+                                                                    href="http://video.liverpoolfc.com/resources/ver/styles/video-player-embeddable.css" />
+
+
+
+                                                                <div
+                                                                    class="video-player-embeddable wrapper-small u-collapse">
+                                                                    <div class="wrapper">
+                                                                        <article class="video-embed video-embed--featured
+video-embed--large video-embed--fade-in js-embed item-active" data-widget="embeddable-video-player">
+                                                                            <figure class="video-embed__img">
+                                                                                <div class="video js-video-widget
+video-embed__img-container loaded" data-env="production" data-video-id="0_gn6s6u7s" data-lang="en" data-width="100%"
+                                                                                    data-height="100%">
+                                                                                </div>
+                                                                            </figure>
+                                                                        </article>
+                                                                    </div>
+                                                                </div>
+                                                                <script
+                                                                    src="http://video.liverpoolfc.com/resources/ver/i18n/i18n-en.js"
+                                                                    charset="UTF-8"></script>
+                                                                <script
+                                                                    src="http://video.liverpoolfc.com/resources/ver/widgets/lfctvgo_video-player-embeddable.js"
+                                                                    type="text/javascript"></script>
+                                                            </div>
+                                                        </div>
+                                                        </p>
+
+                                                        <p style="text-align: center;"><a
+                                                                href="https://video.liverpoolfc.com/player/0_gn6s6u7s"><strong><small>Inside
+                                                                        Training: Reds prepare for Brighton
+                                                                        clash</small></strong></a></p>
+
+                                                        <p><strong>On the importance of Adam Lallana when he was at LFC
+                                                                and whether he set the standard in terms of pressing at
+                                                      other, all five
+                                                            of them. That&rsquo;s really nice to see, so they respect
+                                                            each other a lot and we will need them and we will need Joe.
+                                                            Joe&rsquo;s qualities are incredible, we all know that, we
+                                                            saw that in a lot of moments on Wednesday. But it&rsquo;s
+                                                            just now we have now top-class players only in that position
+                                                            and that makes it a bit harder when you are not in the
+                                                            line-up in the moment. But it was always like this in
+                                                            football - the only thing you can do is to keep working
+                                                            really, really hard and your moment will come.</p>
+
+                                                        <ul>
+                                                            <li><strong><a
+                                                                        href="https://www.liverpoolfc.com/news/announcements/447668-important-information-for-fans-attending-liverpool-v-brighton">Important
+                                                                        information for fans attending Liverpool v
+                                                                        Brighton</a></strong></li>
+                                                        </ul>
+
+                                                    </div>
+
+
+
+                                                    <ul class="post-tags tags">
+
+                                                        <li class="post-tag tag"><span>Premier League</span></li>
+
+
+                                                        <li class="post-tag tag"><span>Jürgen Klopp</span></li>
+
+
+                                                        <li class="post-tag tag"><span>Brighton &amp; Hove Albion</span>
+                                                        </li>
+
+                                                    </ul>
+
+
+                                                    <footer class="post-footer">
+
+
+                                                        <div class="share-panel red-icons">
+                                                            <a href="#" class="share-panel-button icon-share"
+                                                                alt="Share"></a>
+                                                            <ul class="share">
+                                                                <li class="share-item">
+                                                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.liverpoolfc.com%2Fnews%2Ffirst-team%2F447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                        title="Facebook" target="_blank"><i
+                                                                            class="icon-facebook"></i>
+                                                                    </a>
+                                                                </li>
+
+                                                                <li class="share-item">
+                                                                    <a href="https://twitter.com/intent/tweet?text=J%c3%bcrgen%20Klopp%20Q&amp;A%20|%20Brighton,%20selection%20decisions,%20Lallana%20and%20more&amp;url=https://www.liverpoolfc.com/news/first-team/447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                        title="Twitter" target="_blank"><i
+                                                                            class="icon-twitter"></i>
+                                                                    </a>
+                                                                </li>
+
+                                                                <li class="share-item">
+                                                                    <a href="mailto:?&subject=J%C3%BCrgen%20Klopp%20Q%26A%20%7C%20Brighton%2C%20selection%20decisions%2C%20Lallana%20and%20more&body=J%C3%BCrgen%20Klopp%20Q%26A%20%7C%20Brighton%2C%20selection%20decisions%2C%20Lallana%20and%20more%20-%20https%3A%2F%2Fwww.liverpoolfc.com%2Fnews%2Ffirst-team%2F447808-jurgen-klopp-q-a-brighton-selection-decisions-lallana-and-more"
+                                                                        title="Mail"><i class="icon-mail-alt"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- <style media="screen">
+
+      .smart-speaker-wrap {
+        width: 100%;
+        background: #f2f2f2;
+        text-align: center;
+        padding: 20px 20px 0 20px;
+margin: 30px 0 0 0;
+      }
+
+      .smart-speaker-wrap h5 {
+        margin: 0 0 5px 0;
+        display: block;
+font-size: 0.9em;
+        color: #666;
+        font-weight: bold;
+      }
+
+      .smart-speaker-wrap span {
+        margin: 0 0 20px 0;
+        display: block;
+font-size: 0.9em;
+        color: #666;
+      }
+
+      .ss-btn {
+        display: inline-block;
+        background: #FFF;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: solid 1px #afafaf;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        height: 40px;
+        width: 200px;
+        text-indent: -9999px;
+margin: 0 5px 20px 5px;
+-webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.25);
+box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.25);
+      }
+
+.ss-btn:hover {
+position: relative;
+    top: 4px;
+left: 2px;
+    box-shadow: none;
+    border: solid 1px #d6d6d6;
+}
+
+      .ss-google {
+        background-image: url('https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/misc/0001/99/4eeca8657b0f1564661ded292374bb011f3d941f.png');
+      }
+
+      .ss-amazon {
+        background-image: url('https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/misc/0001/99/5926bf22bb50514bb9e615bfb5d5973ab30fb34f.png');
+      }
+
+    </style>
+
+<div class="smart-speaker-wrap">
+      <h5>Get the latest LFC news direct to your smart speaker</h5>
+      <span>Never miss a beat</span>
+      <a href="https://assistant.google.com/services/a/uid/00000ec944878a44?hl=en-US" target="_blank" class="ss-btn ss-google">Google</a>
+      <a href=" https://www.amazon.co.uk/Liverpool-Football-Club-LFC-News/dp/B01N7WO4CD" target="_blank" class="ss-btn ss-amazon">Amazon</a>
+    </div>
+ -->
+                                                        <!--<style>
+.lfctvgo-onemonthfree-banner { margin-top: 30px; width: 100%;  display: block;}
+.lfctvgo-onemonthfree-banner img { width:100%; }
+.lfctvgo-onemonthfree-banner .desktop { display:none}
+@media screen and (min-width: 700px) {
+.lfctvgo-onemonthfree-banner .desktop { display:block;}
+.lfctvgo-onemonthfree-banner .mobile { display:none;}
+}
+</style>
+
+
+<a href="https://video.liverpoolfc.com/?lfm_medium=site-link&lfm_source=liverpoolfc.com&lfm_content=news-story-footer&lfm_campaign=med-lfctv-go-30-off-2021" class="lfctvgo-onemonthfree-banner">
+<img src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/11/a47dadd543d798a82147aac0c1e8628ed2ec7815.jpeg" class="mobile" />
+<img src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/11/f5f04df82d25a80ca82de6e4826d746b90d1b56e.jpeg" class="desktop" />
+</a>
+  -->
+
+                                                        <div class="post-next post-next-bottom">
+
+                                                            <a class="post-next-content"
+                                                                href="https://www.liverpoolfc.com/news/first-team/447713-liverpool-v-brighton-hove-albion-team-news"
+                                                                title="Liverpool v Brighton &amp; Hove Albion: Team news">
+                                                                <img src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/images/spacer.gif"
+                                                                    class="post-next-image lazyLoadPlaceholder"
+                                                                    height='100' width='144'
+                                                                    data-src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/29/thumb_128640_default_news_size_1.jpeg"
+                                                                    data-title="Liverpool v Brighton &amp; Hove Albion: Team news"
+                                                                    alt="" />
+
+                                                                <h3 class="post-next-hd">
+                                                                    <label>Next article</label>
+                                                                    <span class="post-next-title">Liverpool v Brighton
+                                                                        &amp; Hove Albion: Team news</span>
+                                                                </h3>
+
+                                                                <span class="post-next-icon">
+                                                                </span>
+                                                            </a>
+
+                                                        </div>
+
+
+
+
+                                                    </footer>
+
+                                                </section>
+
+                                            </article>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- RELATED CONTENT START -->
+                                    <div class="related-panel">
+
+
+                                        <div class="left-mpu ad-mpu partial">
+                                            <div id='div-gpt-ad-RES_MAIN_RIGHT_ONE'>
+                                                <script>
+                                                    Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_ONE');
+                                                </script>
+                                            </div>
+
+
+                                            <style type="text/css">
+                                                .facebookButton {
+                                                    display: none !important;
+                                                }
+                                            </style>
+
+                                        </div>
+
+
+
+                                        <aside class="related-content">
+
+                                            <h2>Related Content</h2>
+                                            {% if related_items %}
+                                                {% for related in related_items %}
+                                            <article>
+                                                <a
+                                                    href="{{ related.get_absolute_url }}">
+
+                                                    <img src="{{ related.postImage.url }}"
+                                                        class="media-thumbnail-image lazyLoadPlaceholder"
+                                                        data-src="{{ related.postImage.url }}"
+                                                        data-title="Liverpool v Brighton &amp; Hove Albion: Team news"
+                                                        alt="" />
+
+                                                    <span class="grad">
+
+
+                                                        <span
+                                                            class="icon-helper icon-doc-text content-type-article"><span
+                                                                class="indent">article</span></span>
+                                                        <h3>{{ related.title }}</h3>
+                                                        
+                                                    </span>
+                                                </a>
+                                               
+                                                
+                                            </article>
+                                            
+                                        </aside>
+
+
+
+
+                                        <div class="right-top-mpu ad-mpu partial">
+                                            <div id='div-gpt-ad-RES_MAIN_RIGHT_TWO'>
+                                                <script>
+                                                    Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_TWO');
+                                                </script>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <!-- RELATED CONTENT END -->
+
+
+
+                                </div>
+
+                            </main>
+
+
+                            <!-- START MORE / TRENDING -->
+                            <div class="aside-container">
+
+                                <div id="cms-block-" class="cms-block cms-block-element"
+                                    data-block-type="sonata.block.service.text">
+                                    <div id="trending">
+                                        <div class="trending">
+                                            <h2 class="trending-hd">MORE NEWS</h2>
+                                            
+                                            <ul class="trending-list">
+                                            {% if post1 %}
+                                            {% for post in post1 %}
+                                                <li class="trending-list-item" data-post-id="261391">
+                                                    <span class="icon-wrapper">
+
+
+                                                        <span
+                                                            class="icon-helper icon-doc-text content-type-article"><span
+                                                                class="indent">article</span></span>
+                                                    </span>
+                                                    <a
+                                                        href="{{ post.get_absolute_url }}">
+                                                        <time class="post-time"
+                                                            datetime="2021-10-29T15:00:00+00:00">{{ post.created }}</time>
+                                                        <h3>{{ post.title }}</h3>
+                                                    </a>
+                                                    {% endfor %}
+                                                    {% else %}
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item">
+                                                          <h3><i>NO OTHER NEWS YET</i< /h3>
+                                                        </li>
+                                              
+                                                      </ul>
+                                                </li>                                    
+                                                  {% endif %}
+                                            </ul>
+                                             
+                                        </div>
+                                    </div>
+
+                                    <a href="{% url 'bfc:news-first-team' %}" title="More Content"
+                                        class="belowTrending">
+                                        <span class="post-back-icon"></span>
+                                        <div class="content">More news</div>
+                                    </a>
+
+                                </div>
+
+
+                            </div>
+                            <!-- END MORE / TRENDING -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cms-block-31444" class="cms-block cms-block-element"
+                    data-block-type="sonata.page.block.container">
+                    <div class="container-block block-31444 ">
+
+                    </div>
+                </div>
+
+                <div id="cms-block-31445" class="cms-block cms-block-element"
+                    data-block-type="sonata.page.block.container">
+                    <div class="container-block block-31445 ">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/scripts.min.js"></script>
+
+    <script src="https://secure.widget.cloud.opta.net/v3/v3.opta-widgets.js"></script>
+    <script src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/news-scripts.min.js"></script>
+</body>
+{% endblock main %}

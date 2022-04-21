@@ -1,0 +1,47 @@
+table.user-details-table {
+	margin-left: 30px;
+	text-align: left;
+	width: 740px;
+	margin-bottom:20px;
+}
+table.user-details-table td {
+	color: #555555;
+	font-weight: bold;
+	padding: 10px;
+	font-size:13px;	
+}
+table.user-details-table th {
+	padding: 10px;	
+	font-size:13px;
+	width:200px;
+}
+table.user-details-table td, table.user-details-table th { 
+	border:#ebebeb solid 1px;
+}
+table.user-details-table th {
+	border-right:none;
+}
+h1, a {
+	color:#c00;
+}
+#White, #InnerContainer, #SponsorBg, #Container, body {
+	background-color:#fff;
+}
+#White {
+	padding-bottom:30px
+}
+img.btn {
+	display:none;
+}
+.membershipHeadingBox {
+	display:none;
+}
+#Header.lfcMembership {
+	display:block!important;
+}
+#Header.lfcMembership #Logo {
+	display:block!important;
+}
+#Header.lfcMembership #SponsorBanner {
+	display:none;
+}

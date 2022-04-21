@@ -1,0 +1,19 @@
+{% extends 'bfc/base/index1.html' %}
+
+
+
+{% block main %}
+<style>
+    .forget{
+      margin-left: 15%;
+    }
+  </style>
+{% block title %} <title>server Error - 500 </title>{% endblock title %}
+<div class="forget">
+    We're sorry, but the site you are trying to access is currently experiencing problems.
+    <br /><br />
+    We apologize for any inconvenience. Please try back again later.
+</div>
+{% endblock main %}
+
+{% include 'account/footer.html' %}

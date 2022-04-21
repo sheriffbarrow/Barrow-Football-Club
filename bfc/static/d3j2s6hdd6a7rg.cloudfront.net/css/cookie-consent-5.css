@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap');
+
+#onetrust-banner-sdk > *, #onetrust-pc-sdk > * { font-family: 'Roboto', sans-serif!important;
+}
+
+#onetrust-banner-sdk .ot-sdk-button:hover, #onetrust-banner-sdk :not(.ot-leg-btn-container)>button:hover, #onetrust-banner-sdk input[type="submit"]:hover, #onetrust-banner-sdk input[type="reset"]:hover, #onetrust-banner-sdk input[type="button"]:hover, #onetrust-banner-sdk .ot-sdk-button:focus, #onetrust-banner-sdk :not(.ot-leg-btn-container)>button:focus, #onetrust-banner-sdk input[type="submit"]:focus, #onetrust-banner-sdk input[type="reset"]:focus, #onetrust-banner-sdk input[type="button"]:focus, #onetrust-pc-sdk .ot-sdk-button:hover, #onetrust-pc-sdk :not(.ot-leg-btn-container)>button:hover, #onetrust-pc-sdk input[type="submit"]:hover, #onetrust-pc-sdk input[type="reset"]:hover, #onetrust-pc-sdk input[type="button"]:hover, #onetrust-pc-sdk .ot-sdk-button:focus, #onetrust-pc-sdk :not(.ot-leg-btn-container)>button:focus, #onetrust-pc-sdk input[type="submit"]:focus, #onetrust-pc-sdk input[type="reset"]:focus, #onetrust-pc-sdk input[type="button"]:focus, #ot-sdk-cookie-policy .ot-sdk-button:hover, #ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:hover, #ot-sdk-cookie-policy input[type="submit"]:hover, #ot-sdk-cookie-policy input[type="reset"]:hover, #ot-sdk-cookie-policy input[type="button"]:hover, #ot-sdk-cookie-policy .ot-sdk-button:focus, #ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:focus, #ot-sdk-cookie-policy input[type="submit"]:focus, #ot-sdk-cookie-policy input[type="reset"]:focus, #ot-sdk-cookie-policy input[type="button"]:focus {
+    outline:none!important;
+}
+
+#onetrust-banner-sdk #onetrust-policy-text, #onetrust-banner-sdk .ot-b-addl-desc {
+    padding: 20px!important;
+}
+
+#onetrust-close-btn-container {
+    display:none!important;
+}
+
+@media only screen and (max-width: 425px) {
+    #onetrust-banner-sdk.otFloatingRoundedCorner {
+        width: 96%!important;
+    }
+}
+@media only screen and (max-width: 896px) {
+    #onetrust-banner-sdk.otFloatingRoundedCorner {
+        max-width: 96%!important;
+        left: 2%!important;
+    }
+}
+
+#onetrust-consent-sdk #onetrust-pc-btn-handler, #onetrust-consent-sdk #onetrust-pc-btn-handler.cookie-setting-link {
+    color:#dc0714!important;
+}
+#onetrust-consent-sdk .pc-logo { background-image:url("../../d3t7slceky3o83.cloudfront.net/symfony2/JE-491/lfc/images/logo.png")!important; width: 70px!important;
+    height: 100px!important;}
+
+
+#onetrust-pc-sdk .switch-checkbox:checked+.ot-switch-label .ot-switch-nob {
+    background-color: #009982!important;
+    border-color: #009982!important;
+}
+#onetrust-pc-sdk .ot-switch-checkbox:checked+.switch-label {
+    border:1px solid #009982!important;
+}
+#onetrust-pc-sdk .ot-switch-inner:before {
+    background-color: #EDFAF9!important;
+}
+#onetrust-pc-sdk .ot-always-active{
+    color:#009982!important;
+}
+#onetrust-pc-sdk #pc-policy-text a {
+    color:#dc0714!important;
+}

@@ -1,0 +1,55 @@
+
+{% block select %}
+{% load crispy_forms_tags %}
+{% load static %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="{% static 'css/profile.css'%}" rel="stylesheet" media="all">
+
+<style>
+	.profile-pic {
+		max-width: 200px;
+		max-height: 200px;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+</style>
+
+<br>
+<div class="row">
+	<div class="col-md-3">
+		<div class="card card-body">
+			<a class="btn btn-warning" href="{% url 'bfc:myhome' %}"> &#8592; Back to Home</a>
+			<hr>
+			<h4 style="text-align: center">Account Settings</h4>
+			<hr>
+			<img class="profile-pic" src="{{request.user.profile.image.url}}">
+			<ul>
+				<a href="{% url 'account:update' %}">
+					<h5 style="text-align: center"><i class="glyphicon glyphicon-cog"></i>
+						settings
+				</a></h5>
+			</ul>
+			<ul>
+				<a href="{% url 'account:filter' %}">
+					<h5 style="text-align: center"><i class="glyphicon glyphicon-list-alt"></i>
+						history
+				</a></h5>
+			</ul>
+		</div>
+
+	
+		
+	</div>
+	<div class="col-md-9">
+		<div class="card card-body">
+			{% block account %}
+			
+			{% endblock %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

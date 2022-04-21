@@ -1,0 +1,4 @@
+Sitemap: https://barrowfc.net/sitemap.xml
+User-Agent: *
+Disallow: /only_admin/
+Disallow: /accounts/login/

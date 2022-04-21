@@ -1,0 +1,120 @@
+<!doctype html>
+{% extends "bfc/base/index1.html" %}
+
+<html class="no-js" lang="zxx">
+{% block select %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sign in </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicons -->
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Main Wrapper Start Here -->
+    <div class="wrapper">
+       <!-- Banner Popup Start -->
+
+        <!-- Categorie Menu & Slider Area End Here -->
+        <!-- Breadcrumb Start -->
+
+        <!-- Breadcrumb End -->
+        <!-- LogIn Page Start -->
+        <div class="breadcrumb-area mt-30">
+            <div class="container">
+                <div class="breadcrumb">
+                    <ul class="d-flex align-items-center">
+                        <li class="active"><a><h1>Please login first to be able to view the requested page!</h1></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Container End -->
+        </div>
+        <div class="log-in ptb-100 ptb-sm-60">
+            <div class="container">
+                <div class="row">
+                    <!-- New Customer Start -->
+                    <div class="col-md-6">
+                        <div class="well mb-sm-30">
+                            <div class="new-customer">
+                                <h3 class="custom-title">new customer</h3>
+                                <p class="mtb-10"><strong>Register</strong></p>
+                                <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made</p>
+                                <a class="customer-btn" href="{% url 'account:register' %}">continue</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Customer End -->
+                    <!-- Returning Customer Start -->
+                    <div class="col-md-6">
+                        <div class="well">
+                            <div class="return-customer">
+                                <h3 class="mb-10 custom-title">returnng customer</h3>
+                                <p class="mb-10"><strong>I am a returning customer</strong></p>
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    {% for field in login_form %}
+                                      <p>
+                                        {% for error in field.errors %}
+                                          <p style="color: red">{{ error }}</p>
+                                        {% endfor %}
+                                      </p>
+                                  {% endfor %}
+                                  {% if login_form.non_field_errors %}
+                                    <div style="color: red">
+                                      <p>{{login_form.non_field_errors}}</p>
+                                    </div>
+
+                                  {% endif %}
+                                    <div class="form-group">
+
+                                        <div class="form-group col-md-6 mb-0">
+                                            <label>Email</label>
+                                            {{field.as_tag}}
+                                            {{login_form.email}}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <div class="form-group col-md-6 mb-0">
+                                            <label>Password</label>
+                                            {{field.as_tag}}
+                                            {{login_form.password}}
+                                            {% if request.GET.next %}
+                                            <input type="hidden" name="next" value="{{ request.GET.next }}"
+                                            {% endif %}
+                                        </div>
+                                    </div>
+
+
+                                    <p class="lost-password"><a href="forgot-password.html">Forgot password?</a></p>
+
+                                    <input type="submit" value="Login" class="return-customer-btn">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Returning Customer End -->
+                </div>
+                <!-- Row End -->
+            </div>
+            <!-- Container End -->
+        </div>
+        <!-- LogIn Page End -->
+
+        <!-- Quick View Content End -->
+    </div>
+    <!-- Main Wrapper End Here -->
+
+    <!-- jquery 3.2.1 -->
+
+</body>
+
+</html>
+{% endblock %}

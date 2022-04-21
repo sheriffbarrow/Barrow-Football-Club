@@ -1,0 +1,713 @@
+{% extends 'bfc/base/index1.html' %}
+<!DOCTYPE html>
+<html id=top class=js>
+{% load static %}
+
+
+
+<title>Login - Barrow FC</title>
+{% block main %}
+@media screen and (min-width:1300px) {
+    
+  * {
+    -webkit-font-smoothing: antialiased
+  }
+
+  iframe,
+  img {
+    vertical-align: middle
+  }
+
+  fieldset {
+    margin: 0;
+    padding: 0
+  }
+
+  th,
+  td {
+    vertical-align: top
+  }
+
+  a {
+    color: #e31b23;
+    text-decoration: none
+  }
+
+  a:hover,
+  a:active {
+    color: #810f14;
+    text-decoration: underline
+  }
+
+  img {
+    max-width: 100%
+  }
+
+  p {
+    margin: 0 0 .9375em 0
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+  }
+
+  h1 {
+    line-height: initial
+  }
+
+  body>.wrapper {
+    clear: both;
+    margin: 0 auto;
+    max-width: 1300px;
+    overflow-x: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 20px #5d5d5d
+  }
+
+  body>.wrapper:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+
+  a:hover,
+  a:active,
+  a:focus,
+  a:link,
+  a:visited {
+    outline: 0;
+    outline-style: none;
+    text-decoration: none
+  }
+
+  input::-moz-focus-inner {
+    outline: 0
+  }
+
+  .site-header-inner {
+    position: relative;
+    z-index: 9999
+  }
+
+  .site-header-inner:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+
+  .site-header-inner .masthead {
+    display: none
+  }
+
+  .site-header-inner .search {
+    -webkit-appearance: none;
+    float: left;
+    width: 303px
+  }
+
+  .site-header-inner .sponsor {
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat
+  }
+
+  @media screen and (max-width:699px) {
+    .site-header-inner {
+      background-color: #e31b23;
+      height: 46px
+    }
+
+    .site-header-inner .logo-large,
+    .site-header-inner .masthead,
+    .site-header-inner .search,
+    .site-header-inner .main-menu,
+    .site-header-inner .breadcrumbs,
+    .site-header-inner .social-links {
+      display: none
+    }
+
+
+  }
+
+  @media only screen and (max-width:360px) {
+    .site-header-inner .sponsor {
+      right: 49px
+    }
+  }
+
+  @media screen and (min-width:700px) {
+    .site-header-inner {
+      border-bottom: 1px solid #ddd
+    }
+
+    .site-header-inner .logo-large {
+      display: none
+    }
+
+    .site-header-inner .logo {
+      position: absolute;
+      z-index: 1
+    }
+
+    .site-header-inner .sponsor {
+      float: right;
+      clear: right;
+      height: 36px;
+      width: 221px;
+
+      margin: 9px 18px 11px 0
+    }
+
+    .site-header-inner .search {
+      float: right;
+      margin-bottom: 1.75rem;
+      width: 50%
+    }
+
+    .site-header-inner .main-menu {
+      position: relative;
+      clear: both;
+      background-color: #e31b23;
+      padding-left: 9.5833333333rem;
+      margin-bottom: 1.0833333333rem
+    }
+
+    .site-header-inner .main-menu:after {
+      content: "";
+      display: table;
+      clear: both
+    }
+
+    .site-header-inner .main-menu>ul>li {
+      float: left
+    }
+
+    .site-header-inner .main-menu>ul>li.bp-medium-more-min-large-primary {
+      display: none
+    }
+  }
+
+  @media screen and (min-width:700px) and (min-width:1000px) {
+    .site-header-inner .main-menu>ul>li.bp-medium-more-min-large-primary {
+      display: inline-block
+    }
+  }
+
+  @media screen and (min-width:700px) {
+    .site-header-inner .main-menu>ul>li a {
+      display: block;
+      color: #fff;
+      height: 41px;
+      padding: .9166666667rem 1rem;
+      text-transform: uppercase;
+      text-decoration: none
+    }
+
+
+    .site-header-inner .main-menu>ul>li.active,
+    .site-header-inner .main-menu>ul>li:hover,
+    .site-header-inner .main-menu>ul>li:active,
+    .site-header-inner .main-menu>ul>li>a:hover,
+    .site-header-inner .main-menu>ul>li>a:active {
+      background-color: #b8161f
+    }
+  }
+
+  @media screen and (min-width:700px) and (min-width:700px) and (max-width:799px) {
+    .site-header-inner .main-menu>ul>li>a {
+      padding-left: 8px;
+      padding-right: 8px;
+      font-size: .9em
+    }
+  }
+
+  @media screen and (min-width:700px) and (min-width:700px) and (max-width:749px) {
+    .site-header-inner .main-menu>ul:first-child>li {
+      margin-left: -2px;
+      margin-right: -2px
+    }
+  }
+
+  @media screen and (min-width:700px) {
+    .site-header-inner .breadcrumbs {
+      margin: 0 1.6666666667rem 1.0833333333rem 1.6666666667rem;
+      font-size: 1.1666666667rem
+    }
+
+    .site-header-inner .breadcrumbs .breadcrumb-prefix {
+      color: #aaa;
+      margin: 0 12px 0 0;
+      display: inline-block;
+      min-width: 85px
+    }
+
+    .site-header-inner .breadcrumbs ul {
+      display: inline-block
+    }
+
+    .site-header-inner .breadcrumbs ul li {
+      display: inline-block
+    }
+
+    .site-header-inner .breadcrumbs ul span {
+      margin: 0 .5833333333rem
+    }
+  }
+
+  @media screen and (min-width:700px) and (max-width:999px) {
+    .site-header-inner .breadcrumbs .breadcrumb-prefix {
+      visibility: hidden
+    }
+  }
+
+  @media screen and (min-width:700px) and (max-width:800px) {
+    .site-header-inner .breadcrumbs {
+      font-size: 1.0833333333rem
+    }
+
+    .site-header-inner .breadcrumbs ul span {
+      margin: 0 .5rem
+    }
+  }
+
+  @media screen and (min-width:700px) {
+    .site-header-inner .social-links {
+      float: right;
+      margin: -8px 2px;
+      margin-top: -5px;
+      text-decoration: none
+    }
+
+    .site-header-inner .social-links li {
+      float: left;
+      margin: 0;
+      padding: 0 6px
+    }
+
+    .site-header-inner .social-links li>a {
+      display: block;
+      height: 30px;
+      width: 30px;
+
+      background-size: 120px 90px
+    }
+
+    .site-header-inner .social-links li>a:hover {
+      opacity: .8
+    }
+
+    .site-header-inner .social-links li.dugout>a {
+      background-position: -60px -60px
+    }
+
+    .site-header-inner .social-links li.facebook>a {
+      background-position: -30px 0
+    }
+
+    .site-header-inner .social-links li.twitter>a {
+      background-position: -60px 0
+    }
+
+    .site-header-inner .social-links li.youtube>a {
+      background-position: 0 -30px
+    }
+
+    .site-header-inner .social-links li.instagram>a {
+      background-position: -30px -30px
+    }
+
+    .site-header-inner .social-links li.alexa>a {
+      background-position: -90px -60px
+    }
+
+    .site-header-inner .social-links li.global {
+      border-left: 1px solid #dadada;
+      margin-left: 6px;
+      padding: 0 12px
+    }
+
+    .site-header-inner .social-links li.global>a {
+      width: 42px;
+      background-position: 0 -60px
+    }
+  }
+
+  @media screen and (min-width:700px) and (max-width:999px) {
+    .site-header-inner {
+      border-top: 4px solid #e31b23;
+      padding-top: 1.3333333333rem
+    }
+
+    .site-header-inner .logo {
+      width: 105px;
+      top: 14px;
+      left: 15px
+    }
+  }
+
+  @media screen and (min-width:1000px) {
+    .site-header-inner .logo-large {
+      display: block
+    }
+
+    .site-header-inner .masthead {
+      display: block;
+      float: left;
+      width: 100%;
+      border-bottom: 1px solid #dadada;
+      text-transform: uppercase
+    }
+
+    .site-header-inner .masthead a {
+      text-decoration: none
+    }
+
+    .site-header-inner .masthead .masthead-links,
+    .site-header-inner .masthead ul {
+      float: right
+    }
+
+    .site-header-inner .masthead .masthead-links {
+      height: 42px
+    }
+
+    .site-header-inner .masthead .masthead-links>ul {
+      height: 42px
+    }
+
+    .site-header-inner .masthead .masthead-links>ul>li {
+      float: left;
+      padding-top: 1rem
+    }
+  }
+
+  @media screen and (min-width:1000px) and (min-width:1000px) and (max-width:1299px) {
+    .site-header-inner .masthead .masthead-links>ul>li.bp-min-large-more-min-xlarge-primary {
+      display: none
+    }
+  }
+
+  @media screen and (min-width:1000px) {
+
+    .site-header-inner .masthead .masthead-links>ul>li,
+    .site-header-inner .masthead .masthead-links>ul>li:hover,
+    .site-header-inner .masthead .masthead-links>ul>li:active {
+      cursor: pointer
+    }
+
+    body.news .site-header-inner .masthead .masthead-links>ul>li.active-all,
+    body.h .site-header-inner .masthead .masthead-links>ul>li.active-news,
+    body.home .site-header-inner .masthead .masthead-links>ul>li.active-home,
+    body.home .site-header-inner .masthead .masthead-links>ul>li.active-all,
+    .site-header-inner .masthead .masthead-links>ul>li:hover {
+      border-top: 3px solid #e31b23;
+      padding-top: 9px;
+      padding-top: .75rem
+    }
+
+    .site-header-inner .masthead .masthead-links>ul>li>a {
+      display: inline-block;
+      color: #333;
+      border-right: 1px solid #dadada;
+      font-size: 1rem;
+      padding: 0 1.6666666667rem
+    }
+  }
+
+  @media screen and (min-width:1000px) and (max-width:1140px) {
+    .site-header-inner .masthead .masthead-links>ul>li>a {
+      padding: 0 1.1666666667rem
+    }
+  }
+
+  @media screen and (min-width:1000px) {
+    .site-header-inner .masthead .masthead-links .more-menu .more-menu-link {
+      position: relative;
+      height: 42px;
+      padding: 0
+    }
+
+    .site-header-inner .masthead .masthead-links .more-menu .more-menu-link>a {
+      position: relative;
+      padding-right: 2.5rem;
+      height: 42px;
+      padding-top: 12px;
+      border-right: 0
+    }
+
+    .site-header-inner .masthead .masthead-links .more-menu .more-menu-link>a:after {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      border-left: 6.5px solid transparent;
+      border-right: 6.5px solid transparent;
+      border-top: 8px solid #454545;
+      position: absolute;
+      top: 17px;
+      right: 12px;
+      z-index: 999
+    }
+
+    .site-header-inner .masthead .masthead-links .more-menu .more-menu-link:hover>a {
+      margin-top: -3px
+    }
+  }
+
+  @media screen and (min-width:1000px) {
+    .site-header-inner .account-links {
+      background-color: #4f4f4f;
+      display: block;
+      height: 42px;
+      font-size: 1.0833333333rem
+    }
+
+    .site-header-inner .account-links:hover .link-separator {
+      height: 42px;
+      margin: 0
+    }
+
+    .site-header-inner .account-links li a {
+      color: #fff;
+      display: inline-block;
+      height: 42px;
+      padding: 1rem 1.25rem 0 1.25rem
+    }
+
+    .site-header-inner .account-links li a:hover {
+      background-color: #e31b23
+    }
+
+    .site-header-inner .account-links li {
+      color: #fff;
+      float: left;
+      height: 42px
+    }
+
+    .site-header-inner .account-links li.link-separator {
+      background-color: #AAA;
+      width: 1px;
+      height: 20px;
+      margin: 1rem 0 0 0
+    }
+
+    .site-header-inner .account-links li.subnav {
+      position: relative
+    }
+
+    .site-header-inner .account-links li.subnav>a::after {
+      content: '';
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border-left: 6.5px solid transparent;
+      border-right: 6.5px solid transparent;
+      border-top: 8px solid #fff;
+      margin: 0 0 1px 6px
+    }
+
+    .site-header-inner .account-links li.subnav:hover>a,
+    .site-header-inner .account-links li.subnav.active>a {
+      background: #777
+    }
+
+    .site-header-inner .logo {
+      width: auto;
+      top: 50px
+    }
+
+    .site-header-inner .main-menu>ul>li>a {
+      height: auto;
+      padding-top: 2.25rem;
+      padding-bottom: 2.3333333333rem
+    }
+
+    .site-header-inner .masthead,
+    .site-header-inner .main-menu {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+    }
+  }
+
+}
+}
+
+<style>.sf-hidden {
+    display: none !important
+  }
+</style>
+
+<meta http-equiv=content-security-policy
+  content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;">
+</head>
+
+<body class="main-site-layout standard-single-column new_lfc_layout logged-out">
+  <div id=cboxOverlay style=display:none></div>
+  <div id=colorbox style=padding-bottom:0px;padding-right:0px;display:none></div>
+
+
+  <noscript class=sf-hidden><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KCFJMVP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class=wrapper>
+    <a id=page-top></a>
+
+    <div class=clear></div>
+    <h1>Login</h1>
+    <div class=container>
+      <div class=content>
+        <section id=content>
+
+          <div class=membershipHeadingBox>
+          </div>
+          <div id=not-logged-in-text class=loginTopTxt style=display:block>
+            <div id=cmsContentId class="cmsContent content-link-builder"></div>
+          </div>
+          {% if messages %}
+          {% for message in messages %}
+          <div>
+            <div class="alert alert-error" role="alert" id='error-alert'>
+              <center>{{ message }}</center>
+            </div>
+          </div>
+          {% endfor %}
+          {% endif %}
+          <div id=partial-text class=sf-hidden>
+            <p class=sf-hidden><strong class=sf-hidden></strong></p>
+          </div>
+          <div class=leftColumn>
+            <div class=reg-fs-box>
+              <div id=login-include>             
+                <div id=page-login>
+
+                  <form id=WholesaleContact title=Login method=post name=Login action=".">
+                    {% csrf_token %}
+                    <fieldset class=reg-login>
+
+                      <div class=login-content>
+                        <table class=lfcMembershipTable>
+                          <tbody>
+                            <tr>
+                              <td colspan=3 id=invalid_login_msg class=sf-hidden></td>
+                            </tr>
+                            <tr class=LoginTableSpacing>
+                              <th><label>Username</label></th>
+
+                              <td class=inputBox>
+                                <input type=email name=email id=login_form_username value>
+                              <td class=formHelp>
+                                <p>Email address</p>
+                              </td>
+
+                            </tr>
+                            <tr class=LoginTableSpacing>
+
+                              <th><label>Password</label></th>
+
+                              <td class=inputBox>
+                                <input type=password name=password id=login_form_password value>
+                              </td>
+                              <td class=formHelp>
+                                <p><a href="{% url 'password_reset' %}">Forgotten
+                                    password?</a></p>
+                              </td>
+                            </tr>
+                        </table>
+                        <div class="remember LoginTableSpacing">
+                          <div>
+                            <label id=remember>Remember</label>
+                            <span class=input><input type=checkbox name=remember_me class=checkbox></span>
+                            <span class="rememberSideText formHelp">Remember your details on this machine?</span>
+                          </div>
+                        </div>
+
+
+
+
+
+                      </div>
+                      <div class=ArticleContent>
+
+
+                        <div class=mobilePlaceholder>
+                          <div class=buttonPlaceholder>
+                            <input type=submit value=Login class="btn right metroButton" name=submitBtn>
+                            <span class=buttonIcon>
+                            </span>
+                          </div>
+                          <p class="left helpText" style=margin-top:20px>Having problems? <a href="">Help | Contact
+                              Us</a></p>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+
+              <noscript class=sf-hidden>
+                <div class="nojs">You currently have javascript disabled, please <a href="">click here</a> to
+                  login.</div>
+              </noscript>
+              <div id=partial-actions class=sf-hidden>
+
+              </div>
+              <div class=clear></div>
+            </div>
+          </div>
+          <div class=rightColumn>
+            <div id=not-logged-in-actions class=innerPadding style=display:block>
+              <fieldset class=reg-signup>
+                <legend>New users</legend>
+                <div class=new-user-content>
+                  <div class="signUpMessage registerText">
+                    <p>Gives you immediate access to:</p>
+                    <ul class=leftList>
+                      <li class="image-bullet small-bullet video">Access to free BFC videos</li>
+                      <li class="image-bullet small-bullet match">live match update</li>
+                      <li class="image-bullet small-bullet win">Access to exclusive competitions</li>
+                    </ul>
+                    <ul class=rightList>
+                      <li class="image-bullet small-bullet news">Receive the official club newsletter - All in Blue</li>
+                    </ul>
+                    <p style=float:right;padding-top:15px>...and it's completely <span>FREE!</span></p>
+                  </div>
+                </div>
+                <a href="{% url 'account:registration' %}" style=clear:both>
+                  <div class=buttonPlaceholder>
+                    <input type=button value=Register class="btn right metroButton">
+                    <span class=buttonIcon></span>
+                  </div>
+                </a>
+              </fieldset>
+            </div>
+          </div>
+          <div class=clear></div>
+
+
+        </section>
+      </div>
+    </div>
+    <div class=clear></div>
+
+  </div>
+
+ 
+
+  <div id=cboxOverlay style=display:none></div>
+  <div id=colorbox role=dialog tabindex=-1 style=display:none></div>
+  <div id=onetrust-consent-sdk>
+    <div class="onetrust-pc-dark-filter ot-hide ot-fade-in sf-hidden"></div>
+    <div id=onetrust-pc-sdk class="otPcCenter ot-hide ot-fade-in ot-sdk-not-webkit sf-hidden" aria-modal=true
+      role=alertdialog aria-label="Cookie Preference Centre" lang=en></div>
+  </div><img style=display:none src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+  <noscript class=sf-hidden><img height="1" width="1" style="display:none" src=""></noscript>
+  <div id=criteo-tags-div style=display:none></div><iframe style=display:none id=__JSBridgeIframe_1.0__></iframe><iframe
+    style=display:none id=__JSBridgeIframe_SetResult_1.0__></iframe><iframe style=display:none
+    id=__JSBridgeIframe__></iframe><iframe style=display:none id=__JSBridgeIframe_SetResult__></iframe>
+
+   

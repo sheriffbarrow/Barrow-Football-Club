@@ -1,0 +1,3571 @@
+{% extends 'bfc/base/index1.html' %}
+<html>
+{% load static %}
+
+<head>
+  <!-- OneTrust Cookies Consent Notice start for liverpoolfc.com -->
+  <script type="text/javascript"
+    src="../../../../cdn-ukwest.onetrust.com/consent/aa158886-777d-463e-8082-e384a26718f6/OtAutoBlock.js"></script>
+  <script src="../../../../cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+    data-domain-script="aa158886-777d-463e-8082-e384a26718f6"></script>
+  <script type="text/javascript">
+    function OptanonWrapper() { }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../../../d3j2s6hdd6a7rg.cloudfront.net/css/cookie-consent-5.css" />
+
+
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/images/favicon.png"
+    type="image/png" />
+
+
+  <link rel="stylesheet" href="../../../../secure.widget.cloud.opta.net/v3/css/v3.football.opta-widgets.css">
+
+  <link rel="stylesheet" href="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/css/styles.css' %}" />
+
+
+  <script src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/JE-676/lfc/js/base.js"></script>
+
+  <link rel="dns-prefetch" href="http://cdn.dynamicyield.com/">
+  <link rel="dns-prefetch" href="http://st.dynamicyield.com/">
+  <link rel="dns-prefetch" href="http://rcom.dynamicyield.com/">
+
+  <script>
+
+    window.DY = window.DY || {};
+    DY.recommendationContext = { type: 'OTHER' };
+
+  </script>
+
+  <script type="text/javascript" src="../../../../cdn.dynamicyield.com/api/8772718/api_dynamic.js"></script>
+  <script type="text/javascript" src="../../../../cdn.dynamicyield.com/api/8772718/api_static.js"></script>
+
+  <style type="text/css">
+    a.post-next.post-next-top {
+      display: none;
+    }
+
+    div.post-next.post-next-bottom {
+      display: none;
+    }
+  </style>
+
+  <script>
+    // create Lfc element with GPT command queue
+    var Lfc = Lfc || {};
+    Lfc.gtmAdQueue = Lfc.gtmAdQueue || [];
+
+    // Load GPT asynchronously
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function () {
+      var gads = document.createElement('script');
+      gads.async = true;
+      var useSSL = 'https:' == document.location.protocol;
+      gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+      var node = document.getElementsByTagName('script')[0];
+      node.parentNode.insertBefore(gads, node);
+    })();
+  </script>
+  <script>
+    $(document).ready(function () {
+
+      $('.masthead .link-login a').attr('href', 'https://www.liverpoolfc.com/my-lfc/login?fragment=&referer=' + (document.URL));
+
+      // remove age restricted footer logos
+      var checkString = window.location.href;
+      if (checkString.indexOf("academy") !== -1 || checkString.indexOf("under-23") !== -1 || checkString.indexOf("under-18") !== -1 || checkString.indexOf("soccerschools") !== -1 || checkString.indexOf("soccer-schools") !== -1 || checkString.indexOf("u23") !== -1 || checkString.indexOf("u18") !== -1) {
+        $('a[title="Carlsberg"], a[title="Betvictor"], a[title="Liverpool Vodka"], a[title="Draft Kings"], a[title="1XBET"]').remove();
+      }
+
+      if (checkString.indexOf("../../../women/index.html") !== -1 || checkString.indexOf("/news/women") !== -1 || checkString.indexOf("/team/women") !== -1 || checkString.indexOf("/fans/liverpool-fc-women") !== -1) {
+        $('a[title="Western Union"], a[title="Carlsberg"],a[title="MG"],a[title="Nivea"],a[title="Falken Tyres"],a[title="TigerWit"],a[title="EA Sports"],a[title="Chaokoh"],a[title="NH Foods"],a[title="Lavazza"],a[title="Petro-Canada"],a[title="Liverpool Vodka"],a[title="Levis"],a[title="iugis"],a[title="Mitel"],a[title="Verbier"],a[title="Tribus"],a[title="Cadbury UK"],a[title="Cadbury ROW"],a[title="Holly Frontier"],a[title="Quorn"],a[title="Mauritius"],a[title="Acronis"]').remove();
+      }
+
+      // remove link
+      $('a[title="1XBET"]').removeAttr("href");
+
+      // HOT FIX - REMOVING MORE MENU FROM INTERNATIONAL SITES
+      var urlHostName = window.location.hostname;
+      if (urlHostName.indexOf('indonesia') !== -1 || urlHostName.indexOf('thailand') !== -1 || urlHostName.indexOf('japan') !== -1) {
+        $('.main-menu ul.more-menu').hide();
+      }
+
+    })
+  </script>
+  <style>
+    .site-header-inner .masthead .masthead-links .more-menu ul li a {
+      background: none !important;
+    }
+
+    .site-header-inner .social-links li.skype {
+      display: none;
+    }
+
+    .vixlet,
+    .dugout {
+      display: none !important;
+    }
+
+    .video-error__content {
+      padding-top: 3% !important;
+    }
+
+    .video-error__listing {
+      margin: 15px 0 !important;
+    }
+
+    .video-error__subtitle-mobile,
+    .video-error__registered {
+      color: white !important;
+    }
+
+    .video-player-embeddable .video-error--embed .video-error__listing-group ul li {
+      margin: 0 0 5px 0 !important;
+    }
+
+    .video-error__call-to-action a.js-subscribe-button {
+      font-size: 0.8em !important;
+      background: white !important;
+      text-transform: uppercase !important;
+    }
+
+    .video-error__call-to-action a.js-subscribe-button:hover {
+      color: #e31b23 !important;
+    }
+
+    @media only screen and (min-width: 551px) {
+      .video-error__subtitle-mobile {
+        margin: 10px 0 !important;
+        padding: 0 !important;
+      }
+    }
+
+    @media only screen and (min-width: 775px) and (max-width: 975px) {
+      .video-error__listing-group {
+        display: none !important;
+      }
+    }
+
+    /*@media screen and (min-width: 700px) {
+.site-header-inner .main-menu .more-menu .more-menu-link>ul li {
+display:block !important;
+}
+}*/
+
+    @media screen and (min-width: 1000px) {
+      .site-header-inner .masthead .masthead-links .more-menu.noLogin ul {
+        top: 100% !important;
+      }
+    }
+
+    /* IE ONLY */
+    @media screen\0 {
+      .video-player-embeddable .video .shard-overlay {
+        position: absolute !important;
+      }
+    }
+
+    .home .featured-news-carousel .media-image-wrap .indent {
+      text-indent: -99999px;
+    }
+
+    .dy_unit .dy-sliding-drawer-container {
+      bottom: 25%;
+    }
+  </style>
+
+
+
+
+<body class="main-site-layout sonata-bc template-standard_two_column standard-two-column">
+
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-KCFJMVP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  {% block bread %}
+
+  <div class="breadcrumbs">
+
+    <span class="breadcrumb-prefix">you are here:</span>
+
+    <ul>
+
+      <li>
+        <a href="../../../index.html">home</a>
+      </li>
+      <li>
+        <span>/ </span>
+
+        <a href="fixtures-and-results.html">match</a>
+      </li>
+      <li>
+        <span>/ </span>
+
+        <a href="fixtures-and-results.html">2021 22</a>
+      </li>
+      <li>
+        <span>/ </span>
+
+        <a href="fixtures-and-results.html">men</a>
+      </li>
+      <li>
+        <span>/ </span>
+
+        fixtures and results
+      </li>
+    </ul>
+  </div>
+
+  {% endblock bread %}
+  {% block main %}
+
+  <div class="topRow">
+    <div id="cms-block-54321" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+      <div class="container-block block-54321 ">
+
+
+        <div class="content-header default thinner   ">
+          <h1 class="main-title">
+            Fixtures &amp; Results
+          </h1>
+        </div>
+
+        <div id="cms-block-54326" class="cms-block cms-block-element" data-block-type="lfc.block.fixture.nextlast">
+
+
+          <div class="last-next-match standalone">
+            <div class="last-match num-fixtures-1">
+              <h2>LAST MATCH</h2>
+              {% for date in lastmatch %}
+              <div class="matchinfo">
+                <div class="scores">
+                  <img
+                    src="{{ date.homeL.url }}"
+                    title="Liverpool FC" alt="Liverpool FC" class="badge">
+                  <span class="score">{{ date.scoreline_home }} - {{ date.scoreline_away }}</span>
+                  <img
+                    src="{{ date.awayL.url }}"
+                    title="Brighton &amp; Hove Albion" alt="Brighton &amp; Hove Albion" class="badge">
+                </div>
+                <div
+                  style="background-image: url('{{ date.tournamentLogo_sm.url }}')"
+                  title="Premier League" class="comp-logo">
+                </div>
+                <p>
+                  {{date.fixture_date_and_time|time:"H:i"}} {{ date.fixture_date_and_time|date:"D d M Y" }}
+                </p>
+                <a class="button" href="">MORE</a>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="next-match num-fixtures-2">
+              <h2>UPCOMING</h2>
+              {% for upcoming in upcoming %}
+              <div class="matchinfo">
+                <div class="scores">
+                  <img
+                    src="{{ upcoming.homeL.url }}"
+                    title="Liverpool FC" alt="Liverpool FC" class="badge">
+                  <span class="versus">V</span>
+                  <img
+                    src="{{ upcoming.awayL.url }}"
+                    title="Atletico Madrid" alt="Atletico Madrid" class="badge">
+                </div>
+                <div
+                  style="background-image: url('{{ upcoming.tournamentLogo_sm.url }}')"
+                  title="UEFA Champions League" class="comp-logo">
+                </div>
+                <p>
+                  {{upcoming.fixture_date_and_time|time:"H:i"}} {{ upcoming.fixture_date_and_time|date:"D d M Y" }}
+                </p>
+                <a class="button invisible">MORE</a>
+              </div>
+              {% endfor %}
+              <div class="matchinfo">
+                <div class="scores">
+                  <img
+                    src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/24/thumb_23270_crest_medium.png"
+                    title="West Ham United" alt="West Ham United" class="badge">
+                  <span class="versus">V</span>
+                  <img
+                    src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16738_crest_medium.png"
+                    title="Liverpool FC" alt="Liverpool FC" class="badge">
+                </div>
+                <div
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')"
+                  title="Premier League" class="comp-logo">
+                </div>
+                <p>
+                  16:30 Sun 7th November 2021
+                </p>
+                <a class="button invisible">MORE</a>
+              </div>
+            </div>
+            <div style="clear: left;"></div>
+          </div>
+        </div>
+
+        <nav class="grouped-navigation closedMenu default">
+          <span class="current">Fixtures and Results</span>
+          <div class="select"></div>
+          <ul class="bar">
+            <li>
+              <a href="fixtures-and-results.html" class="is_active">Fixtures and Results</a>
+            </li>
+            </li>
+          </ul>
+        </nav>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mainCol">
+    <div class="mainColInner">
+      <div id="cms-block-54322" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+        <div class="container-block block-54322 ">
+
+          <div class="comp-logos comp_num_4">
+            <div
+              style="background-image: url('/static/d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_large.png')"
+              title="Premier League"></div>
+            <div
+              style="background-image: url('/static/d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_large.png')"
+              title="UEFA Champions League"></div>
+            <div
+              style="background-image: url('/static/d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/94/thumb_93476_competition_large.png')"
+              title="Carabao Cup"></div>
+            <div
+              style="background-image: url('/static/d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0002/15/thumb_114652_competition_large.png')"
+              title="Emirates FA Cup"></div>
+          </div>
+
+          <div id="cms-block-54349" class="cms-block cms-block-element" data-block-type="lfc.block.service.richtext">
+            <div class="richtext ">
+              <p style="text-align: center;"><strong>Please note, fixture dates and kick-off times are subject to
+                  change</strong></p>
+
+              <p style="text-align: center;">All times are GMT</p>
+            </div>
+          </div>
+
+          <div class="season-selector-wrapper">
+            <span class="season-label">Season</span>
+            <div class="season-selector">
+              <span class="current">2021-22</span>
+              <div class="select"></div>
+              <ul class="drop-down hideMenu">
+                <li class="active">
+                  <a href="fixtures-and-results.html">2021-22</a>
+                </li>
+                <li>
+                  <a href="../../2020-21/first-team/fixtures-and-results.html">2020-21</a>
+                </li>
+                <li>
+                  <a href="../../2019-20/first-team/fixtures-and-results.html">2019-20</a>
+                </li>
+                <li>
+                  <a href="../../2018-19/first-team/fixtures-and-results.html">2018-19</a>
+                </li>
+                <li>
+                  <a href="../../2017-18/first-team/fixtures-and-results.html">2017-18</a>
+                </li>
+                <li>
+                  <a href="../../2016-17/first-team/fixtures-and-results.html">2016-17</a>
+                </li>
+                <li>
+                  <a href="../../2015-16/first-team/fixtures-and-results.html">2015-16</a>
+                </li>
+                <li>
+                  <a href="../../2014-15/first-team/fixtures-and-results.html">2014-15</a>
+                </li>
+                <li>
+                  <a href="../../2013-14/first-team/fixtures-and-results.html">2013-14</a>
+                </li>
+                <li>
+                  <a href="../../2012-13/first-team/fixtures-and-results.html">2012-13</a>
+                </li>
+                <li>
+                  <a href="../../2011-12/first-team/fixtures-and-results.html">2011-12</a>
+                </li>
+                <li>
+                  <a href="../../2010-11/first-team/fixtures-and-results.html">2010-11</a>
+                </li>
+                <li>
+                  <a href="../../2009-10/first-team/fixtures-and-results.html">2009-10</a>
+                </li>
+                <li>
+                  <a href="../../2008-09/first-team/fixtures-and-results.html">2008-09</a>
+                </li>
+                <li>
+                  <a href="../../2007-08/first-team/fixtures-and-results.html">2007-08</a>
+                </li>
+                <li>
+                  <a href="../../2006-07/first-team/fixtures-and-results.html">2006-07</a>
+                </li>
+                <li>
+                  <a href="../../2005-06/first-team/fixtures-and-results.html">2005-06</a>
+                </li>
+                <li>
+                  <a href="../../2004-05/first-team/fixtures-and-results.html">2004-05</a>
+                </li>
+                <li>
+                  <a href="../../2003-04/first-team/fixtures-and-results.html">2003-04</a>
+                </li>
+                <li>
+                  <a href="../../2002-03/first-team/fixtures-and-results.html">2002-03</a>
+                </li>
+                <li>
+                  <a href="../../2001-02/first-team/fixtures-and-results.html">2001-02</a>
+                </li>
+                <li>
+                  <a href="../../2000-01/first-team/fixtures-and-results.html">2000-01</a>
+                </li>
+                <li>
+                  <a href="../../1999-00/first-team/fixtures-and-results.html">1999-00</a>
+                </li>
+                <li>
+                  <a href="../../1998-99/first-team/fixtures-and-results.html">1998-99</a>
+                </li>
+                <li>
+                  <a href="../../1997-98/first-team/fixtures-and-results.html">1997-98</a>
+                </li>
+                <li>
+                  <a href="../../1996-97/first-team/fixtures-and-results.html">1996-97</a>
+                </li>
+                <li>
+                  <a href="../../1995-96/first-team/fixtures-and-results.html">1995-96</a>
+                </li>
+                <li>
+                  <a href="../../1994-95/first-team/fixtures-and-results.html">1994-95</a>
+                </li>
+                <li>
+                  <a href="../../1993-94/first-team/fixtures-and-results.html">1993-94</a>
+                </li>
+                <li>
+                  <a href="../../1992-93/first-team/fixtures-and-results.html">1992-93</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="cms-block-54330" class="cms-block cms-block-element"
+            data-block-type="lfc.fixtures.listing.block.service">
+
+
+            <ul class="fixture-list-main ">
+
+              <li>
+                <a class="hidden-fixture-toggler" href="#">Show past fixtures</a>
+                <script>
+                  $(function () {
+                    // set up past fixture toggling
+                    $('#cms-block-54330 a.hidden-fixture-toggler').click(function (evt) {
+                      evt.preventDefault();
+                      if (!$(this).hasClass('shown')) {
+                        // slide down, reveal borders at end of slide
+                        $('#cms-block-54330 li.initially-hidden').slideDown(function () {
+                          $(this).css({ 'border-color': '', 'min-height': '' });
+                        });
+                        $(this).text("Hide past fixtures").addClass("shown");
+                      } else {
+                        // hide borders and slide up
+                        $('#cms-block-54330 li.initially-hidden').slideUp().css({ 'border-color': 'transparent', 'min-height': 0 });
+                        $(this).text("Show past fixtures").removeClass("shown");
+                      }
+                    });
+
+                    // hide borders on currently hidden fixture for smooth entry
+                    $('#cms-block-54330 li.initially-hidden').css({ 'border-color': 'transparent', 'min-height': 0 });
+                  });
+                </script>
+              </li>
+
+
+              <li class="fixtures-list-title  initially-hidden ">
+                <h2>July 2021</h2>
+              </li>
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Tue 20th 17:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/24/thumb_123199_crest_small.png" />
+                  </div>
+
+                  <div class="name">FC Wacker Innsbruck
+                    <span>(N)</span>
+                  </div>
+
+                  <div class="comp-mobile"><span>friendly</span></div>
+
+                </div>
+
+                <div class="fixture-list-item-class">N</div>
+
+                <div class="fixture-list-item-type"><span>friendly</span></div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  1 - 1
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_2dhtvwuf" rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/438434-match-report-pre-season-wacker-innsbruck-stuttgart.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Tue 20th 17:45 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/10/thumb_109386_crest_small.png" />
+                  </div>
+
+                  <div class="name">VfB Stuttgart
+                    <span>(N)</span>
+                  </div>
+
+                  <div class="comp-mobile"><span>friendly</span></div>
+
+                </div>
+
+                <div class="fixture-list-item-class">N</div>
+
+                <div class="fixture-list-item-type"><span>friendly</span></div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  1 - 1
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_4s5lzqyh" rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/438434-match-report-pre-season-wacker-innsbruck-stuttgart.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Fri 23rd 17:15 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/24/thumb_123198_crest_small.png" />
+                  </div>
+
+                  <div class="name">FSV Mainz 05
+                    <span>(N)</span>
+                  </div>
+
+                  <div class="comp-mobile"><span>friendly</span></div>
+
+                </div>
+
+                <div class="fixture-list-item-class">N</div>
+
+                <div class="fixture-list-item-type"><span>friendly</span></div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  1 - 0
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_4fuq4uh3/?contentReferences=FOOTBALL_FIXTURE%3Ag2227478&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20LFC%201-0%20Mainz&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/438742-mainz-friendly-match-report-pre-season.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Thu 29th 19:20 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/44/thumb_43200_crest_small.png" />
+                  </div>
+
+                  <div class="name">Hertha BSC
+                    <span>(N)</span>
+                  </div>
+
+                  <div class="comp-mobile"><span>friendly</span></div>
+
+                </div>
+
+                <div class="fixture-list-item-class">N</div>
+
+                <div class="fixture-list-item-type"><span>friendly</span></div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  3 - 4
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_jr2yfdzm/?contentReferences=FOOTBALL_FIXTURE%3Ag2227479&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=90%20Seconds%3A%20LFC%203-4%20Hertha%20BSC&amp;listType=LIST-MATCH-HIGHLIGHTS"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/439280-match-report-pre-season-friendly-hertha.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+              <li class="fixtures-list-title  initially-hidden ">
+                <h2>August 2021</h2>
+              </li>
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Thu 5th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/25/thumb_124431_crest_small.png" />
+                  </div>
+
+                  <div class="name">Bologna FC
+                    <span>(N)</span>
+                  </div>
+
+                  <div class="comp-mobile"><span>friendly</span></div>
+
+                </div>
+
+                <div class="fixture-list-item-class">N</div>
+
+                <div class="fixture-list-item-type"><span>friendly</span></div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  2 - 0
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_t4y3fyx6" rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/439936-pre-season-friendlies-bologna-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Thu 5th 17:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/25/thumb_124431_crest_small.png" />
+                  </div>
+
+                  <div class="name">Bologna FC
+                    <span>(N)</span>
+                  </div>
+
+                  <div class="comp-mobile"><span>friendly</span></div>
+
+                </div>
+
+                <div class="fixture-list-item-class">N</div>
+
+                <div class="fixture-list-item-type"><span>friendly</span></div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  1 - 0
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_t4y3fyx6" rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/439936-pre-season-friendlies-bologna-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 8th 16:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/24/thumb_123810_crest_small.png" />
+                  </div>
+
+                  <div class="name">Athletic Club
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile"><span>friendly</span></div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"><span>friendly</span></div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  1 - 1
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_iheu2n5f/?contentReferences=FOOTBALL_FIXTURE%3Ag2235146&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20LFC%201-1%20Athletic%20Club&amp;listType=LIST-MATCH-HIGHLIGHTS"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/440199-match-report-athletic-club-friendly-anfield.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Mon 9th 19:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/24/thumb_123811_crest_small.png" />
+                  </div>
+
+                  <div class="name">CA Osasuna
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile"><span>friendly</span></div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"><span>friendly</span></div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  3 - 1
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_ooyh14jm/?contentReferences=FOOTBALL_FIXTURE%3Ag2235147&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20LFC%203-1%20CA%20Osasuna&amp;listType=LIST-MATCH-HIGHLIGHTS"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/440342-osasuna-anfield-friendly-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 14th 17:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15458_crest_small.png" />
+                  </div>
+
+                  <div class="name">Norwich City
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  0 - 3
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_1gjmwxdy/?contentReferences=FOOTBALL_FIXTURE%3Ag2210278&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20Norwich%200-3%20LFC&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/440774-norwich-premier-league-match-report.html" class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 21st 12:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16225_crest_small.png" />
+                  </div>
+
+                  <div class="name">Burnley
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  2 - 0
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_7y5skfk0/?contentReferences=FOOTBALL_FIXTURE%3Ag2210286&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20LFC%202-0%20Burnley&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/441304-burnley-premier-league-anfield-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 28th 17:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15451_crest_small.png" />
+                  </div>
+
+                  <div class="name">Chelsea
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  1 - 1
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_wq6parqk/?contentReferences=FOOTBALL_FIXTURE%3Ag2210294&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20LFC%201-1%20Chelsea&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/442053-chelsea-premier-league-anfield-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+              <li class="fixtures-list-title  initially-hidden ">
+                <h2>September 2021</h2>
+              </li>
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 12th 16:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16831_crest_small.png" />
+                  </div>
+
+                  <div class="name">Leeds United
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  0 - 3
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_gxafzadv/?contentReferences=FOOTBALL_FIXTURE%3Ag2210306&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20Leeds%20Utd%200-3%20LFC&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/443008-match-report-liverpool-leeds-premier-league.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Wed 15th 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16847_crest_small.png" />
+                  </div>
+
+                  <div class="name">AC Milan
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png"
+                      alt="UEFA Champions League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  3 - 2
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_v8rup2cf/?contentReferences=FOOTBALL_FIXTURE%3Ag2244582&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20LFC%203-2%20Milan&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/443410-match-report-champions-league-ac-milan.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 18th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15452_crest_small.png" />
+                  </div>
+
+                  <div class="name">Crystal Palace
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  3 - 0
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_xk5dgnu1/" rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/443819-match-report-crystal-palace-premier-league.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Tue 21st 19:45 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15458_crest_small.png" />
+                  </div>
+
+                  <div class="name">Norwich City
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/94/thumb_93476_competition_logo.png"
+                      alt="Carabao Cup" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/94/thumb_93476_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  0 - 3
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_ddfvjcgr/?contentReferences=FOOTBALL_FIXTURE%3Ag2244284&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Carabao%20Cup%20Highlights%3A%20Norwich%200-3%20LFC&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/444185-match-report-norwich-city-carabao-cup.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 25th 17:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/23/thumb_122552_crest_small.png" />
+                  </div>
+
+                  <div class="name">Brentford
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  3 - 3
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_5j5fsdzg/" rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/444697-brentford-premier-league-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Tue 28th 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16844_crest_small.png" />
+                  </div>
+
+                  <div class="name">Porto
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png"
+                      alt="UEFA Champions League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  1 - 5
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_m7w3axov/?contentReferences=FOOTBALL_FIXTURE%3Ag2244597&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20Porto%201-5%20Liverpool&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/444999-match-report-porto-liverpool-champions-league.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+              <li class="fixtures-list-title ">
+                <h2>October 2021</h2>
+              </li>
+
+              <li class="fixtures-list-item  initially-hidden ">
+                {% for last in lastmatch %}
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 3rd 16:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="{{ last.homeL.url }}" />
+                  </div>
+
+                  <div class="name">Manchester City
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="{{ last.tournamentLogo_sm.url }}"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+                
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('{{ last.tournamentLogo_sm.url }}')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  {{ last.scoreline_home }} - {{ last.scoreline_away }}
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_vfam7wha/?contentReferences=FOOTBALL_FIXTURE%3Ag2210336&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20LFC%202-2%20Man%20City&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/445586-manchester-city-premier-league-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+                {% endfor %}
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 16th 12:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15464_crest_small.png" />
+                  </div>
+
+                  <div class="name">Watford
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  0 - 5
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_o0pqotnd/?contentReferences=FOOTBALL_FIXTURE%3Ag2210350&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20Watford%200-5%20LFC&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/446432-watford-premier-league-match-report.html" class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Tue 19th 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/100/thumb_99395_crest_small.png" />
+                  </div>
+
+                  <div class="name">Atletico Madrid
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png"
+                      alt="UEFA Champions League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  2 - 3
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_d5n64a1u/?contentReferences=FOOTBALL_FIXTURE%3Ag2244612&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20Atletico%20Madrid%202-3%20LFC&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/446774-atletico-madrid-champions-league-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 24th 16:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15445_crest_small.png" />
+                  </div>
+
+                  <div class="name">Manchester United
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  0 - 5
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_5rh2a7wm/?contentReferences=FOOTBALL_FIXTURE%3Ag2210358&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20Man%20Utd%200-5%20LFC&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/447077-match-report-manchester-united-premier-league.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item  initially-hidden ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Wed 27th 19:45 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16363_crest_small.png" />
+                  </div>
+
+                  <div class="name">Preston North End
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/94/thumb_93476_competition_logo.png"
+                      alt="Carabao Cup" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/94/thumb_93476_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  away">
+                  0 - 2
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_tavlx3tw/?contentReferences=FOOTBALL_FIXTURE%3Ag2253038&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%3A%20Preston%200-2%20LFC&amp;listType=LIST-DEFAULT"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/447535-carabao-cup-preston-north-end-match-report.html"
+                    class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 30th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/18/thumb_17076_crest_small.png" />
+                  </div>
+
+                  <div class="name">Brighton &amp; Hove Albion
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+
+                <div class="fixture-list-item-score finished  home">
+                  2 - 2
+
+                </div>
+
+
+                <div class="fixture-list-item-channel finished">
+                  <a href="https://video.liverpoolfc.com/player/0_iuxtzrfu/?contentReferences=FOOTBALL_FIXTURE%3Ag2210364&amp;page=0&amp;pageSize=20&amp;sortOrder=desc&amp;title=Highlights%20LFC%202-2%20Brighton&amp;listType=LIST-MATCH-HIGHLIGHTS"
+                    rel="nofollow" target="_blank">
+
+                    <img alt="LFCTV GO.jpg" title="LFCTV GO.jpg"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpg"
+                      width="70" height="30"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/thumb_31035_tvchannel_logo.jpeg 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/32/fd873411ea9c0736c9575b1d418708f8eb69d938.jpeg 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+                <div class="fixture-list-item-link">
+                  <a href="../../../news/first-team/447859-match-report-liverpool-brighton.html" class="btn-watch">
+                    more
+                  </a>
+                </div>
+
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-title">
+                <h2>November 2021</h2>
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Wed 3rd 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/100/thumb_99395_crest_small.png" />
+                  </div>
+
+                  <div class="name">Atletico Madrid
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png"
+                      alt="UEFA Champions League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="http://sport.bt.com/" rel="nofollow" target="_blank">
+
+                    <img alt="BT Sport Logo 2019 Updated.png" title="BT Sport Logo 2019 Updated.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png"
+                      width="68" height="28"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png 68w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/86687feda5dba9ecf40b28a7d1b83c0787a2ec13.png 145w"
+                      sizes="(max-width: 68px) 100vw, 68px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 7th 16:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/24/thumb_23270_crest_small.png" />
+                  </div>
+
+                  <div class="name">West Ham United
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="https://www.skysports.com/watch" rel="nofollow" target="_blank">
+
+                    <img alt="sky-sports-2020-2.png" title="sky-sports-2020-2.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/thumb_110657_tvchannel_logo.png"
+                      width="70" height="15"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/thumb_110657_tvchannel_logo.png 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/bc9b7793d0b2620ef164365b69f0368933eb4cef.png 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 20th 17:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15450_crest_small.png" />
+                  </div>
+
+                  <div class="name">Arsenal
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="https://www.skysports.com/watch" rel="nofollow" target="_blank">
+
+                    <img alt="sky-sports-2020-2.png" title="sky-sports-2020-2.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/thumb_110657_tvchannel_logo.png"
+                      width="70" height="15"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/thumb_110657_tvchannel_logo.png 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/bc9b7793d0b2620ef164365b69f0368933eb4cef.png 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Wed 24th 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16844_crest_small.png" />
+                  </div>
+
+                  <div class="name">Porto
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png"
+                      alt="UEFA Champions League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="http://sport.bt.com/" rel="nofollow" target="_blank">
+
+                    <img alt="BT Sport Logo 2019 Updated.png" title="BT Sport Logo 2019 Updated.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png"
+                      width="68" height="28"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png 68w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/86687feda5dba9ecf40b28a7d1b83c0787a2ec13.png 145w"
+                      sizes="(max-width: 68px) 100vw, 68px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 27th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15459_crest_small.png" />
+                  </div>
+
+                  <div class="name">Southampton
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-title">
+                <h2>December 2021</h2>
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Wed 1st 20:15 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15454_crest_small.png" />
+                  </div>
+
+                  <div class="name">Everton
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="https://www.amazon.co.uk/gp/prime" rel="nofollow" target="_blank">
+
+                    <img alt="800px-Amazon_Prime_Video_logo.svg.png" title="800px-Amazon_Prime_Video_logo.svg.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/95/thumb_94144_tvchannel_logo.png"
+                      width="68" height="21"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/95/thumb_94144_tvchannel_logo.png 68w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/95/fffd833b6fe531989d00bc1320e272b360ce781c.png 800w"
+                      sizes="(max-width: 68px) 100vw, 68px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 4th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16828_crest_small.png" />
+                  </div>
+
+                  <div class="name">Wolverhampton Wanderers
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Tue 7th 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16847_crest_small.png" />
+                  </div>
+
+                  <div class="name">AC Milan
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png"
+                      alt="UEFA Champions League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/17/thumb_16895_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="http://sport.bt.com/" rel="nofollow" target="_blank">
+
+                    <img alt="BT Sport Logo 2019 Updated.png" title="BT Sport Logo 2019 Updated.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png"
+                      width="68" height="28"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png 68w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/86687feda5dba9ecf40b28a7d1b83c0787a2ec13.png 145w"
+                      sizes="(max-width: 68px) 100vw, 68px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 11th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/94/thumb_93483_crest_small.png" />
+                  </div>
+
+                  <div class="name">Aston Villa
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Thu 16th 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15457_crest_small.png" />
+                  </div>
+
+                  <div class="name">Newcastle United
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="http://sport.bt.com/" rel="nofollow" target="_blank">
+
+                    <img alt="BT Sport Logo 2019 Updated.png" title="BT Sport Logo 2019 Updated.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png"
+                      width="68" height="28"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png 68w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/86687feda5dba9ecf40b28a7d1b83c0787a2ec13.png 145w"
+                      sizes="(max-width: 68px) 100vw, 68px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 19th 16:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/35/thumb_34386_crest_small.png" />
+                  </div>
+
+                  <div class="name">Tottenham Hotspur
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="https://www.skysports.com/watch" rel="nofollow" target="_blank">
+
+                    <img alt="sky-sports-2020-2.png" title="sky-sports-2020-2.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/thumb_110657_tvchannel_logo.png"
+                      width="70" height="15"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/thumb_110657_tvchannel_logo.png 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/bc9b7793d0b2620ef164365b69f0368933eb4cef.png 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    TBC
+                  </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15455_crest_small.png" />
+                  </div>
+
+                  <div class="name">Leicester City
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/94/thumb_93476_competition_logo.png"
+                      alt="Carabao Cup" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/94/thumb_93476_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 26th 12:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16831_crest_small.png" />
+                  </div>
+
+                  <div class="name">Leeds United
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="http://sport.bt.com/" rel="nofollow" target="_blank">
+
+                    <img alt="BT Sport Logo 2019 Updated.png" title="BT Sport Logo 2019 Updated.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png"
+                      width="68" height="28"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/thumb_95048_tvchannel_logo.png 68w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/96/86687feda5dba9ecf40b28a7d1b83c0787a2ec13.png 145w"
+                      sizes="(max-width: 68px) 100vw, 68px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Tue 28th 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15455_crest_small.png" />
+                  </div>
+
+                  <div class="name">Leicester City
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="https://www.amazon.co.uk/gp/prime" rel="nofollow" target="_blank">
+
+                    <img alt="800px-Amazon_Prime_Video_logo.svg.png" title="800px-Amazon_Prime_Video_logo.svg.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/95/thumb_94144_tvchannel_logo.png"
+                      width="68" height="21"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/95/thumb_94144_tvchannel_logo.png 68w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0001/95/fffd833b6fe531989d00bc1320e272b360ce781c.png 800w"
+                      sizes="(max-width: 68px) 100vw, 68px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-title">
+                <h2>January 2022</h2>
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 2nd 16:30 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15451_crest_small.png" />
+                  </div>
+
+                  <div class="name">Chelsea
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                  <a href="https://www.skysports.com/watch" rel="nofollow" target="_blank">
+
+                    <img alt="sky-sports-2020-2.png" title="sky-sports-2020-2.png"
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/thumb_110657_tvchannel_logo.png"
+                      width="70" height="15"
+                      srcset="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/thumb_110657_tvchannel_logo.png 70w, https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/tvchannel/0002/11/bc9b7793d0b2620ef164365b69f0368933eb4cef.png 140w"
+                      sizes="(max-width: 70px) 100vw, 70px" />
+                  </a>
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 15th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0002/23/thumb_122552_crest_small.png" />
+                  </div>
+
+                  <div class="name">Brentford
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 22nd 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15452_crest_small.png" />
+                  </div>
+
+                  <div class="name">Crystal Palace
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-title">
+                <h2>February 2022</h2>
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Wed 9th 20:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15455_crest_small.png" />
+                  </div>
+
+                  <div class="name">Leicester City
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 12th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16225_crest_small.png" />
+                  </div>
+
+                  <div class="name">Burnley
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 19th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15458_crest_small.png" />
+                  </div>
+
+                  <div class="name">Norwich City
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 26th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15450_crest_small.png" />
+                  </div>
+
+                  <div class="name">Arsenal
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-title">
+                <h2>March 2022</h2>
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 5th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/24/thumb_23270_crest_small.png" />
+                  </div>
+
+                  <div class="name">West Ham United
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 12th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/18/thumb_17076_crest_small.png" />
+                  </div>
+
+                  <div class="name">Brighton &amp; Hove Albion
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 19th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15445_crest_small.png" />
+                  </div>
+
+                  <div class="name">Manchester United
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-title">
+                <h2>April 2022</h2>
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 2nd 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15464_crest_small.png" />
+                  </div>
+
+                  <div class="name">Watford
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 9th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/24/thumb_23548_crest_small.png" />
+                  </div>
+
+                  <div class="name">Manchester City
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 16th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/94/thumb_93483_crest_small.png" />
+                  </div>
+
+                  <div class="name">Aston Villa
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 23rd 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15454_crest_small.png" />
+                  </div>
+
+                  <div class="name">Everton
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 30th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15457_crest_small.png" />
+                  </div>
+
+                  <div class="name">Newcastle United
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-title">
+                <h2>May 2022</h2>
+              </li>
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sat 7th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/35/thumb_34386_crest_small.png" />
+                  </div>
+
+                  <div class="name">Tottenham Hotspur
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 15th 15:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/16/thumb_15459_crest_small.png" />
+                  </div>
+
+                  <div class="name">Southampton
+                    <span>(A)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">A</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+
+
+
+
+
+
+              <li class="fixtures-list-item ">
+                <div class="fixtures-list-item-info">
+
+                  <div class="date">
+                    Sun 22nd 16:00 </div>
+
+                  <div class="img-wrap"><img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/crest/0001/17/thumb_16828_crest_small.png" />
+                  </div>
+
+                  <div class="name">Wolverhampton Wanderers
+                    <span>(H)</span>
+                  </div>
+
+                  <div class="comp-mobile">
+                    <img
+                      src="../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png"
+                      alt="Premier League" />
+                  </div>
+
+                </div>
+
+                <div class="fixture-list-item-class">H</div>
+
+                <div class="fixture-list-item-type"
+                  style="background-image: url('../../../../d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/competition/0001/32/thumb_31842_competition_logo.png')">
+                </div>
+
+                <div class="fixture-list-item-score">
+                  -
+                </div>
+
+                <div class="fixture-list-item-channel">
+                </div>
+
+
+              </li>
+
+
+
+
+            </ul>
+
+          </div>
+
+          <div id="cms-block-54350" class="cms-block cms-block-element" data-block-type="lfc.block.service.richtext">
+            <div class="richtext ">
+              <p style="text-align: center;"><strong>Please note, fixture dates and kick-off times are subject to
+                  change</strong></p>
+
+              <p style="text-align: center;">All times are GMT</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div class="rightCol">
+
+    <div class="rightAd">
+      <div id='div-gpt-ad-RES_MAIN_RIGHT_ONE'>
+        <script>
+          Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_ONE');
+        </script>
+      </div>
+
+    </div>
+
+
+
+    <div id="cms-block-54323" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+      <div class="container-block block-54323 ">
+        <div id="cms-block-54460" class="cms-block cms-block-element"
+          data-block-type="lfc.opta.standings.block.service">
+
+
+
+          <section id="league-table" class="opta-wrapper">
+
+
+            <opta-widget widget="standings" competition="8" season="2021" team="14" template="normal" live="true"
+              default_nav="1" side="combined" show_form="0" data_detail="full" show_key="false" show_crests="false"
+              points_in_first_column="false" lose_before_draw="false" competition_naming="full" team_naming="full"
+              date_format="dddd D MMMM YYYY" sorting="false" show_live="true" show_relegation_average="false"
+              show_logo="false" show_title="false" breakpoints="550" sport="football">
+            </opta-widget>
+
+
+          </section>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="rightAd">
+      <div id='div-gpt-ad-RES_MAIN_RIGHT_TWO'>
+        <script>
+          Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_RIGHT_TWO');
+        </script>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  </div>
+
+
+  </div>
+  </div>
+
+
+</body>
+
+</html>
+{% endblock main %}

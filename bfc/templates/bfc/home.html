@@ -1,0 +1,570 @@
+
+{% block main %}
+<div class="content ">
+{% load static %}
+
+
+  <div id="cms-block-29248" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+    <div class="container-block block-29248 ">
+
+    </div>
+  </div>
+
+
+
+  <section id="featured-content">
+    <div class="owl-carousel carousel featured-content autoplay-on autoplayInterval-15000">
+      <div class="carousel-item news-carousel-item " data-title="News">
+
+
+        <div id="featured-news" class="featured-news">
+
+          <div id="cms-block-" class="cms-block cms-block-element" data-block-type="sonata.block.service.text">
+            <div class="carousel featured-news-carousel">
+
+              <div class="primary-items">
+                {% for latest in update %}
+                {% if forloop.counter == 1 %}
+                <article class="featured-news-item">
+                  <a class="featured-news-item-link" data-gtm-action="News - main"
+                    data-gtm-label="{{latest.title}}"
+                    href="{{ latest.get_absolute_url }}">
+                    <span class="media-thumbnail-grad"></span>
+                    <h2 class="post-header">
+                      LATEST UPDATE: <span style="font-family:Times New Roman;">{{latest.title|safe }}</span>
+                    </h2>
+                    <div class="media-image-wrap">
+                      <img src="{{ latest.image.url }}" data-src="{{ latest.image.url }}" alt=""
+                        class="carousel-media-image media-image lazyLoadPlaceholder"/>
+                    </div>
+                    {% else %}
+                  </a>
+
+                  {% endif %}
+                </article>
+
+                {% endfor %}
+
+              </div>
+              <div class="secondary-items">
+                {% for post in post1 %}
+                <article class="featured-news-item">
+
+
+                  <a class="featured-news-item-link" data-gtm-action="News - secondary"
+                    data-gtm-label="{{post.title}}"
+                    href="{{ post.get_absolute_url }}">
+
+                    <span class="media-thumbnail-grad"></span>
+
+                    <h2 class="post-header">
+                      <span style="font-family:Times New Roman;">{{ post.title|truncatewords:'10'|safe }}</span>
+                      
+                    </h2>
+
+                    <div class="media-image-wrap">
+
+
+                      <span class="icon-helper icon-doc-text content-type-article"><span
+                          class="indent">article</span></span>
+
+                      <img src="{{ post.postImage.url }}" data-src="{{ latest.postImage.url }}" alt=""
+                        class="carousel-media-image media-image lazyLoadPlaceholder" />
+                    </div>
+
+                  </a>
+
+                </article>
+                {% endfor %}
+                <div class="betting-mobile-position">
+                  <div id='div-gpt-ad-RES_MAIN_HOME_BETTING_MOBILE'>
+                    <script>
+                      Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_HOME_BETTING_MOBILE');
+                    </script>
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <!--
+        <div class="home-page-mobile-betting-banner partial">
+          <div id='div-gpt-ad-RES_MAIN_HOME_BETTING_MOBILE'>
+            <script>
+              Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_HOME_BETTING_MOBILE');
+            </script>
+          </div>
+
+        </div>
+
+
+
+        <div class="home-page-primary-advert partial">
+          <div id='div-gpt-ad-RES_MAIN_HOME_CAROUSEL'>
+            <script>
+              Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_HOME_CAROUSEL');
+            </script>
+          </div>
+
+        </div>
+
+      -->
+      </div>
+
+      <div class="carousel-item match-carousel-item" id="cms-block-4359" data-title="Match">
+
+        <style type="text/css">
+          #cms-block-4359 .last-next-match+.last-next-match-background {
+            background-image: url('/static/d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/page_banner/0002/10/thumb_109854_page_banner_header_large.jpg') !important;
+          }
+
+          @media only screen and (max-width:1000px) {
+            #cms-block-4359 .last-next-match+.last-next-match-background {
+              background-image: url('/static/d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/page_banner/0002/10/thumb_109854_page_banner_header_medium.jpg') !important;
+            }
+          }
+        </style>
+
+        <div class="last-next-match">
+          <div class="last-match num-fixtures-1">
+            <span style="font-family:Times New Roman;"><h2>LAST MATCH</h2></span>
+            
+            {% for date in lastmatch %}
+            {% if forloop.counter == 1 %}
+            
+            <div class="matchinfo">
+              <div class="scores">
+                <img
+                  src="{{ date.homeL.url }}"
+                  title="Barrow FC" alt="Barrow FC" class="badge">
+                <span class="score">{{ date.scoreline_home }} - {{ date.scoreline_away }}</span>
+                <img
+                  src="{{ date.awayL.url }}"
+                  title="{{date.awayTeam}}" alt="{{date.awayTeam}}" class="badge">
+              </div>
+              <div
+                style="background-image: url('{{ date.tournamentLogo_sm.url }}')"
+                title="GFA" class="comp-logo">
+              </div>
+              <p>
+                <span style="font-family:Times New Roman;">{{date.fixture_date_and_time|time:"H:i"}} {{ date.fixture_date_and_time|date:"D dS M Y" }}
+                </span>
+                
+              </p>
+            
+              <a class="button" href="javascript:void(0)">MORE</a>
+              
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+          <div class="next-match num-fixtures-2">
+            <span style="font-family:Times New Roman;"><h2>UPCOMING</h2></span>
+            {% for coming in upcoming %}
+            {% if forloop.counter == 1 %}
+            <div class="matchinfo">
+              <div class="scores">
+                <img
+                  src="{{ coming.homeL.url }}"
+                  title="{{coming.homeTeam}}" alt="{{coming.homeTeam}}" class="badge">
+                <span class="versus">V</span>
+                <img
+                  src="{{ coming.awayL.url }}"
+                  title="" alt="" class="badge">
+              </div>
+              <div
+                style="background-image: url('{{ coming.tournamentLogo_sm.url }}')"
+                title="GFA" class="comp-logo">
+              </div>
+              <p>
+                <span style="font-family:Times New Roman;">{{coming.fixture_date_and_time|time:"H:i"}} {{ coming.fixture_date_and_time|date:"D dS M Y" }}</span>
+                
+              </p>
+              <a class="button invisible">MORE</a>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for upcomings in upcomings %}
+            {% if forloop.counter == 1 %}
+            <div class="matchinfo">
+              <div class="scores">
+                <img
+                  src="{{ upcomings.homeL.url }}"
+                  title="{{upcomings.homeTeam}}" alt="{{upcomings.homeTeam}}" class="badge">
+                <span class="versus">V</span>
+                <img
+                  src="{{ upcomings.awayL.url }}"
+                  title="{{upcomings.awayTeam}}" alt="{{upcomings.awayTeam}}" class="badge">
+              </div>
+              <div
+                style="background-image: url('{{ upcomings.tournamentLogo_sm.url }}')"
+                title="GFA" class="comp-logo">
+              </div>
+              <p>
+                <span style="font-family:Times New Roman;">{{upcomings.fixture_date_and_time|time:'H:i'}} {{upcomings.fixture_date_and_time|date:'D j F Y'}}</span>
+                
+                
+              </p>
+              <a class="button invisible">MORE</a>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+          <div style="clear: left;"></div>
+        </div>
+
+        <div class="last-next-match-background"></div>
+      </div>
+
+
+
+
+      <div class="carousel-item commercial-image-carousel-item" data-title="Brand and Beyond">
+
+
+        <a class="extraLarge" href=""
+          style="background-image: url('/static/d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/29/390fd55d8784f4964f58a30359dde0c1aea9ec22.jpg')"></a>
+
+        <a class="large" href=""
+          style="background-image: url('/static/d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/29/b82077d997f145e954852505ccb145b6f72839c9.jpg')"></a>
+
+        <a class="medium" href="">
+          <img
+            src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/29/formation.png' %}" />
+        </a>
+
+      </div>
+
+
+
+
+
+
+    </div>
+    <a href="#" class="slideBtn owl-prev"></a>
+    <a href="#" class="slideBtn owl-next"></a>
+  </section>
+
+  <div id="cms-block-21911" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+    <div class="container-block block-21911 ">
+<!--
+      <div class="top-adverts-container">
+        <div class="betting-position">
+          <div id='div-gpt-ad-RES_MAIN_HOME_BETTING_NEW'>
+            <script>
+              Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_HOME_BETTING_NEWr');
+            </script>
+          </div>
+
+        </div>
+
+        <div class="next-to-betting-position">
+          <div id='div-gpt-ad-RES_MAIN_HOME_NEXT_TO_BETTING'>
+            <script>
+              Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_HOME_NEXT_TO_BETTING');
+            </script>
+          </div>
+
+        </div>
+      </div>
+    -->
+
+
+      <style>
+        /* start adding axa style fix */
+
+        .home .site-header-inner .principle-partners-logos-inner a:nth-child(4) img {
+
+          width: 45px;
+
+          margin: 0 15px;
+
+        }
+
+        @media only screen and (max-width: 1090px) {
+
+          .home .site-header-inner .principle-partners-logos {
+            left: 19%
+          }
+
+        }
+
+        @media only screen and (max-width: 699px) {
+
+          .home .site-header-inner .principle-partners-logos-inner a:nth-child(4) img {
+
+            width: 35px;
+
+          }
+
+        }
+
+        @media only screen and (max-width: 380px) {
+
+          .home .site-header-inner .principle-partners-logos-inner img {
+
+            width: 62px;
+
+          }
+
+          .home .site-header-inner .principle-partners-logos-inner a:nth-child(4) img {
+
+            width: 28px;
+
+            margin: 0 10px
+          }
+
+        }
+
+
+
+        .home #players-carousel .principle-partners-logos-inner a:nth-child(4) img {
+
+          width: 45px;
+
+          margin: 0 15px;
+
+        }
+
+        @media only screen and (max-width: 699px) {
+
+          .home #players-carousel .principle-partners-logos-inner a:nth-child(4) img {
+
+            width: 35px;
+
+          }
+
+        }
+
+
+
+        @media only screen and (max-width: 380px) {
+
+          .home #players-carousel .principle-partners-logos-inner img {
+
+            width: 62px;
+
+          }
+
+          .home #players-carousel .principle-partners-logos-inner a:nth-child(4) img {
+
+            width: 28px;
+
+            margin: 0 10px
+          }
+
+        }
+
+
+
+        /* end adding axa style fix */
+      </style>
+    
+      <div id="cms-block-21919" class="cms-block cms-block-element" data-block-type="lfc.block.carousel">
+
+        <section id="two-col-content-grid" class="">
+
+
+          <header class="title-container">
+            <span style="font-family:Times New Roman;"><h2>Latest News</h2></span>
+ 
+            
+            <a href="{% url 'bfc:news-first-team' %}" class="view-all"><span>Latest News</span><span class="next-triangle"></span></a>
+
+
+          </header>
+
+
+          <div id="cms-block-" class="cms-block cms-block-element" data-block-type="sonata.block.service.text">
+            <div class="two-col-content-grid">
+              <div class="primary-items">
+                {% for post in post1 %}
+                <article class="two-col-content-grid-item">
+
+                  <a class="two-col-content-grid-item-link" href="{{ post.get_absolute_url }}">
+
+                    <div class="media-image-wrap">
+
+                      <img src="{{ post.postImage.url }}" data-src="{{ post.postImage.url }}" alt=""
+                        class="carousel-media-image media-image lazyLoadPlaceholder" />
+
+                      <span class="icon-helper icon-doc-text content-type-article"><span
+                          class="indent">article</span></span>
+                    </div>
+
+                    <div class="post-time-wrap">
+                      <time class="post-time time" datetime="{{post.publish|date:'M d Y'}}">{{ post.publish|date:'M d Y'}}</time>
+                    </div>
+
+                    <h2 class="post-header">
+                      <span style="font-family:Times New Roman;">{{ post.title|truncatewords:'14' }}
+                      </span>
+                      
+                    </h2>
+
+                  </a>
+
+
+                </article>
+                {% endfor %}
+              </div>
+              <div class="secondary-items">
+                {% for post in post2 %}
+                <article class="two-col-content-grid-item">
+
+                  <a class="two-col-content-grid-item-link"
+                    href="{{ post.get_absolute_url }}">
+
+                    <div class="media-image-wrap">
+
+                      <img src="{{ post.postImage.url }}" data-src="{{ post.postImage.url }}" alt=""
+                        class="carousel-media-image media-image lazyLoadPlaceholder" />
+
+
+                      <span class="icon-helper icon-doc-text content-type-article"><span
+                          class="indent">article</span></span>
+                    </div>
+
+
+                    <div class="post-time-wrap">
+                      <time class="post-time time" datetime="{{post.publish|date:'M d Y'}}"><span style="font-family:Times New Roman;">{{ post.created|date:'M d Y' }}</span></time>
+                    </div>
+
+                    <h2 class="post-header">
+                      <span style="font-family:Times New Roman;">{{ post.title|truncatewords:'14' }}</span>
+                      
+                    </h2>
+
+                  </a>
+                </article>
+                {% endfor %}
+              </div>
+
+            </div>
+          </div>
+
+
+        </section>
+
+      </div>
+
+      <div id="cms-block-21920" class="cms-block cms-block-element" data-block-type="lfc.opta.standings.block.service">
+
+
+
+        <section id="league-table" class="opta-wrapper">
+
+          <header class="title-container">
+            <h1>League Table</h1>
+            <a href="" class="view-all"><span>Full
+                table</span><span class="next-triangle"></span></a>
+          </header>
+
+          <opta-widget widget="standings" competition="8" season="2021" team="14" team_padding="3" template="normal"
+            live="true" default_nav="1" side="combined" show_form="0" data_detail="full" show_key="false"
+            show_crests="false" points_in_first_column="false" lose_before_draw="false" competition_naming="full"
+            team_naming="full" date_format="dddd D MMMM YYYY" sorting="false" show_live="true"
+            show_relegation_average="false" show_logo="false" show_title="false" breakpoints="550" sport="football">
+          </opta-widget>
+
+          <footer>
+            <a href="" class="view-all"><span>Full
+                table</span><span class="next-triangle"></span></a>
+          </footer>
+
+        </section>
+      </div>
+
+      <div class="full-banner-position">
+        <div id='div-gpt-ad-RES_MAIN_HOME_MIDDLE_BANNER'>
+          <script>
+            Lfc.gtmAdQueue.push('div-gpt-ad-RES_MAIN_HOME_MIDDLE_BANNER');
+          </script>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  {% block player %}
+    {% include 'bfc/player.html' %}
+  {% endblock player %}
+
+  <div id="cms-block-21913" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+    <div class="container-block block-21913 ">
+
+
+    </div>
+  </div>
+
+
+  <div id="cms-block-21916" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+    <div class="container-block block-21916 ">
+      <div id="cms-block-21989" class="cms-block cms-block-element" data-block-type="sonata.block.service.text">
+        <section id="hillsborough-heysel">
+
+          <div class="hillsborough-heysel">
+            <a href="" class="hillsborough"></a>
+            <a href="" class="heysel"></a>
+          </div>
+      
+          <div class="ynwa">
+            <h1>YOU'LL NEVER WALK ALONE</h1>
+          </div>
+     
+        </section>
+      </div>
+      <div id="cms-block-51243" class="cms-block cms-block-element" data-block-type="sonata.block.service.text">
+        <!--
+        <div class="champs-wall">
+        
+          <img
+            src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/page_banner/0002/11/f9d2bf533c57965e0174bf510d9bcd588ae379d0.jpg' %}"
+            class="mobile" />
+
+
+          <img
+            src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/page_banner/0002/11/aa0024fde91a556201a3e18aced77ddcbcebaca9.jpg' %}"
+            class="tablet" />
+
+
+
+
+          <img
+            src="{% static 'd3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/page_banner/0002/11/caba13e5118c92cd18eab74b2549006e2fb72b7e.jpg' %}"
+            class="desktop" />
+         
+        </div>
+      -->
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div id="cms-block-21917" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+    <div class="container-block block-21917 ">
+
+    </div>
+  </div>
+
+  <div id="cms-block-21918" class="cms-block cms-block-element" data-block-type="sonata.page.block.container">
+    <div class="container-block block-21918 ">
+
+    </div>
+  </div>
+
+
+
+</div>
+{% endblock main %}

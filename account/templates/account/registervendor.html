@@ -1,0 +1,129 @@
+{% extends 'ecommerce/base/index-example.html' %}
+{% load crispy_forms_tags %}
+{% block select %}
+
+<div class="well">
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+        <center>{{ message }}</center>
+        {% endfor %}
+    {% endif %}
+</div>
+        <div class="register-account ptb-100 ptb-sm-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="register-title">
+                            <h3 class="mb-10">REGISTER</h3>
+                            <p class="mb-10">If you already have an account with us, please login at the login page.</p>
+                        </div>
+                    </div>
+                </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <script>M.toast({html: '{{message}}',classes:'green rounded',
+                                displayLength:2000})
+                        </script>
+                    {% endfor %}
+                {% endif %}
+                <!-- Row End -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form  method="POST" class="form-register" action="{% url 'account:register' %}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <fieldset>
+                                <legend>Your Personal Details</legend>
+
+
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="email"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+
+                                        {{registration_form.email|as_crispy_field}}
+                                    </div>
+                                </div>
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="number"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+
+                                        {{ registration_form.username|as_crispy_field}}
+                                    </div>
+                                </div>
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="number"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+
+                                        {{ registration_form.contact|as_crispy_field}}
+                                    </div>
+                                </div>
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="number"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+                                        {{ registration_form.location|as_crispy_field}}
+                                    </div>
+                                </div>
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="number"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+                                        {{registration_form.profession|as_crispy_field}}
+                                    </div>
+                                </div>
+
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="number"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+                                        {{registration_form.experience|as_crispy_field}}
+                                    </div>
+                                </div>
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="number"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+                                        {{registration_form.verified_id|as_crispy_field}}
+                                    </div>
+                                </div>
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="number"><span class="require"></span></label>
+                                    <div class="col-md-10">
+                                        {{registration_form.image|as_crispy_field}}
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Your Password</legend>
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="pwd"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+                                        {{registration_form.password1|as_crispy_field}}
+                                    </div>
+                                </div>
+                                <div class="form-group d-md-flex align-items-md-center">
+                                    <label class="control-label col-md-2" for="pwd-confirm"><span class="require">*</span></label>
+                                    <div class="col-md-10">
+
+                                        {{registration_form.password2|as_crispy_field}}
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            {% if field.help_text %}
+                            <small style="color: blue;">{{field.help_text}}</small>
+                            {% endif %}
+                            {% for error in field.error %}
+                            <p style="color:red;">{{error}}</p>
+                            {% endfor %}
+                            <div class="terms">
+                                <div class="float-md-right">
+                                    <span>I have read and agree to the <a href="#" class="agree"><b>Privacy Policy</b></a></span>
+                                    <input type="checkbox" name="agree" value="1"> &nbsp;
+                                    <input type="submit" value="Continue" class="return-customer-btn">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Row End -->
+            </div>
+            <!-- Container End -->
+        </div>
+{% endblock %}
